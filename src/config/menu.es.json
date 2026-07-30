@@ -1,0 +1,234 @@
+{
+  "main": [
+    {
+      "enable": true,
+      "name": "Inicio",
+      "weight": 0,
+      "url": "/"
+    },
+    {
+      "name": "Páginas",
+      "enable": true,
+      "weight": 2,
+      "hasChildren": true,
+      "children": [
+        {
+          "enable": true,
+          "name": "Inicio",
+          "weight": 0,
+          "hasChildren": true,
+          "children": [
+            {
+              "enable": true,
+              "name": "Inicio 01",
+              "url": "/",
+              "weight": 1
+            },
+            {
+              "enable": true,
+              "name": "Inicio 02",
+              "url": "/",
+              "weight": 2
+            },
+            {
+              "enable": true,
+              "name": "Inicio 03",
+              "url": "/home-three/",
+              "weight": 3
+            }
+          ]
+        },
+        {
+          "enable": true,
+          "name": "Proyectos",
+          "weight": 0,
+          "hasChildren": true,
+          "children": [
+            {
+              "enable": true,
+              "name": "Proyecto",
+              "url": "/case-studies/",
+              "weight": 0
+            },
+            {
+              "enable": true,
+              "name": "Detalle de proyecto",
+              "url": "/case-studies/custom-slug-case-studies-1/",
+              "weight": 0
+            }
+          ]
+        },
+        {
+          "enable": true,
+          "name": "Blog",
+          "weight": 0,
+          "hasChildren": true,
+          "children": [
+            {
+              "enable": true,
+              "name": "Blog",
+              "url": "/blog/",
+              "weight": 0
+            },
+            {
+              "enable": true,
+              "name": "Detalle de publicación",
+              "url": "/blog/custom-slug-post-1/",
+              "weight": 0
+            }
+          ]
+        },
+        {
+          "enable": true,
+          "name": "Servicios",
+          "weight": 0,
+          "hasChildren": true,
+          "children": [
+            {
+              "enable": true,
+              "name": "Servicios",
+              "url": "/services/",
+              "weight": 0
+            },
+            {
+              "enable": true,
+              "name": "Detalle de servicio",
+              "url": "/services/web-development/",
+              "weight": 0
+            }
+          ]
+        },
+        {
+          "enable": true,
+          "name": "Nosotros",
+          "url": "/about/",
+          "weight": 0
+        },
+        {
+          "enable": true,
+          "name": "Equipo",
+          "url": "/team",
+          "weight": 0
+        },
+        {
+          "enable": true,
+          "name": "Planes y precios",
+          "url": "/pricing/",
+          "weight": 0
+        },
+        {
+          "enable": true,
+          "name": "Preguntas frecuentes",
+          "url": "/faq/",
+          "weight": 0
+        },
+        {
+          "enable": true,
+          "name": "404",
+          "url": "/404/",
+          "weight": 0,
+          "badge": {
+            "enable": true,
+            "label": "Nuevo",
+            "color": "accent",
+            "_color_comment": "color expected value - accent, info, success, danger, dark",
+            "type": "text",
+            "_type_comment": "type expected value - text, dot"
+          }
+        }
+      ]
+    }
+  ],
+  "topbar": [
+    {
+      "enable": true,
+      "name": "Ayuda",
+      "url": "/",
+      "weight": 0
+    },
+    {
+      "enable": true,
+      "name": "Soporte",
+      "url": "/",
+      "weight": 0
+    },
+    {
+      "enable": true,
+      "name": "Contacto",
+      "url": "/",
+      "weight": 0
+    }
+  ],
+  "footer": [
+    {
+      "label": "Enlaces",
+      "list": [
+        {
+          "enable": true,
+          "name": "Inicio",
+          "url": "/",
+          "weight": 0
+        },
+        {
+          "enable": true,
+          "name": "Nosotros",
+          "url": "/about/",
+          "weight": 0
+        },
+        {
+          "enable": true,
+          "name": "Servicios",
+          "url": "/services/",
+          "weight": 0
+        },
+        {
+          "enable": true,
+          "name": "Casos de éxito",
+          "url": "/case-studies/",
+          "weight": 0
+        },
+        {
+          "enable": true,
+          "name": "Contacto",
+          "url": "/contact/",
+          "weight": 0
+        }
+      ]
+    },
+    {
+      "label": "Servicios",
+      "list": [
+        {
+          "enable": true,
+          "name": "Desarrollo de aplicaciones",
+          "url": "/services/",
+          "weight": 0
+        },
+        {
+          "enable": true,
+          "name": "Seguridad de bases de datos",
+          "url": "/services/",
+          "weight": 0
+        },
+        {
+          "enable": true,
+          "name": "Ciberseguridad",
+          "url": "/services/",
+          "weight": 0
+        },
+        {
+          "enable": true,
+          "name": "Marketing digital",
+          "url": "/services/",
+          "weight": 0
+        },
+        {
+          "enable": true,
+          "name": "Diseño gráfico",
+          "url": "/services/",
+          "weight": 0
+        }
+      ]
+    }
+  ]
+}

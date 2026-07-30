@@ -1,0 +1,96 @@
+{
+  "common": {
+    "readMore": "Ver más detalles",
+    "category": "Categoría",
+    "emailPlaceholder": "Correo electrónico",
+    "emailLabel": "Correo electrónico",
+    "subscribeSuccess": "¡Suscripción realizada con éxito!",
+    "subscribeFail": "No fue posible completar la suscripción.",
+    "subscribeError": "Ocurrió un error inesperado.",
+    "bannerPattern": "Patrón decorativo del banner",
+    "customerAvatar": "Avatar de cliente",
+    "decorativePattern": "Patrón decorativo",
+    "experience": "Experiencia",
+    "aboutUs": "Nosotros",
+    "experienceBadge": "Distintivo de experiencia",
+    "paginationNext": "Siguiente",
+    "paginationPrevious": "Anterior",
+    "contactDropdownSearch404": "No se encontraron resultados",
+    "404Heading": "404 - Página no encontrada",
+    "404Description": "Parece que te has salido del mapa.",
+    "404ButtonLabel": "Volver al inicio",
+    "send": "Enviar",
+    "share": "Compartir",
+    "projectDetails": "Detalles del proyecto"
+  },
+  "navigation": {
+    "buttonLabel": "Comenzar"
+  },
+  "contactInfo": {
+    "locationLabel": "Ubicación",
+    "phoneLabel": "Teléfono",
+    "emailLabel": "Correo electrónico"
+  },
+  "subscription": {
+    "title": "",
+    "description": ""
+  },
+  "integration": {
+    "relatedIntegrationSectionTitle": "También te puede **interesar**",
+    "backToIntegration": "Explorar"
+  },
+  "footerBlock": {
+    "description": "Impulsamos negocios con soluciones digitales a la medida: desarrollo web, aplicaciones y consultoría tecnológica.",
+    "copyright": "Copyright © 2026 Fernando Peralta. Todos los derechos reservados.",
+    "contactBlockLabel": "Contacto",
+    "aboutUsLabel": "Nosotros",
+    "quickLinksLabel": "Enlaces rápidos",
+    "officeLabel": "Oficina",
+    "socialLabel": "Redes sociales",
+    "recentPostsLabel": "Publicaciones recientes"
+  },
+  "blog": {
+    "comments": "Comentarios",
+    "noComments": "Sin comentarios",
+    "previousPost": "Publicación anterior",
+    "nextPost": "Publicación siguiente"
+  },
+  "button": {
+    "readMore": "Leer más",
+    "viewProjects": "Ver proyectos",
+    "view": "Ver",
+    "getAQuote": "Solicitar cotización",
+    "discoverMore": "Descubre más",
+    "findOutMore": "Conoce más",
+    "showAll": "Ver todo"
+  },
+  "header": {
+    "announcement": "Presentamos nuestro Programa de Socios de Confianza ampliado. [conoce más](/)"
+  },
+  "social": {
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "linkedin": "Linkedin"
+  },
+  "widgets": {
+    "postSearchTitle": "Buscar",
+    "postSearchFormPlaceholder": "Buscar",
+    "categoriesTitle": "Categorías",
+    "recentPostsTitle": "Publicaciones recientes"
+  },
+  "aria": {
+    "toggleNav": "Abrir o cerrar la navegación",
+    "backToTop": "Volver arriba",
+    "closeModal": "Cerrar",
+    "playVideo": "Reproducir video",
+    "search": "Buscar",
+    "prevSlide": "Diapositiva anterior",
+    "nextSlide": "Diapositiva siguiente",
+    "prevTestimonial": "Testimonio anterior",
+    "nextTestimonial": "Testimonio siguiente",
+    "languageMenu": "Menú de idioma",
+    "pagination": "Paginación",
+    "socialLinks": "Redes sociales",
+    "aboutCompany": "Acerca de la empresa"
+  }
+}

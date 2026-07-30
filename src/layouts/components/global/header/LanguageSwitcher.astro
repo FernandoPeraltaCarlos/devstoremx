@@ -6,35 +6,25 @@ import {
   useTranslations,
 } from "@/lib/utils/i18nUtils";
 import { getLocalizedPathnameCTM } from "@/lib/utils/localizedRouteResolver";
-import trailingSlashChecker from "@/lib/utils/trailingSlashChecker";
 
 const currentLocale = normalizeLocaleCode(Astro.currentLocale);
 const t = await useTranslations(currentLocale);
-const languages = (
-  await Promise.all(
-    supportedLanguages.map(async (lang) => {
-      const href = await getLocalizedPathnameCTM(
-        Astro.url.pathname,
-        currentLocale,
-        lang.languageCode as string,
-      );
 
-      // Don't include current locale in url
-      if (href === trailingSlashChecker(Astro.url.pathname)) {
-        return;
-      }
-
-      return {
-        slug: href,
-        ...lang,
-      };
-    }),
-  )
-).filter(Boolean);
-
-if (languages.length === 0) {
+// Nothing to switch between when a single language is enabled
+if (supportedLanguages.length < 2) {
   return;
 }
+
+const languages = await Promise.all(
+  supportedLanguages.map(async (lang) => ({
+    ...lang,
+    slug: await getLocalizedPathnameCTM(
+      Astro.url.pathname,
+      currentLocale,
+      lang.languageCode as string,
+    ),
+  })),
+);
 
 const idSuffix = Math.random().toString(36).substring(7);
 const toggleId = `language-switcher-dropdown-toggle-${idSuffix}`;
@@ -56,23 +46,24 @@ const toggleId = `language-switcher-dropdown-toggle-${idSuffix}`;
     class="language-switcher-dropdown hs-dropdown-menu hs-dropdown-open:opacity-100 hs-dropdown-open:mt-0! hs-dropdown-open:visible z-50 mt-2 hidden min-w-full opacity-0 transition-[opacity,margin] [--placement:right-bottom]"
     aria-labelledby={toggleId}>
     {
-      languages.map(
-        (language) =>
-          language && (
-            <li>
-              <a
-                class:list={[
-                  {
-                    active: language.languageCode === currentLocale,
-                  },
-                  "py-2.75 capitalize",
-                ]}
-                href={language.slug}>
-                {language.contentDir}
-              </a>
-            </li>
-          ),
-      )
+      languages.map((language) => (
+        <li>
+          <a
+            class:list={[
+              {
+                active: language.languageCode === currentLocale,
+              },
+              "py-2.75 uppercase",
+            ]}
+            aria-current={
+              language.languageCode === currentLocale ? "true" : undefined
+            }
+            hreflang={language.languageCode}
+            href={language.slug}>
+            {language.languageName}
+          </a>
+        </li>
+      ))
     }
   </ul>
 </div>

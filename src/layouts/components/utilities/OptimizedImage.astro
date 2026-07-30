@@ -51,6 +51,7 @@ if (!isRemoteImage) {
   const images = import.meta.glob([
     "/src/assets/images/**/*.{jpeg,jpg,png,avif,tiff,gif,webp,svg,gif}",
     "/public/images/**/*.{jpeg,jpg,png,avif,tiff,gif,webp,svg,gif}",
+    "/public/media/**/*.{jpeg,jpg,png,avif,tiff,gif,webp,svg,gif}",
     "/src/content/**/*.{jpeg,jpg,png,avif,tiff,gif,webp,svg,gif}",
   ]) as Record<string, () => Promise<{ default: ImageMetadata }>>;
 
@@ -60,6 +61,7 @@ if (!isRemoteImage) {
       "/src/assets/images/**/*.svg",
       "/src/content/**/*.svg",
       "/public/images/**/*.svg",
+      "/public/media/**/*.svg",
     ],
     {
       query: "raw",

@@ -60,7 +60,7 @@ let {
 
         {logoText && (
           <span
-            class={`logo-text ${variant === "blue" && "text-white"}`}
+            class:list={["logo-text", { "text-white": variant === "blue" }]}
             set:html={markdownify(logoText)}
           />
         )}

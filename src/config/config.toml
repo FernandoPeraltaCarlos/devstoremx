@@ -1,15 +1,15 @@
 # Site Configuration
 [site]
   title            = "devstoremx"
-  description      = "devstoremx is a modern, high-performance Astro project built with Tailwind CSS for a clean, professional, and fully responsive experience."
-  tagline          = "The Modern Astro Theme for IT & Consulting Businesses"
+  description      = "devstoremx es un proyecto Astro moderno y de alto rendimiento, construido con Tailwind CSS para una experiencia limpia, profesional y totalmente adaptable."
+  tagline          = "Desarrollo web y consultoría de TI a la medida"
   taglineSeparator = "" # default is " - " 
   baseUrl          = "https://devstoremx.vercel.app" # Base URL for the site and used in OpenGraph meta tags.
-  logo             = "" # Path to the site's logo
-  logoWhite        = "" # Path to the site's alternate logo
+  logo             = "/media/devstoremx.svg" # Path to the site's logo
+  logoWhite        = "/media/devstoremx.svg" # Path to the site's alternate logo
   logoText         = "devstoremx" # Text displayed next to the logo
-  logoWidth        = "30px" # Width of the logo
-  logoHeight       = "30px" # Height of the logo
+  logoWidth        = "28px" # Width of the logo (source svg ratio is 256 x 309.1)
+  logoHeight       = "34px" # Height of the logo
 
   # Add a trailing slash at the end of URLs (e.g., https://example.com/, https://example.com/contact/)
   # Note: Manually restart your server when you change this value
@@ -62,12 +62,12 @@
   # formspree | formsubmit.co | netlify (default is formsubmit.co) 
   contactFormProvider = "formsubmit.co"
 
-  footerDescription = "" # Check src/i18n/en.json for the current copy. Add src/i18n/es.json when Spanish content is ready.
+  footerDescription = "" # Check src/i18n/es.json (default) and src/i18n/en.json for the current copy.
 
-  # Spanish is registered for future use but remains disabled until translated content exists.
+  # Spanish (es) is the default language; English (en) is served under /en/.
   [settings.copyright]
     enable = true
-    text   = "Copyright © 2026 Fernando Peralta. All rights reserved." # Check src/i18n/en.json for the current localized value.
+    text   = "Copyright © 2026 Fernando Peralta. Todos los derechos reservados." # Check src/i18n/*.json for the current localized value.
 
   # Mailchimp Subscription Form located in footer
   [settings.subscription]
@@ -81,9 +81,9 @@
     # Set `enable` to `true` for enabling the multilingual feature or `false` for disabling it.
     # Run `pnpm remove-multilingual` for removing multilingual content files after disabling the feature.
     enable               = true
-    defaultLanguage      = "en"
-    disableLanguages     = ["es"] # Enable Spanish after adding its content, menu, and translation files.
-    showDefaultLangInUrl = false # Show default language in URL (eg: https://example.com/en/)
+    defaultLanguage      = "es"
+    disableLanguages     = [] # All languages registered in src/config/language.json are enabled.
+    showDefaultLangInUrl = false # Show default language in URL (eg: https://example.com/es/)
 
   # Navigation Button In Header
   [settings.navigationButton]
@@ -109,7 +109,7 @@
 # -----------------------------------------------------------------------------------------------------------------------------------
 [opengraph]
   image       = "" # Image used in OpenGraph previews
-  ogLocale    = "en_US" # Locale setting for OpenGraph
+  ogLocale    = "es_MX" # Locale setting for OpenGraph
   ogType      = "website" # Type of content for OpenGraph protocol
   twitter     = "" # Twitter handle for Twitter Card meta tags
   twitterCard = "summary_large_image" # Type of Twitter Card to use in social sharing
