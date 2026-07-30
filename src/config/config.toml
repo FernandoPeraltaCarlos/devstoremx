@@ -1,0 +1,120 @@
+# Site Configuration
+[site]
+  title            = "devstoremx"
+  description      = "devstoremx is a modern, high-performance Astro project built with Tailwind CSS for a clean, professional, and fully responsive experience."
+  tagline          = "The Modern Astro Theme for IT & Consulting Businesses"
+  taglineSeparator = "" # default is " - " 
+  baseUrl          = "https://devstoremx.vercel.app" # Base URL for the site and used in OpenGraph meta tags.
+  logo             = "" # Path to the site's logo
+  logoWhite        = "" # Path to the site's alternate logo
+  logoText         = "devstoremx" # Text displayed next to the logo
+  logoWidth        = "30px" # Width of the logo
+  logoHeight       = "30px" # Height of the logo
+
+  # Add a trailing slash at the end of URLs (e.g., https://example.com/, https://example.com/contact/)
+  # Note: Manually restart your server when you change this value
+  trailingSlash = true
+
+# SEO Metadata
+# Specific SEO configurations that complement the general site settings.
+# -----------------------------------------------------------------------------------------------------------------------------------
+[seo]
+  author   = "Fernando Peralta"
+  keywords = ["devstoremx", "astro", "tailwind css"] # SEO keywords
+  robots   = "index, follow" # Instructs search engines on how to crawl and index the pages.
+
+  [seo.robotsTxt]
+    enable   = true # Enables or disables robots.txt file generation on site build
+    disallow = [] # Disallow specific paths (e.g., ["/_astro/", "/cdn-cgi/"])
+
+  [seo.sitemap]
+    enable = true # Enables or disables sitemap generation on site build
+    exclude = [
+    ] # exclude all pages that include these folder names (e.g., "blog", "services")
+
+
+# Contact Information
+# -----------------------------------------------------------------------------------------------------------------------------------
+[contact]
+  location = "Germany — 785 15h Street, Office 478 Berlin, De 81566"
+  phone    = "+1 840 841 25 69"
+  email    = "fernando_peraltac@hotmail.com"
+
+# Different theme settings
+# -----------------------------------------------------------------------------------------------------------------------------------
+[settings]
+  # If you change value of the following content folder, make sure to change the folder name also from
+  # note: restart your server when you change this value
+  # - "src/content" folder
+  # - "src/[...lang]/pages" folder
+  # - "src/content.config.ts" collections object
+  blogFolder        = "blog" # Folder where blog posts are stored
+  servicesFolder    = "services" # Folder where services are stored
+  caseStudiesFolder = "case-studies" # Folder where case studies are stored
+
+  pagination   = 2 # Number of posts displayed on each page blog list page
+  stickyHeader = true # Enables or disable sticky feature of header
+
+  # documentation - https://formspree.io/ | https://formsubmit.co/ | https://docs.netlify.com/forms/setup/
+  # Form action URL for the contact form (For more settings related to form see "src/content/sections/contact-section.md")
+  contactFormAction = "https://formsubmit.co/fernando_peraltac@hotmail.com" # https://formspree.io/f/your_form_id | https://formsubmit.co/your_form_submission_receive_email | "/"
+
+  # formspree | formsubmit.co | netlify (default is formsubmit.co) 
+  contactFormProvider = "formsubmit.co"
+
+  footerDescription = "" # Check src/i18n/en.json for the current copy. Add src/i18n/es.json when Spanish content is ready.
+
+  # Spanish is registered for future use but remains disabled until translated content exists.
+  [settings.copyright]
+    enable = true
+    text   = "Copyright © 2026 Fernando Peralta. All rights reserved." # Check src/i18n/en.json for the current localized value.
+
+  # Mailchimp Subscription Form located in footer
+  [settings.subscription]
+    enable     = false # Enables or disable the subscription form
+    title      = "" # Check src/i18n/en.json for the current localized value.
+    formAction = ""
+
+  # Multilingual settings (check src/config/language.json for changing the languages)
+  # NOTE: Manually restart your server when you change the following multilingual table values
+  [settings.multilingual]
+    # Set `enable` to `true` for enabling the multilingual feature or `false` for disabling it.
+    # Run `pnpm remove-multilingual` for removing multilingual content files after disabling the feature.
+    enable               = true
+    defaultLanguage      = "en"
+    disableLanguages     = ["es"] # Enable Spanish after adding its content, menu, and translation files.
+    showDefaultLangInUrl = false # Show default language in URL (eg: https://example.com/en/)
+
+  # Navigation Button In Header
+  [settings.navigationButton]
+    enable = true
+    label  = "" # Check src/i18n/en.json for the current localized value.
+    url    = "/#contact"
+
+  # Announcement bar in HeaderThree topbar
+  [settings.announcementBar]
+    enable = true
+    label  = "" # Check src/i18n/en.json for the current localized value.
+
+  [settings.markup.tableOfContents]
+    enable     = true
+    expanded   = true # whether to expand the table of contents by default
+    endLevel   = 5
+    ordered    = false
+    startLevel = 1
+
+
+# OpenGraph Metadata
+# Specific OpenGraph settings, using values from the [site] section where possible.
+# -----------------------------------------------------------------------------------------------------------------------------------
+[opengraph]
+  image       = "" # Image used in OpenGraph previews
+  ogLocale    = "en_US" # Locale setting for OpenGraph
+  ogType      = "website" # Type of content for OpenGraph protocol
+  twitter     = "" # Twitter handle for Twitter Card meta tags
+  twitterCard = "summary_large_image" # Type of Twitter Card to use in social sharing
+
+# [head] (Add custom scripts, stylesheets, and meta tags to be rendered in the <head> section of the page)
+# -----------------------------------------------------------------------------------------------------------------------------------
+[head]
+  content = ""

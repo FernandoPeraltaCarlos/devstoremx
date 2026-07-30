@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# build output and framework cache
+dist/
+.astro/
+
+# local environment variables
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+
+# local AI tooling
+.agents/
+.codex/
+skills-lock.json
+
+# operating system files
+.DS_Store
+Thumbs.db
