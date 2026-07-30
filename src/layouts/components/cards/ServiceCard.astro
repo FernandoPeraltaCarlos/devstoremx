@@ -38,8 +38,9 @@ const href = slug ?? "#";
       {String(index + 1).padStart(3, "0")}
     </div>
 
-    {/* Title & Desc Container */}
-    <div class="relative z-10 flex flex-1 flex-col justify-center">
+    {/* Title & Desc — pr reserves the floating image column so text never crosses it */}
+    <div
+      class="relative z-10 flex flex-1 flex-col justify-center lg:pr-[22rem] xl:pr-[28rem]">
       <h3 class="text-h3-sm md:text-h3 font-bold transition-colors">
         {title}
       </h3>
@@ -54,7 +55,7 @@ const href = slug ?? "#";
         ]}>
         <div class="overflow-hidden">
           <p
-            class="text-text-default/70 pt-4 pb-5 lg:max-w-110 lg:pt-6.5 lg:text-lg xl:max-w-140 xl:leading-7"
+            class="text-text-default/70 pt-4 pb-5 lg:pt-6.5 lg:text-lg xl:leading-7"
             set:html={markdownify(description || "")}
           />
         </div>
