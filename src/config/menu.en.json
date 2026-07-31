@@ -14,32 +14,6 @@
       "children": [
         {
           "enable": true,
-          "name": "Home",
-          "weight": 0,
-          "hasChildren": true,
-          "children": [
-            {
-              "enable": true,
-              "name": "Home 01",
-              "url": "/",
-              "weight": 1
-            },
-            {
-              "enable": true,
-              "name": "Home 02",
-              "url": "/",
-              "weight": 2
-            },
-            {
-              "enable": true,
-              "name": "Home 03",
-              "url": "/home-three/",
-              "weight": 3
-            }
-          ]
-        },
-        {
-          "enable": true,
           "name": "Projects",
           "weight": 0,
           "hasChildren": true,
@@ -112,29 +86,9 @@
         },
         {
           "enable": true,
-          "name": "Pricing Plan",
-          "url": "/pricing/",
-          "weight": 0
-        },
-        {
-          "enable": true,
           "name": "FAQ",
           "url": "/faq/",
           "weight": 0
-        },
-        {
-          "enable": true,
-          "name": "404",
-          "url": "/404/",
-          "weight": 0,
-          "badge": {
-            "enable": true,
-            "label": "Badge",
-            "color": "accent",
-            "_color_comment": "color expected value - accent, info, success, danger, dark",
-            "type": "text",
-            "_type_comment": "type expected value - text, dot"
-          }
         }
       ]
     }
