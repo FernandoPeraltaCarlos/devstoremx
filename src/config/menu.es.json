@@ -93,7 +93,7 @@
             {
               "enable": true,
               "name": "Detalle de servicio",
-              "url": "/services/web-development/",
+              "url": "/services/desarrollo-web/",
               "weight": 0
             }
           ]
@@ -200,33 +200,39 @@
       "list": [
         {
           "enable": true,
-          "name": "Desarrollo de aplicaciones",
-          "url": "/services/",
+          "name": "Desarrollo web",
+          "url": "/services/desarrollo-web/",
           "weight": 0
         },
         {
           "enable": true,
-          "name": "Seguridad de bases de datos",
-          "url": "/services/",
-          "weight": 0
+          "name": "Desarrollo de ecommerce",
+          "url": "/services/desarrollo-de-ecommerce/",
+          "weight": 1
         },
         {
           "enable": true,
-          "name": "Ciberseguridad",
-          "url": "/services/",
-          "weight": 0
+          "name": "Administración de sitios web",
+          "url": "/services/administracion-de-sitios-web/",
+          "weight": 2
         },
         {
           "enable": true,
-          "name": "Marketing digital",
-          "url": "/services/",
-          "weight": 0
+          "name": "Rediseño de sitios web",
+          "url": "/services/rediseno-de-sitios-web/",
+          "weight": 3
         },
         {
           "enable": true,
-          "name": "Diseño gráfico",
-          "url": "/services/",
-          "weight": 0
+          "name": "Plantillas de email marketing",
+          "url": "/services/plantillas-de-email/",
+          "weight": 4
+        },
+        {
+          "enable": true,
+          "name": "Landing pages",
+          "url": "/services/landing-pages/",
+          "weight": 5
         }
       ]
     }

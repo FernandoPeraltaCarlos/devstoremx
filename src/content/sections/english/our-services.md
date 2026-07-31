@@ -1,7 +1,7 @@
 ---
 enable: true
 badge: "Our Services"
-title: "Our of services are crafted to meet the needs."
+title: "Our services are crafted to meet your business needs."
 image: "/images/home-banner/banner-2.jpg"
 imageAlt: "Our services"
 footerText: "Need Any Kind Of IT Solution For Your Business."

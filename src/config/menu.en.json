@@ -200,33 +200,39 @@
       "list": [
         {
           "enable": true,
-          "name": "App Development",
-          "url": "/services/",
+          "name": "Web Development",
+          "url": "/services/web-development/",
           "weight": 0
         },
         {
           "enable": true,
-          "name": "Database Security",
-          "url": "/services/",
-          "weight": 0
+          "name": "Ecommerce Development",
+          "url": "/services/ecommerce-development/",
+          "weight": 1
         },
         {
           "enable": true,
-          "name": "Cyber Security",
-          "url": "/services/",
-          "weight": 0
+          "name": "Website Management",
+          "url": "/services/website-management/",
+          "weight": 2
         },
         {
           "enable": true,
-          "name": "Digital Marketing",
-          "url": "/services/",
-          "weight": 0
+          "name": "Website Redesign",
+          "url": "/services/website-redesign/",
+          "weight": 3
         },
         {
           "enable": true,
-          "name": "Graphic Designing",
-          "url": "/services/",
-          "weight": 0
+          "name": "Email Templates",
+          "url": "/services/email-templates/",
+          "weight": 4
+        },
+        {
+          "enable": true,
+          "name": "Landing Pages",
+          "url": "/services/landing-pages/",
+          "weight": 5
         }
       ]
     }
