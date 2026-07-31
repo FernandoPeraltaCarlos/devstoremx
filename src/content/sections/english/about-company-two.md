@@ -1,12 +1,12 @@
 ---
 enable: true
 badge: "// ABOUT US"
-title: "Highly tailored IT design, management and support services."
+title: "The scope, cost and schedule are defined from the start."
 imageSecondary: "/images/about/about-rated-pic.jpg"
 imageSecondaryAlt: "Company members looking at laptop"
 image: "/images/about/about-two.png"
 imageAlt: "Team collaborating around computer"
-description: "Nemo enim ipsam voluptatemsit aspernatur aut odit aut dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, dolorem ipsum quia dolor sit amet, consectetur,"
+description: "We divide every project into stages you can review. If you request work outside the agreed scope, we explain the change and its cost before doing it. The domain and main accounts remain in your name."
 
 button:
   # Refer to the `sharedButton` schema in `src/sections.schema.ts` for all available configuration options

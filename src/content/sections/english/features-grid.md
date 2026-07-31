@@ -4,12 +4,12 @@ bgShape: "/images/feature-shape.png"
 
 features:
   - icon: "TriangleRight"
-    title: "SEAMLESS INTEGRATION"
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit cillum dolore eu fugiat nulla"
+    title: "WRITTEN SCOPE"
+    description: "The proposal states what the project includes, what it costs and how the schedule is divided."
   - icon: "TriangleRight"
-    title: "ADVANCED ANALYTICS"
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit cillum dolore eu fugiat nulla"
+    title: "WORK YOU CAN REVIEW"
+    description: "We show you each stage and address your feedback before moving on."
   - icon: "TriangleRight"
-    title: "UNLIMITED POSSIBILITIES"
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit cillum dolore eu fugiat nulla"
+    title: "ACCOUNTS UNDER YOUR CONTROL"
+    description: "The domain and main accounts are registered to your company from the start."
 ---

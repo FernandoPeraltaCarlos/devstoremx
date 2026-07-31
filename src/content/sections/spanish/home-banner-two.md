@@ -1,7 +1,7 @@
 ---
-subtitle: "Somos una agencia de servicios de TI"
-title: "Ayudamos a los líderes a hacer crecer <br /> sus negocios hacia un futuro mejor"
-description: "Nos dedicamos a guiarte con un enfoque personalizado para tu empresa de tecnología."
+subtitle: "Agencia de desarrollo web · Shopify Partner"
+title: "Desarrollamos páginas web y tiendas en línea <br /> con un proceso que puedes revisar"
+description: "Antes de comenzar acordamos el alcance, el costo y las fechas. Durante el proyecto revisas cada etapa, y las cuentas y accesos permanecen bajo tu control."
 
 image: "/images/home-banner/banner-3.jpg"
 imageAlt: "Colaboración en equipo"
@@ -10,7 +10,7 @@ button:
   # Refer to the `sharedButton` schema in `src/sections.schema.ts` for all available configuration options
   # (e.g., enable, label, url, hoverEffect, variant, icon, tag, rel, class, target, etc.)
   enable: true
-  label: "Consultoría gratuita"
+  label: "Solicitar cotización"
   url: "/#contact"
   icon: # Optional
     enable: true
@@ -23,8 +23,8 @@ button:
 
 satisfactionClients:
   enable: true
-  count: "2.5m"
-  label: "Asesoramos clientes en todo el mundo"
+  count: "+20"
+  label: "proyectos web desarrollados"
   avatars:
     - "/images/customers/avatar/client-1-1.png"
     - "/images/customers/avatar/client-2-1.png"

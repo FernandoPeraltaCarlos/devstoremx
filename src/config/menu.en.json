@@ -67,7 +67,7 @@
             {
               "enable": true,
               "name": "Services Single",
-              "url": "/services/web-development/",
+              "url": "/services/website-development/",
               "weight": 0
             }
           ]
@@ -154,20 +154,20 @@
       "list": [
         {
           "enable": true,
-          "name": "Web Development",
-          "url": "/services/web-development/",
+          "name": "Website Development",
+          "url": "/services/website-development/",
           "weight": 0
         },
         {
           "enable": true,
-          "name": "Ecommerce Development",
-          "url": "/services/ecommerce-development/",
+          "name": "Shopify Online Stores",
+          "url": "/services/shopify-online-stores/",
           "weight": 1
         },
         {
           "enable": true,
-          "name": "Website Management",
-          "url": "/services/website-management/",
+          "name": "Website Maintenance",
+          "url": "/services/website-maintenance/",
           "weight": 2
         },
         {

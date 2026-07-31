@@ -1,8 +1,8 @@
 ---
 enable: true
 badge: "contact"
-title: "Have a project in mind? <br /> Let's talk."
-description: "Whether you're seeking expert assistance, our dedicated team is prepared to support you every step of the way."
+title: "Tell us what you need <br /> and what you have today."
+description: "With that information, we can prepare an initial response and explain what we need to review before quoting the project."
 image: "/images/contact-home.jpg"
 imageAlt: "Contact"
 characterImage: "/images/character-3d.png"
@@ -49,14 +49,23 @@ form:
       dropdown:
         type: "select"
         items:
-          - label: "Web Development"
-            value: "Web Development"
+          - label: "Website Development"
+            value: "Website Development"
             selected: false
-          - label: "App Development"
-            value: "App Development"
+          - label: "Shopify Online Stores"
+            value: "Shopify Online Stores"
             selected: false
-          - label: "UI/UX Design"
-            value: "UI/UX Design"
+          - label: "Website Maintenance"
+            value: "Website Maintenance"
+            selected: false
+          - label: "Website Redesign"
+            value: "Website Redesign"
+            selected: false
+          - label: "Email Templates"
+            value: "Email Templates"
+            selected: false
+          - label: "Landing Pages"
+            value: "Landing Pages"
             selected: false
           - label: "Other"
             value: "Other"

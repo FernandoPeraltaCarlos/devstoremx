@@ -67,7 +67,7 @@
             {
               "enable": true,
               "name": "Detalle de servicio",
-              "url": "/services/desarrollo-web/",
+              "url": "/services/paginas-web/",
               "weight": 0
             }
           ]
@@ -154,20 +154,20 @@
       "list": [
         {
           "enable": true,
-          "name": "Desarrollo web",
-          "url": "/services/desarrollo-web/",
+          "name": "Páginas web",
+          "url": "/services/paginas-web/",
           "weight": 0
         },
         {
           "enable": true,
-          "name": "Desarrollo de ecommerce",
-          "url": "/services/desarrollo-de-ecommerce/",
+          "name": "Tiendas en línea con Shopify",
+          "url": "/services/tiendas-en-linea-shopify/",
           "weight": 1
         },
         {
           "enable": true,
-          "name": "Administración de sitios web",
-          "url": "/services/administracion-de-sitios-web/",
+          "name": "Mantenimiento web",
+          "url": "/services/mantenimiento-web/",
           "weight": 2
         },
         {
@@ -178,7 +178,7 @@
         },
         {
           "enable": true,
-          "name": "Plantillas de email marketing",
+          "name": "Plantillas de email",
           "url": "/services/plantillas-de-email/",
           "weight": 4
         },

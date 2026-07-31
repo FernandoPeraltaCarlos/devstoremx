@@ -1,12 +1,12 @@
 ---
 enable: true
 badge: "Our Services"
-title: "Our services are crafted to meet your business needs."
+title: "We build, redesign and maintain websites and online stores."
 image: "/images/home-banner/banner-2.jpg"
 imageAlt: "Our services"
-footerText: "Need Any Kind Of IT Solution For Your Business."
+footerText: "Need a clear scope and cost for your project?"
 footerLink:
-  label: "View Services"
+  label: "Review Services"
   url: "/services/"
 cardLayout: "horizontal"
 ---

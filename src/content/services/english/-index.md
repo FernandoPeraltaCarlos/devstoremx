@@ -1,6 +1,6 @@
 ---
 enable: true
-title: "Our Services"
-breadcrumbTitle: "Our Services"
-metaDescription: "Web and ecommerce development, website management and redesign, email marketing templates and landing pages to grow your business."
+title: "Websites, Online Stores and Maintenance"
+breadcrumbTitle: "Services"
+metaDescription: "Websites, Shopify online stores, maintenance, redesign, email templates and landing pages with a clear scope and cost."
 ---

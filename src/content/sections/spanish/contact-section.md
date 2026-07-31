@@ -1,8 +1,8 @@
 ---
 enable: true
 badge: "contacto"
-title: "¿Tienes un proyecto en mente? <br /> Hablemos."
-description: "Ya sea que busques asesoría experta o un equipo que ejecute, estamos listos para acompañarte en cada paso del camino."
+title: "Cuéntanos qué necesitas <br /> y qué tienes hoy."
+description: "Con esa información podemos preparar una primera respuesta y decirte qué necesitamos revisar antes de cotizar el proyecto."
 image: "/images/contact-home.jpg"
 imageAlt: "Contacto"
 characterImage: "/images/character-3d.png"
@@ -49,14 +49,23 @@ form:
       dropdown:
         type: "select"
         items:
-          - label: "Desarrollo web"
-            value: "Desarrollo web"
+          - label: "Páginas web"
+            value: "Páginas web"
             selected: false
-          - label: "Desarrollo de aplicaciones"
-            value: "Desarrollo de aplicaciones"
+          - label: "Tiendas en línea con Shopify"
+            value: "Tiendas en línea con Shopify"
             selected: false
-          - label: "Diseño UI/UX"
-            value: "Diseño UI/UX"
+          - label: "Mantenimiento web"
+            value: "Mantenimiento web"
+            selected: false
+          - label: "Rediseño de sitios web"
+            value: "Rediseño de sitios web"
+            selected: false
+          - label: "Plantillas de email"
+            value: "Plantillas de email"
+            selected: false
+          - label: "Landing pages"
+            value: "Landing pages"
             selected: false
           - label: "Otro"
             value: "Otro"

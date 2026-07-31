@@ -1,16 +1,16 @@
 ---
 enable: true
 badge: "// WORKING PROCESS"
-title: "Our working process on how to grow your business"
+title: "What we agree on and review during the project"
 image: "/images/service/working-process.png"
 list:
-  - title: "Initiation & Planning"
-    description: "Nemo enim ipsam voluptatem quia aut consequuntur on magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,"
+  - title: "We define the scope, cost and schedule"
+    description: "The proposal explains what the project includes, what falls outside the scope, what it costs and how the schedule is divided."
     icon: "images/icons/svg/planning.svg"
-  - title: "Execution & Development"
-    description: "Nemo enim ipsam voluptatem quia aut consequuntur on magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,"
+  - title: "You review work at each stage"
+    description: "We show you the project while it is being built. Your feedback is addressed before we continue to the next stage."
     icon: "images/icons/svg/coding.svg"
-  - title: "Testing & Maintenance"
-    description: "Nemo enim ipsam voluptatem quia aut consequuntur on magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,"
+  - title: "We publish through your accounts"
+    description: "The domain and main accounts remain under your control. You decide who can manage them and whether to change providers."
     icon: "images/icons/svg/book.svg"
 ---

@@ -1,12 +1,12 @@
 ---
 enable: true
 badge: "// NOSOTROS"
-title: "Servicios de diseño, gestión y soporte de TI hechos a tu medida."
+title: "Trabajamos con alcance, costos y fechas definidos desde el inicio."
 imageSecondary: "/images/about/about-rated-pic.jpg"
 imageSecondaryAlt: "Integrantes del equipo revisando una laptop"
 image: "/images/about/about-two.png"
 imageAlt: "Equipo colaborando frente a una computadora"
-description: "Acompañamos a empresas de todos los tamaños en su transformación digital. Diseñamos, construimos y mantenemos soluciones tecnológicas que se adaptan a tus procesos, no al revés, con un enfoque cercano y resultados medibles."
+description: "Dividimos cada proyecto en etapas que puedes revisar. Si solicitas algo que no estaba contemplado, te explicamos el cambio y su costo antes de trabajarlo. El dominio y las cuentas principales quedan a tu nombre."
 
 button:
   # Refer to the `sharedButton` schema in `src/sections.schema.ts` for all available configuration options

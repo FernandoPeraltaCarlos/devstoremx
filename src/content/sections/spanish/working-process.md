@@ -1,16 +1,16 @@
 ---
 enable: true
 badge: "// PROCESO DE TRABAJO"
-title: "Nuestro proceso de trabajo para hacer crecer tu negocio"
+title: "Qué acordamos y revisamos durante el proyecto"
 image: "/images/service/working-process.png"
 list:
-  - title: "Inicio y planeación"
-    description: "Definimos objetivos, alcance y prioridades junto contigo. Documentamos requerimientos y acordamos un plan claro con entregables y tiempos realistas."
+  - title: "Definimos alcance, costo y fechas"
+    description: "La propuesta explica qué incluye el proyecto, qué queda fuera, cuánto cuesta y cómo se divide el calendario."
     icon: "images/icons/svg/planning.svg"
-  - title: "Ejecución y desarrollo"
-    description: "Construimos por iteraciones cortas para que veas avances constantes. Cada entrega es funcional y revisable, sin sorpresas al final del proyecto."
+  - title: "Revisas avances por etapas"
+    description: "Te mostramos el proyecto durante el desarrollo. Tus comentarios se atienden antes de continuar con la siguiente etapa."
     icon: "images/icons/svg/coding.svg"
-  - title: "Pruebas y mantenimiento"
-    description: "Validamos calidad, rendimiento y seguridad antes de publicar. Después del lanzamiento damos seguimiento, soporte y mejoras continuas."
+  - title: "Publicamos desde tus cuentas"
+    description: "El dominio y los accesos principales permanecen bajo tu control. Tú decides quién puede administrarlos y cambiar de proveedor."
     icon: "images/icons/svg/book.svg"
 ---
