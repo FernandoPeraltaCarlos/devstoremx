@@ -31,30 +31,13 @@
   };
 
   const loadDynamicModule = async (key, importer) => {
-    const storageKey = `dynamic-import-reload:${key}`;
-
     try {
-      const mod = await importer();
-      sessionStorage.removeItem(storageKey);
-      return mod;
+      return await importer();
     } catch (error) {
-      const isDevHost =
-        window.location.hostname === "localhost" ||
-        window.location.hostname === "127.0.0.1";
-      const failedImport =
-        error instanceof TypeError &&
-        String(error.message).includes(
-          "Failed to fetch dynamically imported module",
-        );
-
-      if (isDevHost && failedImport && !sessionStorage.getItem(storageKey)) {
-        sessionStorage.setItem(storageKey, "1");
-        window.location.reload();
-        return null;
-      }
-
-      sessionStorage.removeItem(storageKey);
-      throw error;
+      // Optional enhancements must fail without navigating or reloading the
+      // current page, especially when a 404 is served as a fallback document.
+      console.warn(`Unable to load optional module "${key}".`, error);
+      return null;
     }
   };
 

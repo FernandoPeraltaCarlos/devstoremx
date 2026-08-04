@@ -26,7 +26,10 @@ const enabledChildren = menu.children?.filter((child) => child.enable !== false)
         : "",
   ]}
   role="menuitem">
-  <span
+  <button
+    type="button"
+    aria-haspopup="menu"
+    aria-expanded="false"
     class:list={[
       "nav-dropdown-toggle hs-dropdown-toggle flex items-center",
       {
@@ -43,10 +46,11 @@ const enabledChildren = menu.children?.filter((child) => child.enable !== false)
       icon="ChevronDown"
       class="hs-dropdown-open:rotate-180 ms-2 size-4 transition-transform duration-300"
     />
-  </span>
+  </button>
   {
     !menu.hasMegaMenu && menu.hasChildren && enabledChildren?.length && (
       <ul
+        role="menu"
         class="nav-dropdown-list hs-dropdown-menu hs-dropdown-open:pointer-events-auto hs-dropdown-open:opacity-100 pointer-events-none absolute top-0 mt-2 hidden opacity-0 transition-[opacity,margin] max-lg:m-0! max-lg:transform-none! lg:block"
         {...(recursive ? { "aria-orientation": "vertical" } : {})}>
         {enabledChildren.map((child) =>
