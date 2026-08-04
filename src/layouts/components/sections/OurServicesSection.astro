@@ -99,7 +99,9 @@ let servicesList = await getCollectionCTM(
 
       {
         servicesList && servicesList.length > 0 && (
-          <div class="divide-border-dark/15 border-border-dark/15 mt-15 mb-13 divide-y border-y md:mt-20 xl:mt-27.5 group/list">
+          <div
+            class="divide-border-dark/15 border-border-dark/15 mt-15 mb-13 divide-y border-y [overflow-anchor:none] md:mt-20 xl:mt-27.5"
+            data-service-list>
             {servicesList.map((service, index) => (
               <ServiceCard content={service} index={index} />
             ))}

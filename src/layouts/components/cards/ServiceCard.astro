@@ -29,6 +29,8 @@ const href = slug ?? "#";
   data-aos="fade-up"
   data-aos-delay={index * 80}
   data-aos-duration="600"
+  data-service-card
+  data-active={index === 0 ? "" : undefined}
   {...rest}>
   <div
     class="flex flex-col gap-4 md:flex-row md:items-start lg:gap-10 xl:gap-14">
@@ -45,13 +47,11 @@ const href = slug ?? "#";
         {title}
       </h3>
 
-      {/* Description - expands on hover */}
+      {/* Description - always visible on mobile, expands for the active card */}
       <div
         class:list={[
           "grid transition-[grid-template-rows] duration-500 ease-in-out",
-          index === 0
-            ? "grid-rows-[1fr] lg:group-hover:grid-rows-[1fr]! lg:group-hover/list:grid-rows-[0fr]"
-            : "grid-rows-[0fr] max-lg:grid-rows-[1fr] lg:group-hover:grid-rows-[1fr]",
+          "grid-rows-[1fr] lg:grid-rows-[0fr] lg:group-data-[active]:grid-rows-[1fr]",
         ]}>
         <div class="overflow-hidden">
           <p
@@ -69,9 +69,9 @@ const href = slug ?? "#";
         aria-label={title}
         class:list={[
           "flex h-10 w-15 items-center justify-center rounded-sm border transition-all duration-300",
-          index === 0
-            ? "border-primary bg-primary lg:group-hover/list:border-border-dark/20 lg:group-hover/list:text-dark lg:group-hover:border-primary! lg:group-hover:bg-primary! text-white lg:group-hover:text-white! lg:group-hover/list:bg-transparent"
-            : "border-border-dark/20 text-dark max-lg:border-primary max-lg:bg-primary lg:group-hover:border-primary lg:group-hover:bg-primary max-lg:text-white lg:group-hover:text-white",
+          "border-primary bg-primary text-white",
+          "lg:border-border-dark/20 lg:text-dark lg:bg-transparent",
+          "lg:group-data-[active]:border-primary lg:group-data-[active]:bg-primary lg:group-data-[active]:text-white",
         ]}>
         <Icons icon="ArrowRight" class="stroke-1.5 h-5 w-5" />
       </a>
@@ -88,9 +88,7 @@ const href = slug ?? "#";
             "bottom-8.5": imagePosition === "bottom",
             "top-1/2 -translate-y-1/2": imagePosition === "center",
           },
-          index === 0
-            ? "scale-100 opacity-100 group-hover:scale-100! group-hover:opacity-100! group-hover/list:scale-95 group-hover/list:opacity-0"
-            : "scale-95 opacity-0 delay-75 group-hover:scale-100 group-hover:opacity-100",
+          "scale-95 opacity-0 group-data-[active]:scale-100 group-data-[active]:opacity-100",
         ]}>
         <OptimizedImage
           src={image}
@@ -109,3 +107,61 @@ const href = slug ?? "#";
     aria-hidden="true">
   </a>
 </div>
+
+<script>
+  // The active card is driven by real pointer movement instead of :hover.
+  // Expanding a card resizes its neighbours, which moves rows under a still
+  // cursor: with :hover that re-triggers the state in a loop (flicker + stuck
+  // styles). "pointermove" only fires when the pointer actually moves.
+  const initServiceCards = () => {
+    const lists =
+      document.querySelectorAll<HTMLElement>("[data-service-list]");
+
+    lists.forEach((list) => {
+      if (list.dataset.serviceListReady === "true") return;
+      list.dataset.serviceListReady = "true";
+
+      const cards = Array.from(
+        list.querySelectorAll<HTMLElement>("[data-service-card]"),
+      );
+      if (cards.length === 0) return;
+
+      const defaultCard = cards[0];
+      let activeCard =
+        cards.find((card) => card.hasAttribute("data-active")) ?? defaultCard;
+      let lastX: number | null = null;
+      let lastY: number | null = null;
+
+      const setActiveCard = (card: HTMLElement) => {
+        if (card === activeCard) return;
+        activeCard.removeAttribute("data-active");
+        card.setAttribute("data-active", "");
+        activeCard = card;
+      };
+
+      list.addEventListener("pointermove", (event) => {
+        if (event.pointerType !== "mouse") return;
+        if (event.clientX === lastX && event.clientY === lastY) return;
+
+        lastX = event.clientX;
+        lastY = event.clientY;
+
+        const card = (event.target as HTMLElement).closest<HTMLElement>(
+          "[data-service-card]",
+        );
+        if (card) setActiveCard(card);
+      });
+
+      list.addEventListener("pointerleave", (event) => {
+        if (event.pointerType !== "mouse") return;
+
+        lastX = null;
+        lastY = null;
+        setActiveCard(defaultCard);
+      });
+    });
+  };
+
+  initServiceCards();
+  document.addEventListener("astro:page-load", initServiceCards);
+</script>
