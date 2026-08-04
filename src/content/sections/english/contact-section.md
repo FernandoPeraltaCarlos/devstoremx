@@ -14,10 +14,17 @@ form:
     enable: true
     label: "Send a Message"
   inputs:
-    - label: "Full Name"
-      placeholder: "Full Name *"
-      name: "Full Name"
+    - label: "Name"
+      placeholder: "Name *"
+      name: "Name"
       required: true
+      halfWidth: true
+      defaultValue: ""
+    - label: "Phone or WhatsApp"
+      placeholder: "Phone or WhatsApp *"
+      name: "Phone or WhatsApp"
+      required: true
+      type: "text"
       halfWidth: true
       defaultValue: ""
     - label: "Email Address"
@@ -27,71 +34,13 @@ form:
       type: "email"
       halfWidth: true
       defaultValue: ""
-    - label: "Phone Number"
-      placeholder: "Phone Number"
-      name: "Phone Number"
+    - label: "Preferred contact method"
+      placeholder: "Preferred contact method"
+      name: "Preferred contact method"
       required: false
       type: "text"
       halfWidth: true
       defaultValue: ""
-    - label: "Company"
-      placeholder: "Company"
-      name: "Company"
-      required: false
-      type: "text"
-      halfWidth: true
-      defaultValue: ""
-    - label: "Subject"
-      placeholder: "Subject *"
-      name: "Subject"
-      required: true
-      halfWidth: true
-      dropdown:
-        type: "select"
-        items:
-          - label: "Website Development"
-            value: "Website Development"
-            selected: false
-          - label: "Shopify Online Stores"
-            value: "Shopify Online Stores"
-            selected: false
-          - label: "Website Maintenance"
-            value: "Website Maintenance"
-            selected: false
-          - label: "Website Redesign"
-            value: "Website Redesign"
-            selected: false
-          - label: "Email Templates"
-            value: "Email Templates"
-            selected: false
-          - label: "Landing Pages"
-            value: "Landing Pages"
-            selected: false
-          - label: "Other"
-            value: "Other"
-            selected: false
-    - label: "Related Department"
-      placeholder: "Select Department *"
-      name: "Department Search"
-      required: true
-      halfWidth: true
-      dropdown:
-        type: "search"
-        search:
-          placeholder: "Search Departments..."
-        items:
-          - label: "Customer Support"
-            value: "Customer Support"
-            selected: false
-          - label: "Sales & Finance"
-            value: "Sales & Finance"
-            selected: false
-          - label: "Technical Assistance"
-            value: "Technical Assistance"
-            selected: false
-          - label: "Partnerships"
-            value: "Partnerships"
-            selected: false
     - label: "Message"
       tag: "textarea"
       placeholder: "Ask your question *"
@@ -117,6 +66,20 @@ form:
       halfWidth: true
       defaultValue: ""
     - label: "Referral"
+      name: "User Source"
+      required: true
+      group: "source"
+      type: "radio"
+      halfWidth: true
+      defaultValue: ""
+    - label: "LinkedIn"
+      name: "User Source"
+      required: true
+      group: "source"
+      type: "radio"
+      halfWidth: true
+      defaultValue: ""
+    - label: "Google Maps"
       name: "User Source"
       required: true
       group: "source"
