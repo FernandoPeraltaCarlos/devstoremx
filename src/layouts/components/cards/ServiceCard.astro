@@ -82,7 +82,7 @@ const href = slug ?? "#";
     image && (
       <div
         class:list={[
-          "pointer-events-none absolute right-28 z-20 hidden w-80 transform overflow-hidden rounded-xl shadow-2xl transition-all duration-600 lg:block xl:right-41 xl:h-115.75 xl:w-97.5",
+          "pointer-events-none absolute right-28 z-20 hidden aspect-[4/5] w-80 transform overflow-hidden rounded-xl shadow-2xl transition-all duration-600 lg:block xl:right-41 xl:w-97.5",
           {
             "top-8.5": imagePosition === "top" || !imagePosition,
             "bottom-8.5": imagePosition === "bottom",
@@ -95,9 +95,10 @@ const href = slug ?? "#";
         <OptimizedImage
           src={image}
           alt={title}
-          width={350}
-          height={437}
-          class="h-full w-full object-cover"
+          width={900}
+          height={1125}
+          quality={100}
+          class="h-full w-full object-contain"
         />
       </div>
     )
