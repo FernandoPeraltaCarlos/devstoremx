@@ -199,10 +199,10 @@ footer {
   }
 
   &.badge-accent {
-    @apply bg-blue-600 text-white;
+    @apply bg-primary text-white;
 
     &.badge-dot {
-      @apply bg-blue-600;
+      @apply bg-primary;
     }
   }
 
