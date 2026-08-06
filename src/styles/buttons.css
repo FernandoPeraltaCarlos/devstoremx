@@ -81,7 +81,7 @@
   }
   &:hover {
     &.btn-outline {
-      color: var(--color-white) !important;
+      color: var(--color-text-inverse) !important;
     }
   }
 }

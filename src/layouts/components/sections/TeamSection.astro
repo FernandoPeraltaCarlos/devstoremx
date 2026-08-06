@@ -1,0 +1,117 @@
+---
+import type { z } from "astro/zod";
+import type { Section } from "@/types";
+import { getEntryCTM } from "@/lib/contentParser.astro";
+import overrideObjects from "@/lib/utils/overrideObjects";
+import type { teamSectionSchema } from "@/sections.schema";
+import OptimizedImage from "@/components/utilities/OptimizedImage.astro";
+import Button from "@/components/Button.astro";
+import SectionBadge from "../global/SectionBadge.astro";
+import SectionTitle from "../global/SectionTitle.astro";
+
+type SectionType = Section & NonNullable<z.infer<typeof teamSectionSchema>>;
+type Props = { content?: SectionType };
+
+let defaultContent = (
+  await getEntryCTM("sections", "team-section", Astro.currentLocale)
+)?.data as SectionType;
+
+let actualContent = overrideObjects(
+  { ...defaultContent },
+  Astro.props.content,
+) as SectionType;
+
+const { enable = true, badge, title, list } = actualContent ?? {};
+
+if (!enable) return;
+
+const getInitials = (name: string) =>
+  name
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0]?.toUpperCase() ?? "")
+    .join("");
+
+const linkedinLabel = "LinkedIn";
+const portfolioLabel =
+  Astro.currentLocale === "en" ? "Portfolio" : "Portafolio";
+---
+
+<section
+  id="equipo"
+  class="section-spacing-vertical relative overflow-hidden scroll-mt-28">
+  <div class="container">
+    <div class="mb-10 flex flex-col gap-1 xl:mb-14 xl:gap-4">
+      {badge && <SectionBadge title={badge} />}
+      {title && <SectionTitle title={title} />}
+    </div>
+
+    {
+      list && list.length > 0 && (
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5 xl:gap-7.5">
+          {list.map((member, i) => (
+            <article
+              class="bg-theme-light flex flex-col gap-5 rounded-lg p-5 xl:gap-6 xl:px-6 xl:py-7"
+              data-aos="fade-up"
+              data-aos-delay={i * 100}
+              data-aos-duration="600">
+              <div class="bg-border-light relative aspect-square w-full overflow-hidden rounded-md">
+                {member.image ? (
+                  <OptimizedImage
+                    src={member.image}
+                    alt={member.name}
+                    width={400}
+                    height={400}
+                    class="size-full object-cover"
+                  />
+                ) : (
+                  <div
+                    class="text-text-default/40 flex size-full items-center justify-center text-3xl font-semibold tracking-wide xl:text-4xl"
+                    aria-hidden="true">
+                    {getInitials(member.name)}
+                  </div>
+                )}
+              </div>
+
+              <div class="flex flex-col gap-1">
+                <h3 class="text-base font-semibold lg:text-lg">{member.name}</h3>
+                <p class="text-text-default/70 text-sm xl:text-base">
+                  {member.role}
+                </p>
+              </div>
+
+              <div class="mt-auto flex flex-wrap gap-2.5">
+                {member.linkedin && (
+                  <Button
+                    tag="a"
+                    variant="fill"
+                    url={member.linkedin}
+                    label={linkedinLabel}
+                    class="px-4! py-2.5! text-sm"
+                  />
+                )}
+                {member.portfolio && (
+                  <Button
+                    tag="a"
+                    variant="outline"
+                    hoverEffect="creative-fill"
+                    url={member.portfolio}
+                    label={portfolioLabel}
+                    class="team-portfolio-btn border-text-default/35 bg-transparent px-4! py-2.5! text-sm shadow-none"
+                  />
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  #equipo :global(.team-portfolio-btn.creative-hover-anim.btn-outline .hover-bg) {
+    background: var(--color-theme-dark);
+  }
+</style>

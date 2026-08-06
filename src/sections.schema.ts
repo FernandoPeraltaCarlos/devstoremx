@@ -422,14 +422,16 @@ export const officeLocationsSchema = z.object({
 
 export const teamSectionSchema = z
   .object({
-    enable: z.boolean().default(false).optional(),
+    enable: z.boolean().default(true).optional(),
     badge: z.string().optional(),
     title: z.string().optional(),
     list: z.array(
       z.object({
         name: z.string(),
-        image: z.string(),
+        image: z.string().optional(),
         role: z.string(),
+        linkedin: z.string().optional(),
+        portfolio: z.string().optional(),
       }),
     ),
   })
