@@ -82,7 +82,7 @@ const portfolioLabel =
               </div>
 
               <div class="mt-auto flex flex-wrap gap-2.5">
-                {member.linkedin && (
+                {member.linkedin && member.linkedin !== "#" && (
                   <Button
                     tag="a"
                     variant="fill"
@@ -91,7 +91,7 @@ const portfolioLabel =
                     class="px-4! py-2.5! text-sm"
                   />
                 )}
-                {member.portfolio && (
+                {member.portfolio && member.portfolio !== "#" && (
                   <Button
                     tag="a"
                     variant="outline"
