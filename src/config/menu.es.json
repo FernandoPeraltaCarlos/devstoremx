@@ -160,8 +160,8 @@
         },
         {
           "enable": true,
-          "name": "Tiendas en línea con Shopify",
-          "url": "/services/tiendas-en-linea-shopify/",
+          "name": "Ecommerce",
+          "url": "/services/ecommerce/",
           "weight": 1
         },
         {

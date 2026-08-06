@@ -1,6 +1,6 @@
 ---
 enable: true
-title: "Websites, Online Stores and Maintenance"
+title: "Websites, Ecommerce and Maintenance"
 breadcrumbTitle: "Services"
-metaDescription: "Websites, Shopify online stores, maintenance, redesign, email templates and landing pages with a clear scope and cost."
+metaDescription: "Websites, Shopify ecommerce, maintenance, redesign, email templates and landing pages with a clear scope and cost."
 ---

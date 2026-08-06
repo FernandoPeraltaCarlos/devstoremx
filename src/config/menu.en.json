@@ -160,8 +160,8 @@
         },
         {
           "enable": true,
-          "name": "Shopify Online Stores",
-          "url": "/services/shopify-online-stores/",
+          "name": "Ecommerce",
+          "url": "/services/ecommerce/",
           "weight": 1
         },
         {
