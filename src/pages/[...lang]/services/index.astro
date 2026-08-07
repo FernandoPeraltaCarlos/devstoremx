@@ -18,6 +18,17 @@ const services = await getEntryCTM("services", "-index", Astro.currentLocale);
     title={services.data.title}
     breadcrumbTitle={services?.data?.breadcrumbTitle}
   />
+  {
+    services.data.description && (
+      <section class="pt-12 md:pt-16">
+        <div class="container max-w-4xl text-center">
+          <p class="text-text-default/80 text-lg leading-relaxed md:text-xl">
+            {services.data.description}
+          </p>
+        </div>
+      </section>
+    )
+  }
   <ServiceListSection />
   <ContactSection  />
 </Base>

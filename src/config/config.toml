@@ -1,13 +1,14 @@
 # Site Configuration
 [site]
-  title            = "Devstoremx"
-  description      = "devstoremx es un proyecto Astro moderno y de alto rendimiento, construido con Tailwind CSS para una experiencia limpia, profesional y totalmente adaptable."
+  title            = "DevStoreMX"
+  description      = "DevStoreMX es una agencia de desarrollo web y Shopify que crea, rediseña y mantiene sitios web y tiendas en línea para empresas de México y mercados internacionales."
+  descriptionEn    = "DevStoreMX is a web development and Shopify agency that builds, redesigns and maintains websites and online stores for companies across the Americas and Europe."
   tagline          = "Desarrollo web y consultoría de TI a la medida"
   taglineSeparator = "" # default is " - " 
-  baseUrl          = "https://devstoremx.vercel.app" # Base URL for the site and used in OpenGraph meta tags.
+  baseUrl          = "https://devstoremx.xyz" # Base URL for the site and used in OpenGraph meta tags.
   logo             = "/media/devstoremx.svg" # Path to the site's logo
   logoWhite        = "/media/devstoremx.svg" # Path to the site's alternate logo
-  logoText         = "devstoremx" # Text displayed next to the logo
+  logoText         = "DevStoreMX" # Text displayed next to the logo
   logoWidth        = "28px" # Width of the logo (source svg ratio is 256 x 309.1)
   logoHeight       = "34px" # Height of the logo
 
@@ -19,9 +20,9 @@
 # Specific SEO configurations that complement the general site settings.
 # -----------------------------------------------------------------------------------------------------------------------------------
 [seo]
-  author   = "Fernando Peralta"
-  keywords = ["devstoremx", "astro", "tailwind css"] # SEO keywords
-  robots   = "index, follow" # Instructs search engines on how to crawl and index the pages.
+  author   = "DevStoreMX"
+  keywords = ["desarrollo web", "Shopify", "mantenimiento web", "DevStoreMX"]
+  robots   = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" # Instructs search engines on how to crawl and index the pages.
 
   [seo.robotsTxt]
     enable   = true # Enables or disables robots.txt file generation on site build
@@ -36,9 +37,19 @@
 # Contact Information
 # -----------------------------------------------------------------------------------------------------------------------------------
 [contact]
-  location = "Germany — 785 15h Street, Office 478 Berlin, De 81566"
-  phone    = "+1 840 841 25 69"
-  email    = "fernando_peraltac@hotmail.com"
+  location = "Agencia remota"
+  phone    = ""
+  email    = "hola@devstoremx.xyz"
+
+[organization]
+  name            = "DevStoreMX"
+  logo            = "/media/icon-512.png"
+  founder         = "Fernando Peralta"
+  founderLinkedin = "https://www.linkedin.com/in/fernandodperaltac/"
+  foundingDate    = "2023"
+  email           = "hola@devstoremx.xyz"
+  linkedin        = "https://www.linkedin.com/company/devstoremx/"
+  areaServed      = ["México", "Latinoamérica", "Estados Unidos", "Canadá", "Europa"]
 
 # Different theme settings
 # -----------------------------------------------------------------------------------------------------------------------------------
@@ -57,7 +68,7 @@
 
   # documentation - https://formspree.io/ | https://formsubmit.co/ | https://docs.netlify.com/forms/setup/
   # Form action URL for the contact form (For more settings related to form see "src/content/sections/contact-section.md")
-  contactFormAction = "https://formsubmit.co/fernando_peraltac@hotmail.com" # https://formspree.io/f/your_form_id | https://formsubmit.co/your_form_submission_receive_email | "/"
+  contactFormAction = "https://formsubmit.co/hola@devstoremx.xyz" # https://formspree.io/f/your_form_id | https://formsubmit.co/your_form_submission_receive_email | "/"
 
   # formspree | formsubmit.co | netlify (default is formsubmit.co) 
   contactFormProvider = "formsubmit.co"
@@ -67,7 +78,7 @@
   # Spanish (es) is the default language; English (en) is served under /en/.
   [settings.copyright]
     enable = true
-    text   = "Copyright © 2026 Fernando Peralta. Todos los derechos reservados." # Check src/i18n/*.json for the current localized value.
+    text   = "Copyright © 2026 DevStoreMX. Todos los derechos reservados." # Check src/i18n/*.json for the current localized value.
 
   # Mailchimp Subscription Form located in footer
   [settings.subscription]
@@ -80,9 +91,10 @@
   [settings.multilingual]
     # Set `enable` to `true` for enabling the multilingual feature or `false` for disabling it.
     # Run `pnpm remove-multilingual` for removing multilingual content files after disabling the feature.
-    enable               = true
-    defaultLanguage      = "es"
-    disableLanguages     = [] # All languages registered in src/config/language.json are enabled.
+    enable = true
+    defaultLanguage = "es"
+    disableLanguages = [
+    ] # All languages registered in src/config/language.json are enabled.
     showDefaultLangInUrl = false # Show default language in URL (eg: https://example.com/es/)
 
   # Navigation Button In Header
@@ -108,7 +120,7 @@
 # Specific OpenGraph settings, using values from the [site] section where possible.
 # -----------------------------------------------------------------------------------------------------------------------------------
 [opengraph]
-  image       = "" # Image used in OpenGraph previews
+  image       = "/media/devstore_mx.png" # Image used in OpenGraph previews
   ogLocale    = "es_MX" # Locale setting for OpenGraph
   ogType      = "website" # Type of content for OpenGraph protocol
   twitter     = "" # Twitter handle for Twitter Card meta tags

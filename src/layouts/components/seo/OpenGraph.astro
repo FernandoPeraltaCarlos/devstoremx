@@ -2,6 +2,7 @@
 import { absoluteUrl } from "@/lib/utils/absoluteUrl";
 import config from ".astro/config.generated.json";
 import { plainify, removeWhitespace } from "@/lib/utils/textConverter";
+import { normalizeLocaleCode } from "@/lib/utils/i18nUtils";
 
 // Destructure optional props with default fallback to config values
 let {
@@ -9,16 +10,23 @@ let {
   metaTitle,
   description,
   metaDescription,
-  disableTagline,
   image = config.opengraph.image,
-  twitter = config.opengraph.twitter,
   twitterCard = config.opengraph.twitterCard,
   ogType = config.opengraph.ogType,
-  ogLocale = config.opengraph.ogLocale,
+  imageAlt,
 } = Astro.props;
+const currentLocale = normalizeLocaleCode(Astro.currentLocale);
+const defaultDescription =
+  currentLocale === "en" ? config.site.descriptionEn : config.site.description;
 
 // Get the possible value for title and description and remove any line breaks and extra spaces
-title = plainify(metaTitle ? metaTitle : title ? title : config.site.title);
+title = plainify(
+  metaTitle
+    ? metaTitle
+    : title
+      ? `${title} | ${config.site.title}`
+      : config.site.title,
+);
 title = removeWhitespace(title);
 
 description = plainify(
@@ -26,28 +34,49 @@ description = plainify(
     ? metaDescription
     : description
       ? description
-      : config.site.description,
+      : defaultDescription,
 );
 
 description = removeWhitespace(description);
 
 // Generate the full URL for the current page
-const pageUrl = new URL(Astro.url.pathname, Astro.site);
-
-// Add tagline & separator to title
-if (!disableTagline) {
-  title =
-    title +
-    (config.site.tagline &&
-      (config.site.taglineSeparator || " - ") + config.site.tagline);
-}
+const pageUrl = new URL(Astro.url.pathname, config.site.baseUrl);
+const ogLocale = currentLocale === "en" ? "en_US" : "es_MX";
+const alternateLocale = currentLocale === "en" ? "es_MX" : "en_US";
+const imageUrl = image ? absoluteUrl(image, Astro) : undefined;
+const resolvedImageAlt = imageAlt || title;
+const isDefaultImage = image === config.opengraph.image;
+const imageExtension = imageUrl
+  ?.split(".")
+  .pop()
+  ?.split(/[?#]/)[0]
+  ?.toLowerCase();
+const imageType =
+  imageExtension === "jpg" || imageExtension === "jpeg"
+    ? "image/jpeg"
+    : imageExtension === "webp"
+      ? "image/webp"
+      : "image/png";
 ---
 
 <!-------------------------
     Standard Open Graph
 --------------------------->{
-  image && <meta property="og:image" content={absoluteUrl(image, Astro)} />
+  imageUrl && <meta property="og:image" content={imageUrl} />
 }
+{imageUrl && <meta property="og:image:secure_url" content={imageUrl} />}
+{imageUrl && <meta property="og:image:type" content={imageType} />}
+{
+  imageUrl && isDefaultImage && (
+    <meta property="og:image:width" content="1200" />
+  )
+}
+{
+  imageUrl && isDefaultImage && (
+    <meta property="og:image:height" content="630" />
+  )
+}
+{imageUrl && <meta property="og:image:alt" content={resolvedImageAlt} />}
 {title && <meta property="og:title" content={removeWhitespace(title)} />}
 {
   config.site.title && (
@@ -64,12 +93,12 @@ if (!disableTagline) {
 }
 {ogType && <meta property="og:type" content={ogType} />}
 {ogLocale && <meta property="og:locale" content={ogLocale} />}
+<meta property="og:locale:alternate" content={alternateLocale} />
 {pageUrl && <meta property="og:url" content={pageUrl} />}
 
 <!------------------------
     Twitter Open Graph
 -------------------------->
-{twitter && <meta name="twitter:creator" content={removeWhitespace(twitter)} />}
 {title && <meta name="twitter:title" content={removeWhitespace(title)} />}
 {
   description && (
@@ -77,4 +106,5 @@ if (!disableTagline) {
   )
 }
 {twitterCard && <meta name="twitter:card" content={twitterCard} />}
-{image && <meta name="twitter:image" content={absoluteUrl(image, Astro)} />}
+{imageUrl && <meta name="twitter:image" content={imageUrl} />}
+{imageUrl && <meta name="twitter:image:alt" content={resolvedImageAlt} />}

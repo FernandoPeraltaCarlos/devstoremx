@@ -18,6 +18,7 @@ main = filteredEnabled(main);
 main = sortByWeight(main) as NavigationLink[];
 
 const { stickyHeader, navigationButton } = config.settings;
+const { showLanguageSwitcher = true } = Astro.props;
 ---
 
 <header
@@ -34,11 +35,11 @@ const { stickyHeader, navigationButton } = config.settings;
 
       <ul
         id="nav-menu"
-        class="navbar hs-dropdown-menu lg:flex! lg:hs-dropdown-open:flex border-border-dark/15 flex-1 justify-center border-x max-lg:absolute max-lg:transform-none! lg:transform-none!">
+        class="navbar hs-dropdown-menu lg:hs-dropdown-open:flex border-border-dark/15 flex-1 justify-center border-x max-lg:absolute max-lg:transform-none! lg:flex! lg:transform-none!">
         {main.map((menu) => <NavMenuItem menu={menu} />)}
 
         {
-          config.settings.multilingual.enable && (
+          config.settings.multilingual.enable && showLanguageSwitcher && (
             <li class="max-lg:px-2 max-lg:py-2 lg:hidden" role="menuitem">
               <LanguageSwitcher />
             </li>
@@ -66,9 +67,12 @@ const { stickyHeader, navigationButton } = config.settings;
       </ul>
 
       {
-        (navigationButton.enable || config.settings.multilingual.enable) && (
+        (navigationButton.enable ||
+          (config.settings.multilingual.enable && showLanguageSwitcher)) && (
           <div class="hidden gap-3.5 ps-8 max-lg:ms-auto max-lg:me-4 lg:flex lg:items-center lg:py-4 xl:ps-9.75">
-            {config.settings.multilingual.enable && <LanguageSwitcher />}
+            {config.settings.multilingual.enable && showLanguageSwitcher && (
+              <LanguageSwitcher />
+            )}
             {navigationButton.enable && (
               <Button
                 variant="fill"
@@ -100,7 +104,9 @@ const { stickyHeader, navigationButton } = config.settings;
       }
 
       function updateMegaMenuOffset(): void {
-        const header = document.querySelector("header.header") as HTMLElement | null;
+        const header = document.querySelector(
+          "header.header",
+        ) as HTMLElement | null;
         if (!header) return;
 
         const headerBottom = Math.round(header.getBoundingClientRect().bottom);

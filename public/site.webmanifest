@@ -1,0 +1,21 @@
+{
+  "name": "DevStoreMX",
+  "short_name": "DevStoreMX",
+  "description": "Agencia de desarrollo web y Shopify.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#5271ff",
+  "icons": [
+    {
+      "src": "/media/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/media/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

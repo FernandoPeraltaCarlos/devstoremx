@@ -18,6 +18,8 @@ let { copyright, footerDescription } = config.settings;
 
 footerDescription = footerDescription || t("footerBlock.description");
 const copyrightText = copyright.text;
+const remoteLabel =
+  Astro.currentLocale === "en" ? "Remote agency" : "Agencia remota";
 ---
 
 <footer>
@@ -47,24 +49,26 @@ const copyrightText = copyright.text;
           </h3>
           <div class="text-text-inverse/50 flex flex-col gap-0 md:gap-4">
             <p class="leading-relaxed lg:max-w-50">
-              {config.contact.location}
+              {remoteLabel}
             </p>
-            <div
-              class="hover:text-text-inverse! text-text-inverse/50! mt-4 transition-colors"
-              set:html={markdownify(config.contact.email)}
-            />
-            <div class="mt-4 text-2xl font-semibold">
-              <Button
-                tag="a"
-                variant="text"
-                url={getLocaleUrlCTM(
-                  `tel:${config.contact.phone?.replace(/\s/g, "")}`,
-                  Astro.currentLocale,
-                )}
-                label={config.contact.phone}
-                class="text-text-inverse hover:text-text-inverse"
-              />
-            </div>
+            <a
+              class="hover:text-text-inverse text-text-inverse/50 mt-4 transition-colors"
+              href={`mailto:${config.contact.email}`}>
+              {config.contact.email}
+            </a>
+            {
+              config.contact.phone && (
+                <div class="mt-4 text-2xl font-semibold">
+                  <Button
+                    tag="a"
+                    variant="text"
+                    url={`tel:${config.contact.phone.replace(/\s/g, "")}`}
+                    label={config.contact.phone}
+                    class="text-text-inverse hover:text-text-inverse"
+                  />
+                </div>
+              )
+            }
           </div>
         </div>
 

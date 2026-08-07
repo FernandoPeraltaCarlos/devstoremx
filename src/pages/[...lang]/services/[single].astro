@@ -9,6 +9,7 @@ import OptimizedImage from "@/components/utilities/OptimizedImage.astro";
 import ContactSection from "@/components/sections/ContactSection.astro";
 import PageHeader from "@/components/widgets/PageHeader.astro";
 import { shortcodes } from "@/lib/shortcodes";
+import FaqList from "@/components/widgets/FaqList.astro";
 
 export async function getStaticPaths() {
   const paths = await Promise.all(
@@ -51,16 +52,28 @@ const { service } = Astro.props;
 const { Content } = await render(service);
 ---
 
-<Base {...service.data}>
+<Base {...service.data} pageType="service">
   <PageHeader title={service.data.title} breadcrumbTitle={service.data.title} />
 
   <section>
     <div class="relative container">
+      {
+        service.data.description && (
+          <p class="text-text-default/80 mx-auto mb-10 max-w-4xl text-lg leading-relaxed md:text-xl">
+            {service.data.description}
+          </p>
+        )
+      }
       <div class="prose-styles content has-video-modal">
         <Content components={{ ...shortcodes, img: OptimizedImage }} />
       </div>
     </div>
   </section>
+
+  <FaqList
+    items={service.data.faqItems}
+    title={Astro.currentLocale === "en" ? "Questions about this service" : "Preguntas sobre este servicio"}
+  />
 
   <ContactSection />
 </Base>

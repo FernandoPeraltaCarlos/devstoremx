@@ -1,61 +1,43 @@
 ---
-import { absoluteUrl } from "@/lib/utils/absoluteUrl";
 import JsonLdGenerator from "@/lib/utils/JsonLdGenerator";
-import { supportedLanguages } from "@/lib/utils/i18nUtils";
+import { getLocaleUrlCTM, normalizeLocaleCode } from "@/lib/utils/i18nUtils";
+import { getLocalizedPathnameCTM } from "@/lib/utils/localizedRouteResolver";
+import { plainify } from "@/lib/utils/textConverter";
 import config from ".astro/config.generated.json";
 
 const { content } = Astro.props;
-
-let {
-  title = config.site.title,
-  metaTitle = title,
-  description = config.site.description,
-  metaDescription = description,
-  image = config.opengraph.image,
-  taglineSeparator = " - ",
-  disableTagline,
-  canonical,
-  lang,
-  author = config.seo.author,
-  structuredData,
-} = content;
-
-title =
-  !disableTagline && metaTitle ? metaTitle : title ? title : config.site.title;
-
-// Add tagline & separator to title
-// prettier-ignore
-const alternateLangs =  config.settings.multilingual.enable ? supportedLanguages : []
-title += config.site.tagline ? taglineSeparator + config.site.tagline : "";
-description = metaDescription ? metaDescription : description;
-canonical = canonical ? canonical : Astro.url.href;
-lang = Astro.currentLocale;
-image = absoluteUrl(image, Astro);
-
-// Generate JSON-LD dynamically
-const jsonLdData = JsonLdGenerator(
-  {
-    ...content,
-    ...structuredData,
-    title,
-    description,
-    image,
-    canonical,
-    config,
-    author,
-    lang,
-    alternateLangs,
-  },
-  Astro,
+const currentLocale = normalizeLocaleCode(Astro.currentLocale);
+const defaultDescription =
+  currentLocale === "en" ? config.site.descriptionEn : config.site.description;
+const localizedPath = await getLocalizedPathnameCTM(
+  Astro.url.pathname,
+  currentLocale,
+  currentLocale,
 );
+const canonicalPath = content.canonical
+  ? getLocaleUrlCTM(content.canonical, currentLocale)
+  : getLocaleUrlCTM(localizedPath, currentLocale);
+const canonical = new URL(canonicalPath, config.site.baseUrl).href;
+const image = content.image || config.opengraph.image;
+
+const jsonLdData = JsonLdGenerator({
+  canonical,
+  title: plainify(content.title || config.site.title),
+  description: plainify(
+    content.metaDescription || content.description || defaultDescription,
+  ),
+  image: image ? new URL(image, config.site.baseUrl).href : undefined,
+  lang: currentLocale,
+  pageType: content.pageType || "webpage",
+  faqItems: content.faqItems || [],
+  homepage: Boolean(content.homepage),
+  pathname: canonicalPath,
+  config,
+});
 ---
 
-<!-- JSON-LD -->{
-  content ? (
-    <script
-      type="application/ld+json"
-      is:inline
-      set:html={JSON.stringify(jsonLdData, null, 2)}
-    />
-  ) : null
-}
+<script
+  type="application/ld+json"
+  is:inline
+  set:html={JSON.stringify(jsonLdData)}
+/>

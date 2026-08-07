@@ -137,7 +137,7 @@ function getSlug(filePathPosix, metadata) {
   // fallback if structure isn't src/content/<section>/...
   const base = section ? section : "";
 
-  const rawSlug = metadata?.originalSlug || fileName;
+  const rawSlug = metadata?.customSlug || metadata?.originalSlug || fileName;
   if (fileName === "-index") return base || "";
 
   // join with posix so URLs are correct on Windows too
@@ -215,7 +215,7 @@ async function processSitemaps() {
 
       // If draft/excluded, we mark it for removal
       if (meta?.draft || meta?.excludeFromSitemap) {
-        excludedUrlSet.add(meta.customSlug || norm);
+        excludedUrlSet.add(norm.replace(/\/+$/, "") || "/");
       }
     }
 
@@ -240,14 +240,13 @@ async function processSitemaps() {
         if (pathname.includes("-index")) return false;
 
         // Exclude folders
-        if (EXCLUDE_FOLDERS.some((folder) => pathname.includes(folder)))
+        const pathSegments = pathname.split("/").filter(Boolean);
+        if (EXCLUDE_FOLDERS.some((folder) => pathSegments.includes(folder)))
           return false;
 
         // Remove draft/excluded URLs
-        // Match on either customSlug or generated url path
-        for (const bad of excludedUrlSet) {
-          if (bad && pathname.includes(bad)) return false;
-        }
+        const normalizedPathname = pathname.replace(/\/+$/, "") || "/";
+        if (excludedUrlSet.has(normalizedPathname)) return false;
 
         return true;
       });

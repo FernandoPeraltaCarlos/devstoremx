@@ -1,0 +1,21 @@
+# DevStoreMX
+
+> DevStoreMX is a remote web development and Shopify agency founded in 2023 by Fernando Peralta. It serves organizations in Spanish and English across Mexico, Latin America, the United States, Canada and Europe.
+
+DevStoreMX builds, redesigns and maintains websites, Shopify stores, landing pages and email templates. Project scope, cost, schedule, review stages and account ownership are agreed before work begins. The official website is https://devstoremx.xyz/ and the official company profile is https://www.linkedin.com/company/devstoremx/.
+
+## Spanish
+
+- [Inicio](https://devstoremx.xyz/): Agency overview, process, services and team.
+- [Servicios](https://devstoremx.xyz/services/): Web development, Shopify, maintenance, redesign, email templates and landing pages.
+- [Nosotros](https://devstoremx.xyz/about/): Organization, founder, team, experience and service area.
+- [Preguntas frecuentes](https://devstoremx.xyz/faq/): Scope, pricing, timelines, ownership and support.
+- [Contacto](https://devstoremx.xyz/contact/): Project enquiry information and contact form.
+
+## English
+
+- [Home](https://devstoremx.xyz/en/): Agency overview, process, services and team.
+- [Services](https://devstoremx.xyz/en/services/): Web development, Shopify, maintenance, redesign, email templates and landing pages.
+- [About](https://devstoremx.xyz/en/about/): Organization, founder, team, experience and service area.
+- [Frequently asked questions](https://devstoremx.xyz/en/faq/): Scope, pricing, timelines, ownership and support.
+- [Contact](https://devstoremx.xyz/en/contact/): Project enquiry information and contact form.

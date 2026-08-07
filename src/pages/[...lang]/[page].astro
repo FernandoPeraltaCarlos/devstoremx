@@ -1,0 +1,69 @@
+---
+import Base from "@/layouts/Base.astro";
+import ContactSection from "@/components/sections/ContactSection.astro";
+import TeamSection from "@/components/sections/TeamSection.astro";
+import FaqList from "@/components/widgets/FaqList.astro";
+import PageHeader from "@/components/widgets/PageHeader.astro";
+import OptimizedImage from "@/components/utilities/OptimizedImage.astro";
+import { getCollectionCTM } from "@/lib/contentParser.astro";
+import { getEntryRouteParam, supportedLanguages } from "@/lib/utils/i18nUtils";
+import { shortcodes } from "@/lib/shortcodes";
+import config from ".astro/config.generated.json";
+import { render } from "astro:content";
+
+export async function getStaticPaths() {
+  const paths = await Promise.all(
+    supportedLanguages.map(async (language) => {
+      const entries = await getCollectionCTM("pages", language.languageCode);
+      const { defaultLanguage, showDefaultLangInUrl } =
+        config.settings.multilingual;
+
+      return entries.map((entry) => ({
+        params: {
+          lang:
+            language.languageCode === defaultLanguage && !showDefaultLangInUrl
+              ? undefined
+              : language.languageCode,
+          page: getEntryRouteParam(entry),
+        },
+        props: { entry },
+      }));
+    }),
+  );
+
+  return paths.flat();
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const faqTitle =
+  Astro.currentLocale === "en"
+    ? "Frequently asked questions"
+    : "Preguntas frecuentes";
+---
+
+<Base {...entry.data}>
+  <PageHeader
+    title={entry.data.title}
+    breadcrumbTitle={entry.data.breadcrumbTitle || entry.data.title}
+  />
+
+  <section class="section-spacing-vertical">
+    <div class="container max-w-4xl">
+      {
+        entry.data.description && (
+          <p class="text-text-default/80 mb-8 text-lg leading-relaxed md:text-xl">
+            {entry.data.description}
+          </p>
+        )
+      }
+      <div class="prose-styles content">
+        <Content components={{ ...shortcodes, img: OptimizedImage }} />
+      </div>
+    </div>
+  </section>
+
+  <FaqList items={entry.data.faqItems} title={faqTitle} />
+  {entry.data.showTeam && <TeamSection />}
+  {entry.data.showContact && <ContactSection />}
+</Base>

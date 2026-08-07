@@ -16,8 +16,23 @@ const preloadImages = (Astro.props.preloadImages as string[]) || [];
 -------------->
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/media/devstoremx.svg" />
-  <meta http-equiv="Content-Language" content={Astro.currentLocale} />
-  <meta name="theme" content="devstoremx" />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="48x48"
+    href="/media/favicon-48.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/media/apple-touch-icon.png"
+  />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta
+    http-equiv="Content-Language"
+    content={Astro.currentLocale ||
+      config.settings.multilingual.defaultLanguage}
+  />
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1, maximum-scale=5"
@@ -44,12 +59,16 @@ const preloadImages = (Astro.props.preloadImages as string[]) || [];
       <Fragment set:html={config.head?.content} />
     )
   }
-  <OpenGraph {...Astro.props} />
-  <JsonLD
-    content={{
-      ...Astro.props,
-    }}
-  />
+  {Astro.props.status !== 404 && <OpenGraph {...Astro.props} />}
+  {
+    Astro.props.status !== 404 && (
+      <JsonLD
+        content={{
+          ...Astro.props,
+        }}
+      />
+    )
+  }
   {preloadImages.map((src) => <link rel="preload" as="image" href={src} />)}
   <noscript>
     <style>

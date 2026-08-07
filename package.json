@@ -12,9 +12,10 @@
   ],
   "scripts": {
     "dev": "pnpm run toml:watch -- --watch & astro dev",
-    "build": "pnpm run toml:watch && astro build && pnpm run remove-draft-from-sitemap",
+    "build": "pnpm run toml:watch && astro build && pnpm run remove-draft-from-sitemap && pnpm run check-seo",
     "preview": "astro build && pnpm run remove-draft-from-sitemap && astro preview",
     "astro-check": "astro check",
+    "check-seo": "node ./scripts/check-seo.mjs",
     "toml:watch": "node scripts/toml-watcher.mjs",
     "generate-favicons": "node ./scripts/generate-favicons.mjs",
     "remove-multilingual": "node ./scripts/remove-multilingual.mjs",

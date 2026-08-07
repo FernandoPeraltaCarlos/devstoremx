@@ -9,6 +9,7 @@ import GlobalScripts from "./components/widgets/GlobalScripts.astro";
 import config from ".astro/config.generated.json";
 
 type Props = JSONLDProps & {
+  class?: string;
   className?: string;
   fitToScreen?: boolean;
   draft?: boolean;
@@ -21,6 +22,9 @@ type Props = JSONLDProps & {
   status?: number;
   keywords?: string[]; // Array of strings
   disableTagline?: boolean;
+  pageType?: "webpage" | "about" | "contact" | "faq" | "service" | "collection";
+  faqItems?: Array<{ question: string; answer: string }>;
+  homepage?: boolean;
   structuredData?: Props;
   preloadImages?: string[];
 };
@@ -36,7 +40,7 @@ let { structuredData } = Astro.props;
     "en"}>
   <Head {...Astro.props} structuredData={structuredData} />
   <body>
-    <Header />
+    <Header showLanguageSwitcher={Astro.props.status !== 404} />
     <main class:list={["has-section-gap", Astro.props.class]}>
       <slot />
     </main>

@@ -1,152 +1,27 @@
 {
   "main": [
-    {
-      "enable": true,
-      "name": "Home",
-      "weight": 0,
-      "url": "/"
-    },
-    {
-      "name": "Pages",
-      "enable": true,
-      "weight": 2,
-      "hasChildren": true,
-      "children": [
-        {
-          "enable": true,
-          "name": "Projects",
-          "weight": 0,
-          "hasChildren": true,
-          "children": [
-            {
-              "enable": true,
-              "name": "Project",
-              "url": "/case-studies/",
-              "weight": 0
-            },
-            {
-              "enable": true,
-              "name": "Project Single",
-              "url": "/case-studies/custom-slug-case-studies-1/",
-              "weight": 0
-            }
-          ]
-        },
-        {
-          "enable": true,
-          "name": "Blog",
-          "weight": 0,
-          "hasChildren": true,
-          "children": [
-            {
-              "enable": true,
-              "name": "Blog",
-              "url": "/blog/",
-              "weight": 0
-            },
-            {
-              "enable": true,
-              "name": "Blog Single",
-              "url": "/blog/custom-slug-post-1/",
-              "weight": 0
-            }
-          ]
-        },
-        {
-          "enable": true,
-          "name": "Services",
-          "weight": 0,
-          "hasChildren": true,
-          "children": [
-            {
-              "enable": true,
-              "name": "Services",
-              "url": "/services/",
-              "weight": 0
-            },
-            {
-              "enable": true,
-              "name": "Services Single",
-              "url": "/services/website-development/",
-              "weight": 0
-            }
-          ]
-        },
-        {
-          "enable": true,
-          "name": "About",
-          "url": "/about/",
-          "weight": 0
-        },
-        {
-          "enable": true,
-          "name": "Team Member",
-          "url": "/team",
-          "weight": 0
-        },
-        {
-          "enable": true,
-          "name": "FAQ",
-          "url": "/faq/",
-          "weight": 0
-        }
-      ]
-    }
+    { "enable": true, "name": "Home", "weight": 0, "url": "/" },
+    { "enable": true, "name": "Services", "weight": 1, "url": "/services/" },
+    { "enable": true, "name": "About", "weight": 2, "url": "/about/" },
+    { "enable": true, "name": "FAQ", "weight": 3, "url": "/faq/" },
+    { "enable": true, "name": "Contact", "weight": 4, "url": "/contact/" }
   ],
-  "topbar": [
-    {
-      "enable": true,
-      "name": "Help",
-      "url": "/",
-      "weight": 0
-    },
-    {
-      "enable": true,
-      "name": "Support",
-      "url": "/",
-      "weight": 0
-    },
-    {
-      "enable": true,
-      "name": "Contact",
-      "url": "/",
-      "weight": 0
-    }
-  ],
+  "topbar": [],
   "footer": [
     {
       "label": "Links",
       "list": [
-        {
-          "enable": true,
-          "name": "Home",
-          "url": "/",
-          "weight": 0
-        },
-        {
-          "enable": true,
-          "name": "About Us",
-          "url": "/about/",
-          "weight": 0
-        },
+        { "enable": true, "name": "Home", "url": "/", "weight": 0 },
+        { "enable": true, "name": "About", "url": "/about/", "weight": 1 },
         {
           "enable": true,
           "name": "Services",
           "url": "/services/",
-          "weight": 0
+          "weight": 2
         },
-        {
-          "enable": true,
-          "name": "Case Studies",
-          "url": "/case-studies/",
-          "weight": 0
-        },
-        {
-          "enable": true,
-          "name": "Contact",
-          "url": "/contact/",
-          "weight": 0
-        }
+        { "enable": true, "name": "FAQ", "url": "/faq/", "weight": 3 },
+        { "enable": true, "name": "Contact", "url": "/contact/", "weight": 4 },
+        { "enable": true, "name": "Privacy", "url": "/privacy/", "weight": 5 }
       ]
     },
     {

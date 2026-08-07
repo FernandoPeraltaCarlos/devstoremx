@@ -1,7 +1,7 @@
 ---
 import { getLocaleUrlCTM } from "@/lib/utils/i18nUtils";
 import OptimizedImage from "@/components/utilities/OptimizedImage.astro";
-import { markdownify, toSentenceCase } from "@/lib/utils/textConverter";
+import { markdownify } from "@/lib/utils/textConverter";
 
 import config from ".astro/config.generated.json";
 
@@ -49,7 +49,7 @@ let {
           class="logo"
           width={getNumber(logoWidth)}
           height={getNumber(logoHeight)}
-          alt={toSentenceCase("Brand logo of " + title)}
+          alt={Astro.currentLocale === "en" ? `DevStoreMX logo` : `Logotipo de DevStoreMX`}
           loading="eager"
           decoding="async"
           style={{

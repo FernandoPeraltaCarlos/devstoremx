@@ -34,6 +34,7 @@ let {
   characterImage,
   characterImageAlt,
   badge,
+  description,
 } = actualContent;
 
 if (!enable) return null;
@@ -42,8 +43,7 @@ const { hasSectionSpacing = true } = Astro.props;
 
 <section
   id="contact"
-  class:list={["overflow-hidden scroll-mt-28", { "pt-0": !hasSectionSpacing }]}
->
+  class:list={["scroll-mt-28 overflow-hidden", { "pt-0": !hasSectionSpacing }]}>
   <div class="bg-theme-dark relative flex flex-col lg:flex-row">
     <div class="container">
       {/* Left: full-bleed image */}
@@ -80,6 +80,13 @@ const { hasSectionSpacing = true } = Astro.props;
         }
         {/* Bold white heading */}
         {title && <SectionTitle title={title} variant="dark" />}
+        {
+          description && (
+            <p class="text-text-inverse/75 max-w-2xl text-base leading-relaxed md:text-lg">
+              {description}
+            </p>
+          )
+        }
 
         {/* Form */}
         {form && <ContactForm form={form} />}

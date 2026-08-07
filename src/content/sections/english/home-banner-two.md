@@ -1,6 +1,6 @@
 ---
 subtitle: "Web development agency · Shopify Partner"
-title: "We build websites and online stores <br /> through a process you can review"
+title: "We build websites and online stores"
 description: "Before work begins, we agree on the scope, cost and schedule. You review each stage, and your company keeps control of its accounts and access."
 
 image: "/images/home-banner/banner-3.jpg"

@@ -1,97 +1,251 @@
-/**
- * JSON-LD Generator
- * Generates appropriate JSON-LD data based on the page type and provided content
- * Generates JSON-LD data that search engines like Google, Bing, and DuckDuckGo can use to better understand the content of the page.
- * This can improve the page's visibility in search engine results and provide users with additional information about the page.
- */
-import { absoluteUrl } from "./absoluteUrl";
-import { getLocaleUrlCTM } from "@/lib/utils/i18nUtils";
-import trailingSlashChecker from "./trailingSlashChecker";
-import social from "@/config/social.json";
-
-// This component dynamically generates appropriate JSON-LD data based on the page type
 export type JSONLDProps = {
-  canonical?: string; // Canonical URL of the page, used to determine page type
-  title?: string; // Title of the page
-  description?: string; // Description of the page
-  image?: string; // Image URL for blog posts, case studies, or team members
-  categories?: string[]; // Categories or tags for blog posts or case studies
-  author?: string; // Author for blog posts or case studies
-  pageType?: string; // Page type
-
-  [key: string]: any;
+  canonical?: string;
+  title?: string;
+  description?: string;
+  image?: string;
+  lang?: string;
+  pageType?: "webpage" | "about" | "contact" | "faq" | "service" | "collection";
+  faqItems?: Array<{ question: string; answer: string }>;
+  homepage?: boolean;
+  pathname?: string;
+  config?: any;
 };
 
-export default function JsonLdGenerator(content: JSONLDProps, Astro: any) {
-  let {
-    canonical = "/",
-    title = "",
-    description = "",
-    image = "",
-    pageType = "",
-    lang,
-    alternateLangs = [], // Array of alternate language URLs
-    config,
-  } = content || {};
+type ResolvedJSONLDProps = JSONLDProps & {
+  canonical: string;
+  title: string;
+  description: string;
+  lang: string;
+  pathname: string;
+  config: any;
+};
 
-  if (!lang) {
-    lang = config.settings.multilingual.defaultLanguage;
-  }
+const withoutEmptyValues = <T extends Record<string, any>>(value: T): T =>
+  Object.fromEntries(
+    Object.entries(value).filter(
+      ([, entryValue]) =>
+        entryValue !== undefined && entryValue !== null && entryValue !== "",
+    ),
+  ) as T;
 
-  // Generate JSON-LD data dynamically based on page type
-  let jsonLdData: Record<string, any> = {
-    "@context": "https://schema.org",
-  };
+const localizedHomeUrl = (baseUrl: string, lang: string): string =>
+  new URL(lang === "en" ? "/en/" : "/", baseUrl).href;
 
-  switch (pageType) {
-    default:
-      jsonLdData["@type"] = "WebPage";
-      jsonLdData.name = title;
-      jsonLdData.description = description;
-      jsonLdData.image = image;
-      jsonLdData.url = canonical;
+const buildBreadcrumbs = ({
+  baseUrl,
+  canonical,
+  lang,
+  pathname,
+  title,
+}: {
+  baseUrl: string;
+  canonical: string;
+  lang: string;
+  pathname: string;
+  title: string;
+}) => {
+  const segments = pathname.split("/").filter(Boolean);
+  if (segments[0] === lang) segments.shift();
+  if (segments.length === 0) return undefined;
 
-      if (lang) {
-        jsonLdData.inLanguage = lang;
-      }
-  }
-
-  // Add site metadata to `isPartOf` of jsonLdData
-  const siteTitle =
-    config.site.title +
-    (config.site.tagline &&
-      (config.site.taglineSeparator || " - ") + config.site.tagline);
-
-  jsonLdData["isPartOf"] = {
-    "@type": "WebSite",
-    name: siteTitle,
-    description: config.site.description,
-    url: trailingSlashChecker(Astro.url.origin),
-  };
-
-  // Add alternate languages if provided
-  if (alternateLangs.length > 0) {
-    jsonLdData.alternateLanguage = alternateLangs
-      .filter((alt: any) => Astro.currentLocale !== alt.languageCode)
-      .map((alt: any) => ({
-        "@type": "WebPage",
-        url: getLocaleUrlCTM(canonical, alt.languageCode),
-        inLanguage: alt.languageCode,
-      }));
-  }
-
-  // Add `publisher` to jsonLdData
-  jsonLdData.publisher = {
-    "@type": "Organization",
-    name: config.seo.author,
-    url: trailingSlashChecker(Astro.url.origin),
-    sameAs: social.main.filter((item) => item.enable).map((item) => item.url),
-    logo: {
-      "@type": "ImageObject",
-      url: absoluteUrl(config.site.logo, Astro),
+  const homeLabel = lang === "en" ? "Home" : "Inicio";
+  const items: Array<Record<string, any>> = [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: homeLabel,
+      item: localizedHomeUrl(baseUrl, lang),
     },
+  ];
+
+  if (segments[0] === "services" && segments.length > 1) {
+    items.push({
+      "@type": "ListItem",
+      position: 2,
+      name: lang === "en" ? "Services" : "Servicios",
+      item: new URL(lang === "en" ? "/en/services/" : "/services/", baseUrl)
+        .href,
+    });
+  }
+
+  items.push({
+    "@type": "ListItem",
+    position: items.length + 1,
+    name: title,
+    item: canonical,
+  });
+
+  return {
+    "@type": "BreadcrumbList",
+    "@id": `${canonical}#breadcrumb`,
+    itemListElement: items,
+  };
+};
+
+export default function JsonLdGenerator(content: ResolvedJSONLDProps) {
+  const {
+    canonical,
+    title,
+    description,
+    image,
+    lang,
+    pageType = "webpage",
+    faqItems = [],
+    homepage = false,
+    pathname,
+    config,
+  } = content;
+
+  const baseUrl = new URL("/", config.site.baseUrl).href;
+  const organizationId = `${baseUrl}#organization`;
+  const websiteId = `${baseUrl}#website`;
+  const founderId = `${baseUrl}#fernando-peralta`;
+  const pageId = `${canonical}#webpage`;
+  const organization = config.organization;
+  const organizationDescription =
+    lang === "en" ? config.site.descriptionEn : config.site.description;
+
+  const graph: Array<Record<string, any>> = [
+    withoutEmptyValues({
+      "@type": "Organization",
+      "@id": organizationId,
+      name: organization.name,
+      url: baseUrl,
+      description: organizationDescription,
+      foundingDate: organization.foundingDate,
+      email: organization.email,
+      logo: {
+        "@type": "ImageObject",
+        "@id": `${baseUrl}#logo`,
+        url: new URL(organization.logo, baseUrl).href,
+        contentUrl: new URL(organization.logo, baseUrl).href,
+        width: 512,
+        height: 512,
+      },
+      founder: { "@id": founderId },
+      sameAs: [organization.linkedin],
+      areaServed: organization.areaServed.map((name: string) => ({
+        "@type": "AdministrativeArea",
+        name,
+      })),
+      knowsLanguage: ["es", "en"],
+    }),
+    withoutEmptyValues({
+      "@type": "Person",
+      "@id": founderId,
+      name: organization.founder,
+      jobTitle:
+        lang === "en"
+          ? "Founder and technical lead"
+          : "Fundador y responsable técnico",
+      worksFor: { "@id": organizationId },
+      sameAs: organization.founderLinkedin
+        ? [organization.founderLinkedin]
+        : undefined,
+    }),
+    withoutEmptyValues({
+      "@type": "WebSite",
+      "@id": websiteId,
+      url: baseUrl,
+      name: organization.name,
+      description: organizationDescription,
+      publisher: { "@id": organizationId },
+      inLanguage: ["es", "en"],
+    }),
+  ];
+
+  const pageSchemaType: Record<string, string> = {
+    webpage: "WebPage",
+    about: "AboutPage",
+    contact: "ContactPage",
+    faq: "FAQPage",
+    service: "WebPage",
+    collection: "CollectionPage",
   };
 
-  // Utility to remove empty or undefined keys
-  return jsonLdData;
+  const webPage: Record<string, any> = withoutEmptyValues({
+    "@type": pageSchemaType[pageType] || "WebPage",
+    "@id": pageId,
+    url: canonical,
+    name: title,
+    description,
+    inLanguage: lang,
+    isPartOf: { "@id": websiteId },
+    about: { "@id": organizationId },
+    primaryImageOfPage: image
+      ? {
+          "@type": "ImageObject",
+          url: image,
+          contentUrl: image,
+        }
+      : undefined,
+  });
+
+  if (homepage || pageType === "about") {
+    webPage.mainEntity = { "@id": organizationId };
+  }
+
+  if (pageType === "faq" && faqItems.length > 0) {
+    webPage.mainEntity = faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    }));
+  }
+
+  if (pageType === "service") {
+    const serviceId = `${canonical}#service`;
+    webPage.mainEntity = { "@id": serviceId };
+    if (faqItems.length > 0) {
+      webPage.subjectOf = { "@id": `${canonical}#faq` };
+      graph.push({
+        "@type": "FAQPage",
+        "@id": `${canonical}#faq`,
+        url: canonical,
+        inLanguage: lang,
+        mainEntity: faqItems.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      });
+    }
+    graph.push(
+      withoutEmptyValues({
+        "@type": "Service",
+        "@id": serviceId,
+        name: title,
+        description,
+        url: canonical,
+        provider: { "@id": organizationId },
+        areaServed: organization.areaServed.map((name: string) => ({
+          "@type": "AdministrativeArea",
+          name,
+        })),
+        availableLanguage: ["es", "en"],
+      }),
+    );
+  }
+
+  graph.push(webPage);
+
+  const breadcrumbs = buildBreadcrumbs({
+    baseUrl,
+    canonical,
+    lang,
+    pathname,
+    title,
+  });
+  if (breadcrumbs) graph.push(breadcrumbs);
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": graph,
+  };
 }

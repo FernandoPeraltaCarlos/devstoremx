@@ -1,151 +1,41 @@
 {
   "main": [
+    { "enable": true, "name": "Inicio", "weight": 0, "url": "/" },
+    { "enable": true, "name": "Servicios", "weight": 1, "url": "/services/" },
+    { "enable": true, "name": "Nosotros", "weight": 2, "url": "/about/" },
     {
       "enable": true,
-      "name": "Inicio",
-      "weight": 0,
-      "url": "/"
+      "name": "Preguntas frecuentes",
+      "weight": 3,
+      "url": "/faq/"
     },
+    { "enable": true, "name": "Contacto", "weight": 4, "url": "/contact/" }
+  ],
+  "topbar": [],
+  "footer": [
     {
-      "name": "Páginas",
-      "enable": true,
-      "weight": 2,
-      "hasChildren": true,
-      "children": [
-        {
-          "enable": true,
-          "name": "Proyectos",
-          "weight": 0,
-          "hasChildren": true,
-          "children": [
-            {
-              "enable": true,
-              "name": "Proyecto",
-              "url": "/case-studies/",
-              "weight": 0
-            },
-            {
-              "enable": true,
-              "name": "Detalle de proyecto",
-              "url": "/case-studies/custom-slug-case-studies-1/",
-              "weight": 0
-            }
-          ]
-        },
-        {
-          "enable": true,
-          "name": "Blog",
-          "weight": 0,
-          "hasChildren": true,
-          "children": [
-            {
-              "enable": true,
-              "name": "Blog",
-              "url": "/blog/",
-              "weight": 0
-            },
-            {
-              "enable": true,
-              "name": "Detalle de publicación",
-              "url": "/blog/custom-slug-post-1/",
-              "weight": 0
-            }
-          ]
-        },
+      "label": "Enlaces",
+      "list": [
+        { "enable": true, "name": "Inicio", "url": "/", "weight": 0 },
+        { "enable": true, "name": "Nosotros", "url": "/about/", "weight": 1 },
         {
           "enable": true,
           "name": "Servicios",
-          "weight": 0,
-          "hasChildren": true,
-          "children": [
-            {
-              "enable": true,
-              "name": "Servicios",
-              "url": "/services/",
-              "weight": 0
-            },
-            {
-              "enable": true,
-              "name": "Detalle de servicio",
-              "url": "/services/paginas-web/",
-              "weight": 0
-            }
-          ]
-        },
-        {
-          "enable": true,
-          "name": "Nosotros",
-          "url": "/about/",
-          "weight": 0
-        },
-        {
-          "enable": true,
-          "name": "Equipo",
-          "url": "/team",
-          "weight": 0
+          "url": "/services/",
+          "weight": 2
         },
         {
           "enable": true,
           "name": "Preguntas frecuentes",
           "url": "/faq/",
-          "weight": 0
-        }
-      ]
-    }
-  ],
-  "topbar": [
-    {
-      "enable": true,
-      "name": "Ayuda",
-      "url": "/",
-      "weight": 0
-    },
-    {
-      "enable": true,
-      "name": "Soporte",
-      "url": "/",
-      "weight": 0
-    },
-    {
-      "enable": true,
-      "name": "Contacto",
-      "url": "/",
-      "weight": 0
-    }
-  ],
-  "footer": [
-    {
-      "label": "Enlaces",
-      "list": [
-        {
-          "enable": true,
-          "name": "Inicio",
-          "url": "/",
-          "weight": 0
+          "weight": 3
         },
+        { "enable": true, "name": "Contacto", "url": "/contact/", "weight": 4 },
         {
           "enable": true,
-          "name": "Nosotros",
-          "url": "/about/",
-          "weight": 0
-        },
-        {
-          "enable": true,
-          "name": "Servicios",
-          "url": "/services/",
-          "weight": 0
-        },
-        {
-          "enable": true,
-          "name": "Casos de éxito",
-          "url": "/case-studies/",
-          "weight": 0
-        },
-        {
-          "enable": true,
-          "name": "Contacto",
-          "url": "/contact/",
-          "weight": 0
+          "name": "Privacidad",
+          "url": "/privacy/",
+          "weight": 5
         }
       ]
     },

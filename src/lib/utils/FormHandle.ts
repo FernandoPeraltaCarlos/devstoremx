@@ -264,7 +264,7 @@ export const formspreeSubmit = async (
   } catch (error) {
     setMessage(
       error +
-        "! Please use this email - [fernando_peraltac@hotmail.com](mailto:fernando_peraltac@hotmail.com) to submit a ticket!",
+        "! Please email [hola@devstoremx.xyz](mailto:hola@devstoremx.xyz) instead.",
       false,
       false,
       form,

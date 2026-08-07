@@ -10,7 +10,7 @@ const contentLoader = (base: string) =>
   glob({ pattern: "**/[^_]*.{md,mdx}", base });
 
 const basePage = z.object({
-  title: z.string(),
+  title: z.string().trim().min(1),
   breadcrumbTitle: z.string().optional(),
   author: z.string().optional(),
   categories: z.array(z.string()).optional(),
@@ -31,6 +31,19 @@ const basePage = z.object({
   canonical: z.string().optional(),
   keywords: z.array(z.string()).optional(),
   disableTagline: z.boolean().optional(),
+  pageType: z
+    .enum(["webpage", "about", "contact", "faq", "service", "collection"])
+    .optional(),
+  showTeam: z.boolean().optional(),
+  showContact: z.boolean().optional(),
+  faqItems: z
+    .array(
+      z.object({
+        question: z.string().trim().min(1),
+        answer: z.string().trim().min(1),
+      }),
+    )
+    .optional(),
 });
 
 export const page = basePage.extend(sectionsSchema.shape);
@@ -51,6 +64,11 @@ const serviceCollection = defineCollection({
     imagePosition: z.string().optional(),
     image3: z.string().optional(),
   }),
+});
+
+const pageCollection = defineCollection({
+  loader: contentLoader("./src/content/pages"),
+  schema: page,
 });
 
 export const teamCollection = defineCollection({
@@ -102,5 +120,7 @@ export const collections = {
   }),
   homepage: defineCollection({
     loader: contentLoader("./src/content/homepage"),
+    schema: page,
   }),
+  pages: pageCollection,
 };

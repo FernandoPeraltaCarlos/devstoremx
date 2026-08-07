@@ -86,7 +86,7 @@ form:
       type: "radio"
       halfWidth: true
       defaultValue: ""
-    - label: "I agree to the [Terms & Conditions](/)"
+    - label: "I have read the [Privacy Notice](/en/privacy/)"
       name: "Agreed Privacy"
       value: "Agreed"
       checked: false

@@ -31,7 +31,7 @@ const createBreadcrumbParts = (pathname: string) => {
 
   const breadcrumbParts = [
     {
-      label: "Home",
+      label: Astro.currentLocale === "en" ? "Home" : "Inicio",
       href: getLocaleUrlCTM("/", Astro.currentLocale),
       "aria-label": pathname === "/" ? "page" : undefined,
     },

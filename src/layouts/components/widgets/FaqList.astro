@@ -1,0 +1,46 @@
+---
+type FaqItem = {
+  question: string;
+  answer: string;
+};
+
+type Props = {
+  items?: FaqItem[];
+  title?: string;
+};
+
+const { items = [], title } = Astro.props;
+---
+
+{
+  items.length > 0 && (
+    <section
+      class="section-spacing-vertical pt-0"
+      aria-labelledby="faq-heading">
+      <div class="container max-w-4xl">
+        {title && (
+          <h2 id="faq-heading" class="text-h3-sm md:text-h3 mb-8 font-semibold">
+            {title}
+          </h2>
+        )}
+        <div class="divide-border/70 divide-y border-y">
+          {items.map((item) => (
+            <details class="group py-5">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-5 font-semibold">
+                <span>{item.question}</span>
+                <span
+                  aria-hidden="true"
+                  class="text-xl transition-transform group-open:rotate-45">
+                  +
+                </span>
+              </summary>
+              <p class="text-text-default/80 max-w-3xl pt-4 leading-relaxed">
+                {item.answer}
+              </p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
