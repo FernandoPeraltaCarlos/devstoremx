@@ -1,6 +1,6 @@
 # Site Configuration
 [site]
-  title            = "devstoremx"
+  title            = "Devstoremx"
   description      = "devstoremx es un proyecto Astro moderno y de alto rendimiento, construido con Tailwind CSS para una experiencia limpia, profesional y totalmente adaptable."
   tagline          = "Desarrollo web y consultoría de TI a la medida"
   taglineSeparator = "" # default is " - " 
