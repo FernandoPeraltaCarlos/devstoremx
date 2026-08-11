@@ -1,7 +1,7 @@
 ---
 enable: true
 badge: "contacto"
-title: "Cuéntanos qué necesitas <br /> y qué tienes hoy."
+title: "¿Tienes un proyecto en mente? <br /> Contáctanos."
 description: "Con esa información podemos preparar una primera respuesta y decirte qué necesitamos revisar antes de cotizar el proyecto."
 image: "/images/contact-home.jpg"
 imageAlt: "Contacto"

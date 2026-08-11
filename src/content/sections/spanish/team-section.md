@@ -1,7 +1,7 @@
 ---
 enable: true
 badge: "Equipo"
-title: "Las personas detrás de cada proyecto"
+title: "Nuestro equipo"
 list:
   - name: "Fernando Peralta"
     role: "Technical Lead"

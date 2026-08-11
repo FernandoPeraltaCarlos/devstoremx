@@ -1,7 +1,7 @@
 ---
-subtitle: "Agencia de desarrollo web · Shopify Partner"
+subtitle: "Desarrollo web · Shopify Partner"
 title: "Desarrollamos páginas web y tiendas en línea"
-description: "Antes de comenzar acordamos el alcance, el costo y las fechas. Durante el proyecto revisas cada etapa, y las cuentas y accesos permanecen bajo tu control."
+description: "Nuestra prioridad siempre es el cliente. Siempre tendrás la certeza de en qué fase está tu producto y de la calidad de los entregables."
 
 image: "/images/home-banner/banner-3.jpg"
 imageAlt: "Colaboración en equipo"
