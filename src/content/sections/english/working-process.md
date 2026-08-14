@@ -1,16 +1,19 @@
 ---
 enable: true
 badge: "// WORKING PROCESS"
-title: "What we agree on and review during the project"
+title: "How is your project built?"
 image: "/images/service/working-process.png"
 list:
-  - title: "We define the scope, cost and schedule"
-    description: "The proposal explains what the project includes, what falls outside the scope, what it costs and how the schedule is divided."
+  - title: "First conversation"
+    description: "We schedule a Google Meet call so we can better understand your project."
     icon: "images/icons/svg/planning.svg"
-  - title: "You review work at each stage"
-    description: "We show you the project while it is being built. Your feedback is addressed before we continue to the next stage."
+  - title: "Quote"
+    description: "A detailed quote with every phase and the full project scope."
+    icon: "images/icons/svg/book.svg"
+  - title: "Development"
+    description: "Our team builds your project."
     icon: "images/icons/svg/coding.svg"
-  - title: "We publish through your accounts"
-    description: "The domain and main accounts remain under your control. You decide who can manage them and whether to change providers."
+  - title: "Delivery"
+    description: "Final delivery of your project."
     icon: "images/icons/svg/book.svg"
 ---

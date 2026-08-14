@@ -1,7 +1,7 @@
 ---
 enable: true
 badge: "contact"
-title: "Tell us what you need <br /> and what you have today."
+title: "Have a project in mind? <br /> Get in touch."
 description: "With that information, we can prepare an initial response and explain what we need to review before quoting the project."
 image: "/images/contact-home.jpg"
 imageAlt: "Contact"

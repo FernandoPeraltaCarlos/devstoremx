@@ -1,12 +1,12 @@
 ---
 enable: true
 badge: "// ABOUT US"
-title: "The scope, cost and schedule are defined from the start."
+title: "We are a cross-functional team"
 imageSecondary: "/images/about/about-rated-pic.jpg"
 imageSecondaryAlt: "Company members looking at laptop"
 image: "/images/about/about-two.png"
 imageAlt: "Team collaborating around computer"
-description: "We divide every project into stages you can review. If you request work outside the agreed scope, we explain the change and its cost before doing it. The domain and main accounts remain in your name."
+description: "Our team of engineers across several areas of technology brings well-rounded expertise to every project."
 
 button:
   # Refer to the `sharedButton` schema in `src/sections.schema.ts` for all available configuration options

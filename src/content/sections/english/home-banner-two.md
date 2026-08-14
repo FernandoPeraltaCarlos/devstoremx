@@ -1,7 +1,7 @@
 ---
-subtitle: "Web development agency · Shopify Partner"
+subtitle: "Web development · Shopify Partner"
 title: "We build websites and online stores"
-description: "Before work begins, we agree on the scope, cost and schedule. You review each stage, and your company keeps control of its accounts and access."
+description: "Our clients always come first. You will always know which phase your product is in and the quality of every deliverable."
 
 image: "/images/home-banner/banner-3.jpg"
 imageAlt: "Team Collaboration"
