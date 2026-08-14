@@ -17,7 +17,6 @@
     "astro-check": "astro check",
     "check-seo": "node ./scripts/check-seo.mjs",
     "toml:watch": "node scripts/toml-watcher.mjs",
-    "generate-favicons": "node ./scripts/generate-favicons.mjs",
     "remove-multilingual": "node ./scripts/remove-multilingual.mjs",
     "generate-multilingual-content": "node ./scripts/generate-multilingual-content.mjs",
     "remove-draft-from-sitemap": "node ./scripts/remove-draft-from-sitemap.mjs",
@@ -46,8 +45,6 @@
     "@astrojs/check": "^0.9.9",
     "@astrojs/mdx": "^7.0.0",
     "@astrojs/sitemap": "3.7.3",
-    "@realfavicongenerator/generate-favicon": "^0.8.0",
-    "@realfavicongenerator/image-adapter-node": "^0.8.0",
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.2",
@@ -60,16 +57,12 @@
     "prop-types": "^15.8.1",
     "rehype-external-links": "^3.0.0",
     "remark-toc": "^9.0.0",
-    "sharp": "^0.34.5",
+    "sharp": "^0.35.3",
     "slugify": "^1.6.9",
     "tailwindcss": "^4.2.2",
     "toml": "^4.1.1",
     "typescript": "^5.9.3",
     "unist-util-visit": "^5.1.0",
     "xml2js": "^0.6.2"
-  },
-  "overrides": {
-    "yaml": "^2.8.3",
-    "js-yaml@>=4.0.0 <4.2.0": "^4.2.0"
   }
 }
