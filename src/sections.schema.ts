@@ -337,8 +337,6 @@ export const pricingSectionSchema = z
 
 export const contactFormSchema = z.object({
   title: z.string().optional(),
-  action: z.string().optional(),
-  emailSubject: z.string().optional(),
   note: z.string().optional(),
   submitButton: z.object({
     enable: z.boolean().optional(),

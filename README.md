@@ -4,11 +4,11 @@ Proyecto web construido con Astro, Tailwind CSS y contenido en Markdown/MDX.
 
 ## Características
 
-- Preparado para inglés y español; español permanece deshabilitado hasta que exista contenido traducido.
+- Disponible en español (`/`) e inglés (`/en/`).
 - Diseño responsivo y accesible.
 - Metadatos SEO, Open Graph y datos estructurados.
 - Navegación, formularios de contacto y contenido editable.
-- Generación estática preparada para despliegue en Vercel.
+- Generación estática preparada para despliegue en Vercel, con un endpoint serverless para el formulario de contacto.
 
 ## Desarrollo local
 
@@ -19,15 +19,19 @@ pnpm dev
 
 El servidor local estará disponible en `http://localhost:4321`.
 
+Copia `.env.example` a `.env` y define `RESEND_API_KEY` para probar el envío de correos. Esa clave es solo de servidor: no uses el prefijo `PUBLIC_`.
+
+Cuando alguien envía el formulario, Resend entrega un aviso interno a `hola@devstoremx.xyz` y una autorespuesta al visitante. La autorespuesta usa español o inglés según el idioma de la página.
+
 ## Comandos
 
-| Comando               | Acción                                      |
-| :-------------------- | :------------------------------------------ |
-| `pnpm dev`         | Inicia el servidor de desarrollo            |
-| `pnpm build`       | Genera el sitio de producción en `dist/`    |
-| `pnpm preview`     | Genera y previsualiza el sitio localmente    |
-| `pnpm astro-check` | Valida los componentes y tipos de Astro      |
-| `pnpm format`      | Formatea los archivos dentro de `src/`       |
+| Comando            | Acción                                                                               |
+| :----------------- | :----------------------------------------------------------------------------------- |
+| `pnpm dev`         | Inicia el servidor de desarrollo                                                     |
+| `pnpm build`       | Genera el sitio de producción (estático + función `/api/contact/`)                   |
+| `pnpm preview`     | Alias de `pnpm dev`; el artefacto real se valida con un Preview Deployment de Vercel |
+| `pnpm astro-check` | Valida los componentes y tipos de Astro                                              |
+| `pnpm format`      | Formatea los archivos dentro de `src/`                                               |
 
 ## Estructura principal
 
@@ -51,7 +55,7 @@ El servidor local estará disponible en `http://localhost:4321`.
 
 ## Despliegue
 
-El repositorio se conecta directamente a Vercel desde GitHub. No requiere archivos de configuración específicos del proveedor.
+El repositorio se conecta directamente a Vercel desde GitHub. `RESEND_API_KEY` ya está configurada en Production, Preview y Development; se aplica en el siguiente despliegue.
 
 ## Autor
 

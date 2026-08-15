@@ -49,7 +49,7 @@ async function convertTomlToJson() {
     await fs.mkdir(outputDir, { recursive: true });
 
     // atomic write (important for Vite)
-    const tempFile = outputFilePath + ".tmp";
+    const tempFile = `${outputFilePath}.${process.pid}.tmp`;
 
     await fs.writeFile(tempFile, JSON.stringify(parsed, null, 2), "utf8");
     await fs.rename(tempFile, outputFilePath);

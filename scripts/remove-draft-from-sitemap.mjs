@@ -12,7 +12,11 @@ const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.resolve(__dirname, "..");
 
 // --------- Paths (absolute) ----------
-const DIST_FOLDER = path.resolve(PROJECT_ROOT, "dist");
+const outputArgument = process.argv.slice(2).find((value) => value !== "--");
+const DIST_FOLDER = path.resolve(
+  PROJECT_ROOT,
+  outputArgument || ".vercel/output/static",
+);
 const CONTENT_FOLDER = path.resolve(PROJECT_ROOT, "src", "content");
 const LANG_FILE = path.resolve(PROJECT_ROOT, "src", "config", "language.json");
 const ASTRO_CONFIG_FILE = path.resolve(
@@ -179,7 +183,7 @@ async function processSitemaps() {
   try {
     if (!(await pathExists(DIST_FOLDER))) {
       console.error(
-        `❌ The 'dist' folder was not found at '${DIST_FOLDER}'.\n` +
+        `❌ The static output folder was not found at '${DIST_FOLDER}'.\n` +
           `   Run your build first (e.g., pnpm build).`,
       );
       process.exitCode = 1;

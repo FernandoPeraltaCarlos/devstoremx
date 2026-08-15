@@ -9,34 +9,33 @@ characterImage: "/images/character-3d.png"
 characterImageAlt: "3D character"
 
 form:
-  emailSubject: "New contact form submission"
   submitButton:
     enable: true
     label: "Send a Message"
   inputs:
     - label: "Name"
       placeholder: "Name *"
-      name: "Name"
+      name: "name"
       required: true
       halfWidth: true
       defaultValue: ""
     - label: "Phone or WhatsApp"
       placeholder: "Phone or WhatsApp *"
-      name: "Phone or WhatsApp"
+      name: "phone"
       required: true
       type: "text"
       halfWidth: true
       defaultValue: ""
     - label: "Email Address"
       placeholder: "Email Address *"
-      name: "Email Address"
+      name: "email"
       required: true
       type: "email"
       halfWidth: true
       defaultValue: ""
     - label: "Preferred contact method"
       placeholder: "Preferred contact method"
-      name: "Preferred contact method"
+      name: "preferredContact"
       required: false
       type: "text"
       halfWidth: true
@@ -44,14 +43,14 @@ form:
     - label: "Message"
       tag: "textarea"
       placeholder: "Ask your question *"
-      name: "Message"
+      name: "message"
       required: true
       halfWidth: false
       rows: "4"
       defaultValue: ""
     - label: "Google Search"
       checked: false
-      name: "User Source"
+      name: "source"
       required: true
       groupLabel: "How did you hear about us?"
       group: "source"
@@ -59,40 +58,32 @@ form:
       halfWidth: true
       defaultValue: ""
     - label: "Social Media"
-      name: "User Source"
+      name: "source"
       required: true
       group: "source"
       type: "radio"
       halfWidth: true
       defaultValue: ""
     - label: "Referral"
-      name: "User Source"
+      name: "source"
       required: true
       group: "source"
       type: "radio"
       halfWidth: true
       defaultValue: ""
     - label: "LinkedIn"
-      name: "User Source"
+      name: "source"
       required: true
       group: "source"
       type: "radio"
       halfWidth: true
       defaultValue: ""
     - label: "Google Maps"
-      name: "User Source"
+      name: "source"
       required: true
       group: "source"
       type: "radio"
       halfWidth: true
-      defaultValue: ""
-    - label: "I have read the [Privacy Notice](/en/privacy/)"
-      name: "Agreed Privacy"
-      value: "Agreed"
-      checked: false
-      required: true
-      type: "checkbox"
-      halfWidth: false
       defaultValue: ""
     - note: success
       parentClass: "hidden text-sm message success"

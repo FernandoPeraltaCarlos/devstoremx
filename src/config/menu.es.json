@@ -30,13 +30,7 @@
           "url": "/faq/",
           "weight": 3
         },
-        { "enable": true, "name": "Contacto", "url": "/contact/", "weight": 4 },
-        {
-          "enable": true,
-          "name": "Privacidad",
-          "url": "/privacy/",
-          "weight": 5
-        }
+        { "enable": true, "name": "Contacto", "url": "/contact/", "weight": 4 }
       ]
     },
     {

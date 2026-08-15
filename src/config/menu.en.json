@@ -20,8 +20,7 @@
           "weight": 2
         },
         { "enable": true, "name": "FAQ", "url": "/faq/", "weight": 3 },
-        { "enable": true, "name": "Contact", "url": "/contact/", "weight": 4 },
-        { "enable": true, "name": "Privacy", "url": "/privacy/", "weight": 5 }
+        { "enable": true, "name": "Contact", "url": "/contact/", "weight": 4 }
       ]
     },
     {

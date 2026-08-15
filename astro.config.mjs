@@ -2,7 +2,9 @@ import mdx from "@astrojs/mdx";
 import remarkToc from "remark-toc";
 import { unified } from "@astrojs/markdown-remark";
 import sitemap from "@astrojs/sitemap";
-import { defineConfig } from "astro/config";
+import { defineConfig, envField } from "astro/config";
+import react from "@astrojs/react";
+import vercel from "@astrojs/vercel";
 import tailwindcss from "@tailwindcss/vite";
 import rehypeExternalLinks from "rehype-external-links";
 import { enabledLanguages } from "./src/lib/utils/i18nUtils.ts";
@@ -40,11 +42,24 @@ export default defineConfig({
     },
   },
 
+  adapter: vercel(),
+
+  env: {
+    validateSecrets: true,
+    schema: {
+      RESEND_API_KEY: envField.string({
+        context: "server",
+        access: "secret",
+      }),
+    },
+  },
+
   integrations: [
     sitemapConfig.enable ? sitemap() : null,
     // Shortcodes are provided to MDX via the `components` prop on `<Content />`
     // (see `src/lib/shortcodes.ts`), so no auto-import integration is needed.
     mdx(),
+    react(),
   ],
 
   markdown: {

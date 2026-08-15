@@ -6,9 +6,19 @@ const projectRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
   "..",
 );
-const distDir = path.join(projectRoot, "dist");
+const outputArgument = process.argv.slice(2).find((value) => value !== "--");
+const distDir = path.resolve(
+  projectRoot,
+  outputArgument || ".vercel/output/static",
+);
 const canonicalOrigin = "https://devstoremx.xyz";
 const errors = [];
+
+try {
+  await fs.access(distDir);
+} catch {
+  throw new Error(`Static output folder not found: ${distDir}`);
+}
 
 const readFilesRecursively = async (directory) => {
   const entries = await fs.readdir(directory, { withFileTypes: true });

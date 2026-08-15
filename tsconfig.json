@@ -11,6 +11,8 @@
     "isolatedModules": true,
     "incremental": true,
     "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
     "paths": {
       "@/components/*": [
         "./src/layouts/components/*"

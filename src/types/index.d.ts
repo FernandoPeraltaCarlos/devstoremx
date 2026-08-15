@@ -128,8 +128,6 @@ export interface InputField {
 }
 
 export interface ContactFormConfig {
-  action: string;
-  emailSubject: string;
   submitButton: SubmitButtonConfig;
   note: string;
   inputs: InputField[];
@@ -188,11 +186,7 @@ export interface NavigationLink extends ChildNavigationLink {
 }
 
 export type WidgetName =
-  | "Search"
-  | "RelatedCaseStudies"
-  | "Categories"
-  | "RecentPosts"
-  | "CtaBlock";
+  "Search" | "RelatedCaseStudies" | "Categories" | "RecentPosts" | "CtaBlock";
 
 // END MENU TYPE
 // ----------------------------------------------------------------------
