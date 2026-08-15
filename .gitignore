@@ -4,6 +4,7 @@ node_modules/
 # build output and framework cache
 dist/
 .astro/
+.vercel/
 
 # local environment variables
 .env
@@ -16,8 +17,10 @@ dist/
 # local AI tooling
 .agents/
 .codex/
+.chunkhound/
 skills-lock.json
 
 # operating system files
 .DS_Store
 Thumbs.db
+.chunkhound.json
