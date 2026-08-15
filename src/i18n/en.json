@@ -29,7 +29,10 @@
   "contactInfo": {
     "locationLabel": "Location",
     "phoneLabel": "Phone Number",
-    "emailLabel": "Email"
+    "emailLabel": "Email",
+    "continueWithLinkedin": "Contact via LinkedIn",
+    "continueWithWhatsapp": "Contact via WhatsApp",
+    "whatsappMessage": "Hi, I'd like to talk about a project."
   },
   "subscription": {
     "title": "",

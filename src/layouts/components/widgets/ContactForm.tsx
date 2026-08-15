@@ -180,8 +180,9 @@ const SubmitButton = ({
     type="submit"
     id="contact-submit"
     disabled={disabled}
-    className="btn-wrapper btn btn-primary has-icon has-icon-moving-animation text-flip-hover-anim btn hover:btn-primary mt-0 px-8 py-4!"
+    className="btn-wrapper btn btn-primary creative-hover-anim has-icon has-icon-moving-animation contact-submit-btn mt-0 px-8 py-4!"
   >
+    <span className="hover-bg" aria-hidden="true" />
     <span className="icons-wrapper -mb-px inline-flex min-h-4 min-w-4 items-center justify-center">
       <span className="icon icon-before flex items-center justify-center">
         <LucideIcon className="[font-size:inherit]" icon={ArrowUpRight} />
@@ -190,9 +191,7 @@ const SubmitButton = ({
         <LucideIcon className="[font-size:inherit]" icon={ArrowUpRight} />
       </span>
     </span>
-    <span className="text-flip-inner" data-content={label}>
-      {label}
-    </span>
+    <span>{label}</span>
   </button>
 );
 

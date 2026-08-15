@@ -8,6 +8,7 @@ import type { z } from "astro/zod";
 import OptimizedImage from "../utilities/OptimizedImage.astro";
 import SectionTitle from "../global/SectionTitle.astro";
 import VerticalLabel from "@/components/widgets/VerticalLabel.astro";
+import ContactDirectButtons from "@/components/widgets/ContactDirectButtons.astro";
 
 type ContactSection = Section & z.infer<typeof contactSectionSchema>;
 
@@ -80,6 +81,7 @@ const { hasSectionSpacing = true } = Astro.props;
         }
         {/* Bold white heading */}
         {title && <SectionTitle title={title} variant="dark" />}
+        <ContactDirectButtons />
         {
           description && (
             <p class="text-text-inverse/75 max-w-2xl text-base leading-relaxed md:text-lg">
@@ -114,3 +116,14 @@ const { hasSectionSpacing = true } = Astro.props;
     </div>
   </div>
 </section>
+
+<style>
+  /* Same creative fill as Portafolio, inverted: site blue -> white */
+  #contact :global(.contact-submit-btn.creative-hover-anim .hover-bg) {
+    background: #fff;
+  }
+  #contact :global(.contact-submit-btn:hover) {
+    background-color: var(--color-primary) !important;
+    color: var(--color-text-default) !important;
+  }
+</style>
