@@ -2,7 +2,9 @@ import { waitUntil } from "@vercel/functions";
 import type { APIRoute } from "astro";
 import { getSecret } from "astro:env/server";
 import { z } from "astro/zod";
+import { createElement } from "react";
 import { Resend } from "resend";
+import HomeForm from "../../../react-email-starter/emails/home-form";
 
 export const prerender = false;
 
@@ -258,20 +260,24 @@ const buildInternalEmail = (payload: ContactPayload) => {
 };
 
 const buildAutoresponse = (payload: ContactPayload) => {
-  const name = escapeHtml(payload.name);
-
   if (payload.locale === "es") {
     return {
       subject: "Recibimos tu mensaje | DevStoreMX",
       text: `Hola ${payload.name},\n\nRecibimos tu mensaje y te responderemos lo antes posible.\n\nSi quieres añadir información, responde a este mensaje o escribe a ${CONTACT_INBOX}.\n\nDevStoreMX`,
-      html: `<p>Hola ${name},</p><p>Recibimos tu mensaje y te responderemos lo antes posible.</p><p>Si quieres añadir información, responde a este mensaje o escribe a <a href="mailto:${CONTACT_INBOX}">${CONTACT_INBOX}</a>.</p><p>DevStoreMX</p>`,
+      react: createElement(HomeForm, {
+        locale: payload.locale,
+        name: payload.name,
+      }),
     };
   }
 
   return {
     subject: "We received your message | DevStoreMX",
     text: `Hi ${payload.name},\n\nWe received your message and will get back to you as soon as possible.\n\nIf you want to add more information, reply to this message or write to ${CONTACT_INBOX}.\n\nDevStoreMX`,
-    html: `<p>Hi ${name},</p><p>We received your message and will get back to you as soon as possible.</p><p>If you want to add more information, reply to this message or write to <a href="mailto:${CONTACT_INBOX}">${CONTACT_INBOX}</a>.</p><p>DevStoreMX</p>`,
+    react: createElement(HomeForm, {
+      locale: payload.locale,
+      name: payload.name,
+    }),
   };
 };
 
@@ -300,7 +306,7 @@ const sendAutoresponse = async (
         to: payload.email,
         replyTo: CONTACT_INBOX,
         subject: autoresponse.subject,
-        html: autoresponse.html,
+        react: autoresponse.react,
         text: autoresponse.text,
       },
       { idempotencyKey: `contact/autoresponse/${submissionId}` },
