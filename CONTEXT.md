@@ -270,11 +270,11 @@ El arreglo `team` contiene cuatro integrantes, correspondientes a las fotografí
 | Nombre | Fotografía | Cargo |
 | --- | --- | --- |
 | Fernando Peralta | `/team/fernando-peralta.jpg` | Technical Lead |
+| Miriam Medina | `/team/miriam-medina.jpg` | Full Stack Developer |
 | Hazel Vázquez | `/team/hazel-vazquez.jpg` | Full Stack Developer |
 | Janice García | `/team/janice-garcia.jpg` | Full Stack Developer |
-| Miriam Medina | `/team/miriam-medina.jpg` | Full Stack Developer |
 
-Los nombres se obtuvieron de los nombres de archivo. Cada integrante tiene `name`, `role`, `image` y `tone`; ya no se usa `featured` para dar un tamaño diferente a una persona. Los cargos indicados por el usuario son Technical Lead para Fernando Peralta y Full Stack Developer para Hazel Vázquez, Janice García y Miriam Medina.
+Los nombres se obtuvieron de los nombres de archivo. Cada integrante tiene `name`, `role`, `image`, `tone`, `linkedin` y `portfolio` (el botón “Ver portafolio” solo aparece si `portfolio` tiene URL); ya no se usa `featured` para dar un tamaño diferente a una persona. Los cargos indicados por el usuario son Technical Lead para Fernando Peralta y Full Stack Developer para Hazel Vázquez, Janice García y Miriam Medina.
 
 Todas las fotografías proporcionadas tienen 400 × 400 px. Las tarjetas usan `aspect-square` y captions compactos con fondo `brand` azul y texto blanco. El cuadro se ajusta al ancho del contenido, tiene padding de 10 px horizontal y 6 px vertical, y muestra el nombre a 13 px y el cargo a 11 px debajo; ya no tiene una altura mínima de 76 px. Se distribuyen en una columna en móvil, dos desde `sm` y cuatro desde `lg`. No hay spans de filas o columnas ni una altura mínima de 1000 px en la sección. Se conservan las animaciones actuales de las tarjetas.
 

@@ -97,10 +97,10 @@ export const steps = [
 export const technologies = ['Shopify', 'WordPress', 'React', 'Next.js', 'OpenAI', 'Anthropic', 'AWS', 'Figma'] as const;
 
 export const team = [
-  { name: 'Fernando Peralta', role: 'Technical Lead', image: '/team/fernando-peralta.jpg', tone: 'light', linkedin: '' },
-  { name: 'Hazel Vázquez', role: 'Full Stack Developer', image: '/team/hazel-vazquez.jpg', tone: 'light', linkedin: '' },
-  { name: 'Janice García', role: 'Full Stack Developer', image: '/team/janice-garcia.jpg', tone: 'light', linkedin: '' },
-  { name: 'Miriam Medina', role: 'Full Stack Developer', image: '/team/miriam-medina.jpg', tone: 'light', linkedin: '' },
+  { name: 'Fernando Peralta', role: 'Technical Lead', image: '/team/fernando-peralta.jpg', tone: 'light', linkedin: '', portfolio: 'https://fernandoperalta.xyz' },
+  { name: 'Miriam Medina', role: 'Full Stack Developer', image: '/team/miriam-medina.jpg', tone: 'light', linkedin: '', portfolio: '' },
+  { name: 'Hazel Vázquez', role: 'Full Stack Developer', image: '/team/hazel-vazquez.jpg', tone: 'light', linkedin: '', portfolio: '' },
+  { name: 'Janice García', role: 'Full Stack Developer', image: '/team/janice-garcia.jpg', tone: 'light', linkedin: '', portfolio: '' },
 ] as const;
 
 export const defaultTitle = 'devstoremx · Desarrollo web y soluciones digitales en México';

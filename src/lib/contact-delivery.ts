@@ -1,6 +1,7 @@
 import { randomUUID } from 'node:crypto';
 import type { Resend } from 'resend';
-import { CONTACT_EMAIL, FROM, confirmationEmail, notificationEmail, parseContact } from './contact.ts';
+import { CONTACT_EMAIL, FROM, notificationEmail, parseContact } from './contact.ts';
+import { confirmationEmail } from './confirmation-email.ts';
 import type { ContactResponse, EmailStatus } from './contact-status.ts';
 
 type SendEmail = Resend['emails']['send'];

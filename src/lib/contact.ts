@@ -29,7 +29,7 @@ export function escapeHtml(value: string): string {
   return value.replace(/[&<>"']/g, (char) => HTML_ESCAPES[char]);
 }
 
-function htmlText(value: string): string {
+export function htmlText(value: string): string {
   return escapeHtml(value).replaceAll('\n', '<br>');
 }
 
@@ -72,13 +72,5 @@ export function notificationEmail(data: ContactData): EmailContent {
   ];
   const html = `<table>${rows.map(([label, value]) => `<tr><th>${escapeHtml(label)}</th><td>${htmlText(value)}</td></tr>`).join('')}</table>`;
   const text = rows.map(([label, value]) => `${label}: ${value}`).join('\n');
-  return { subject, html, text };
-}
-
-export function confirmationEmail(data: ContactData): EmailContent {
-  const subject = 'Recibimos tu mensaje · devstoremx';
-  const intro = `Hola ${data.name}, recibimos tu mensaje. Te escribimos en menos de 24 horas hábiles.`;
-  const html = `<p>${htmlText(intro)}</p><p>${htmlText(data.message)}</p>`;
-  const text = `${intro}\n\n${data.message}`;
   return { subject, html, text };
 }

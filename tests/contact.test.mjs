@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { confirmationEmail, escapeHtml, notificationEmail, parseContact } from '../src/lib/contact.ts';
+import { escapeHtml, notificationEmail, parseContact } from '../src/lib/contact.ts';
+import { confirmationEmail } from '../src/lib/confirmation-email.ts';
 
 const valid = { name: 'Ana López', email: 'ana@empresa.com', phone: '55 0000 0000', message: 'Hola, quiero un sitio.' };
 

@@ -121,9 +121,11 @@ if (variant === 'home') {
         image: new URL(member.image, origin).href,
         worksFor: { '@id': organizationId },
       };
-      if (linkedin) {
-        person.url = linkedin;
-        person.sameAs = [linkedin];
+      const portfolio = publicValue(member.portfolio);
+      const links = [portfolio, linkedin].filter((link): link is string => Boolean(link));
+      if (links.length) {
+        person.url = links[0];
+        person.sameAs = links;
       }
       return person;
     }),
