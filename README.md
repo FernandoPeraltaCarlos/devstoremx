@@ -51,7 +51,7 @@ Los cargos del equipo ya están configurados. Completa los datos de contacto y l
 
 La clave `RESEND_API_KEY` se define en `.env` en local y en las variables de entorno del proyecto en Vercel. Completa `site.whatsappUrl` y `site.linkedinUrl` con los enlaces reales. El aviso de privacidad está en `/aviso-de-privacidad` y sigue marcado como borrador para revisión legal.
 
-El correo `hola@devstoremx.xyz` se publica en el footer y en los datos estructurados. Teléfono y ciudad siguen entre corchetes y no se muestran. `public/robots.txt`, `public/llms.txt` y el sitemap se generan con el dominio `https://devstoremx.com`.
+El correo `hola@devstoremx.xyz` se publica en el footer y en los datos estructurados. Teléfono y ciudad siguen entre corchetes y no se muestran. `public/robots.txt`, `public/llms.txt` y el sitemap se generan con el dominio `https://www.devstoremx.xyz`.
 
 ## Responsive y movimiento
 

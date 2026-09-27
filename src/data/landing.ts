@@ -111,7 +111,7 @@ export const ogImageAlt = 'devstoremx, desarrollo web y soluciones digitales en 
 // Los textos entre corchetes no se muestran ni se envían en datos estructurados.
 // formEndpoint acepta POST JSON: name, email, phone, message y el honeypot company.
 export const site = {
-  url: 'https://devstoremx.com',
+  url: 'https://www.devstoremx.xyz',
   ogImage: '/devstore_mx.png',
   sameAs: [] as string[],
   heroImage: '',

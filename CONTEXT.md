@@ -312,7 +312,7 @@ Configuración actual de `site`:
 
 | Campo | Estado actual | Uso |
 | --- | --- | --- |
-| `url` | `https://devstoremx.com` | Dominio canónico, alineado con `site` en `astro.config.mjs` |
+| `url` | `https://www.devstoremx.xyz` | Dominio canónico, alineado con `site` en `astro.config.mjs` |
 | `ogImage` | `/devstore_mx.png` | Imagen Open Graph de 1200 × 630 |
 | `sameAs` | Arreglo vacío | Perfiles públicos de la organización |
 | `heroImage` | Cadena vacía | Fotografía de portada |
@@ -586,7 +586,7 @@ Hay un único `h1` en el hero, headings por sección, un enlace “Saltar al con
 
 Los SVG decorativos se marcan con `aria-hidden="true"`. Los placeholders de personas e imágenes tienen una representación con `role="img"` y `aria-label`.
 
-El dominio canónico configurado es `https://devstoremx.com`. El layout publica canonical, Open Graph, Twitter Card, favicons y el manifiesto. Los datos estructurados viven en `StructuredData.astro`. El detalle está en la sección 29.
+El dominio canónico configurado es `https://www.devstoremx.xyz`. El layout publica canonical, Open Graph, Twitter Card, favicons y el manifiesto. Los datos estructurados viven en `StructuredData.astro`. El detalle está en la sección 29.
 
 `BrandMark.astro` usa `/devstoremx.svg` con respaldo `/devstoremx.png`. El documento enlaza `favicon.svg`, `favicon.ico`, `apple-touch-icon.png` y `site.webmanifest`. `public/devstore_mx.png` (1200 × 630) es la imagen Open Graph. El H1 de portada no usa `data-reveal="blur"`; su animación solo desplaza el texto y lo deja opaco desde el primer frame.
 
@@ -737,7 +737,7 @@ El usuario pidió ampliar un poco las imágenes. La cuadrícula de `About.astro`
 
 ## 29. Actualización: SEO y GEO de la landing
 
-Se aplicó la fase técnica y de entidad sobre la landing, con dominio `https://devstoremx.com`. No se inventaron correo, teléfono, ciudad, precios ni perfiles.
+Se aplicó la fase técnica y de entidad sobre la landing, con dominio `https://www.devstoremx.xyz`. No se inventaron correo, teléfono, ciudad, precios ni perfiles.
 
 - `astro.config.mjs` define `site` e incluye `@astrojs/sitemap`. El build genera `dist/sitemap-index.xml` y `dist/sitemap-0.xml` con `/` y `/aviso-de-privacidad/`.
 - `BaseLayout.astro` publica canonical, Open Graph, Twitter Card, favicon, apple touch icon y manifiesto. Ya no incluye `<meta name="generator">`. La descripción añade la ciudad solo cuando `site.location` deja de ser un placeholder.

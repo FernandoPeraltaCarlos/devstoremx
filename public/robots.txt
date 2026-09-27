@@ -17,4 +17,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://devstoremx.com/sitemap-index.xml
+Sitemap: https://www.devstoremx.xyz/sitemap-index.xml

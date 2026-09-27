@@ -1,6 +1,7 @@
+import { site } from '../data/landing.ts';
 import { CONTACT_EMAIL, escapeHtml, htmlText, type ContactData, type EmailContent } from './contact.ts';
 
-const SITE_URL = 'https://devstoremx.com';
+const SITE_URL = site.url;
 
 // Design system tokens (src/styles/global.css). Email clients need them inline.
 const C = {
@@ -27,6 +28,20 @@ const NEXT_STEPS: Array<[string, string]> = [
   ['Llamada de acercamiento', 'Escuchamos tu negocio, tus objetivos y lo que necesitas resolver.'],
   ['Planeación y cotización', 'Definimos alcance, tiempos y costo por escrito, antes de escribir una línea de código.'],
 ];
+
+/** Solid colour Gmail's mobile dark mode cannot invert: it leaves gradients alone. */
+function keep(color: string): string {
+  return `background-color:${color};background-image:linear-gradient(${color},${color});`;
+}
+
+/**
+ * Gmail iOS darkens light text even on dark backgrounds. These wrappers only apply in Gmail
+ * (`u + .body`) and blend the text back to its light colour; elsewhere they are plain divs.
+ * https://www.hteumeuleu.com/2021/fixing-gmail-dark-mode-css-blend-modes/
+ */
+function keepLightText(html: string): string {
+  return `<div class="gmail-screen"><div class="gmail-difference">${html}</div></div>`;
+}
 
 function eyebrow(label: string, color: string, className = ''): string {
   return `<p class="${className}" style="margin:0 0 12px;font-family:${MONO};font-size:12px;line-height:16px;letter-spacing:0.1em;text-transform:uppercase;color:${color};">${label}</p>`;
@@ -60,7 +75,7 @@ function darkRules(...prefixes: string[]): string {
     ['.t-ink', `color:${C.cloud} !important;`],
     ['.t-muted', `color:${C.mutedDark} !important;`],
     ['.t-brand', `color:${C.periwinkle} !important;`],
-    ['.btn', `background-color:${C.periwinkle} !important;`],
+    ['.btn', `background-color:${C.periwinkle} !important;background-image:linear-gradient(${C.periwinkle},${C.periwinkle}) !important;`],
     ['.btn-text', `color:${C.night} !important;`],
   ];
   return rules.map(([selector, declarations]) => `${prefixes.map((prefix) => prefix + selector).join(', ')} { ${declarations} }`).join('\n    ');
@@ -89,6 +104,8 @@ function confirmationHtml(data: ContactData, preheader: string): string {
   :root { color-scheme: light dark; supported-color-schemes: light dark; }
   body { margin: 0; padding: 0; }
   a { color: ${C.brand}; }
+  u + .body .gmail-screen { background: #000; mix-blend-mode: screen; }
+  u + .body .gmail-difference { background: #000; mix-blend-mode: difference; }
   @media (max-width: 620px) {
     .px { padding-left: 24px !important; padding-right: 24px !important; }
     .h1 { font-size: 32px !important; line-height: 38px !important; }
@@ -100,43 +117,43 @@ function confirmationHtml(data: ContactData, preheader: string): string {
   ${darkRules('[data-ogsc] ', '[data-ogsb] ')}
 </style>
 </head>
-<body class="bg-page" style="margin:0;padding:0;background-color:${C.paper};">
+<body class="body bg-page" style="margin:0;padding:0;background-color:${C.paper};">
 <div style="display:none;max-height:0;overflow:hidden;opacity:0;mso-hide:all;">${escapeHtml(preheader)}&#8199;&#65279;&#847;&#8199;&#65279;&#847;&#8199;&#65279;&#847;&#8199;&#65279;&#847;</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="bg-page" style="background-color:${C.paper};">
 <tr><td align="center" style="padding:32px 12px;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;">
 
     <!-- Header -->
-    <tr><td class="px" style="background-color:${C.night};padding:28px 40px;border-bottom:1px solid ${C.lineDark};">
+    <tr><td class="px" style="${keep(C.night)}padding:28px 40px;border-bottom:1px solid ${C.lineDark};">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
         <td valign="middle" style="padding-right:12px;"><a href="${SITE_URL}" style="text-decoration:none;"><img src="${SITE_URL}/devstoremx.png" width="30" height="36" alt="" style="display:block;border:0;width:30px;height:36px;"></a></td>
-        <td valign="middle" style="font-family:${SANS};font-size:18px;line-height:24px;font-weight:700;letter-spacing:-0.01em;"><a href="${SITE_URL}" style="color:${C.cloud};text-decoration:none;">devstoremx</a></td>
+        <td valign="middle" style="font-family:${SANS};font-size:18px;line-height:24px;font-weight:700;letter-spacing:-0.01em;">${keepLightText(`<a href="${SITE_URL}" style="color:${C.cloud};text-decoration:none;">devstoremx</a>`)}</td>
       </tr></table>
     </td></tr>
 
     <!-- Hero -->
-    <tr><td class="px" style="background-color:${C.night};padding:44px 40px 40px;">
+    <tr><td class="px" style="${keep(C.night)}padding:44px 40px 40px;">${keepLightText(`
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;"><tr>
-        <td style="border:1px solid ${C.lineDark};background-color:${C.panel};border-radius:4px;padding:7px 12px;">
+        <td style="border:1px solid ${C.lineDark};${keep(C.panel)}border-radius:4px;padding:7px 12px;">
           <span style="display:inline-block;width:8px;height:8px;background-color:${C.sky};vertical-align:middle;"></span>
           <span style="font-family:${SANS};font-size:11px;line-height:16px;font-weight:700;letter-spacing:0.1em;color:${C.mutedDark};vertical-align:middle;">&nbsp;MENSAJE RECIBIDO</span>
         </td>
       </tr></table>
       <h1 class="h1" style="margin:0;font-family:${SANS};font-size:40px;line-height:46px;font-weight:700;letter-spacing:-0.035em;color:${C.cloud};">Hola ${name},<br><span style="color:${C.electric};">ya tenemos tu mensaje.</span></h1>
       <p style="margin:20px 0 0;font-family:${SANS};font-size:16px;line-height:26px;color:${C.mutedDark};">Gracias por escribirnos. Un integrante del equipo revisará tu proyecto y te responderá en menos de <strong style="color:${C.cloud};font-weight:700;">24&nbsp;horas hábiles</strong>.</p>
-    </td></tr>
+    `)}</td></tr>
 
     <!-- Message copy -->
-    <tr><td class="px" style="background-color:${C.night};padding:0 40px 44px;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:${C.panel};border:1px solid ${C.lineDark};border-radius:6px;">
-        <tr><td style="padding:24px;">
+    <tr><td class="px" style="${keep(C.night)}padding:0 40px 44px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="${keep(C.panel)}border:1px solid ${C.lineDark};border-radius:6px;">
+        <tr><td style="padding:24px;">${keepLightText(`
           ${eyebrow('Tu mensaje', C.periwinkle)}
           <p style="margin:0 0 20px;font-family:${SANS};font-size:15px;line-height:24px;color:${C.cloud};word-break:break-word;">${htmlText(data.message)}</p>
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-top:1px solid ${C.lineDark};">
             <tr><td style="height:10px;line-height:10px;font-size:0;">&nbsp;</td></tr>
             ${summary}
           </table>
-        </td></tr>
+        `)}</td></tr>
       </table>
     </td></tr>
 
@@ -153,15 +170,15 @@ function confirmationHtml(data: ContactData, preheader: string): string {
     <tr><td class="px bg-card" style="background-color:#ffffff;padding:16px 40px 44px;border-left:1px solid ${C.line};border-right:1px solid ${C.line};border-bottom:1px solid ${C.line};">
       <p class="t-muted" style="margin:0 0 20px;font-family:${SANS};font-size:15px;line-height:24px;color:${C.muted};">¿Olvidaste algún detalle? Responde a este correo y lo sumamos a tu solicitud.</p>
       <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
-        <td class="btn" style="background-color:${C.brand};border-radius:4px;">
-          <a class="btn-text" href="mailto:${CONTACT_EMAIL}" style="display:inline-block;padding:14px 24px;font-family:${SANS};font-size:15px;line-height:20px;font-weight:700;color:#ffffff;text-decoration:none;">Escribir a devstoremx &rarr;</a>
+        <td class="btn" style="${keep(C.brand)}border-radius:4px;">${keepLightText(`
+          <a class="btn-text" href="mailto:${CONTACT_EMAIL}" style="display:inline-block;padding:14px 24px;font-family:${SANS};font-size:15px;line-height:20px;font-weight:700;color:#ffffff;text-decoration:none;">Escribir a devstoremx &rarr;</a>`)}
         </td>
       </tr></table>
     </td></tr>
 
     <!-- Footer -->
     <tr><td class="px t-muted" style="padding:28px 40px 8px;font-family:${SANS};font-size:12px;line-height:20px;color:${C.muted};text-align:center;">
-      <p style="margin:0;">Recibiste este correo porque enviaste el formulario de contacto en <a class="t-brand" href="${SITE_URL}" style="color:${C.brand};text-decoration:underline;">devstoremx.com</a>.</p>
+      <p style="margin:0;">Recibiste este correo porque enviaste el formulario de contacto en <a class="t-brand" href="${SITE_URL}" style="color:${C.brand};text-decoration:underline;">devstoremx.xyz</a>.</p>
       <p class="t-muted" style="margin:4px 0 0;font-family:${MONO};color:${C.muted};">${CONTACT_EMAIL}</p>
     </td></tr>
 

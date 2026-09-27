@@ -6,15 +6,15 @@ El mensaje de la marca es: «Sitios que venden. Código que dura.» El primer pa
 
 ## Servicios
 
-- [Desarrollo web](https://devstoremx.com/#desarrollo-web): Sitios corporativos rápidos, seguros y fáciles de actualizar, hechos a la medida del negocio.
-- [Landing pages](https://devstoremx.com/#landing-pages): Páginas enfocadas en una sola acción: cotizar, comprar o registrarse.
-- [Ecommerce](https://devstoremx.com/#ecommerce): Tiendas en línea con pagos, inventario y envíos integrados.
-- [Email templates](https://devstoremx.com/#email-templates): Plantillas de correo que se ven bien en Gmail, Outlook y el celular.
-- [Automatizaciones](https://devstoremx.com/#automatizaciones): Conexión de herramientas para que las tareas repetitivas se hagan solas.
-- [Apps móviles](https://devstoremx.com/#apps-moviles): Aplicaciones para iOS y Android.
-- [Administración de sitios web](https://devstoremx.com/#administracion-de-sitios-web): Actualizaciones, respaldos, seguridad y cambios de contenido.
-- [Apps web](https://devstoremx.com/#apps-web): Portales de clientes, dashboards y reservas que funcionan en el navegador.
-- [Soluciones digitales](https://devstoremx.com/#soluciones-digitales): Integraciones con IA, APIs y herramientas a la medida.
+- [Desarrollo web](https://www.devstoremx.xyz/#desarrollo-web): Sitios corporativos rápidos, seguros y fáciles de actualizar, hechos a la medida del negocio.
+- [Landing pages](https://www.devstoremx.xyz/#landing-pages): Páginas enfocadas en una sola acción: cotizar, comprar o registrarse.
+- [Ecommerce](https://www.devstoremx.xyz/#ecommerce): Tiendas en línea con pagos, inventario y envíos integrados.
+- [Email templates](https://www.devstoremx.xyz/#email-templates): Plantillas de correo que se ven bien en Gmail, Outlook y el celular.
+- [Automatizaciones](https://www.devstoremx.xyz/#automatizaciones): Conexión de herramientas para que las tareas repetitivas se hagan solas.
+- [Apps móviles](https://www.devstoremx.xyz/#apps-moviles): Aplicaciones para iOS y Android.
+- [Administración de sitios web](https://www.devstoremx.xyz/#administracion-de-sitios-web): Actualizaciones, respaldos, seguridad y cambios de contenido.
+- [Apps web](https://www.devstoremx.xyz/#apps-web): Portales de clientes, dashboards y reservas que funcionan en el navegador.
+- [Soluciones digitales](https://www.devstoremx.xyz/#soluciones-digitales): Integraciones con IA, APIs y herramientas a la medida.
 
 ## Proceso
 
@@ -26,14 +26,14 @@ El mensaje de la marca es: «Sitios que venden. Código que dura.» El primer pa
 
 ## Preguntas frecuentes
 
-- [Costo](https://devstoremx.com/#preguntas): depende del alcance. La propuesta incluye costo, tiempos y entregables antes de empezar.
-- [Tiempos](https://devstoremx.com/#preguntas): dependen del alcance y la complejidad. El calendario se acuerda antes de comenzar.
-- [Entrega](https://devstoremx.com/#preguntas): entregables acordados, accesos e indicaciones para usar y administrar el proyecto.
-- [Mantenimiento](https://devstoremx.com/#preguntas): mantenimiento, actualizaciones y mejoras con un alcance acordado según el proyecto.
-- [Definir una idea](https://devstoremx.com/#preguntas): basta con explicar el objetivo o problema; el equipo ayuda a definir el proyecto.
-- [Proyectos existentes](https://devstoremx.com/#preguntas): se revisan para proponer mejoras, nuevas funciones o una renovación.
-- [Avances](https://devstoremx.com/#preguntas): seguimiento durante el desarrollo y revisión del resultado antes de la entrega.
-- [Cómo empezar](https://devstoremx.com/#preguntas): formulario de contacto y llamada de acercamiento.
+- [Costo](https://www.devstoremx.xyz/#preguntas): depende del alcance. La propuesta incluye costo, tiempos y entregables antes de empezar.
+- [Tiempos](https://www.devstoremx.xyz/#preguntas): dependen del alcance y la complejidad. El calendario se acuerda antes de comenzar.
+- [Entrega](https://www.devstoremx.xyz/#preguntas): entregables acordados, accesos e indicaciones para usar y administrar el proyecto.
+- [Mantenimiento](https://www.devstoremx.xyz/#preguntas): mantenimiento, actualizaciones y mejoras con un alcance acordado según el proyecto.
+- [Definir una idea](https://www.devstoremx.xyz/#preguntas): basta con explicar el objetivo o problema; el equipo ayuda a definir el proyecto.
+- [Proyectos existentes](https://www.devstoremx.xyz/#preguntas): se revisan para proponer mejoras, nuevas funciones o una renovación.
+- [Avances](https://www.devstoremx.xyz/#preguntas): seguimiento durante el desarrollo y revisión del resultado antes de la entrega.
+- [Cómo empezar](https://www.devstoremx.xyz/#preguntas): formulario de contacto y llamada de acercamiento.
 
 ## Equipo
 
@@ -44,9 +44,9 @@ El mensaje de la marca es: «Sitios que venden. Código que dura.» El primer pa
 
 ## Contacto
 
-- Sitio: https://devstoremx.com/
-- Formulario: https://devstoremx.com/#contacto
+- Sitio: https://www.devstoremx.xyz/
+- Formulario: https://www.devstoremx.xyz/#contacto
 - Correo: hola@devstoremx.xyz
-- Aviso de privacidad: https://devstoremx.com/aviso-de-privacidad
+- Aviso de privacidad: https://www.devstoremx.xyz/aviso-de-privacidad
 
 El teléfono y la ciudad solo aparecen en el sitio cuando dejan de ser datos pendientes. No inventar esos datos a partir de este archivo.

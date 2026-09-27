@@ -8,11 +8,11 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://devstoremx.com',
+  site: 'https://www.devstoremx.xyz',
   adapter: vercel(),
   env: {
     schema: {
-      RESEND_API_KEY: envField.string({ context: 'server', access: 'secret' }),
+      RESEND_API_KEY: envField.string({ context: 'server', access: 'secret', optional: true }),
     },
   },
   integrations: [preact(), sitemap()],

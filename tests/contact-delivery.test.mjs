@@ -9,7 +9,7 @@ const id = 'ba959738-4f1e-468a-b9e7-a6e5b6298ef0';
 const success = { data: { id: 'email-1' }, error: null };
 const rejected = { data: null, error: { name: 'validation_error', statusCode: 422, message: 'Rejected' } };
 function request(body = valid) {
-  return new Request('https://devstoremx.com/api/contact', {
+  return new Request('https://www.devstoremx.xyz/api/contact', {
     method: 'POST', headers: { 'Idempotency-Key': id },
     body: typeof body === 'string' ? body : JSON.stringify(body),
   });
