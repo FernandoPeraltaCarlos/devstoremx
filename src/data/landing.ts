@@ -103,7 +103,7 @@ export const team = [
   { name: 'Janice García', role: 'Full Stack Developer', image: '/team/janice-garcia.jpg', tone: 'light', linkedin: '', portfolio: '' },
 ] as const;
 
-export const defaultTitle = 'devstoremx · Desarrollo web y soluciones digitales en México';
+export const defaultTitle = 'Devstoremx · Desarrollo web y soluciones digitales en México';
 export const defaultDescription = 'Diseñamos, desarrollamos y mantenemos tu presencia digital. Sitios web, ecommerce, apps y automatizaciones a la medida de tu negocio.';
 export const ogImageAlt = 'devstoremx, desarrollo web y soluciones digitales en México';
 
