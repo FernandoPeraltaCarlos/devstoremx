@@ -1,0 +1,146 @@
+---
+import {
+  defaultTitle,
+  faqs,
+  metaDescription,
+  ogImageAlt,
+  organizationSameAs,
+  postalAddress,
+  publicValue,
+  services,
+  site,
+  team,
+  technologies,
+} from '../../data/landing';
+
+interface Props {
+  title?: string;
+  description?: string;
+  variant?: 'home' | 'page';
+}
+
+const title = Astro.props.title ?? defaultTitle;
+const description = Astro.props.description ?? metaDescription();
+const variant = Astro.props.variant ?? 'home';
+const organizationDescription = metaDescription();
+const origin = (Astro.site ?? new URL(site.url)).origin;
+const pageUrl = new URL(Astro.url.pathname, origin).href;
+const organizationId = `${origin}/#organization`;
+const websiteId = `${origin}/#website`;
+const webpageId = `${pageUrl}#webpage`;
+
+const sameAs = organizationSameAs();
+const email = publicValue(site.email);
+const phone = publicValue(site.phone);
+const location = publicValue(site.location);
+
+const organization: Record<string, unknown> = {
+  '@type': ['Organization', 'ProfessionalService'],
+  '@id': organizationId,
+  name: 'devstoremx',
+  url: origin,
+  slogan: 'Sitios que venden. Código que dura.',
+  logo: {
+    '@type': 'ImageObject',
+    url: new URL('/devstoremx.svg', origin).href,
+  },
+  image: new URL(site.ogImage, origin).href,
+  description: organizationDescription,
+  areaServed: { '@type': 'Country', name: 'México' },
+  knowsAbout: [...technologies],
+};
+
+if (sameAs.length) organization.sameAs = sameAs;
+if (email) organization.email = email;
+if (phone) organization.telephone = phone;
+if (location) organization.address = postalAddress(location);
+
+const serviceNodes = services.map((service) => ({
+  '@type': 'Service',
+  '@id': `${origin}/#${service.slug}`,
+  name: service.title,
+  description: service.description,
+  url: `${origin}/#${service.slug}`,
+  serviceType: service.title,
+  provider: { '@id': organizationId },
+  areaServed: { '@type': 'Country', name: 'México' },
+}));
+
+const graph: Record<string, unknown>[] = [
+  organization,
+  {
+    '@type': 'WebSite',
+    '@id': websiteId,
+    url: origin,
+    name: 'devstoremx',
+    description: organizationDescription,
+    inLanguage: 'es-MX',
+    publisher: { '@id': organizationId },
+  },
+  {
+    '@type': 'WebPage',
+    '@id': webpageId,
+    url: pageUrl,
+    name: title,
+    description,
+    inLanguage: 'es-MX',
+    isPartOf: { '@id': websiteId },
+    about: { '@id': organizationId },
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: new URL(site.ogImage, origin).href,
+      width: 1200,
+      height: 630,
+      caption: ogImageAlt,
+    },
+  },
+];
+
+if (variant === 'home') {
+  organization.hasOfferCatalog = { '@id': `${origin}/#catalogo` };
+  graph.push(
+    ...serviceNodes,
+    {
+      '@type': 'OfferCatalog',
+      '@id': `${origin}/#catalogo`,
+      name: 'Servicios de desarrollo web y soluciones digitales',
+      itemListElement: services.map((service, index) => ({
+        '@type': 'Offer',
+        position: index + 1,
+        itemOffered: { '@id': `${origin}/#${service.slug}` },
+      })),
+    },
+    ...team.map((member) => {
+      const slug = member.image.replace(/^\/team\//, '').replace(/\.jpg$/, '');
+      const linkedin = publicValue(member.linkedin);
+      const person: Record<string, unknown> = {
+        '@type': 'Person',
+        '@id': `${origin}/#${slug}`,
+        name: member.name,
+        jobTitle: member.role,
+        image: new URL(member.image, origin).href,
+        worksFor: { '@id': organizationId },
+      };
+      if (linkedin) {
+        person.url = linkedin;
+        person.sameAs = [linkedin];
+      }
+      return person;
+    }),
+    {
+      '@type': 'FAQPage',
+      '@id': `${origin}/#faq`,
+      url: `${origin}/#preguntas`,
+      isPartOf: { '@id': webpageId },
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+      })),
+    },
+  );
+}
+
+const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c');
+---
+<script is:inline type="application/ld+json" set:html={jsonLd}></script>

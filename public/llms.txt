@@ -1,0 +1,52 @@
+# devstoremx
+
+> Agencia de desarrollo web y soluciones digitales en México. Diseña, desarrolla y mantiene sitios web, tiendas en línea, apps y automatizaciones para negocios en México.
+
+El mensaje de la marca es: «Sitios que venden. Código que dura.» El primer paso es una llamada de acercamiento. Después se entrega una cotización por escrito con alcance, tiempos y costo, antes de escribir código. No hay un precio único publicado: el costo depende del alcance.
+
+## Servicios
+
+- [Desarrollo web](https://devstoremx.com/#desarrollo-web): Sitios corporativos rápidos, seguros y fáciles de actualizar, hechos a la medida del negocio.
+- [Landing pages](https://devstoremx.com/#landing-pages): Páginas enfocadas en una sola acción: cotizar, comprar o registrarse.
+- [Ecommerce](https://devstoremx.com/#ecommerce): Tiendas en línea con pagos, inventario y envíos integrados.
+- [Email templates](https://devstoremx.com/#email-templates): Plantillas de correo que se ven bien en Gmail, Outlook y el celular.
+- [Automatizaciones](https://devstoremx.com/#automatizaciones): Conexión de herramientas para que las tareas repetitivas se hagan solas.
+- [Apps móviles](https://devstoremx.com/#apps-moviles): Aplicaciones para iOS y Android.
+- [Administración de sitios web](https://devstoremx.com/#administracion-de-sitios-web): Actualizaciones, respaldos, seguridad y cambios de contenido.
+- [Apps web](https://devstoremx.com/#apps-web): Portales de clientes, dashboards y reservas que funcionan en el navegador.
+- [Soluciones digitales](https://devstoremx.com/#soluciones-digitales): Integraciones con IA, APIs y herramientas a la medida.
+
+## Proceso
+
+1. Llamada de acercamiento: entender el negocio, los objetivos y el problema.
+2. Planeación y cotización: alcance, tiempos y costo por escrito.
+3. Desarrollo: diseño y construcción, con avances durante el trabajo.
+4. Llamada de revisión: revisar el resultado y ajustar detalles.
+5. Entrega: publicación del proyecto y accesos para operarlo.
+
+## Preguntas frecuentes
+
+- [Costo](https://devstoremx.com/#preguntas): depende del alcance. La propuesta incluye costo, tiempos y entregables antes de empezar.
+- [Tiempos](https://devstoremx.com/#preguntas): dependen del alcance y la complejidad. El calendario se acuerda antes de comenzar.
+- [Entrega](https://devstoremx.com/#preguntas): entregables acordados, accesos e indicaciones para usar y administrar el proyecto.
+- [Mantenimiento](https://devstoremx.com/#preguntas): mantenimiento, actualizaciones y mejoras con un alcance acordado según el proyecto.
+- [Definir una idea](https://devstoremx.com/#preguntas): basta con explicar el objetivo o problema; el equipo ayuda a definir el proyecto.
+- [Proyectos existentes](https://devstoremx.com/#preguntas): se revisan para proponer mejoras, nuevas funciones o una renovación.
+- [Avances](https://devstoremx.com/#preguntas): seguimiento durante el desarrollo y revisión del resultado antes de la entrega.
+- [Cómo empezar](https://devstoremx.com/#preguntas): formulario de contacto y llamada de acercamiento.
+
+## Equipo
+
+- Fernando Peralta, Technical Lead
+- Hazel Vázquez, Full Stack Developer
+- Janice García, Full Stack Developer
+- Miriam Medina, Full Stack Developer
+
+## Contacto
+
+- Sitio: https://devstoremx.com/
+- Formulario: https://devstoremx.com/#contacto
+- Correo: hola@devstoremx.xyz
+- Aviso de privacidad: https://devstoremx.com/aviso-de-privacidad
+
+El teléfono y la ciudad solo aparecen en el sitio cuando dejan de ser datos pendientes. No inventar esos datos a partir de este archivo.

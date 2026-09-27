@@ -1,0 +1,7 @@
+---
+import Logo from '../ui/Logo.astro';
+import Navigation from '../interactive/Navigation';
+---
+<header class="absolute inset-x-0 top-0 z-30">
+  <div class="container-page flex items-center justify-between gap-6 py-6 lg:py-7"><Logo /><Navigation client:load /></div>
+</header>

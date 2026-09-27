@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StructuredData from '../components/seo/StructuredData.astro';
+import Footer from '../components/sections/Footer.astro';
+import Logo from '../components/ui/Logo.astro';
+import { publicValue, site } from '../data/landing';
+
+const title = 'Aviso de privacidad · devstoremx';
+const description = 'Aviso de privacidad de devstoremx sobre los datos que recaba el formulario de contacto y los derechos de quien los proporciona.';
+const email = publicValue(site.email);
+---
+<BaseLayout title={title} description={description}>
+  <StructuredData slot="head" title={title} description={description} variant="page" />
+  <header class="bg-night text-cloud">
+    <div class="container-page flex items-center py-6"><Logo /></div>
+  </header>
+  <main id="contenido" class="section-space bg-paper">
+    <article class="container-page mx-auto flex max-w-[760px] flex-col gap-8">
+      <header class="flex flex-col gap-4">
+        <h1 class="text-[40px] leading-[1.1] font-bold tracking-[-0.03em] text-ink">Aviso de privacidad</h1>
+        <p class="rounded-md border border-line bg-white px-4 py-3 text-sm leading-6 text-muted">Borrador pendiente de revisión legal. Este texto es una base para publicar el aviso y no sustituye asesoría jurídica.</p>
+      </header>
+      <section class="flex flex-col gap-3">
+        <h2 class="text-xl font-semibold tracking-[-0.02em] text-ink">1. Responsable</h2>
+        <p class="text-base leading-7 text-muted">devstoremx, con sitio en {site.url}, es responsable de los datos personales que se recaban por este medio. Para ejercer derechos o hacer preguntas sobre este aviso, usa {email ? <a class="font-semibold text-brand underline-offset-4 hover:underline" href={`mailto:${email}`}>{email}</a> : <a class="font-semibold text-brand underline-offset-4 hover:underline" href="/#contacto">el formulario de contacto</a>}.</p>
+      </section>
+      <section class="flex flex-col gap-3">
+        <h2 class="text-xl font-semibold tracking-[-0.02em] text-ink">2. Datos que se recaban</h2>
+        <p class="text-base leading-7 text-muted">El formulario de contacto pide nombre, correo electrónico y mensaje. El teléfono es opcional. No se solicitan datos personales sensibles. Si más adelante se publican otros canales, como WhatsApp, solo se usarán los datos que la persona envíe por ese medio para responder su solicitud.</p>
+      </section>
+      <section class="flex flex-col gap-3">
+        <h2 class="text-xl font-semibold tracking-[-0.02em] text-ink">3. Finalidades</h2>
+        <p class="text-base leading-7 text-muted">Los datos se usan para responder la solicitud, agendar la llamada de acercamiento, preparar una cotización y dar seguimiento al proyecto que se haya consultado. No se usan para enviar publicidad no relacionada ni se venden a terceros.</p>
+      </section>
+      <section class="flex flex-col gap-3">
+        <h2 class="text-xl font-semibold tracking-[-0.02em] text-ink">4. Transferencias</h2>
+        <p class="text-base leading-7 text-muted">devstoremx no vende datos personales. Puede compartirlos solo con proveedores necesarios para hospedar el sitio o recibir el mensaje del formulario, y únicamente para esa finalidad.</p>
+      </section>
+      <section class="flex flex-col gap-3">
+        <h2 class="text-xl font-semibold tracking-[-0.02em] text-ink">5. Derechos</h2>
+        <p class="text-base leading-7 text-muted">Quien haya enviado sus datos puede solicitar acceso, rectificación, cancelación u oposición, y revocar el consentimiento para su tratamiento. La solicitud se atiende por el mismo medio de contacto de este aviso. También puede limitar el uso o la divulgación de sus datos.</p>
+      </section>
+      <section class="flex flex-col gap-3">
+        <h2 class="text-xl font-semibold tracking-[-0.02em] text-ink">6. Cambios</h2>
+        <p class="text-base leading-7 text-muted">Cualquier cambio a este aviso se publicará en esta misma página. La versión vigente es la que esté disponible en {site.url}/aviso-de-privacidad.</p>
+      </section>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>

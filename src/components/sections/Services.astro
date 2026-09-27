@@ -1,0 +1,10 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import ServiceCard from '../ui/ServiceCard.astro';
+import { services } from '../../data/landing';
+---
+<section id="servicios" class="section-space bg-paper lg:min-h-[1120px]">
+  <div class="container-page"><SectionHeading eyebrow="Servicios" title="Todo lo que tu negocio necesita para vender en línea." description="Un solo equipo para diseñar, construir y mantener cada pieza de tu presencia digital." />
+    <div class="mt-10 grid gap-x-8 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-x-12">{services.map(({ slug, ...service }, i) => <ServiceCard id={slug} {...service} delay={(i % 3) * 120} />)}</div>
+  </div>
+</section>

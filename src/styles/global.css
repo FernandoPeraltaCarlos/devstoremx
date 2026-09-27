@@ -1,0 +1,243 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("/fonts/plus-jakarta-sans-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("/fonts/plus-jakarta-sans-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+2020, U+20A0-20AB, U+2113;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/ibm-plex-mono-latin.woff2") format("woff2");
+}
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --color-paper: #f6f8fc;
+  --color-ink: #0a0f1c;
+  --color-night: #05070d;
+  --color-panel: #0d1321;
+  --color-brand: #3b55e6;
+  --color-electric: #5271ff;
+  --color-periwinkle: #7b93ff;
+  --color-sky: #51ade5;
+  --color-muted: #4a5570;
+  --color-muted-dark: #98a4bd;
+  --color-line: #dbe2ee;
+  --color-line-dark: #1f2a3d;
+  --color-cloud: #e9eefb;
+  --color-surface-sunken: #eef2f8;
+  --color-primary-soft: #e8edff;
+  --color-success: #1d7a45;
+  --color-success-soft: #e6f5ec;
+  --color-warning: #8a5a00;
+  --color-warning-soft: #fff4dc;
+  --color-danger: #b42318;
+  --color-danger-soft: #fdecea;
+}
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; interpolate-size: allow-keywords; }
+  body { @apply m-0 bg-paper font-sans text-ink antialiased; }
+  button, a, input, textarea { -webkit-tap-highlight-color: transparent; }
+  /* DS: 150 ms ease-out on hover and focus. */
+  button, a { @apply transition duration-150 ease-out; }
+  button:not(:disabled) { cursor: pointer; }
+  /* DS focus ring: 2px of the surface, then 2px of primary. */
+  :focus-visible { outline: 2px solid transparent; box-shadow: 0 0 0 2px var(--color-paper), 0 0 0 4px var(--color-brand); }
+  :is(.bg-night, .bg-panel) :focus-visible { box-shadow: 0 0 0 2px var(--color-night), 0 0 0 4px var(--color-periwinkle); }
+  ::selection { background: #5271ff; color: white; }
+}
+@layer components {
+  .container-page { @apply mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 xl:px-[120px]; }
+  .section-space { @apply py-16 sm:py-20 lg:py-24; }
+  .grid-background {
+    background-image: linear-gradient(#1f2a3d 1px, transparent 1px), linear-gradient(90deg, #1f2a3d 1px, transparent 1px);
+    background-size: 160px 150px;
+  }
+  .button { @apply inline-flex min-h-12 items-center justify-center gap-2.5 rounded-md px-6 text-base font-semibold transition duration-150 ease-out disabled:cursor-not-allowed disabled:opacity-60; }
+  .button-primary { @apply bg-brand text-white hover:bg-[#2f47cc]; }
+  .button-hero { @apply bg-periwinkle text-night hover:bg-[#9ab0ff]; }
+  .button-outline { @apply border border-[#77839b] bg-white text-ink hover:border-brand hover:text-brand; }
+  .button-dark-outline { @apply border border-[#56627a] text-cloud hover:border-periwinkle hover:text-periwinkle; }
+  .button-whatsapp { @apply bg-[#25d366] text-[#073b1b] hover:bg-[#20bd5a]; }
+  .button-linkedin { @apply bg-[#0a66c2] text-white hover:bg-[#004182]; }
+  .field { @apply min-h-12 w-full rounded-md border border-[#77839b] bg-white px-3.5 text-base text-ink transition placeholder:text-[#6b758a] focus:border-brand focus:outline-2 focus:outline-offset-2 focus:outline-brand; }
+  .eyebrow { @apply text-[13px] leading-5 font-bold tracking-[0.1em] uppercase; }
+}
+/* Pinned process timeline: centred by ProcessTimeline while the runway gives each stage ~28vh of scroll. */
+@media (min-width: 1024px) and (min-height: 780px) {
+  .process-pin { position: sticky; top: 1rem; }
+  .process-runway { height: 140vh; }
+  /* "Durante el desarrollo" waits for stage 03; its space stays reserved so the pin does not jump. */
+  html:not(.reveal-ready) .process-track:is([data-step="0"], [data-step="1"]) .process-dev > * { opacity: 0; }
+}
+
+@keyframes enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes hero-title-in {
+  from { translate: 0 12px; }
+  to { translate: 0 0; }
+}
+@keyframes signal {
+  0%, 100% { opacity: .5; }
+  50% { opacity: 1; }
+}
+@keyframes spin { to { rotate: 360deg; } }
+.scroll-progress { scale: 0 1; }
+
+/* Hero background: pulses sit exactly on the 160px × 150px grid lines. */
+.hero-pulse-track { position: absolute; overflow: clip; pointer-events: none; }
+.hero-pulse-x { inset-inline: 0; height: 1px; }
+.hero-pulse-y { inset-block: 0; width: 1px; }
+.hero-pulse-col { left: 960px; left: round(down, 62%, 160px); }
+.hero-pulse-track > span { position: absolute; inset: 0; translate: -100% 0; }
+.hero-pulse-x > span { background: linear-gradient(90deg, transparent, var(--color-electric), transparent) right / 200px 1px no-repeat; }
+.hero-pulse-y > span { translate: 0 -100%; background: linear-gradient(180deg, transparent, var(--color-sky), transparent) bottom / 1px 180px no-repeat; }
+.hero-bar { transform-origin: left; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-enter { animation: enter .3s both; }
+  /* LCP: the hero title stays opaque. Only a short shift, never a hidden first frame. */
+  .hero-title { animation: hero-title-in 700ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+  .signal { animation: signal 3s ease-in-out infinite; }
+
+  /* Hero loops: bars type and erase like lines of code, pulses cross the grid, the sky block breathes. */
+  @keyframes hero-type {
+    0% { scale: 0 1; }
+    12%, 78% { scale: 1 1; }
+    90%, 100% { scale: 0 1; }
+  }
+  @keyframes hero-caret { 50% { opacity: 0; } }
+  @keyframes hero-breathe { from { opacity: 0.5; } to { opacity: 1; } }
+  @keyframes hero-pulse-x { from { translate: -100% 0; } to { translate: 100% 0; } }
+  @keyframes hero-pulse-y { from { translate: 0 -100%; } to { translate: 0 100%; } }
+  .hero-bar { animation: hero-type 7s cubic-bezier(0.22, 1, 0.36, 1) infinite both; }
+  .hero-caret { animation: hero-caret 1.1s steps(1) infinite; }
+  .hero-breathe { animation: hero-breathe 6s ease-in-out infinite alternate; }
+  .hero-pulse-x > span { animation: hero-pulse-x 9s linear infinite; }
+  .hero-pulse-y > span { animation: hero-pulse-y 11s linear infinite; animation-delay: -3s; }
+  [data-hero][data-paused] .hero-anim { animation-play-state: paused; }
+  /* Outside the hero there are no loops: the in-progress icon turns once as its row enters. */
+  .reveal-visible .spin-once { animation: spin 900ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+  /* FAQ panels open and close in 250 ms (DS panel timing); older browsers simply toggle. */
+  .faq-item::details-content {
+    block-size: 0;
+    overflow-y: clip;
+    transition: block-size 250ms ease-out, content-visibility 250ms ease-out allow-discrete;
+  }
+  .faq-item[open]::details-content { block-size: auto; }
+  @keyframes faq-answer-in { from { opacity: 0; translate: 0 -4px; } }
+  .faq-item[open] .faq-answer { animation: faq-answer-in 250ms ease-out both; }
+
+  /* Viewport reveals — hidden only once the observer is running (see viewport-reveal.ts). */
+  .reveal-ready [data-reveal] {
+    --reveal-distance: 48px;
+    transition:
+      opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+      translate 900ms cubic-bezier(0.22, 1, 0.36, 1),
+      scale 900ms cubic-bezier(0.22, 1, 0.36, 1),
+      filter 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .reveal-ready [data-reveal]:not(.reveal-visible):not(:focus-within) {
+    opacity: 0;
+    filter: blur(8px);
+    translate: 0 calc(var(--reveal-dir, 1) * var(--reveal-distance));
+  }
+  .reveal-ready [data-reveal="left"]:not(.reveal-visible):not(:focus-within) { translate: calc(-1 * var(--reveal-distance)) 0; }
+  .reveal-ready [data-reveal="right"]:not(.reveal-visible):not(:focus-within) { translate: var(--reveal-distance) 0; }
+  .reveal-ready [data-reveal="scale"]:not(.reveal-visible):not(:focus-within) { translate: 0 calc(var(--reveal-dir, 1) * 24px); scale: 0.92; }
+  .reveal-ready [data-reveal="blur"]:not(.reveal-visible):not(:focus-within) { translate: none; filter: blur(16px); }
+  /* Leaving the viewport should not animate visibly or wait for a stagger. */
+  .reveal-ready [data-reveal]:not(.reveal-visible) { transition-delay: 0ms; }
+  /* Pinned process: hold the development block in its entrance state until stage 03. */
+  @media (min-width: 1024px) and (min-height: 780px) {
+    .reveal-ready .process-track:is([data-step="0"], [data-step="1"]) .process-dev [data-reveal] {
+      opacity: 0;
+      filter: blur(8px);
+      translate: 0 32px;
+      transition-delay: 0ms;
+    }
+    .reveal-ready .process-track:is([data-step="0"], [data-step="1"]) .process-dev [data-reveal="left"] { translate: -48px 0; }
+    .reveal-ready .process-track:is([data-step="0"], [data-step="1"]) .process-dev [data-reveal="right"] { translate: 48px 0; }
+  }
+
+  /* Scroll-linked motion where the browser supports scroll-driven animations. */
+  @supports (animation-timeline: view()) {
+    @keyframes scroll-progress { from { scale: 0 1; } to { scale: 1 1; } }
+    @keyframes hero-out { to { opacity: 0; translate: 0 -18vh; scale: 0.94; } }
+    @keyframes parallax-up { to { translate: 0 -40vh; } }
+    @keyframes parallax-down { to { translate: 0 30vh; } }
+    @keyframes image-settle { from { scale: 1.18; } to { scale: 1; } }
+    @keyframes line-draw { from { scale: 0 1; } to { scale: 1 1; } }
+    @keyframes drift { from { translate: 6% 0; } to { translate: -6% 0; } }
+    @keyframes zoom-in { from { scale: 0.86; } to { scale: 1; } }
+
+    .scroll-progress {
+      animation: scroll-progress linear both;
+      animation-timeline: scroll(root);
+    }
+    /* The hero opens the page, so its exit follows the first viewport of document scroll. */
+    .scroll-hero-out {
+      animation: hero-out linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 90vh;
+    }
+    .scroll-parallax-up, .scroll-parallax-down {
+      animation: parallax-up linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 100vh;
+    }
+    .scroll-parallax-down { animation-name: parallax-down; }
+    /* Photos settle inside their frame while the frame crosses the viewport. */
+    .scroll-image-settle > img, .scroll-image-settle > span[role="img"] {
+      animation: image-settle linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 60%;
+    }
+    .scroll-line {
+      position: relative;
+      border-top-color: transparent !important;
+      view-timeline-name: --line;
+    }
+    .scroll-line::before {
+      content: "";
+      position: absolute;
+      inset: -1px 0 auto;
+      height: 1px;
+      background: var(--scroll-line-color, var(--color-line));
+      transform-origin: left;
+      animation: line-draw linear both;
+      animation-timeline: --line;
+      animation-range: entry 10% cover 40%;
+    }
+    .scroll-drift {
+      animation: drift linear both;
+      animation-timeline: view();
+    }
+    .scroll-zoom {
+      animation: zoom-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 45%;
+    }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

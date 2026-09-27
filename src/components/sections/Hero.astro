@@ -1,0 +1,44 @@
+---
+import Header from './Header.astro';
+import Button from '../ui/Button.astro';
+import { site } from '../../data/landing';
+---
+<section id="inicio" data-hero class="relative flex min-h-[760px] flex-col overflow-clip bg-night text-cloud sm:min-h-[820px] lg:min-h-[900px]">
+  <!-- Same composition as the reference; the loops below are the design system's one approved exception. -->
+  <div aria-hidden="true" class="grid-background absolute inset-0 bg-panel">
+    {site.heroImage && <img src={site.heroImage} alt="" class="absolute inset-0 h-full w-full object-cover" fetchpriority="high" />}
+    <!-- Data pulses travel along grid lines (multiples of 160px × 150px). -->
+    <span class="hero-pulse-track hero-pulse-x top-[300px]"><span class="hero-anim"></span></span>
+    <span class="hero-pulse-track hero-pulse-x top-[600px]"><span class="hero-anim [animation-delay:-5s] [animation-duration:13s]"></span></span>
+    <span class="hero-pulse-track hero-pulse-y hero-pulse-col"><span class="hero-anim"></span></span>
+    <div class="scroll-parallax-down absolute inset-0"><div class="absolute top-[150px] right-[11.1%] flex w-[160px] flex-col gap-[18px] opacity-90">
+      <span class="hero-anim hero-bar h-3 w-full bg-electric"></span>
+      <span class="hero-anim hero-bar h-3 w-[110px] bg-electric [animation-delay:350ms]"></span>
+      <span class="flex items-center gap-1.5"><span class="hero-anim hero-bar h-3 w-[60px] bg-electric [animation-delay:700ms]"></span><span class="hero-anim hero-caret h-4 w-0.5 bg-sky"></span></span>
+    </div></div>
+    <div class="scroll-parallax-up absolute inset-0"><div class="hero-anim hero-breathe absolute bottom-[150px] left-[11.1%] h-[150px] w-[160px] bg-sky/20"></div></div>
+  </div>
+  <div aria-hidden="true" class="absolute inset-0 bg-night/55"></div>
+  <Header />
+  <div class="scroll-hero-out container-page relative flex flex-1 flex-col items-center justify-center gap-7 pt-32 pb-36 text-center lg:py-32">
+    <div data-reveal class="inline-flex max-w-full items-center gap-2.5 rounded border border-line-dark bg-panel/80 px-3.5 py-2">
+      <span class="signal hero-anim h-2 w-2 shrink-0 bg-sky" aria-hidden="true"></span><span class="text-[10px] leading-4 font-bold tracking-[0.1em] text-muted-dark sm:text-[13px]">AGENCIA DE DESARROLLO WEB · MÉXICO</span>
+    </div>
+    <h1 class="hero-title max-w-[980px] text-[44px] leading-[1.05] font-bold tracking-[-0.035em] sm:text-[64px] lg:text-[80px]">Sitios que venden.<br /><span class="text-electric">Código que dura.</span></h1>
+    <p data-reveal class="max-w-[680px] text-base leading-[1.65] text-muted-dark sm:text-xl sm:leading-[30px]" data-reveal-delay="260">Diseñamos, desarrollamos y mantenemos tu presencia digital de punta a punta: desde una landing page hasta una app a la medida de tu negocio.</p>
+    <div data-reveal class="mt-3 flex w-full flex-col items-center gap-6 sm:w-auto sm:flex-row sm:gap-7" data-reveal-delay="400">
+      <Button href="#contacto" variant="hero" arrow class="min-h-14 w-full max-w-80 px-7 text-[17px] sm:w-auto">Cotiza tu proyecto</Button>
+      <a href="#proceso" class="font-semibold text-cloud underline decoration-[#56627a] underline-offset-[6px] hover:text-periwinkle">Ver cómo trabajamos</a>
+    </div>
+  </div>
+  <div class="container-page absolute inset-x-0 bottom-7 flex flex-col items-center justify-end gap-4 text-center lg:bottom-9 lg:flex-row lg:text-left">
+    <span class="text-xs font-medium tracking-[0.01em] text-muted-dark sm:text-[13px]">Web · Ecommerce · Apps · Automatizaciones</span>
+  </div>
+</section>
+<script>
+  // Background loops only run while the hero is on screen.
+  const hero = document.querySelector<HTMLElement>('[data-hero]');
+  if (hero && 'IntersectionObserver' in window) {
+    new IntersectionObserver(([entry]) => { hero.toggleAttribute('data-paused', !entry.isIntersecting); }).observe(hero);
+  }
+</script>

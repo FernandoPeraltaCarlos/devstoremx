@@ -1,0 +1,8 @@
+---
+interface Props { class?: string; }
+const { class: className = '' } = Astro.props;
+---
+<picture class="inline-flex shrink-0" aria-hidden="true">
+  <source srcset="/devstoremx.svg" type="image/svg+xml" />
+  <img src="/devstoremx.png" alt="" width="800" height="968" decoding="async" class:list={['h-9 w-auto object-contain', className]} />
+</picture>

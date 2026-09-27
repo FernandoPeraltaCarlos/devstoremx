@@ -1,0 +1,9 @@
+---
+import { technologies } from '../../data/landing';
+---
+<section aria-label="Tecnologías" class="overflow-clip border-y border-line bg-surface-sunken">
+  <div class="container-page flex flex-col gap-8 py-12 lg:min-h-[200px] lg:flex-row lg:items-center lg:gap-10 lg:py-10 xl:gap-16">
+    <h2 data-reveal class="eyebrow max-w-[220px] shrink-0 text-muted lg:w-[180px]">Tecnologías con las que trabajamos</h2>
+    <ul class="scroll-drift grid flex-1 grid-cols-2 gap-x-5 gap-y-7 text-xl font-bold tracking-[-0.02em] sm:grid-cols-4 lg:flex lg:flex-wrap lg:items-center lg:justify-between lg:gap-5 lg:text-2xl">{technologies.map((name, i) => <li data-reveal data-reveal-delay={(i % 4) * 80} class="transition-colors duration-150 ease-out hover:text-brand">{name}</li>)}</ul>
+  </div>
+</section>

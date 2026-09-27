@@ -1,0 +1,21 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import ProjectStatus from '../ui/ProjectStatus.astro';
+import ProcessTimeline from '../interactive/ProcessTimeline';
+import { steps } from '../../data/landing';
+---
+<section id="proceso" class="section-space bg-night text-cloud">
+  <!-- On tall-enough desktops the whole block stays pinned while the stages advance;
+       "Durante el desarrollo" joins in from stage 03 (see `.process-dev` in global.css). -->
+  <div data-process-track class="process-track">
+    <div data-process-pin class="process-pin container-page">
+      <SectionHeading eyebrow="Flujo de desarrollo" title="De la primera llamada a tu sitio en línea." description="Cinco etapas claras. Sabes qué sigue, quién lo hace y cuándo lo vas a ver." dark />
+      <ProcessTimeline steps={steps} client:load />
+      <div class="process-dev mt-14 grid items-center gap-8 border-t border-line-dark pt-10 lg:mt-10 lg:grid-cols-2 lg:gap-16 lg:pt-8">
+        <div data-reveal="left" class="flex flex-col gap-3.5"><span class="eyebrow text-sky">Durante el desarrollo</span><h3 class="text-[26px] leading-9 font-semibold tracking-[-0.015em] sm:text-[30px]">Siempre sabes en qué punto está tu proyecto.</h3><p class="text-base leading-[26px] text-muted-dark">Te compartimos cada avance y tienes un canal directo con tu equipo. Nada de esperar semanas sin noticias.</p></div>
+        <ProjectStatus />
+      </div>
+    </div>
+    <div aria-hidden="true" class="process-runway"></div>
+  </div>
+</section>

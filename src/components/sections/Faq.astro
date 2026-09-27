@@ -1,0 +1,21 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import { faqs } from '../../data/landing';
+---
+<section id="preguntas" class="section-space border-y border-line-dark bg-night text-cloud [--scroll-line-color:var(--color-line-dark)]">
+  <div class="container-page">
+    <SectionHeading eyebrow="Preguntas frecuentes" title="Respuestas antes de la primera llamada." description="Costo, tiempos, alcance y cómo trabajamos con negocios en México." dark />
+    <div class="mx-auto mt-10 max-w-[860px] border-b border-line-dark lg:mt-16">
+      {faqs.map((faq, index) => (
+        <details data-reveal data-reveal-delay={Math.min(index * 40, 120)} class="faq-item scroll-line group border-t border-line-dark">
+          <summary class="grid cursor-pointer list-none grid-cols-[32px_1fr_32px] items-center gap-4 py-5 text-cloud marker:content-none hover:text-periwinkle sm:gap-6 [&::-webkit-details-marker]:hidden">
+            <span class="font-mono text-[13px] text-muted-dark">{String(index + 1).padStart(2, '0')}</span>
+            <span class="text-lg leading-7 font-semibold tracking-[-0.01em] transition-colors duration-150 ease-out group-open:text-periwinkle">{faq.question}</span>
+            <span aria-hidden="true" class="grid h-8 w-8 place-items-center rounded-md border border-line-dark bg-panel text-xl leading-none text-periwinkle transition-[background-color,border-color] duration-[250ms] ease-out group-open:border-periwinkle group-open:bg-panel"><span class="transition-[rotate] duration-[250ms] ease-out group-open:rotate-45">+</span></span>
+          </summary>
+          <p class="faq-answer max-w-[720px] pb-6 pl-12 text-base leading-[26px] text-muted-dark sm:pl-14">{faq.answer}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

@@ -8,13 +8,26 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "check": "astro check",
+    "test": "node --experimental-strip-types tests/run.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.3.5"
+    "@astrojs/preact": "^6.0.5",
+    "@astrojs/sitemap": "^3.7.4",
+    "@astrojs/vercel": "^11.0.11",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.5",
+    "preact": "^10.29.8",
+    "resend": "^6.30.0",
+    "tailwindcss": "^4.3.3"
   },
   "allowScripts": {
     "esbuild": true
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^6.0.3"
   }
 }

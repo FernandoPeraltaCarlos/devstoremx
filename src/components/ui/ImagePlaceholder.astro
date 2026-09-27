@@ -1,0 +1,14 @@
+---
+import Icon from './Icon.astro';
+interface Props { src?: string; alt: string; label?: string; person?: boolean; featured?: boolean; reveal?: boolean | 'up' | 'left' | 'right' | 'scale' | 'blur'; width?: number; height?: number; class?: string; }
+const { src, alt, label, person = false, featured = false, reveal = false, width, height, class: className = '' } = Astro.props;
+const visibleLabel = label && !label.includes('[') ? label : '';
+const descriptiveAlt = alt && !alt.includes('[') && !alt.toLowerCase().includes('pendiente');
+---
+<figure data-reveal={reveal === true ? '' : reveal || undefined} class:list={['relative flex items-center justify-center overflow-clip rounded-[10px]', className]}>
+  {src ? <img src={src} alt={descriptiveAlt ? alt : ''} width={width} height={height} loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover" /> : <>
+    {descriptiveAlt ? <span role="img" aria-label={alt}><Icon name={person ? 'person' : 'image'} size={featured ? 96 : 64} class="opacity-80" /></span> : <span aria-hidden="true"><Icon name={person ? 'person' : 'image'} size={featured ? 96 : 64} class="opacity-80" /></span>}
+    {visibleLabel && <span class="absolute top-6 right-6 left-6 font-mono text-xs leading-5">{visibleLabel}</span>}
+  </>}
+  <slot />
+</figure>

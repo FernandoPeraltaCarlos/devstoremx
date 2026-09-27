@@ -1,0 +1,18 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import VideoPlayer from '../interactive/VideoPlayer';
+import { publicValue, site } from '../../data/landing';
+
+const duration = publicValue(site.videoDuration);
+const description = duration
+  ? `${duration} minutos para ver a nuestro equipo y un proyecto de principio a fin.`
+  : 'Un recorrido para ver a nuestro equipo y un proyecto de principio a fin.';
+---
+{site.videoSrc && (
+  <section id="video" class="section-space bg-night text-cloud lg:min-h-[960px]">
+    <div class="container-page flex flex-col items-center gap-10 lg:gap-12">
+      <SectionHeading eyebrow="Video" title="Conoce cómo trabajamos." description={description} dark centered />
+      <div data-reveal="scale" class="w-full max-w-[1040px]"><div class="scroll-zoom"><VideoPlayer src={site.videoSrc} poster={site.videoPoster} client:visible /></div></div>
+    </div>
+  </section>
+)}

@@ -1,17 +1,19 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import Services from '../components/sections/Services.astro';
+import Technologies from '../components/sections/Technologies.astro';
+import Process from '../components/sections/Process.astro';
+import About from '../components/sections/About.astro';
+import Video from '../components/sections/Video.astro';
+import Faq from '../components/sections/Faq.astro';
+import Contact from '../components/sections/Contact.astro';
+import Footer from '../components/sections/Footer.astro';
+import StructuredData from '../components/seo/StructuredData.astro';
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <StructuredData slot="head" />
+  <!-- clip (not hidden) keeps the pinned timeline sticky while side reveals stay off-canvas. -->
+  <main id="contenido" class="overflow-x-clip"><Hero /><Services /><Technologies /><Process /><About /><Video /><Faq /><Contact /></main>
+  <Footer />
+</BaseLayout>
