@@ -21,6 +21,6 @@ const onPrivacy = Astro.url.pathname.includes('aviso-de-privacidad');
         <div data-reveal data-reveal-delay="200" class="col-span-2 flex flex-col gap-3 text-[15px] sm:col-span-1"><span class="eyebrow text-muted-dark">Contacto</span><a href="/#contacto" class="hover:text-periwinkle">Formulario de contacto</a>{email && <a href={`mailto:${email}`} class="break-words hover:text-periwinkle">{email}</a>}{phone && <a href={`tel:${phone.replace(/[^\d+]/g, '')}`} class="hover:text-periwinkle">{phone}</a>}{location && <span>{location}</span>}</div>
       </div>
     </div>
-    <div class="flex flex-col justify-between gap-4 border-t border-line-dark pt-6 text-sm text-muted-dark sm:flex-row"><span>© {new Date().getFullYear()} devstoremx. Todos los derechos reservados.</span><a href="/aviso-de-privacidad" class="hover:text-periwinkle" aria-current={onPrivacy ? 'page' : undefined}>Aviso de privacidad</a></div>
+    <div class="flex flex-col justify-between gap-4 border-t border-line-dark pt-6 text-sm text-muted-dark sm:flex-row"><span>© {new Date().getFullYear()} Devstoremx. Todos los derechos reservados.</span><a href="/aviso-de-privacidad" class="hover:text-periwinkle" aria-current={onPrivacy ? 'page' : undefined}>Aviso de privacidad</a></div>
   </div>
 </footer>

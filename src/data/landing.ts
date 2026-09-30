@@ -58,7 +58,7 @@ export const services = [
   {
     number: '09',
     slug: 'soluciones-digitales',
-    title: 'Soluciones digitales',
+    title: 'Integraciones',
     description: 'Integraciones con IA, APIs y herramientas a la medida para los retos que no se resuelven con software de caja.',
     icon: '<path d="m12 2 10 5-10 5L2 7z"></path><path d="m2 17 10 5 10-5"></path><path d="m2 12 10 5 10-5"></path>',
   },
@@ -97,7 +97,7 @@ export const steps = [
 export const technologies = ['Shopify', 'WordPress', 'React', 'Next.js', 'OpenAI', 'Anthropic', 'AWS', 'Figma'] as const;
 
 export const team = [
-  { name: 'Fernando Peralta', role: 'Technical Lead', image: '/team/fernando-peralta.jpg', tone: 'light', linkedin: '', portfolio: 'https://fernandoperalta.xyz' },
+  { name: 'Fernando Peralta', role: 'Technical Lead', image: '/team/fernando-peralta.jpg', tone: 'light', linkedin: 'https://www.linkedin.com/in/fernandodperaltac/', portfolio: 'https://fernandoperalta.xyz' },
   { name: 'Miriam Medina', role: 'Full Stack Developer', image: '/team/miriam-medina.jpg', tone: 'light', linkedin: '', portfolio: '' },
   { name: 'Hazel Vázquez', role: 'Full Stack Developer', image: '/team/hazel-vazquez.jpg', tone: 'light', linkedin: '', portfolio: '' },
   { name: 'Janice García', role: 'Full Stack Developer', image: '/team/janice-garcia.jpg', tone: 'light', linkedin: '', portfolio: '' },
