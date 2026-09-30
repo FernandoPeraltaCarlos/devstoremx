@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
 import { defaultTitle, metaDescription, ogImageAlt, site } from '../data/landing';
 
 interface Props {
@@ -51,6 +52,7 @@ const imageHref = new URL(image, origin).href;
     <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <ClientRouter />
     <slot name="head" />
   </head>
   <body>
@@ -59,7 +61,12 @@ const imageHref = new URL(image, origin).href;
     <slot />
     <script>
       import { setupViewportReveals } from '../scripts/viewport-reveal';
-      setupViewportReveals();
+      // Module scripts run once, but ClientRouter swaps the DOM: bind the reveals again on every page load.
+      let teardown: (() => void) | undefined;
+      document.addEventListener('astro:page-load', () => {
+        teardown?.();
+        teardown = setupViewportReveals();
+      });
     </script>
   </body>
 </html>

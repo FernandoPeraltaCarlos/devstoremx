@@ -1,0 +1,42 @@
+---
+import Icon from './Icon.astro';
+import StatusBadge from './StatusBadge.astro';
+import { steps } from '../../data/landing';
+import { deliverables, project } from '../../data/dashboard';
+
+// Maqueta decorativa de /dashboard-cliente: una muestra por estado.
+const rows = [0, 2, 3, 4].map((i) => deliverables[i]);
+const icon = { aprobado: 'check', 'en-progreso': 'progress', pendiente: 'circle' } as const;
+const color = { aprobado: 'text-[#4ade80]', 'en-progreso': 'text-periwinkle', pendiente: 'text-muted-dark' } as const;
+const total = steps.length;
+const current = project.currentStage;
+// Las cajas se reparten de borde a borde: la caja i queda en i / (total - 1) del ancho.
+const fill = ((current + project.stageProgress) / (total - 1)) * 100;
+---
+<!-- Shared with the header of /dashboard-cliente: the preview grows into it (see "dashboard-*" in global.css). -->
+<div aria-hidden="true" transition:name="dashboard-frame" transition:animate="initial" class="overflow-clip rounded-[10px] border border-line-dark bg-night text-cloud shadow-xl">
+  <div class="flex items-center gap-2 border-b border-line-dark bg-panel px-4 py-3">
+    <span class="h-2.5 w-2.5 rounded-full bg-line-dark"></span><span class="h-2.5 w-2.5 rounded-full bg-line-dark"></span><span class="h-2.5 w-2.5 rounded-full bg-line-dark"></span>
+    <span class="ml-3 min-w-0 truncate rounded bg-night px-3 py-1 font-mono text-xs text-muted-dark">{project.client} · Dashboard</span>
+  </div>
+  <div class="flex flex-col gap-6 p-5 sm:p-6">
+    <div class="flex flex-col gap-3">
+      <div class="flex items-baseline justify-between gap-4"><span class="text-[15px] font-semibold">{project.name}</span><span class="shrink-0 font-mono text-[15px] text-periwinkle">{project.progress} %</span></div>
+      <div transition:name="dashboard-progress" transition:animate="initial" class="h-2 w-full overflow-hidden rounded-full bg-line-dark"><span class="block h-full rounded-full bg-gradient-to-r from-electric to-sky" style={`width: ${project.progress}%`}></span></div>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="font-mono text-xs text-muted-dark sm:text-[13px]">Etapa {current + 1} de {total} · {steps[current].title}</span>
+      <div class="relative flex justify-between">
+        <span class="absolute inset-x-0 top-[18px] h-px bg-line-dark"></span>
+        <span class="absolute top-[17px] left-0 h-[3px] rounded-full bg-gradient-to-r from-electric to-sky" style={`width: ${fill}%`}></span>
+        {steps.map((step, i) => <span class:list={['relative z-10 flex h-9 w-9 items-center justify-center rounded-md border font-mono text-[13px]', i === current ? 'border-electric bg-electric text-white shadow-[0_0_0_4px_rgba(82,113,255,0.18)]' : i < current ? 'border-electric bg-night text-periwinkle' : 'border-[#56627a] bg-night text-cloud opacity-60']}>{i < current ? <Icon name="check" size={16} /> : step.number}</span>)}
+      </div>
+    </div>
+    <div class="rounded-[10px] border border-line-dark bg-panel px-4 py-1 sm:px-5">
+      {rows.map((task, i) => <div class:list={['flex items-center justify-between gap-3 py-3', i < rows.length - 1 && 'border-b border-line-dark']}>
+        <span class="flex min-w-0 items-center gap-2.5 text-xs sm:text-[15px]"><Icon name={icon[task.status]} size={18} class={`${color[task.status]} shrink-0`} /><span class="min-w-0">{task.name}</span></span>
+        <StatusBadge status={task.status} dark />
+      </div>)}
+    </div>
+  </div>
+</div>

@@ -165,6 +165,7 @@ export const faqs = [
 export const navigation = [
   { href: '/#servicios', label: 'Servicios' },
   { href: '/#proceso', label: 'Proceso' },
+  { href: '/#dashboard', label: 'Dashboard' },
   { href: '/#nosotros', label: 'Nosotros' },
   ...(site.videoSrc ? [{ href: '/#video', label: 'Video' }] : []),
   { href: '/#preguntas', label: 'Preguntas' },

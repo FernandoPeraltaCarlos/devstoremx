@@ -1,0 +1,11 @@
+---
+interface Props { status: 'aprobado' | 'en-progreso' | 'pendiente'; dark?: boolean; class?: string; }
+const { status, dark = false, class: className = '' } = Astro.props;
+const tones = {
+  aprobado: { label: 'Aprobado', light: 'bg-success-soft text-success', dark: 'bg-[#0c2a1a] text-[#4ade80]' },
+  'en-progreso': { label: 'En progreso', light: 'bg-primary-soft text-brand', dark: 'bg-[#1a2350] text-periwinkle' },
+  pendiente: { label: 'Pendiente', light: 'bg-warning-soft text-warning', dark: 'bg-[#2e2108] text-[#f5b544]' },
+};
+const tone = tones[status];
+---
+<span class:list={['shrink-0 rounded px-2 py-[3px] text-xs font-medium sm:text-[13px]', dark ? tone.dark : tone.light, className]}>{tone.label}</span>

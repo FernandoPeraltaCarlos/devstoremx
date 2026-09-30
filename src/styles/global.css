@@ -237,7 +237,24 @@
     }
   }
 }
+/* While ClientRouter navigates (it sets data-astro-transition), jump to the hash or restored scroll instantly:
+   a smooth scroll would drag the target away from under the view transition's new snapshot. */
+html[data-astro-transition] { scroll-behavior: auto; }
+/* View transitions: the home's dashboard preview grows into the header band of /dashboard-cliente (and back). */
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-group(dashboard-frame),
+  ::view-transition-group(dashboard-progress) {
+    animation-duration: 700ms;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  /* The two boxes differ in size: crop the frame instead of stretching it; the bar only needs to widen. */
+  ::view-transition-old(dashboard-frame),
+  ::view-transition-new(dashboard-frame) { width: 100%; height: 100%; object-fit: cover; }
+  ::view-transition-old(dashboard-progress),
+  ::view-transition-new(dashboard-progress) { width: 100%; height: 100%; }
+}
 @media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }

@@ -24,6 +24,8 @@ El mensaje de la marca es: «Sitios que venden. Código que dura.» El primer pa
 4. Llamada de revisión: revisar el resultado y ajustar detalles.
 5. Entrega: publicación del proyecto y accesos para operarlo.
 
+Durante el desarrollo, cada cliente puede consultar el estado de su proyecto en un dashboard de seguimiento: etapas, entregables, bitácora y próximas fechas. [Dashboard de ejemplo](https://www.devstoremx.xyz/dashboard-cliente).
+
 ## Preguntas frecuentes
 
 - [Costo](https://www.devstoremx.xyz/#preguntas): depende del alcance. La propuesta incluye costo, tiempos y entregables antes de empezar.

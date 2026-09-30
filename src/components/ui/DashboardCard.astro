@@ -1,0 +1,11 @@
+---
+interface Props { title: string; eyebrow?: string; delay?: number; class?: string; }
+const { title, eyebrow, delay = 0, class: className = '' } = Astro.props;
+---
+<section data-reveal data-reveal-delay={delay} class:list={['flex min-w-0 flex-col gap-5 rounded-[10px] border border-line bg-white p-5 sm:p-6', className]}>
+  <header class="flex flex-col gap-1.5">
+    {eyebrow && <span class="eyebrow text-brand">{eyebrow}</span>}
+    <h2 class="text-xl leading-7 font-semibold tracking-[-0.01em] text-ink">{title}</h2>
+  </header>
+  <slot />
+</section>

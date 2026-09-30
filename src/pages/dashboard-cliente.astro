@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StructuredData from '../components/seo/StructuredData.astro';
+import Footer from '../components/sections/Footer.astro';
+import Logo from '../components/ui/Logo.astro';
+import Button from '../components/ui/Button.astro';
+import Icon from '../components/ui/Icon.astro';
+import DashboardCard from '../components/ui/DashboardCard.astro';
+import StatusBadge from '../components/ui/StatusBadge.astro';
+import { steps, team } from '../data/landing';
+import { activity, deliverables, milestones, project, resources, stageNotes } from '../data/dashboard';
+
+const title = 'Dashboard del cliente · Devstoremx';
+const description = 'Ejemplo del dashboard con el que cada cliente de devstoremx ve en qué punto está su proyecto: etapas, entregables, avances y próximas fechas.';
+
+const total = steps.length;
+const current = project.currentStage;
+// El relleno llega a la etapa actual y avanza lo que lleva de ella.
+const timelineFill = ((current + project.stageProgress) / total) * 100;
+const approved = deliverables.filter((task) => task.status === 'aprobado').length;
+const taskIcon = { aprobado: 'check', 'en-progreso': 'progress', pendiente: 'circle' } as const;
+const taskColor = { aprobado: 'text-success', 'en-progreso': 'text-brand', pendiente: 'text-muted' } as const;
+
+const kpis = [
+  { label: 'Etapa actual', value: steps[current].title, hint: `Etapa ${current + 1} de ${total}`, icon: 'progress' },
+  { label: 'Entregables aprobados', value: `${approved} de ${deliverables.length}`, hint: 'Tareas ya revisadas por ti', icon: 'check' },
+  { label: 'Próxima revisión', value: project.nextReview, hint: 'Llamada para revisar el resultado', icon: 'message' },
+  { label: 'Entrega estimada', value: project.deliveryDate, hint: `Inicio: ${project.startDate}`, icon: 'calendar' },
+];
+---
+<BaseLayout title={title} description={description}>
+  <StructuredData slot="head" title={title} description={description} variant="page" />
+  <main id="contenido" class="overflow-x-clip">
+    <!-- Shared with the preview on the home page (DashboardPreview.astro): it grows into this band and back. -->
+    <section transition:name="dashboard-frame" transition:animate="initial" class="relative overflow-clip bg-night text-cloud">
+      <div aria-hidden="true" class="grid-background absolute inset-0 bg-panel"></div>
+      <div aria-hidden="true" class="absolute inset-0 bg-night/70"></div>
+      <header class="relative">
+        <div class="container-page flex items-center justify-between gap-4 py-6 lg:py-7">
+          <Logo />
+          <Button href="/#dashboard" variant="dark-outline" class="min-h-10 px-4 text-sm sm:min-h-12 sm:px-6 sm:text-base">Volver al sitio</Button>
+        </div>
+      </header>
+      <div class="container-page relative flex flex-col gap-10 pt-10 pb-16 sm:pt-14 lg:gap-12 lg:pb-20">
+        <div class="flex flex-col gap-5">
+          <div data-reveal class="inline-flex w-fit max-w-full items-center gap-2.5 rounded border border-line-dark bg-panel/80 px-3.5 py-2">
+            <span class="signal h-2 w-2 shrink-0 bg-sky" aria-hidden="true"></span><span class="text-[10px] leading-4 font-bold tracking-[0.1em] text-muted-dark uppercase sm:text-[13px]">Vista de ejemplo · Datos ficticios</span>
+          </div>
+          <span data-reveal data-reveal-delay="80" class="eyebrow text-periwinkle">Dashboard del cliente</span>
+          <h1 data-reveal="blur" data-reveal-delay="120" class="max-w-[900px] text-[32px] leading-[1.1] font-bold tracking-[-0.03em] sm:text-[44px] lg:text-[56px]">{project.name}</h1>
+          <p data-reveal data-reveal-delay="200" class="font-mono text-xs text-muted-dark sm:text-[13px]">{project.service} · {project.client} · Inicio {project.startDate}</p>
+        </div>
+        <div class="flex flex-col gap-3">
+          <div data-reveal data-reveal-delay="260" class="flex items-baseline justify-between gap-4"><span class="text-[15px] font-semibold">Avance general</span><span class="font-mono text-[15px] text-periwinkle">{project.progress} %</span></div>
+          <div role="progressbar" transition:name="dashboard-progress" transition:animate="initial" aria-label="Avance general del proyecto" aria-valuemin="0" aria-valuemax="100" aria-valuenow={project.progress} class="h-2 w-full overflow-hidden rounded-full bg-line-dark"><span class="block h-full rounded-full bg-gradient-to-r from-electric to-sky" style={`width: ${project.progress}%`}></span></div>
+        </div>
+        <div data-reveal="blur" data-reveal-delay="320" class="relative">
+          <h2 class="sr-only">Etapas del proyecto</h2>
+          <ol class="relative grid gap-8 lg:grid-cols-5 lg:before:absolute lg:before:top-6 lg:before:right-0 lg:before:left-0 lg:before:h-px lg:before:bg-line-dark">
+            {steps.map((step, i) => {
+              const isCurrent = i === current;
+              const isDone = i < current;
+              const box = isCurrent
+                ? 'border-electric bg-electric text-white shadow-[0_0_0_4px_rgba(82,113,255,0.18)]'
+                : isDone ? 'border-electric bg-night text-periwinkle' : 'border-[#56627a] bg-night text-cloud';
+              return <li aria-current={isCurrent ? 'step' : undefined} class="relative z-10 grid grid-cols-[48px_1fr] gap-x-5 lg:flex lg:flex-col lg:gap-3.5">
+                {i < total - 1 && <span aria-hidden="true" class:list={['absolute top-12 -bottom-8 left-[22.5px] w-[3px] rounded-full lg:hidden', isDone ? 'bg-gradient-to-b from-electric to-sky' : 'bg-line-dark']}></span>}
+                <span class:list={['relative flex h-12 w-12 shrink-0 items-center justify-center rounded-md border font-mono text-[15px]', box]}>{isDone ? <Icon name="check" size={20} /> : step.number}</span>
+                <div class:list={[!isCurrent && !isDone && 'opacity-60']}>
+                  <h3 class:list={['mb-1.5 pt-2 text-xl leading-[26px] font-semibold lg:pt-2.5', isCurrent ? 'text-periwinkle' : 'text-cloud']}>{step.title}</h3>
+                  <span class="mb-3 block font-mono text-[13px] text-muted-dark">{isCurrent ? 'En curso' : isDone ? `Listo · ${stageNotes[i]}` : `Estimado · ${stageNotes[i]}`}</span>
+                  <p class="text-[15px] leading-6 text-muted-dark">{step.description}</p>
+                </div>
+              </li>;
+            })}
+          </ol>
+          <span aria-hidden="true" class="pointer-events-none absolute top-[23px] left-0 hidden h-[3px] rounded-full bg-gradient-to-r from-electric to-sky lg:block" style={`width: ${timelineFill}%`}></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space bg-paper !py-12 lg:!py-16">
+      <div class="container-page flex flex-col gap-6 lg:gap-8">
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          {kpis.map((kpi, i) => <article data-reveal data-reveal-delay={i * 90} class="flex min-w-0 flex-col gap-3 rounded-[10px] border border-line bg-white p-5">
+            <div class="flex items-center justify-between gap-3"><span class="text-sm font-semibold text-muted">{kpi.label}</span><Icon name={kpi.icon} size={24} class="shrink-0 text-brand" /></div>
+            <p class="text-2xl leading-8 font-bold tracking-[-0.02em] text-ink">{kpi.value}</p>
+            <p class="text-sm leading-5 text-muted">{kpi.hint}</p>
+          </article>)}
+        </div>
+
+        <div class="grid items-start gap-6 lg:grid-cols-[2fr_1fr] lg:gap-8">
+          <div class="flex min-w-0 flex-col gap-6 lg:gap-8">
+            <DashboardCard eyebrow="Estado por tarea" title="Entregables">
+              <ul class="flex flex-col">
+                {deliverables.map((task, i) => <li class:list={['flex flex-col gap-2.5 py-3.5', i > 0 && 'border-t border-line']}>
+                  <div class="flex items-center justify-between gap-3">
+                    <span class="flex min-w-0 items-center gap-2.5 text-[15px] leading-6 font-medium text-ink"><Icon name={taskIcon[task.status]} size={18} class={`${taskColor[task.status]} shrink-0`} /><span class="min-w-0">{task.name}</span></span>
+                    <StatusBadge status={task.status} />
+                  </div>
+                  <div class="flex items-center gap-3 pl-[28px]">
+                    {task.progress !== undefined && <div role="progressbar" aria-label={`Avance de ${task.name}`} aria-valuemin="0" aria-valuemax="100" aria-valuenow={task.progress} class="h-1.5 flex-1 overflow-hidden rounded-full bg-surface-sunken"><span class="block h-full rounded-full bg-gradient-to-r from-brand to-sky" style={`width: ${task.progress}%`}></span></div>}
+                    <span class="font-mono text-[13px] text-muted">{task.detail}</span>
+                  </div>
+                </li>)}
+              </ul>
+            </DashboardCard>
+
+            <DashboardCard eyebrow="Bitácora" title="Actividad reciente" delay={80}>
+              <ol class="relative flex flex-col gap-6 before:absolute before:top-2 before:bottom-2 before:left-[5px] before:w-px before:bg-line">
+                {activity.map((item) => <li class="relative flex flex-col gap-1 pl-7">
+                  <span aria-hidden="true" class="absolute top-1.5 left-0 h-[11px] w-[11px] rounded-full border-2 border-brand bg-white"></span>
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-0.5"><span class="font-mono text-[13px] text-muted">{item.date}</span><span class="text-sm font-semibold text-ink">{item.author}</span></div>
+                  <p class="text-[15px] leading-6 text-muted">{item.text}</p>
+                </li>)}
+              </ol>
+            </DashboardCard>
+          </div>
+
+          <div class="flex min-w-0 flex-col gap-6 lg:gap-8">
+            <DashboardCard eyebrow="Calendario" title="Próximos hitos" delay={60}>
+              <ul class="flex flex-col gap-4">
+                {milestones.map((item) => <li class="flex items-center gap-3.5">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-primary-soft text-brand"><Icon name={item.icon} size={20} /></span>
+                  <div class="flex min-w-0 flex-col"><span class="text-[15px] leading-6 font-semibold text-ink">{item.title}</span><span class="font-mono text-[13px] text-muted">{item.date}</span></div>
+                </li>)}
+              </ul>
+            </DashboardCard>
+
+            <DashboardCard eyebrow="Canal directo" title="Tu equipo" delay={120}>
+              <ul class="flex flex-col gap-4">
+                {team.map((member) => <li class="flex items-center gap-3.5">
+                  <img src={member.image} alt="" width="44" height="44" loading="lazy" decoding="async" class="h-11 w-11 shrink-0 rounded-full bg-surface-sunken object-cover" />
+                  <div class="flex min-w-0 flex-col"><span class="text-[15px] leading-6 font-semibold text-ink">{member.name}</span><span class="text-sm leading-5 text-muted">{member.role}</span></div>
+                </li>)}
+              </ul>
+              <Button href="/#contacto" class="w-full">Enviar mensaje</Button>
+            </DashboardCard>
+
+            <DashboardCard eyebrow="Documentos" title="Archivos y enlaces" delay={180}>
+              <ul class="flex flex-col gap-4">
+                {resources.map((item) => <li class="flex items-center gap-3.5">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-surface-sunken text-muted"><Icon name={item.label.startsWith('Vista') ? 'link' : 'file'} size={20} /></span>
+                  <div class="flex min-w-0 flex-col"><span class="text-[15px] leading-6 font-semibold text-ink">{item.label}</span><span class="text-sm leading-5 text-muted">{item.hint}</span></div>
+                </li>)}
+              </ul>
+            </DashboardCard>
+          </div>
+        </div>
+
+        <p data-reveal class="max-w-[720px] text-sm leading-6 text-muted">Datos de ejemplo. Cada cliente recibe acceso a su propio dashboard durante el desarrollo, con el estado real de su proyecto.</p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

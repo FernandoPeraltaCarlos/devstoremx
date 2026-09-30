@@ -37,8 +37,11 @@ import { site } from '../../data/landing';
 </section>
 <script>
   // Background loops only run while the hero is on screen.
-  const hero = document.querySelector<HTMLElement>('[data-hero]');
-  if (hero && 'IntersectionObserver' in window) {
-    new IntersectionObserver(([entry]) => { hero.toggleAttribute('data-paused', !entry.isIntersecting); }).observe(hero);
-  }
+  // Runs on every page load because ClientRouter swaps the DOM without re-running module scripts.
+  document.addEventListener('astro:page-load', () => {
+    const hero = document.querySelector<HTMLElement>('[data-hero]');
+    if (hero && 'IntersectionObserver' in window) {
+      new IntersectionObserver(([entry]) => { hero.toggleAttribute('data-paused', !entry.isIntersecting); }).observe(hero);
+    }
+  });
 </script>

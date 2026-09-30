@@ -1,0 +1,30 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import Button from '../ui/Button.astro';
+import Icon from '../ui/Icon.astro';
+import DashboardPreview from '../ui/DashboardPreview.astro';
+
+const benefits = [
+  { icon: 'progress', title: 'Etapas y avance en un vistazo', description: 'Ves en qué etapa está tu proyecto y qué porcentaje del trabajo ya se completó.' },
+  { icon: 'check', title: 'Entregables con su estado', description: 'Cada pieza aparece como aprobada, en progreso o pendiente, sin tener que preguntar.' },
+  { icon: 'calendar', title: 'Bitácora y próximas fechas', description: 'Consultas los avances recientes y las fechas de revisión y entrega acordadas.' },
+] as const;
+---
+<section id="dashboard" class="section-space scroll-mt-8 border-y border-line bg-surface-sunken">
+  <div class="container-page">
+    <SectionHeading eyebrow="Seguimiento de proyecto" title="Tu proyecto, siempre a la vista." description="Un dashboard propio donde ves etapas, entregables y próximas fechas, sin tener que pedir un reporte." />
+    <div class="mt-10 grid items-center gap-10 lg:mt-16 lg:grid-cols-[5fr_7fr] lg:gap-16">
+      <div class="flex flex-col gap-8">
+        <ul class="flex flex-col gap-6">
+          {benefits.map((benefit, i) => <li data-reveal data-reveal-delay={i * 120} class="flex gap-4">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-primary-soft text-brand"><Icon name={benefit.icon} size={24} /></span>
+            <div class="flex flex-col gap-1.5"><h3 class="text-xl leading-7 font-semibold tracking-[-0.01em]">{benefit.title}</h3><p class="text-base leading-[26px] text-muted">{benefit.description}</p></div>
+          </li>)}
+        </ul>
+        <div data-reveal data-reveal-delay="360"><Button href="/dashboard-cliente" arrow class="w-full sm:w-auto">Ver el dashboard de ejemplo</Button></div>
+      </div>
+      <!-- No data-reveal: the preview is a view-transition target and its box must stay put. -->
+      <div class="min-w-0"><DashboardPreview /></div>
+    </div>
+  </div>
+</section>
