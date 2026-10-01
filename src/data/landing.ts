@@ -98,9 +98,9 @@ export const technologies = ['Shopify', 'WordPress', 'React', 'Next.js', 'OpenAI
 
 export const team = [
   { name: 'Fernando Peralta', role: 'Technical Lead', image: '/team/fernando-peralta.jpg', tone: 'light', linkedin: 'https://www.linkedin.com/in/fernandodperaltac/', portfolio: 'https://fernandoperalta.xyz' },
-  { name: 'Miriam Medina', role: 'Full Stack Developer', image: '/team/miriam-medina.jpg', tone: 'light', linkedin: '', portfolio: '' },
-  { name: 'Hazel Vázquez', role: 'Full Stack Developer', image: '/team/hazel-vazquez.jpg', tone: 'light', linkedin: '', portfolio: '' },
-  { name: 'Janice García', role: 'Full Stack Developer', image: '/team/janice-garcia.jpg', tone: 'light', linkedin: '', portfolio: '' },
+  { name: 'Miriam Medina', role: 'Full Stack Developer', image: '/team/miriam-medina.jpg', tone: 'light', linkedin: 'https://www.linkedin.com/in/cmiriam-medinad/', portfolio: '' },
+  { name: 'Hazel Vázquez', role: 'Full Stack Developer', image: '/team/hazel-vazquez.jpg', tone: 'light', linkedin: 'https://www.linkedin.com/in/adad-hazel-v%C3%A1zquez-pe%C3%B1a/', portfolio: '' },
+  { name: 'Janice García', role: 'Full Stack Developer', image: '/team/janice-garcia.jpg', tone: 'light', linkedin: 'https://www.linkedin.com/in/janiceagarciasamperio/', portfolio: '' },
 ] as const;
 
 export const defaultTitle = 'Devstoremx · Desarrollo web y soluciones digitales en México';
