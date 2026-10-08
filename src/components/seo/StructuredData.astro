@@ -6,6 +6,8 @@ import { canonicalPathname } from '../../lib/seo';
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
+  imageAlt?: string;
   variant?: StructuredInput['variant'];
   breadcrumbs?: StructuredInput['breadcrumbs'];
   faqs?: StructuredInput['faqs'];
@@ -13,7 +15,6 @@ interface Props {
   serviceType?: string;
   article?: StructuredInput['article'];
   howTo?: StructuredInput['howTo'];
-  authorSlug?: string;
   blogPosts?: StructuredInput['blogPosts'];
 }
 
@@ -23,6 +24,8 @@ const graph = buildStructuredGraph({
   pathname: canonicalPathname(Astro.url.pathname),
   title: Astro.props.title ?? defaultTitle,
   description: Astro.props.description ?? metaDescription(),
+  image: Astro.props.image,
+  imageAlt: Astro.props.imageAlt,
   variant: Astro.props.variant ?? 'home',
   breadcrumbs: Astro.props.breadcrumbs,
   faqs: Astro.props.faqs,
@@ -30,7 +33,6 @@ const graph = buildStructuredGraph({
   serviceType: Astro.props.serviceType,
   article: Astro.props.article,
   howTo: Astro.props.howTo,
-  authorSlug: Astro.props.authorSlug,
   blogPosts: Astro.props.blogPosts,
 });
 const jsonLd = JSON.stringify(graph).replace(/</g, '\\u003c');

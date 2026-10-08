@@ -6,10 +6,12 @@ h1: Qué es una landing page
 intro: >
   Una landing page es una página con una sola oferta y una sola acción, sin el menú de un sitio completo.
   Sirve para una campaña, un registro o una venta concreta. No sustituye a la página web del negocio, y no es una tienda aunque tenga un botón de pagar.
-author: janice-garcia
+author: fernando-peralta
 publishedAt: 2026-10-07
 updatedAt: 2026-10-07
-heroImage: /devstore_mx.png
+heroImage: /blog/que-es-una-landing-page.webp
+heroImageAlt: Laptop que muestra una landing page con una oferta principal y un botón de acción.
+category: Diseño y conversión
 relatedService: landing-pages
 ---
 

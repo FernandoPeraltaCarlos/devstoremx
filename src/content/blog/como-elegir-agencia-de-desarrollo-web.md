@@ -5,17 +5,19 @@ metaDescription: Cómo elegir agencia de desarrollo web en México sin dejarte l
 h1: Cómo elegir una agencia de desarrollo web
 intro: >
   Elige a quien pueda explicar qué va a construir, qué no entra y a nombre de quién quedan el dominio y las cuentas.
-  Una agencia de desarrollo web se compara por el alcance escrito y por cómo entrega, no por el adjetivo de la portada. Esta guía es la lista que usamos cuando un negocio nos evalúa a nosotros también.
+  Una agencia de desarrollo web se compara por el alcance escrito y por cómo entrega, no por el adjetivo de la portada. Esta entrada de blog es la lista que usamos cuando un negocio nos evalúa a nosotros también.
 author: fernando-peralta
 publishedAt: 2026-10-07
 updatedAt: 2026-10-07
-heroImage: /devstore_mx.png
+heroImage: /blog/como-elegir-agencia-de-desarrollo-web.webp
+heroImageAlt: Manos que revisan bocetos de un sitio web y documentos de alcance en una mesa de trabajo.
+category: Estrategia digital
 relatedService: desarrollo-web
 ---
 
 ## ¿Qué estás contratando en realidad?
 
-No estás contratando “una agencia”. Estás contratando un resultado: un sitio, una tienda, una landing, una app o el cuidado de algo que ya existe. Si la conversación no baja a ese resultado en la primera llamada, da igual lo bien que se vea la oficina en las fotos. Devstoremx es una [agencia de desarrollo web](/) que trabaja en remoto con todo México. Esta guía no pide que nos elijas. Pide que quien te cotice sobreviva las mismas preguntas.
+No estás contratando “una agencia”. Estás contratando un resultado: un sitio, una tienda, una landing, una app o el cuidado de algo que ya existe. Si la conversación no baja a ese resultado en la primera llamada, da igual lo bien que se vea la oficina en las fotos. Devstoremx es una [agencia de desarrollo web](/) que trabaja en remoto con todo México. Esta entrada de blog no pide que nos elijas. Pide que quien te cotice sobreviva las mismas preguntas.
 
 El portafolio ayuda solo cuando los casos son reales y se pueden explicar: qué problema había, qué se hizo, qué no se hizo. Un mosaico de pantallas sin contexto no demuestra operación. El nuestro, de hecho, está en preparación y no debe usarse como prueba hasta que haya casos autorizados. Quien te muestre clientes que no puede nombrar ni describir está decorando.
 
@@ -35,7 +37,7 @@ Hazlas todas. La incomodidad es información.
 
 Es una señal de que hay que leer el alcance, no una señal de fraude ni de ganga. Una landing corta debe costar menos trabajo que una tienda. Un precio bajo con dominio en rehén, tema que no se puede actualizar y cero pruebas es caro. Un precio alto sin lista de entregables también lo es: estás pagando la marca de la agencia, no el proyecto.
 
-Pide el número por escrito, al lado de la lista. Compara listas, no PDF contra PDF por la tipografía. La guía de [cuánto cuesta una página web](/blog/cuanto-cuesta-una-pagina-web) arma los factores. Ninguna agencia seria necesita esconderse detrás de “desde” si puede describir el caso.
+Pide el número por escrito, al lado de la lista. Compara listas, no PDF contra PDF por la tipografía. La entrada de blog de [cuánto cuesta una página web](/blog/cuanto-cuesta-una-pagina-web) arma los factores. Ninguna agencia seria necesita esconderse detrás de “desde” si puede describir el caso.
 
 ## ¿Importa que estén en mi ciudad?
 
@@ -57,4 +59,4 @@ Desconfía del proceso que empieza a diseñar en la primera hora, antes de saber
 
 ## ¿Qué sigue si ya estás comparando?
 
-Manda el mismo brief corto a dos o tres equipos: qué debe lograr el proyecto, qué materiales tienes y qué fecha importa. Tira a quien no conteste por escrito. Con los que sí, usa la lista de arriba. Si quieres que Devstoremx sea uno de esos equipos, el camino es el formulario de contacto y la llamada. La propuesta dirá qué entra. Si no somos el equipo correcto, también se puede decir en esa llamada, y sales con el criterio de esta guía para seguir buscando.
+Manda el mismo brief corto a dos o tres equipos: qué debe lograr el proyecto, qué materiales tienes y qué fecha importa. Tira a quien no conteste por escrito. Con los que sí, usa la lista de arriba. Si quieres que Devstoremx sea uno de esos equipos, el camino es el formulario de contacto y la llamada. La propuesta dirá qué entra. Si no somos el equipo correcto, también se puede decir en esa llamada, y sales con el criterio de esta entrada de blog para seguir buscando.

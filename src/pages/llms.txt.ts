@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
-import { memberSlug, shopifyPartner, site, steps, team } from '../data/landing';
+import { shopifyPartner, site, steps, team } from '../data/landing';
 
 export const prerender = true;
 
@@ -23,8 +23,9 @@ export const GET: APIRoute = async () => {
     '',
     ...servicios.map((entry) => `- [${entry.data.title}](${origin}/${entry.id}): ${entry.data.intro.replace(/\s+/g, ' ')}`),
     '',
-    '## Guías',
+    '## Entradas de blog',
     '',
+    `- [Blog de Devstoremx](${origin}/blog): entradas sobre desarrollo web y tiendas en línea, escritas por Fernando Peralta.`,
     ...posts.map((post) => `- [${post.data.title}](${origin}/blog/${post.id}): ${post.data.intro.replace(/\s+/g, ' ')}`),
     '',
     '## Portafolio',
@@ -37,7 +38,7 @@ export const GET: APIRoute = async () => {
     '',
     '## Equipo',
     '',
-    ...team.map((member) => `- [${member.name}](${origin}/equipo/${memberSlug(member.image)}), ${member.role}. ${member.bio}`),
+    ...team.map((member) => `- ${member.name}, ${member.role}. ${member.bio}`),
     '',
     '## Contacto',
     '',
@@ -45,8 +46,8 @@ export const GET: APIRoute = async () => {
     `- Formulario: ${origin}/#contacto`,
     `- Correo: ${site.email}`,
     `- Aviso de privacidad: ${origin}/aviso-de-privacidad`,
-    `- Texto completo de los servicios: ${origin}/llms-full.txt`,
-    `- RSS de guías: ${origin}/rss.xml`,
+    `- Texto completo de los servicios y las entradas de blog: ${origin}/llms-full.txt`,
+    `- RSS del blog: ${origin}/rss.xml`,
     '',
     'El teléfono no está publicado. No hay ciudad ni dirección: el trabajo es remoto en todo México. El dashboard de ejemplo usa datos ficticios y no es un caso de cliente.',
     '',

@@ -33,7 +33,9 @@ const blog = defineCollection({
     author: z.enum(['fernando-peralta', 'miriam-medina', 'hazel-vazquez', 'janice-garcia']),
     publishedAt: z.coerce.date(),
     updatedAt: z.coerce.date(),
-    heroImage: z.string().default('/devstore_mx.png'),
+    heroImage: z.string(),
+    heroImageAlt: z.string(),
+    category: z.string(),
     relatedService: z.string(),
     howTo: z.object({
       name: z.string(),

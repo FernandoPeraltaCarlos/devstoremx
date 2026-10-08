@@ -30,7 +30,9 @@ export interface StructuredInput {
   pathname: string;
   title?: string;
   description?: string;
-  variant?: 'home' | 'page' | 'service' | 'article' | 'author';
+  image?: string;
+  imageAlt?: string;
+  variant?: 'home' | 'page' | 'service' | 'article';
   breadcrumbs?: Crumb[];
   faqs?: readonly FaqItem[];
   serviceName?: string;
@@ -47,8 +49,7 @@ export interface StructuredInput {
     description: string;
     steps: readonly { name: string; text: string }[];
   };
-  authorSlug?: string;
-  blogPosts?: readonly { headline: string; href: string; datePublished: Date }[];
+  blogPosts?: readonly { headline: string; href: string; datePublished: Date; authorSlug: string; image: string }[];
 }
 
 function personNode(origin: string, member: (typeof team)[number]) {
@@ -62,9 +63,9 @@ function personNode(origin: string, member: (typeof team)[number]) {
     name: member.name,
     jobTitle: member.role,
     image: new URL(member.image, origin).href,
-    url: absoluteUrl(origin, `/equipo/${slug}`),
     worksFor: { '@id': `${origin}/#organization` },
   };
+  if (portfolio || linkedin) person.url = portfolio || linkedin;
   if (sameAs.length) person.sameAs = sameAs;
   if (member.bio) person.description = member.bio;
   return person;
@@ -84,7 +85,7 @@ export function buildStructuredGraph(input: StructuredInput) {
   const phone = publicValue(site.phone);
   const location = publicValue(site.location);
   const organizationDescription = metaDescription();
-  const imagePath = input.article?.image || site.ogImage;
+  const imagePath = input.image || input.article?.image || site.ogImage;
 
   const organization: Record<string, unknown> = {
     '@type': ['Organization', 'ProfessionalService'],
@@ -134,7 +135,7 @@ export function buildStructuredGraph(input: StructuredInput) {
       url: new URL(imagePath, origin).href,
       width: 1200,
       height: 630,
-      caption: ogImageAlt,
+      caption: input.imageAlt || ogImageAlt,
     },
   };
 
@@ -223,7 +224,7 @@ export function buildStructuredGraph(input: StructuredInput) {
       datePublished: input.article.datePublished.toISOString(),
       dateModified: input.article.dateModified.toISOString(),
       inLanguage: 'es-MX',
-      image: new URL(input.article.image || site.ogImage, origin).href,
+      image: new URL(imagePath, origin).href,
       author: { '@id': `${origin}/#${input.article.authorSlug}` },
       publisher: { '@id': organizationId },
       mainEntityOfPage: { '@id': webpageId },
@@ -246,16 +247,10 @@ export function buildStructuredGraph(input: StructuredInput) {
     }
   }
 
-  if (variant === 'author' && input.authorSlug) {
-    const author = team.find((member) => memberSlug(member.image) === input.authorSlug);
-    if (author) {
-      const person = personNode(origin, author);
-      webpage.about = { '@id': person['@id'] };
-      graph.push(person);
-    }
-  }
-
   if (input.blogPosts?.length) {
+    const authorSlugs = new Set(input.blogPosts.map((post) => post.authorSlug));
+    graph.push(...team.filter((member) => authorSlugs.has(memberSlug(member.image))).map((member) => personNode(origin, member)));
+    webpage.mainEntity = { '@id': `${pageUrl}#blog` };
     graph.push({
       '@type': 'Blog',
       '@id': `${pageUrl}#blog`,
@@ -266,8 +261,11 @@ export function buildStructuredGraph(input: StructuredInput) {
       publisher: { '@id': organizationId },
       blogPost: input.blogPosts.map((post) => ({
         '@type': 'BlogPosting',
+        '@id': `${absoluteUrl(origin, post.href)}#article`,
         headline: post.headline,
         datePublished: post.datePublished.toISOString(),
+        author: { '@id': `${origin}/#${post.authorSlug}` },
+        image: new URL(post.image, origin).href,
         url: absoluteUrl(origin, post.href),
       })),
     });

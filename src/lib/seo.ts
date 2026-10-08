@@ -46,6 +46,7 @@ export function isIndexableUrl(url: string): boolean {
     return false;
   }
   if (PRIVATE_PATHS.has(pathname) || pathname.startsWith('/api/')) return false;
+  if (pathname === '/equipo' || pathname.startsWith('/equipo/')) return false;
   if (pathname === '/portafolio' && !portfolioIsPublic()) return false;
   return true;
 }

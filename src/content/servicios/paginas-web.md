@@ -45,7 +45,7 @@ El mapa cambia con el giro, pero este es el punto de partida que usamos para no 
 - **Confianza.** Quién está detrás, cómo trabajan o qué condiciones aplican. Sin inventar testimonios ni números de clientes.
 - **Contacto.** Un formulario que llega a un buzón revisado, más el correo y el horario en que sí responden.
 
-Un blog solo entra si alguien del negocio va a publicar. Una página vacía de “noticias” no ayuda a Google ni al visitante. Si más adelante quieren explicar procesos, las [guías](/blog) se pueden sumar cuando haya algo que decir.
+Un blog solo entra si alguien del negocio va a publicar. Una página vacía de “noticias” no ayuda a Google ni al visitante. Si más adelante quieren explicar procesos, las [entradas de blog](/blog) se pueden sumar cuando haya algo que decir.
 
 ## Para quién es este servicio
 

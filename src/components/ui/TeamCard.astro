@@ -1,19 +1,17 @@
 ---
 import Icon from './Icon.astro';
 import ImagePlaceholder from './ImagePlaceholder.astro';
-interface Props { name: string; role: string; image?: string; linkedin?: string; portfolio?: string; profileHref?: string; tone: 'founder' | 'light' | 'dark' | 'blue'; delay?: number; }
-const { name, role, image, linkedin, portfolio, profileHref, tone, delay = 0 } = Astro.props;
+interface Props { name: string; role: string; image?: string; linkedin?: string; portfolio?: string; tone: 'founder' | 'light' | 'dark' | 'blue'; delay?: number; }
+const { name, role, image, linkedin, portfolio, tone, delay = 0 } = Astro.props;
 const tones = { founder: 'bg-line text-[#77839b]', light: 'bg-[#e3e9f3] text-[#77839b]', dark: 'bg-panel text-[#56627a]', blue: 'bg-electric text-[#c9d3ff]' };
 const alt = image ? `Retrato de ${name}, ${role} de devstoremx` : '';
 ---
 <div data-reveal="scale" data-reveal-delay={delay} class="group flex min-w-0 flex-col gap-3">
   <ImagePlaceholder src={image} alt={alt} width={image ? 400 : undefined} height={image ? 400 : undefined} person class={`scroll-image-settle ${tones[tone]} aspect-square w-full`}>
     <figcaption class="absolute bottom-3 left-3 flex w-fit max-w-[calc(100%_-_1.5rem)] flex-col gap-0.5 rounded-md bg-brand px-2.5 py-1.5 text-white transition-transform duration-300 group-hover:-translate-y-1">
-      {profileHref
-        ? <a href={profileHref} class="text-[13px] leading-[18px] font-semibold underline-offset-2 hover:underline">{name}<span class="sr-only">, ver perfil</span></a>
-        : linkedin
-          ? <a href={linkedin} rel="noopener noreferrer" target="_blank" class="text-[13px] leading-[18px] font-semibold underline-offset-2 hover:underline">{name}<span class="sr-only"> en LinkedIn</span></a>
-          : <span class="text-[13px] leading-[18px] font-semibold">{name}</span>}
+      {linkedin
+        ? <a href={linkedin} rel="noopener noreferrer" target="_blank" class="text-[13px] leading-[18px] font-semibold underline-offset-2 hover:underline">{name}<span class="sr-only"> en LinkedIn</span></a>
+        : <span class="text-[13px] leading-[18px] font-semibold">{name}</span>}
       {role && <span class="text-[11px] leading-[14px] text-white/90">{role}</span>}
     </figcaption>
   </ImagePlaceholder>

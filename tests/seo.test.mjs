@@ -33,7 +33,7 @@ test('canonicalPathname quita .html y la barra final', () => {
   assert.equal(canonicalPathname('/blog/como-hacer-una-pagina-web.html'), '/blog/como-hacer-una-pagina-web');
 });
 
-test('el sitemap no debe incluir dashboard, portafolio vacío ni archivos de texto', () => {
+test('el sitemap excluye equipo, dashboard, portafolio vacío y archivos de texto', () => {
   assert.equal(portfolioIsPublic(), false);
   assert.equal(isIndexableUrl(`${origin}/dashboard-cliente`), false);
   assert.equal(isIndexableUrl(`${origin}/dashboard-cliente/`), false);
@@ -41,6 +41,10 @@ test('el sitemap no debe incluir dashboard, portafolio vacío ni archivos de tex
   assert.equal(isIndexableUrl(`${origin}/llms.txt`), false);
   assert.equal(isIndexableUrl(`${origin}/llms-full.txt`), false);
   assert.equal(isIndexableUrl(`${origin}/rss.xml`), false);
+  assert.equal(isIndexableUrl(`${origin}/equipo`), false);
+  assert.equal(isIndexableUrl(`${origin}/equipo/`), false);
+  assert.equal(isIndexableUrl(`${origin}/equipo/fernando-peralta/`), false);
+  assert.equal(isIndexableUrl(`${origin}/blog`), true);
   assert.equal(isIndexableUrl(`${origin}/shopify`), true);
   assert.equal(isIndexableUrl(`${origin}/blog/como-hacer-una-pagina-web`), true);
   assert.equal(isIndexableUrl(`${origin}/aviso-de-privacidad`), true);
@@ -78,7 +82,8 @@ test('el grafo de la portada usa Devstoremx y las URLs reales de servicio', () =
   assert.equal(serialized.includes('/#ecommerce'), false);
   assert.equal(serialized.includes('/#desarrollo-web'), false);
   const fernando = nodes.find((node) => node['@id'] === `${origin}/#fernando-peralta`);
-  assert.equal(fernando.url, `${origin}/equipo/fernando-peralta`);
+  assert.equal(fernando.url, 'https://fernandoperalta.xyz');
+  assert.equal(serialized.includes('/equipo/'), false);
 });
 
 test('una página de servicio publica su propia URL, migas y preguntas', () => {
@@ -105,13 +110,15 @@ test('una página de servicio publica su propia URL, migas y preguntas', () => {
   assert.equal(faq.mainEntity[0].name, '¿La cuenta queda del negocio?');
 });
 
-test('un artículo apunta al perfil de la persona que ya existe en el equipo', () => {
+test('un artículo identifica al autor sin enlazar a páginas de equipo', () => {
   const published = new Date('2026-10-07T00:00:00.000Z');
   const graph = buildStructuredGraph({
     origin,
     pathname: '/blog/como-hacer-una-pagina-web',
     title: 'Cómo hacer una página web',
-    description: 'Guía',
+    description: 'Entrada de blog',
+    image: '/blog/como-hacer-una-pagina-web.webp',
+    imageAlt: 'Laptop con el esquema de un sitio web.',
     variant: 'article',
     article: {
       headline: 'Cómo hacer una página web',
@@ -128,12 +135,49 @@ test('un artículo apunta al perfil de la persona que ya existe en el equipo', (
   const nodes = graph['@graph'];
   const article = nodes.find((node) => node['@type'] === 'BlogPosting');
   assert.deepEqual(article.author, { '@id': `${origin}/#fernando-peralta` });
+  const author = nodes.find((node) => node['@id'] === article.author['@id']);
+  assert.equal(author.name, 'Fernando Peralta');
+  assert.equal(author.url, 'https://fernandoperalta.xyz');
+  assert.equal(JSON.stringify(graph).includes('/equipo/'), false);
   assert.equal(article.datePublished, '2026-10-07T00:00:00.000Z');
+  assert.equal(article.image, `${origin}/blog/como-hacer-una-pagina-web.webp`);
+  const webpage = nodes.find((node) => node['@type'] === 'WebPage');
+  assert.equal(webpage.primaryImageOfPage.url, article.image);
+  assert.equal(webpage.primaryImageOfPage.caption, 'Laptop con el esquema de un sitio web.');
   const howTo = nodes.find((node) => node['@type'] === 'HowTo');
   assert.equal(howTo.step[0].position, 1);
 });
 
-test('los servicios y las guías tienen texto útil, sin precios ni niveles de partner no publicados', () => {
+test('el índice del blog identifica al autor y las portadas de sus entradas', () => {
+  const graph = buildStructuredGraph({
+    origin,
+    pathname: '/blog',
+    variant: 'page',
+    image: '/blog/como-hacer-una-pagina-web.webp',
+    imageAlt: 'Bocetos de una página web.',
+    blogPosts: [{
+      headline: 'Cómo hacer una página web',
+      href: '/blog/como-hacer-una-pagina-web',
+      datePublished: new Date('2026-10-07T00:00:00.000Z'),
+      authorSlug: 'fernando-peralta',
+      image: '/blog/como-hacer-una-pagina-web.webp',
+    }],
+  });
+  const nodes = graph['@graph'];
+  const webpage = nodes.find((node) => node['@type'] === 'WebPage');
+  const blog = nodes.find((node) => node['@type'] === 'Blog');
+  assert.deepEqual(webpage.mainEntity, { '@id': blog['@id'] });
+  assert.equal(webpage.primaryImageOfPage.url, `${origin}/blog/como-hacer-una-pagina-web.webp`);
+  assert.equal(webpage.primaryImageOfPage.caption, 'Bocetos de una página web.');
+  const entry = blog.blogPost[0];
+  assert.equal(entry['@id'], `${origin}/blog/como-hacer-una-pagina-web#article`);
+  assert.equal(entry.image, webpage.primaryImageOfPage.url);
+  const author = nodes.find((node) => node['@id'] === entry.author['@id']);
+  assert.equal(author.name, 'Fernando Peralta');
+  assert.equal(JSON.stringify(graph).includes('/equipo/'), false);
+});
+
+test('los servicios y las entradas de blog tienen texto útil, sin precios ni niveles de partner no publicados', () => {
   const price = /\$\s?\d|\b\d[\d.,]*\s?(?:mxn|pesos|usd)\b/i;
   const unpublishedTier = /shopify (?:plus|premier|select) partner|partner (?:plus|premier|select)|shopify expert/i;
   for (const file of readdirSync('src/content/servicios').filter((name) => name.endsWith('.md'))) {
@@ -147,7 +191,8 @@ test('los servicios y las guías tienen texto útil, sin precios ni niveles de p
   const howTo = splitFrontmatter('src/content/blog/como-hacer-una-pagina-web.md');
   assert.match(howTo.fm, /howTo:/);
   for (const file of readdirSync('src/content/blog').filter((name) => name.endsWith('.md'))) {
-    const { raw, body } = splitFrontmatter(`src/content/blog/${file}`);
+    const { raw, fm, body } = splitFrontmatter(`src/content/blog/${file}`);
+    assert.match(fm, /^author: fernando-peralta$/m, file);
     assert.equal(words(body) >= 650, true, `${file} tiene ${words(body)} palabras en el cuerpo`);
     assert.doesNotMatch(raw, price, file);
   }

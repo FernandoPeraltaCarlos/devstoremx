@@ -5,11 +5,13 @@ metaDescription: Comparación entre Shopify y WordPress con WooCommerce para ven
 h1: Shopify o WordPress, cuál te conviene
 intro: >
   Elige Shopify si el centro del proyecto es una tienda y no quieres administrar el servidor. Elige WordPress si el centro es el contenido editable, o WooCommerce si la tienda debe vivir en ese mismo panel.
-  Devstoremx construye las dos. Esta guía compara la operación, no un ganador universal, y no incluye tarifas de desarrollo.
-author: miriam-medina
+  Devstoremx construye las dos. Esta entrada de blog compara la operación, no un ganador universal, y no incluye tarifas de desarrollo.
+author: fernando-peralta
 publishedAt: 2026-10-07
 updatedAt: 2026-10-07
-heroImage: /devstore_mx.png
+heroImage: /blog/shopify-vs-wordpress.webp
+heroImageAlt: Dos laptops que muestran una tienda en línea y un sitio de contenidos.
+category: Plataformas
 relatedService: shopify
 ---
 
@@ -47,7 +49,7 @@ No lo elijas si nadie va a mantener actualizaciones. WooCommerce abandonado es u
 
 ## ¿Y el dinero de las plataformas?
 
-Las dos tienen costos que no son el desarrollo. Shopify cobra su suscripción y pueden existir comisiones de la plataforma o de la pasarela, según el plan y el método de pago. WordPress no cobra licencia del software, y sí cobra el hosting, el dominio y las licencias de los plugins o temas de paga que se usen. Esos montos los pone cada proveedor y cambian. Esta guía no los copia, porque una cifra pegada aquí se vuelve falsa en silencio.
+Las dos tienen costos que no son el desarrollo. Shopify cobra su suscripción y pueden existir comisiones de la plataforma o de la pasarela, según el plan y el método de pago. WordPress no cobra licencia del software, y sí cobra el hosting, el dominio y las licencias de los plugins o temas de paga que se usen. Esos montos los pone cada proveedor y cambian. Esta entrada de blog no los copia, porque una cifra pegada aquí se vuelve falsa en silencio.
 
 El desarrollo —diseño, configuración, carga inicial, pruebas— es otro concepto. Devstoremx lo cotiza por escrito para el camino que se elija. Un número de “tienda en Shopify” comparado con un número de “tienda en WordPress” no dice nada si uno incluye catálogo y el otro no.
 

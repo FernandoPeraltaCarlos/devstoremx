@@ -1,0 +1,30 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { formatDate } from '../../lib/seo';
+import { readingMinutes } from '../../lib/blog';
+interface Props { post: CollectionEntry<'blog'>; }
+const { post } = Astro.props;
+---
+<article class="post-card">
+  <a href={`/blog/${post.id}`} class="post-card-image" tabindex="-1" aria-hidden="true">
+    <img src={post.data.heroImage} alt="" width="1200" height="630" loading="lazy" decoding="async" />
+  </a>
+  <div class="post-card-meta"><span>{post.data.category}</span><span>{readingMinutes(post.body)} min de lectura</span></div>
+  <h3><a href={`/blog/${post.id}`}>{post.data.h1}</a></h3>
+  <p>{post.data.metaDescription}</p>
+  <div class="post-card-footer"><span>Fernando Peralta</span><time datetime={post.data.publishedAt.toISOString()}>{formatDate(post.data.publishedAt)}</time></div>
+</article>
+<style>
+  .post-card { min-width: 0; }
+  .post-card-image { display: block; overflow: hidden; border-radius: 10px; background: var(--color-line); }
+  img { width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; transition: transform 300ms; }
+  .post-card:hover img { transform: scale(1.025); }
+  .post-card-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin-top: 22px; font-size: 12px; color: var(--color-muted); }
+  .post-card-meta > :first-child { font-weight: 700; color: var(--color-brand); }
+  h3 { margin-top: 12px; font-size: 23px; line-height: 1.35; font-weight: 700; letter-spacing: -.025em; }
+  h3 a:hover { color: var(--color-brand); }
+  p { margin-top: 12px; font-size: 14px; line-height: 1.8; color: var(--color-muted); }
+  .post-card-footer { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 22px; font-size: 12px; color: var(--color-muted); }
+  .post-card-footer > span { font-weight: 600; color: var(--color-ink); }
+  @media (prefers-reduced-motion: reduce) { img { transition: none; } .post-card:hover img { transform: none; } }
+</style>

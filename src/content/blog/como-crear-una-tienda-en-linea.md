@@ -1,15 +1,17 @@
 ---
 title: Cómo crear una tienda en línea
 metaTitle: Cómo crear una tienda en línea | Devstoremx
-metaDescription: "Cómo vender en línea paso a paso: catálogo, pagos, envíos y la plataforma. Guía para negocios en México, sin un precio cerrado de tienda."
+metaDescription: "Cómo vender en línea paso a paso: catálogo, pagos, envíos y la plataforma. Entrada de blog para negocios en México, sin un precio cerrado de tienda."
 h1: Cómo crear una tienda en línea
 intro: >
   Crear una tienda en línea es publicar un catálogo que se puede pagar y entregar, no solo un botón de comprar.
-  El orden es: qué vendes, cómo cobras, cómo envías y en qué plataforma opera tu equipo. Esta guía sigue ese orden para negocios en México.
-author: hazel-vazquez
+  El orden es: qué vendes, cómo cobras, cómo envías y en qué plataforma opera tu equipo. Esta entrada de blog sigue ese orden para negocios en México.
+author: fernando-peralta
 publishedAt: 2026-10-07
 updatedAt: 2026-10-07
-heroImage: /devstore_mx.png
+heroImage: /blog/como-crear-una-tienda-en-linea.webp
+heroImageAlt: Mesa de preparación de pedidos con una tienda en línea abierta en una laptop y paquetes.
+category: Comercio electrónico
 relatedService: tienda-en-linea
 ---
 

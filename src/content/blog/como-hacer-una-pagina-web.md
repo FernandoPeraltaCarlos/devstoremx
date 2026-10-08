@@ -5,11 +5,13 @@ metaDescription: Cómo crear una página web para un negocio, de la oferta al do
 h1: Cómo hacer una página web
 intro: >
   Para hacer una página web de negocio necesitas una oferta clara, un dominio, un lugar donde viva el sitio y las páginas que responden qué vendes y cómo te contactan.
-  Puedes armarla tú con un constructor o encargarla. Esta guía recorre los pasos en orden y señala en cuál conviene pedir ayuda.
+  Puedes armarla tú con un constructor o encargarla. Esta entrada de blog recorre los pasos en orden y señala en cuál conviene pedir ayuda.
 author: fernando-peralta
 publishedAt: 2026-10-07
 updatedAt: 2026-10-07
-heroImage: /devstore_mx.png
+heroImage: /blog/como-hacer-una-pagina-web.webp
+heroImageAlt: Laptop con el esquema de un sitio web y bocetos de páginas sobre un escritorio.
+category: Desarrollo web
 relatedService: paginas-web
 howTo:
   name: Cómo hacer una página web para un negocio
@@ -41,7 +43,7 @@ Saber programar, o contratar a quien sabe, importa cuando el constructor se qued
 
 La acción. “Tener presencia” no es una acción. “Que pidan una cita”, “que escriban por un servicio” o “que compren este producto” sí lo son. Si eliges dos, la portada se parte y ninguna queda clara.
 
-Después, el formato. La guía se centra en una [página web](/paginas-web) de negocio. Si la visita viene de un anuncio y solo hay una oferta, lee [qué es una landing page](/blog/que-es-una-landing-page). Si hay catálogo y cobro, lee [cómo crear una tienda en línea](/blog/como-crear-una-tienda-en-linea). Elegir bien aquí ahorra rehacer el proyecto.
+Después, el formato. La entrada de blog se centra en una [página web](/paginas-web) de negocio. Si la visita viene de un anuncio y solo hay una oferta, lee [qué es una landing page](/blog/que-es-una-landing-page). Si hay catálogo y cobro, lee [cómo crear una tienda en línea](/blog/como-crear-una-tienda-en-linea). Elegir bien aquí ahorra rehacer el proyecto.
 
 ## ¿Qué contenidos no se pueden inventar?
 
@@ -75,4 +77,4 @@ Mide solo la acción que elegiste al principio. Si casi nadie envía el formular
 
 ## ¿Cuándo encargarla en lugar de hacerla tú?
 
-Cuando tu tiempo vendiendo vale más que el aprendizaje, cuando ya intentaste un constructor y el resultado no representa al negocio, o cuando hay tienda, varios idiomas operativos o integraciones. En Devstoremx ese encargo empieza con una llamada y una propuesta por escrito. Si quieres ver qué mueve el costo antes de escribir, está la guía de [cuánto cuesta una página web](/blog/cuanto-cuesta-una-pagina-web). No hay una cifra en ninguna de las dos: hay factores, y luego una cotización.
+Cuando tu tiempo vendiendo vale más que el aprendizaje, cuando ya intentaste un constructor y el resultado no representa al negocio, o cuando hay tienda, varios idiomas operativos o integraciones. En Devstoremx ese encargo empieza con una llamada y una propuesta por escrito. Si quieres ver qué mueve el costo antes de escribir, está la entrada de blog de [cuánto cuesta una página web](/blog/cuanto-cuesta-una-pagina-web). No hay una cifra en ninguna de las dos: hay factores, y luego una cotización.

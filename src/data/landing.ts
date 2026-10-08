@@ -148,7 +148,7 @@ export const team = [
     tone: 'light',
     linkedin: 'https://www.linkedin.com/in/fernandodperaltac/',
     portfolio: 'https://fernandoperalta.xyz',
-    bio: 'Technical Lead de Devstoremx. Dirige la parte técnica de los proyectos y firma las guías de desarrollo web, costos y elección de agencia.',
+    bio: 'Technical Lead de Devstoremx. Dirige la parte técnica de los proyectos y escribe las entradas del blog sobre desarrollo web, tiendas en línea y elección de agencia.',
   },
   {
     name: 'Miriam Medina',
@@ -157,7 +157,7 @@ export const team = [
     tone: 'light',
     linkedin: 'https://www.linkedin.com/in/cmiriam-medinad/',
     portfolio: '',
-    bio: 'Full Stack Developer en Devstoremx. Construye sitios y tiendas, y firma la guía que compara Shopify con WordPress.',
+    bio: 'Full Stack Developer en Devstoremx. Construye sitios y tiendas con Shopify y WordPress.',
   },
   {
     name: 'Hazel Vázquez',
@@ -166,7 +166,7 @@ export const team = [
     tone: 'light',
     linkedin: 'https://www.linkedin.com/in/adad-hazel-v%C3%A1zquez-pe%C3%B1a/',
     portfolio: '',
-    bio: 'Full Stack Developer en Devstoremx. Trabaja en tiendas y aplicaciones, y firma la guía para crear una tienda en línea.',
+    bio: 'Full Stack Developer en Devstoremx. Trabaja en tiendas en línea y aplicaciones.',
   },
   {
     name: 'Janice García',
@@ -175,7 +175,7 @@ export const team = [
     tone: 'light',
     linkedin: 'https://www.linkedin.com/in/janiceagarciasamperio/',
     portfolio: '',
-    bio: 'Full Stack Developer en Devstoremx. Desarrolla páginas y landings, y firma la guía sobre qué es una landing page.',
+    bio: 'Full Stack Developer en Devstoremx. Desarrolla páginas web y landing pages.',
   },
 ] as const;
 
@@ -253,7 +253,7 @@ export const faqs = [
 
 export const navigation = [
   { href: '/#servicios', label: 'Servicios' },
-  { href: '/blog', label: 'Guías' },
+  { href: '/blog', label: 'Blog' },
   { href: '/portafolio', label: 'Portafolio' },
   { href: '/#proceso', label: 'Proceso' },
   { href: '/#nosotros', label: 'Nosotros' },

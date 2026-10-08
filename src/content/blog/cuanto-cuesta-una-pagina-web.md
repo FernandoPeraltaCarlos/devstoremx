@@ -5,11 +5,13 @@ metaDescription: Qué hace que una página web cueste más o menos en México. F
 h1: Cuánto cuesta una página web en México
 intro: >
   Una página web no tiene un precio único en México: cuesta según el tipo de sitio, las páginas reales, el diseño, el contenido y lo que hay que conectar.
-  Devstoremx no publica tarifas. Esta guía sirve para entender qué estás comparando cuando te pasan dos números distintos, y para pedir una cotización que diga qué incluye.
+  Devstoremx no publica tarifas. Esta entrada de blog sirve para entender qué estás comparando cuando te pasan dos números distintos, y para pedir una cotización que diga qué incluye.
 author: fernando-peralta
 publishedAt: 2026-10-07
 updatedAt: 2026-10-07
-heroImage: /devstore_mx.png
+heroImage: /blog/cuanto-cuesta-una-pagina-web.webp
+heroImageAlt: Documentos de alcance de un proyecto web junto a una calculadora y una libreta azul.
+category: Planeación y costos
 relatedService: desarrollo-web
 ---
 
@@ -17,7 +19,7 @@ relatedService: desarrollo-web
 
 Porque “sitio web” no es un producto de estante. Una landing de una campaña, un sitio de seis páginas y una tienda con envíos pueden llamarse igual en una conversación y ser proyectos distintos. El número solo significa algo al lado de una lista: qué páginas, qué diseño, quién escribe, quién carga el contenido, qué pasa después del lanzamiento.
 
-Si una propuesta cabe en un renglón y la otra en dos páginas, no estás comparando el mismo trabajo. Estás comparando una promesa corta con un alcance. Devstoremx cotiza por escrito después de una llamada precisamente para que el número tenga esa lista. No hay precios en el sitio, ni en esta guía.
+Si una propuesta cabe en un renglón y la otra en dos páginas, no estás comparando el mismo trabajo. Estás comparando una promesa corta con un alcance. Devstoremx cotiza por escrito después de una llamada precisamente para que el número tenga esa lista. No hay precios en el sitio, ni en esta entrada de blog.
 
 ## ¿Qué factores mueven el costo?
 
@@ -59,6 +61,6 @@ Pregunta, en concreto: ¿a nombre de quién queda el dominio? ¿Puedo entrar a e
 
 ## ¿Y las páginas que dicen el precio en internet?
 
-Hay talleres y plataformas que publican paquetes. Sirven como referencia de que el mercado existe, no como el precio de tu proyecto. En cuanto tu caso agrega una tienda, una migración o un idioma de operación, el paquete se desarma. Esta guía no los copia ni los “actualiza” con cifras, porque se quedan viejas y porque empujan a comparar números en lugar de alcances.
+Hay talleres y plataformas que publican paquetes. Sirven como referencia de que el mercado existe, no como el precio de tu proyecto. En cuanto tu caso agrega una tienda, una migración o un idioma de operación, el paquete se desarma. Esta entrada de blog no los copia ni los “actualiza” con cifras, porque se quedan viejas y porque empujan a comparar números en lugar de alcances.
 
 Si ya tienes dos propuestas en la mano, ponlas lado a lado y subraya lo que una nombra y la otra no. La diferencia suele estar ahí, no en la reputación del PDF. Cuando quieras una tercera conversación con el alcance por escrito, el [desarrollo web](/desarrollo-web) de Devstoremx empieza por esa llamada.
