@@ -97,7 +97,7 @@ function confirmationHtml(data: ContactData, preheader: string): string {
 <meta name="x-apple-disable-message-reformatting">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark">
-<title>Recibimos tu mensaje · devstoremx</title>
+<title>Recibimos tu mensaje · Devstoremx</title>
 <style>
   @font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 200 800; src: url('${SITE_URL}/fonts/plus-jakarta-sans-latin.woff2') format('woff2'); }
   @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 400; src: url('${SITE_URL}/fonts/ibm-plex-mono-latin.woff2') format('woff2'); }
@@ -127,7 +127,7 @@ function confirmationHtml(data: ContactData, preheader: string): string {
     <tr><td class="px" style="${keep(C.night)}padding:28px 40px;border-bottom:1px solid ${C.lineDark};">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
         <td valign="middle" style="padding-right:12px;"><a href="${SITE_URL}" style="text-decoration:none;"><img src="${SITE_URL}/devstoremx.png" width="30" height="36" alt="" style="display:block;border:0;width:30px;height:36px;"></a></td>
-        <td valign="middle" style="font-family:${SANS};font-size:18px;line-height:24px;font-weight:700;letter-spacing:-0.01em;">${keepLightText(`<a href="${SITE_URL}" style="color:${C.cloud};text-decoration:none;">devstoremx</a>`)}</td>
+        <td valign="middle" style="font-family:${SANS};font-size:18px;line-height:24px;font-weight:700;letter-spacing:-0.01em;">${keepLightText(`<a href="${SITE_URL}" style="color:${C.cloud};text-decoration:none;">Devstoremx</a>`)}</td>
       </tr></table>
     </td></tr>
 
@@ -171,7 +171,7 @@ function confirmationHtml(data: ContactData, preheader: string): string {
       <p class="t-muted" style="margin:0 0 20px;font-family:${SANS};font-size:15px;line-height:24px;color:${C.muted};">¿Olvidaste algún detalle? Responde a este correo y lo sumamos a tu solicitud.</p>
       <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
         <td class="btn" style="${keep(C.brand)}border-radius:4px;">${keepLightText(`
-          <a class="btn-text" href="mailto:${CONTACT_EMAIL}" style="display:inline-block;padding:14px 24px;font-family:${SANS};font-size:15px;line-height:20px;font-weight:700;color:#ffffff;text-decoration:none;">Escribir a devstoremx &rarr;</a>`)}
+          <a class="btn-text" href="mailto:${CONTACT_EMAIL}" style="display:inline-block;padding:14px 24px;font-family:${SANS};font-size:15px;line-height:20px;font-weight:700;color:#ffffff;text-decoration:none;">Escribir a Devstoremx &rarr;</a>`)}
         </td>
       </tr></table>
     </td></tr>
@@ -190,7 +190,7 @@ function confirmationHtml(data: ContactData, preheader: string): string {
 }
 
 export function confirmationEmail(data: ContactData): EmailContent {
-  const subject = 'Recibimos tu mensaje · devstoremx';
+  const subject = 'Recibimos tu mensaje · Devstoremx';
   const preheader = 'Te respondemos en menos de 24 horas hábiles.';
   const steps = NEXT_STEPS.map(([title, description], index) => `${String(index + 1).padStart(2, '0')}. ${title}: ${description}`);
   const text = [
@@ -201,7 +201,7 @@ export function confirmationEmail(data: ContactData): EmailContent {
     '— Qué sigue —',
     ...steps,
     '¿Olvidaste algún detalle? Responde a este correo y lo sumamos a tu solicitud.',
-    `devstoremx · ${SITE_URL} · ${CONTACT_EMAIL}`,
+    `Devstoremx · ${SITE_URL} · ${CONTACT_EMAIL}`,
   ].join('\n\n');
   return { subject, html: confirmationHtml(data, preheader), text };
 }

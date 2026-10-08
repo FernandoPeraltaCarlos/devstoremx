@@ -1,3 +1,4 @@
+import './seo.test.mjs';
 import './viewport-reveal.test.mjs';
 import './process-progress.test.mjs';
 import './contact.test.mjs';

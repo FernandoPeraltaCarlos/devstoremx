@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import { ClientRouter } from 'astro:transitions';
 import { defaultTitle, metaDescription, ogImageAlt, site } from '../data/landing';
+import { absoluteUrl, canonicalPathname } from '../lib/seo';
 
 interface Props {
   title?: string;
@@ -9,6 +10,10 @@ interface Props {
   canonical?: string;
   image?: string;
   imageAlt?: string;
+  noindex?: boolean;
+  ogType?: 'website' | 'article';
+  publishedTime?: string;
+  modifiedTime?: string;
 }
 
 const {
@@ -17,11 +22,16 @@ const {
   canonical,
   image = site.ogImage,
   imageAlt = ogImageAlt,
+  noindex = false,
+  ogType = 'website',
+  publishedTime,
+  modifiedTime,
 } = Astro.props;
 
-const origin = Astro.site ?? site.url;
-const canonicalHref = canonical ?? new URL(Astro.url.pathname, origin).href;
+const origin = (Astro.site ?? new URL(site.url)).origin;
+const canonicalHref = canonical ?? absoluteUrl(origin, canonicalPathname(Astro.url.pathname));
 const imageHref = new URL(image, origin).href;
+const rssHref = absoluteUrl(origin, '/rss.xml');
 ---
 <!doctype html>
 <html lang="es-MX">
@@ -29,15 +39,19 @@ const imageHref = new URL(image, origin).href;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <meta name="theme-color" content="#05070d" />
     <title>{title}</title>
     <link rel="canonical" href={canonicalHref} />
+    <link rel="alternate" type="application/rss+xml" title="Guías de Devstoremx" href={rssHref} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:locale" content="es_MX" />
     <meta property="og:url" content={canonicalHref} />
-    <meta property="og:site_name" content="devstoremx" />
+    <meta property="og:site_name" content="Devstoremx" />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
     <meta property="og:image" content={imageHref} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />

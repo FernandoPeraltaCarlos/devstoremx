@@ -6,7 +6,7 @@ import Logo from '../components/ui/Logo.astro';
 import { publicValue, site } from '../data/landing';
 
 const title = 'Aviso de privacidad · Devstoremx';
-const description = 'Aviso de privacidad de devstoremx sobre los datos que recaba el formulario de contacto y los derechos de quien los proporciona.';
+const description = 'Aviso de privacidad de Devstoremx sobre los datos que recaba el formulario de contacto y los derechos de quien los proporciona.';
 const email = publicValue(site.email);
 ---
 <BaseLayout title={title} description={description}>
@@ -22,7 +22,7 @@ const email = publicValue(site.email);
       </header>
       <section class="flex flex-col gap-3">
         <h2 class="text-xl font-semibold tracking-[-0.02em] text-ink">1. Responsable</h2>
-        <p class="text-base leading-7 text-muted">devstoremx, con sitio en {site.url}, es responsable de los datos personales que se recaban por este medio. Para ejercer derechos o hacer preguntas sobre este aviso, usa {email ? <a class="font-semibold text-brand underline-offset-4 hover:underline" href={`mailto:${email}`}>{email}</a> : <a class="font-semibold text-brand underline-offset-4 hover:underline" href="/#contacto">el formulario de contacto</a>}.</p>
+        <p class="text-base leading-7 text-muted">Devstoremx, con sitio en {site.url}, es responsable de los datos personales que se recaban por este medio. Para ejercer derechos o hacer preguntas sobre este aviso, usa {email ? <a class="font-semibold text-brand underline-offset-4 hover:underline" href={`mailto:${email}`}>{email}</a> : <a class="font-semibold text-brand underline-offset-4 hover:underline" href="/#contacto">el formulario de contacto</a>}.</p>
       </section>
       <section class="flex flex-col gap-3">
         <h2 class="text-xl font-semibold tracking-[-0.02em] text-ink">2. Datos que se recaban</h2>
@@ -34,7 +34,7 @@ const email = publicValue(site.email);
       </section>
       <section class="flex flex-col gap-3">
         <h2 class="text-xl font-semibold tracking-[-0.02em] text-ink">4. Transferencias</h2>
-        <p class="text-base leading-7 text-muted">devstoremx no vende datos personales. Puede compartirlos solo con proveedores necesarios para hospedar el sitio o recibir el mensaje del formulario, y únicamente para esa finalidad.</p>
+        <p class="text-base leading-7 text-muted">Devstoremx no vende datos personales. Puede compartirlos solo con proveedores necesarios para hospedar el sitio o recibir el mensaje del formulario, y únicamente para esa finalidad.</p>
       </section>
       <section class="flex flex-col gap-3">
         <h2 class="text-xl font-semibold tracking-[-0.02em] text-ink">5. Derechos</h2>

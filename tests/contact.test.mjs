@@ -56,7 +56,7 @@ test('email builders escape the message and keep their subjects', () => {
   const notification = notificationEmail(data);
   const confirmation = confirmationEmail(data);
   assert.equal(notification.subject, 'Nuevo mensaje de Ana López');
-  assert.equal(confirmation.subject, 'Recibimos tu mensaje · devstoremx');
+  assert.equal(confirmation.subject, 'Recibimos tu mensaje · Devstoremx');
   assert.equal(notification.html.includes('<script>'), false);
   assert.equal(confirmation.html.includes('<script>'), false);
   assert.match(notification.html, /&lt;script&gt;/);

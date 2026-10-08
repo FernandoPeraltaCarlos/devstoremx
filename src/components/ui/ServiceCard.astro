@@ -1,10 +1,13 @@
 ---
 import Icon from './Icon.astro';
-interface Props { id: string; number: string; title: string; description: string; icon: string; delay?: number; }
-const { id, number, title, description, icon, delay = 0 } = Astro.props;
+interface Props { id: string; href: string; number: string; title: string; description: string; icon: string; delay?: number; }
+const { id, href, number, title, description, icon, delay = 0 } = Astro.props;
 ---
-<article id={id} data-reveal data-reveal-delay={delay} class="scroll-line group flex scroll-mt-8 flex-col gap-3.5 border-t border-line py-8 lg:min-h-[226px]">
-  <div class="flex items-center justify-between"><Icon markup={icon} size={28} class="text-brand transition-transform duration-300 group-hover:-translate-y-1" /><span class="font-mono text-[13px] text-muted">{number}</span></div>
-  <h3 class="mt-1.5 text-[22px] leading-7 font-semibold tracking-[-0.01em]">{title}</h3>
-  <p class="text-base leading-[26px] text-muted">{description}</p>
+<article id={id} data-reveal data-reveal-delay={delay} class="scroll-line group scroll-mt-8 border-t border-line lg:min-h-[226px]">
+  <a href={href} class="flex flex-col gap-3.5 py-8">
+    <div class="flex items-center justify-between"><Icon markup={icon} size={28} class="text-brand transition-transform duration-300 group-hover:-translate-y-1" /><span class="font-mono text-[13px] text-muted">{number}</span></div>
+    <h3 class="mt-1.5 text-[22px] leading-7 font-semibold tracking-[-0.01em] group-hover:text-brand">{title}</h3>
+    <p class="text-base leading-[26px] text-muted">{description}</p>
+    <span class="font-semibold text-brand">Ver el servicio</span>
+  </a>
 </article>

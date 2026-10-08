@@ -75,6 +75,18 @@
   .button-linkedin { @apply bg-[#0a66c2] text-white hover:bg-[#004182]; }
   .field { @apply min-h-12 w-full rounded-md border border-[#77839b] bg-white px-3.5 text-base text-ink transition placeholder:text-[#6b758a] focus:border-brand focus:outline-2 focus:outline-offset-2 focus:outline-brand; }
   .eyebrow { @apply text-[13px] leading-5 font-bold tracking-[0.1em] uppercase; }
+  .rich-text { @apply max-w-[72ch] text-base leading-7 text-muted; }
+  .rich-text :where(h2) { @apply mt-10 text-[28px] leading-[1.2] font-bold tracking-[-0.02em] text-ink sm:text-[32px]; }
+  .rich-text :where(h3) { @apply mt-8 text-xl font-semibold tracking-[-0.01em] text-ink; }
+  .rich-text :where(p, ul, ol, table) { @apply mt-4; }
+  .rich-text :where(ul) { @apply list-disc pl-5; }
+  .rich-text :where(ol) { @apply list-decimal pl-5; }
+  .rich-text :where(li + li) { @apply mt-2; }
+  .rich-text :where(a) { @apply font-semibold text-brand underline decoration-transparent underline-offset-4 hover:decoration-brand; }
+  .rich-text :where(strong) { @apply font-semibold text-ink; }
+  .rich-text :where(table) { @apply w-full border-collapse text-left text-[15px] leading-6; }
+  .rich-text :where(th, td) { @apply border-b border-line py-3 pr-4 align-top; }
+  .rich-text :where(th) { @apply font-semibold text-ink; }
 }
 /* Pinned process timeline: centred by ProcessTimeline while the runway gives each stage ~28vh of scroll. */
 @media (min-width: 1024px) and (min-height: 780px) {

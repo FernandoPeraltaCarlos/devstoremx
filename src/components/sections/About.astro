@@ -1,11 +1,14 @@
 ---
 import SectionHeading from '../ui/SectionHeading.astro';
 import TeamCard from '../ui/TeamCard.astro';
-import { team } from '../../data/landing';
+import { memberSlug, team } from '../../data/landing';
 ---
 <section id="nosotros" class="section-space bg-paper">
   <div class="container-page">
     <SectionHeading eyebrow="Sobre nosotros" title="Las personas detrás de tu proyecto." description="Un equipo de especialistas en diseño, desarrollo y estrategia digital que trabaja contigo, no solo para ti." />
-    <div class="-mx-2 mt-10 grid grid-cols-1 gap-x-3 gap-y-6 min-[300px]:grid-cols-2 sm:-mx-4 sm:gap-6 lg:-mx-6 lg:mt-12 lg:grid-cols-4 xl:-mx-12">{team.map((member, i) => <TeamCard {...member} delay={(i % 4) * 110} />)}</div>
+    <div class="-mx-2 mt-10 grid grid-cols-1 gap-x-3 gap-y-6 min-[300px]:grid-cols-2 sm:-mx-4 sm:gap-6 lg:-mx-6 lg:mt-12 lg:grid-cols-4 xl:-mx-12">{team.map((member, i) => {
+  const { bio: _bio, image, ...card } = member;
+  return <TeamCard {...card} image={image} profileHref={`/equipo/${memberSlug(image)}`} delay={(i % 4) * 110} />;
+})}</div>
   </div>
 </section>

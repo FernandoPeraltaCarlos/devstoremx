@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StructuredData from '../components/seo/StructuredData.astro';
+import SiteFrame from '../components/content/SiteFrame.astro';
+import PageHero from '../components/content/PageHero.astro';
+import Button from '../components/ui/Button.astro';
+import { portfolioIsPublic } from '../lib/seo';
+
+const projects = await getCollection('proyectos');
+const indexable = portfolioIsPublic();
+const title = 'Portafolio de desarrollo web | Devstoremx';
+const description = 'Espacio para los casos de Devstoremx. Los proyectos reales se publican cuando el cliente autoriza contar el problema, el alcance y el resultado.';
+const crumbs = [
+  { name: 'Inicio', href: '/' },
+  { name: 'Portafolio', href: '/portafolio' },
+];
+---
+<BaseLayout title={title} description={description} noindex={!indexable}>
+  <StructuredData slot="head" title={title} description={description} variant="page" breadcrumbs={crumbs} />
+  <SiteFrame>
+    <PageHero crumbs={crumbs} title="Portafolio" lede="Aquí van a vivir los casos reales de Devstoremx: qué problema tenía el negocio, qué se construyó y qué cambió después de publicarlo. Todavía no hay casos autorizados para mostrar, así que esta página no inventa clientes ni resultados.">
+      <Button href="/#contacto" variant="hero">Contarnos tu proyecto</Button>
+    </PageHero>
+    <section class="section-space bg-paper">
+      <div class="container-page">
+        <ul class="grid gap-8 lg:grid-cols-3">
+          {projects.map((project) => (
+            <li class="flex flex-col gap-4 border-t border-line pt-6">
+              <p class="font-mono text-[13px] text-muted">{project.data.placeholder ? 'Pendiente de publicar' : 'Caso'}</p>
+              <h2 class="text-2xl font-bold tracking-[-0.02em]">{project.data.title}</h2>
+              <p class="text-base leading-7 text-muted">{project.data.summary}</p>
+              <a href={`/${project.data.service}`} class="font-semibold text-brand">Ver el servicio</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  </SiteFrame>
+</BaseLayout>

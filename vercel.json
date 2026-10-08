@@ -1,0 +1,16 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "devstoremx.xyz" }],
+      "destination": "https://www.devstoremx.xyz/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "devstoremx.xyz" }],
+      "destination": "https://www.devstoremx.xyz/:path*",
+      "permanent": true
+    }
+  ]
+}

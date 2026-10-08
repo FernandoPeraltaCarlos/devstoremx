@@ -23,3 +23,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Project-local Google Search Console MCP runtime and secrets
+.mcp/gsc/.venv/
+.mcp/gsc/cache/
+.mcp/gsc/credentials/
+.mcp/gsc/state/

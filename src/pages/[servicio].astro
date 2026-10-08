@@ -1,0 +1,96 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StructuredData from '../components/seo/StructuredData.astro';
+import SiteFrame from '../components/content/SiteFrame.astro';
+import PageHero from '../components/content/PageHero.astro';
+import Button from '../components/ui/Button.astro';
+import ProcessSteps from '../components/sections/ProcessSteps.astro';
+import Faq from '../components/sections/Faq.astro';
+import Contact from '../components/sections/Contact.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('servicios');
+  return entries.map((entry) => ({ params: { servicio: entry.id }, props: { id: entry.id } }));
+}
+
+const { id } = Astro.props;
+const entries = await getCollection('servicios');
+const entry = entries.find((item) => item.id === id);
+if (!entry) throw new Error(`Servicio no encontrado: ${id}`);
+const { Content } = await render(entry);
+const related = entry.data.relatedServices.flatMap((relatedId) => {
+  const match = entries.find((item) => item.id === relatedId);
+  return match ? [match] : [];
+});
+const crumbs = [
+  { name: 'Inicio', href: '/' },
+  { name: 'Servicios', href: '/#servicios' },
+  { name: entry.data.title, href: `/${entry.id}` },
+];
+const platformLinks: Record<string, string> = {
+  Shopify: '/shopify',
+  WordPress: '/wordpress',
+  WooCommerce: '/wordpress',
+  'A la medida': '/apps-web',
+};
+---
+<BaseLayout title={entry.data.metaTitle} description={entry.data.metaDescription}>
+  <StructuredData
+    slot="head"
+    title={entry.data.metaTitle}
+    description={entry.data.metaDescription}
+    variant="service"
+    serviceName={entry.data.title}
+    serviceType={entry.data.h1}
+    faqs={entry.data.faqs}
+    breadcrumbs={crumbs}
+  />
+  <SiteFrame>
+    <PageHero crumbs={crumbs} title={entry.data.h1} lede={entry.data.intro}>
+      <Button href="#contacto" variant="hero">Cotizar este servicio</Button>
+    </PageHero>
+    <article class="section-space bg-paper">
+      <div class="container-page">
+        <div class="rich-text"><Content /></div>
+        {entry.data.platforms.length > 0 && (
+          <section class="mt-12 max-w-[72ch]" aria-labelledby="plataformas">
+            <h2 id="plataformas" class="text-[28px] leading-[1.2] font-bold tracking-[-0.02em] sm:text-[32px]">Plataformas con las que lo construimos</h2>
+            <p class="mt-4 text-base leading-7 text-muted">Elegimos la plataforma según el catálogo, el equipo que va a operar el proyecto y lo que ya tienen instalado. No partimos de una herramienta fija.</p>
+            <ul class="mt-5 flex flex-wrap gap-3">
+              {entry.data.platforms.map((name) => {
+                const href = platformLinks[name];
+                const current = href === `/${entry.id}`;
+                return href && !current
+                  ? <li><a href={href} class="inline-flex min-h-11 items-center rounded-md border border-line bg-white px-4 font-semibold text-ink hover:border-brand hover:text-brand">{name}</a></li>
+                  : <li><span class="inline-flex min-h-11 items-center rounded-md border border-line bg-white px-4 font-semibold text-ink">{name}</span></li>;
+              })}
+            </ul>
+          </section>
+        )}
+      </div>
+    </article>
+    <ProcessSteps />
+    <Faq
+      items={entry.data.faqs}
+      title={`Preguntas sobre ${entry.data.title}`}
+      description="Respuestas concretas de este servicio. El costo se define en la propuesta, no en esta página."
+    />
+    {related.length > 0 && (
+      <section class="section-space bg-surface-sunken" aria-labelledby="relacionados">
+        <div class="container-page">
+          <h2 id="relacionados" class="text-[32px] leading-[1.14] font-bold tracking-[-0.025em] sm:text-[40px]">También puede servirte</h2>
+          <ul class="mt-8 grid gap-x-10 sm:grid-cols-3">
+            {related.map((item) => (
+              <li class="border-t border-line py-6">
+                <a href={`/${item.id}`} class="text-xl font-semibold tracking-[-0.01em] hover:text-brand">{item.data.title}</a>
+                <p class="mt-2 text-[15px] leading-6 text-muted">{item.data.metaDescription}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    )}
+    <Contact />
+  </SiteFrame>
+</BaseLayout>

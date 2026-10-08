@@ -1,0 +1,18 @@
+---
+import { steps } from '../../data/landing';
+---
+<section class="section-space bg-paper" aria-labelledby="proceso-servicio">
+  <div class="container-page">
+    <h2 id="proceso-servicio" class="max-w-[640px] text-[32px] leading-[1.14] font-bold tracking-[-0.025em] sm:text-[40px]">Cómo trabajamos este proyecto</h2>
+    <p class="mt-4 max-w-[640px] text-base leading-7 text-muted">El mismo recorrido en todos los servicios. Primero entendemos el negocio y el costo queda por escrito antes de construir.</p>
+    <ol class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+      {steps.map((step) => (
+        <li class="border-t border-line pt-5">
+          <span class="font-mono text-[13px] text-muted">{step.number}</span>
+          <h3 class="mt-3 text-lg font-semibold tracking-[-0.01em]">{step.title}</h3>
+          <p class="mt-2 text-[15px] leading-6 text-muted">{step.description}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

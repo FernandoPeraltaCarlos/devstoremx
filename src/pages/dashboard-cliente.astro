@@ -10,8 +10,8 @@ import StatusBadge from '../components/ui/StatusBadge.astro';
 import { steps, team } from '../data/landing';
 import { activity, deliverables, milestones, project, resources, stageNotes } from '../data/dashboard';
 
-const title = 'Dashboard del cliente · Devstoremx';
-const description = 'Ejemplo del dashboard con el que cada cliente de devstoremx ve en qué punto está su proyecto: etapas, entregables, avances y próximas fechas.';
+const title = 'Dashboard de ejemplo para seguir tu proyecto | Devstoremx';
+const description = 'Ejemplo del dashboard con el que cada cliente de Devstoremx ve en qué punto está su proyecto: etapas, entregables, avances y próximas fechas.';
 
 const total = steps.length;
 const current = project.currentStage;
@@ -28,7 +28,7 @@ const kpis = [
   { label: 'Entrega estimada', value: project.deliveryDate, hint: `Inicio: ${project.startDate}`, icon: 'calendar' },
 ];
 ---
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} noindex>
   <StructuredData slot="head" title={title} description={description} variant="page" />
   <main id="contenido" class="overflow-x-clip">
     <!-- Shared with the preview on the home page (DashboardPreview.astro): it grows into this band and back. -->

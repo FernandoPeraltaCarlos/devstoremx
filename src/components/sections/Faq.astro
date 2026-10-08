@@ -1,12 +1,24 @@
 ---
 import SectionHeading from '../ui/SectionHeading.astro';
 import { faqs } from '../../data/landing';
+interface Props {
+  items?: readonly { question: string; answer: string }[];
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+}
+const {
+  items = faqs,
+  eyebrow = 'Preguntas frecuentes',
+  title = 'Respuestas antes de la primera llamada.',
+  description = 'Costo, tiempos, alcance y cómo trabajamos con negocios en México.',
+} = Astro.props;
 ---
 <section id="preguntas" class="section-space border-y border-line-dark bg-night text-cloud [--scroll-line-color:var(--color-line-dark)]">
   <div class="container-page">
-    <SectionHeading eyebrow="Preguntas frecuentes" title="Respuestas antes de la primera llamada." description="Costo, tiempos, alcance y cómo trabajamos con negocios en México." dark />
+    <SectionHeading eyebrow={eyebrow} title={title} description={description} dark />
     <div class="mx-auto mt-10 max-w-[860px] border-b border-line-dark lg:mt-16">
-      {faqs.map((faq, index) => (
+      {items.map((faq, index) => (
         <details data-reveal data-reveal-delay={Math.min(index * 40, 120)} class="faq-item scroll-line group border-t border-line-dark">
           <summary class="grid cursor-pointer list-none grid-cols-[32px_1fr_32px] items-center gap-4 py-5 text-cloud marker:content-none hover:text-periwinkle sm:gap-6 [&::-webkit-details-marker]:hidden">
             <span class="font-mono text-[13px] text-muted-dark">{String(index + 1).padStart(2, '0')}</span>

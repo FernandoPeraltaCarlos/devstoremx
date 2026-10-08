@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StructuredData from '../../components/seo/StructuredData.astro';
+import SiteFrame from '../../components/content/SiteFrame.astro';
+import PageHero from '../../components/content/PageHero.astro';
+import { formatDate } from '../../lib/seo';
+
+const posts = (await getCollection('blog')).sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
+const title = 'Guías para crear tu página web y tu tienda | Devstoremx';
+const description = 'Guías en español para hacer una página web, calcular qué encarece un proyecto, comparar Shopify y WordPress, y elegir agencia. Sin precios de lista.';
+const crumbs = [
+  { name: 'Inicio', href: '/' },
+  { name: 'Guías', href: '/blog' },
+];
+---
+<BaseLayout title={title} description={description}>
+  <StructuredData
+    slot="head"
+    title={title}
+    description={description}
+    variant="page"
+    breadcrumbs={crumbs}
+    blogPosts={posts.map((post) => ({ headline: post.data.h1, href: `/blog/${post.id}`, datePublished: post.data.publishedAt }))}
+  />
+  <SiteFrame>
+    <PageHero crumbs={crumbs} title="Guías para crear tu página y tu tienda" lede="Respuestas directas para quien va a encargar un sitio, una landing o una tienda en línea en México. Cada guía termina en el servicio de Devstoremx que corresponde, si quieres que el equipo lo haga." />
+    <section class="section-space bg-paper">
+      <div class="container-page">
+        <ul class="mx-auto flex max-w-[760px] flex-col">
+          {posts.map((post) => (
+            <li class="border-t border-line py-8">
+              <p class="font-mono text-[13px] text-muted">{formatDate(post.data.updatedAt)}</p>
+              <h2 class="mt-3 text-[28px] leading-[1.2] font-bold tracking-[-0.02em]"><a href={`/blog/${post.id}`} class="hover:text-brand">{post.data.h1}</a></h2>
+              <p class="mt-3 text-base leading-7 text-muted">{post.data.intro}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  </SiteFrame>
+</BaseLayout>

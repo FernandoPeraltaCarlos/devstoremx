@@ -2,69 +2,113 @@ export const services = [
   {
     number: '01',
     slug: 'desarrollo-web',
+    href: '/desarrollo-web',
     title: 'Desarrollo web',
     description: 'Sitios corporativos rápidos, seguros y fáciles de actualizar, hechos a la medida de tu negocio.',
     icon: '<polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>',
   },
   {
     number: '02',
+    slug: 'paginas-web',
+    href: '/paginas-web',
+    title: 'Páginas web',
+    description: 'Sitios corporativos con las páginas, el contenido y la estructura que un negocio necesita para presentarse y recibir contactos.',
+    icon: '<rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M3 8h18"></path>',
+  },
+  {
+    number: '03',
     slug: 'landing-pages',
+    href: '/landing-pages',
     title: 'Landing pages',
     description: 'Páginas enfocadas en una sola acción: que tu visitante cotice, compre o se registre.',
     icon: '<rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M9 21V9"></path>',
   },
   {
-    number: '03',
+    number: '04',
     slug: 'ecommerce',
+    href: '/tienda-en-linea',
     title: 'Ecommerce',
     description: 'Tiendas en línea con pagos, inventario y envíos integrados, listas para vender desde el primer día.',
     icon: '<circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>',
   },
   {
-    number: '04',
+    number: '05',
+    slug: 'shopify',
+    href: '/shopify',
+    title: 'Shopify',
+    description: 'Shopify Partner en México: tiendas con catálogo, pagos, envíos y un diseño que se puede operar sin depender del equipo técnico.',
+    icon: '<path d="M6 7h12l-1 13H7L6 7z"></path><path d="M9 7V5a3 3 0 0 1 6 0v2"></path>',
+  },
+  {
+    number: '06',
+    slug: 'wordpress',
+    href: '/wordpress',
+    title: 'WordPress',
+    description: 'Sitios y WooCommerce en WordPress, con un panel que tu equipo puede actualizar y un mantenimiento claro.',
+    icon: '<circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path>',
+  },
+  {
+    number: '07',
     slug: 'email-templates',
+    href: '/email-templates',
     title: 'Email templates',
     description: 'Plantillas de correo que se ven bien en Gmail, Outlook y el celular, con tu marca en cada envío.',
     icon: '<rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>',
   },
   {
-    number: '05',
+    number: '08',
     slug: 'automatizaciones',
+    href: '/automatizaciones',
     title: 'Automatizaciones',
     description: 'Conectamos tus herramientas para que las tareas repetitivas se hagan solas y tu equipo gane tiempo.',
     icon: '<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path>',
   },
   {
-    number: '06',
+    number: '09',
     slug: 'apps-moviles',
+    href: '/apps-moviles',
     title: 'Apps móviles',
-    description: 'Aplicaciones para iOS y Android con la experiencia fluida que tus usuarios esperan.',
+    description: 'Aplicaciones para iOS y Android cuando el negocio ya no se resuelve solo con un sitio web.',
     icon: '<rect x="5" y="2" width="14" height="20" rx="2"></rect><path d="M12 18h.01"></path>',
   },
   {
-    number: '07',
+    number: '10',
     slug: 'administracion-de-sitios-web',
-    title: 'Administración de sitios web',
+    href: '/mantenimiento-web',
+    title: 'Mantenimiento web',
     description: 'Actualizaciones, respaldos, seguridad y cambios de contenido: nos encargamos de que tu sitio siga funcionando.',
     icon: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>',
   },
   {
-    number: '08',
+    number: '11',
     slug: 'apps-web',
+    href: '/apps-web',
     title: 'Apps web',
     description: 'Plataformas y sistemas que funcionan desde el navegador: portales de clientes, dashboards y reservas.',
     icon: '<rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M10 4v4M2 8h20M6 4v4"></path>',
   },
   {
-    number: '09',
+    number: '12',
     slug: 'soluciones-digitales',
+    href: '/integraciones',
     title: 'Integraciones',
-    description: 'Integraciones con IA, APIs y herramientas a la medida para los retos que no se resuelven con software de caja.',
+    description: 'APIs, webhooks e integraciones con IA para los retos que no se resuelven conectando dos herramientas de caja.',
     icon: '<path d="m12 2 10 5-10 5L2 7z"></path><path d="m2 17 10 5 10-5"></path><path d="m2 12 10 5 10-5"></path>',
   },
 ] as const;
 
-export const footerServiceSlugs = ['desarrollo-web', 'ecommerce', 'apps-moviles', 'automatizaciones'] as const;
+export const footerServiceSlugs = [
+  'desarrollo-web',
+  'paginas-web',
+  'landing-pages',
+  'ecommerce',
+  'shopify',
+  'wordpress',
+  'apps-web',
+  'apps-moviles',
+  'automatizaciones',
+  'administracion-de-sitios-web',
+] as const;
 
 export const steps = [
   {
@@ -97,15 +141,51 @@ export const steps = [
 export const technologies = ['Shopify', 'WordPress', 'React', 'Next.js', 'OpenAI', 'Anthropic', 'AWS', 'Figma'] as const;
 
 export const team = [
-  { name: 'Fernando Peralta', role: 'Technical Lead', image: '/team/fernando-peralta.jpg', tone: 'light', linkedin: 'https://www.linkedin.com/in/fernandodperaltac/', portfolio: 'https://fernandoperalta.xyz' },
-  { name: 'Miriam Medina', role: 'Full Stack Developer', image: '/team/miriam-medina.jpg', tone: 'light', linkedin: 'https://www.linkedin.com/in/cmiriam-medinad/', portfolio: '' },
-  { name: 'Hazel Vázquez', role: 'Full Stack Developer', image: '/team/hazel-vazquez.jpg', tone: 'light', linkedin: 'https://www.linkedin.com/in/adad-hazel-v%C3%A1zquez-pe%C3%B1a/', portfolio: '' },
-  { name: 'Janice García', role: 'Full Stack Developer', image: '/team/janice-garcia.jpg', tone: 'light', linkedin: 'https://www.linkedin.com/in/janiceagarciasamperio/', portfolio: '' },
+  {
+    name: 'Fernando Peralta',
+    role: 'Technical Lead',
+    image: '/team/fernando-peralta.jpg',
+    tone: 'light',
+    linkedin: 'https://www.linkedin.com/in/fernandodperaltac/',
+    portfolio: 'https://fernandoperalta.xyz',
+    bio: 'Technical Lead de Devstoremx. Dirige la parte técnica de los proyectos y firma las guías de desarrollo web, costos y elección de agencia.',
+  },
+  {
+    name: 'Miriam Medina',
+    role: 'Full Stack Developer',
+    image: '/team/miriam-medina.jpg',
+    tone: 'light',
+    linkedin: 'https://www.linkedin.com/in/cmiriam-medinad/',
+    portfolio: '',
+    bio: 'Full Stack Developer en Devstoremx. Construye sitios y tiendas, y firma la guía que compara Shopify con WordPress.',
+  },
+  {
+    name: 'Hazel Vázquez',
+    role: 'Full Stack Developer',
+    image: '/team/hazel-vazquez.jpg',
+    tone: 'light',
+    linkedin: 'https://www.linkedin.com/in/adad-hazel-v%C3%A1zquez-pe%C3%B1a/',
+    portfolio: '',
+    bio: 'Full Stack Developer en Devstoremx. Trabaja en tiendas y aplicaciones, y firma la guía para crear una tienda en línea.',
+  },
+  {
+    name: 'Janice García',
+    role: 'Full Stack Developer',
+    image: '/team/janice-garcia.jpg',
+    tone: 'light',
+    linkedin: 'https://www.linkedin.com/in/janiceagarciasamperio/',
+    portfolio: '',
+    bio: 'Full Stack Developer en Devstoremx. Desarrolla páginas y landings, y firma la guía sobre qué es una landing page.',
+  },
 ] as const;
 
-export const defaultTitle = 'Devstoremx · Desarrollo web y soluciones digitales en México';
-export const defaultDescription = 'Diseñamos, desarrollamos y mantenemos tu presencia digital. Sitios web, ecommerce, apps y automatizaciones a la medida de tu negocio.';
-export const ogImageAlt = 'devstoremx, desarrollo web y soluciones digitales en México';
+export function memberSlug(image: string): string {
+  return image.replace(/^\/team\//, '').replace(/\.jpg$/, '');
+}
+
+export const defaultTitle = 'Agencia de desarrollo web en México | Devstoremx';
+export const defaultDescription = 'Agencia de desarrollo web en México. Páginas web, tiendas en línea, apps y automatizaciones para negocios de todo el país. Trabajo remoto y cotización por escrito.';
+export const ogImageAlt = 'Devstoremx, agencia de desarrollo web en México';
 
 // Completar estos valores al conectar los recursos reales.
 // Los textos entre corchetes no se muestran ni se envían en datos estructurados.
@@ -113,7 +193,10 @@ export const ogImageAlt = 'devstoremx, desarrollo web y soluciones digitales en 
 export const site = {
   url: 'https://www.devstoremx.xyz',
   ogImage: '/devstore_mx.png',
-  sameAs: [] as string[],
+  // Fichas reales pendientes del equipo: LinkedIn de empresa, Google Business Profile
+  // (área de servicio, sin dirección pública), Clutch y GoodFirms.
+  sameAs: ['https://www.google.com/maps/place/Paginas+web+Devstoremx/@19.493275,-99.1778529,17z/data=!3m1!4b1!4m6!3m5!1s0x85d1f9e6b5eb7741:0x57e0fb8178bfe2a3!8m2!3d19.49327!4d-99.175278!16s%2Fg%2F11t7_5dl28'] as string[],
+  alternateName: ['devstore mx', 'DevStore MX'] as const,
   heroImage: '',
   contactImage: '/devstoremx-contacto-9x16.png',
   videoSrc: '', // Archivo de video local o URL directa compatible con <video>.
@@ -121,10 +204,16 @@ export const site = {
   videoDuration: '[Duración]',
   formEndpoint: '/api/contact',
   whatsappUrl: '', // https://wa.me/52... con el número real.
-  linkedinUrl: '',
+  linkedinUrl: 'https://www.linkedin.com/company/devstoremx',
   email: 'hola@devstoremx.xyz',
   phone: '[Teléfono / WhatsApp]',
-  location: '[Ciudad], México',
+  location: '', // Trabajo remoto en todo México: no hay ciudad ni dirección pública.
+};
+
+// Devstoremx es Shopify Partner. El ID se publica en la página de Shopify, los datos estructurados y llms.txt.
+export const shopifyPartner = {
+  registered: true,
+  id: '2475594',
 };
 
 export const faqs = [
@@ -164,8 +253,9 @@ export const faqs = [
 
 export const navigation = [
   { href: '/#servicios', label: 'Servicios' },
+  { href: '/blog', label: 'Guías' },
+  { href: '/portafolio', label: 'Portafolio' },
   { href: '/#proceso', label: 'Proceso' },
-  { href: '/#dashboard', label: 'Dashboard' },
   { href: '/#nosotros', label: 'Nosotros' },
   ...(site.videoSrc ? [{ href: '/#video', label: 'Video' }] : []),
   { href: '/#preguntas', label: 'Preguntas' },
