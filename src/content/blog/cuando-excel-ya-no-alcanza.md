@@ -1,7 +1,7 @@
 ---
 title: Cuando Excel ya no alcanza para operar
 metaTitle: Cuando Excel ya no alcanza en tu negocio | Devstoremx
-metaDescription: Versiones distintas, permisos improvisados y pedidos que solo entiende una persona. Cuándo una aplicación web puede ordenar una operación que creció más que sus hojas.
+metaDescription: Versiones distintas, permisos improvisados y pedidos que solo entiende una persona. Cuándo una aplicación web puede ordenar una operación que creció.
 h1: Cuando las hojas de cálculo ya no alcanzan para operar tu negocio
 intro: >
   Hay una hoja para pedidos, otra para seguimiento y una tercera que alguien actualiza al final del día. Todas intentan describir el mismo trabajo, pero ya no coinciden.

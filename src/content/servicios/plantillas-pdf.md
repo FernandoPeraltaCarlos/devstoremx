@@ -1,7 +1,7 @@
 ---
 title: Plantillas PDF
 metaTitle: Plantillas PDF personalizadas y catálogos | Devstoremx
-metaDescription: Diseñamos plantillas PDF, catálogos digitales y documentos interactivos con tu marca. Archivos para compartir, completar o generar desde tus sistemas, según el alcance.
+metaDescription: Diseñamos plantillas PDF, catálogos digitales y documentos interactivos con tu marca. Archivos para compartir, completar o generar desde tus sistemas.
 h1: Plantillas PDF y catálogos que sí representan a tu negocio
 keywords:
   - plantillas pdf personalizadas

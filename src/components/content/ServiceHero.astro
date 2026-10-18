@@ -21,10 +21,10 @@ const { crumbs, title, lede, name, number, icon, highlights } = Astro.props;
     <Breadcrumbs items={crumbs} />
     <div class="grid gap-12 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)] lg:items-center lg:gap-16">
       <div class="flex min-w-0 flex-col items-start gap-6">
-        <h1 class="text-[36px] leading-[1.08] font-bold tracking-[-0.03em] text-balance sm:text-5xl lg:text-[56px]">{title}</h1>
+        <h1 class="text-[30px] leading-[1.1] font-bold tracking-[-0.03em] text-balance min-[400px]:text-[34px] sm:text-5xl lg:text-[56px]">{title}</h1>
         <p class="max-w-[56ch] text-base leading-7 text-muted-dark sm:text-lg sm:leading-8">{lede}</p>
-        <div class="mt-2 flex flex-wrap items-center gap-x-8 gap-y-5">
-          <Button href="#contacto" variant="hero" class="min-h-14 px-7 text-[17px]">Cotizar este servicio</Button>
+        <div class="mt-2 flex w-full flex-col items-start gap-x-8 gap-y-4 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:gap-y-5">
+          <Button href="#contacto" variant="hero" class="w-full sm:min-h-14 sm:w-auto sm:px-7 sm:text-[17px]">Cotizar este servicio</Button>
           <a href="#proceso-servicio" class="font-semibold text-cloud underline decoration-[#56627a] underline-offset-[6px] hover:text-periwinkle">Ver cómo trabajamos</a>
         </div>
       </div>

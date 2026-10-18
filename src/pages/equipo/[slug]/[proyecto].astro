@@ -43,7 +43,7 @@ const crumbs = [
       <p class="text-sm leading-7 text-muted-dark">
         Por{' '}<a href={authorHref} rel="author" class="font-semibold text-cloud underline underline-offset-4">{author.name}</a>, Technical Lead de Devstoremx
       </p>
-      <div class="flex flex-wrap gap-3">
+      <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
         <a href="/#contacto" class="button button-hero">{content.cta.label}</a>
         <a href={project.sourceUrl} target="_blank" rel="noopener noreferrer" class="button button-dark-outline">Ver proyecto completo<span class="sr-only"> en el portafolio de Fernando (se abre en una pestaña nueva)</span></a>
       </div>
@@ -95,7 +95,7 @@ const crumbs = [
         </div>
       </div>
       <section class="container-page border-t border-line py-14" aria-labelledby="mas-proyectos">
-        <h2 id="mas-proyectos" class="text-[32px] leading-tight font-bold tracking-[-0.025em] text-ink">Otras necesidades que podemos resolver</h2>
+        <h2 id="mas-proyectos" class="text-[26px] leading-tight font-bold tracking-[-0.025em] text-ink sm:text-[32px]">Otras necesidades que podemos resolver</h2>
         <div class="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">{more.map((item) => <ProjectCard project={item} />)}</div>
       </section>
     </article>
@@ -122,8 +122,18 @@ const crumbs = [
   .project-contact { border-top: 2px solid var(--color-brand); padding-top: 28px; }
   .project-contact > .button { margin-top: 24px; }
   @media (max-width: 900px) {
-    .project-story { grid-template-columns: minmax(0, 760px); justify-content: center; gap: 32px; margin-top: 40px; }
-    .project-nav { position: static; }
-    .project-nav nav { flex-direction: row; flex-wrap: wrap; gap: 12px 24px; border-left: 0; border-bottom: 1px solid var(--color-line); padding: 0 0 24px; }
+    .project-story { grid-template-columns: minmax(0, 760px); justify-content: center; }
+    .project-nav { display: none; }
+  }
+  @media (max-width: 639px) {
+    .project-copy > section + section, .project-contact { margin-top: 36px; }
+    .project-copy h2 { font-size: 22px; line-height: 1.25; }
+    .project-copy h3 { margin-top: 20px; font-size: 17px; line-height: 1.45; }
+    .project-copy p { margin-top: 14px; font-size: 16px; line-height: 1.7; }
+    .project-deliverables { margin-top: 16px; padding-left: 20px; font-size: 16px; line-height: 1.7; }
+    .project-deliverables li + li { margin-top: 8px; }
+    .project-contact { padding-top: 24px; }
+    .project-contact > .button { width: 100%; }
+    .project-copy .project-date { font-size: 12px; line-height: 1.7; }
   }
 </style>

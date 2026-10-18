@@ -66,7 +66,7 @@
     background-image: linear-gradient(#1f2a3d 1px, transparent 1px), linear-gradient(90deg, #1f2a3d 1px, transparent 1px);
     background-size: 160px 150px;
   }
-  .button { @apply inline-flex min-h-12 items-center justify-center gap-2.5 rounded-md px-6 text-base font-semibold transition duration-150 ease-out disabled:cursor-not-allowed disabled:opacity-60; }
+  .button { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-md px-5 py-2.5 text-center text-[15px] leading-snug font-semibold transition sm:gap-2.5 sm:px-6 sm:text-base duration-150 ease-out disabled:cursor-not-allowed disabled:opacity-60; }
   .button-primary { @apply bg-brand text-white hover:bg-[#2f47cc]; }
   .button-hero { @apply bg-periwinkle text-night hover:bg-[#9ab0ff]; }
   .button-outline { @apply border border-[#77839b] bg-white text-ink hover:border-brand hover:text-brand; }
@@ -89,14 +89,14 @@
   .rich-text :where(th) { @apply font-semibold text-ink; }
 
   /* Páginas de servicio: rehype-sections.ts envuelve cada "## Título" en .svc-section > h2 + .svc-body. */
-  .service-prose .svc-section { display: grid; gap: 24px 64px; border-top: 1px solid var(--color-line); padding-block: 44px 52px; }
+  .service-prose .svc-section { display: grid; gap: 20px 64px; border-top: 1px solid var(--color-line); padding-block: 32px 36px; }
   .service-prose .svc-section:first-child { border-top: 0; padding-top: 0; }
-  .service-prose .svc-section > h2 { max-width: 22ch; font-size: 28px; line-height: 1.16; font-weight: 700; letter-spacing: -0.025em; color: var(--color-ink); text-wrap: balance; }
+  .service-prose .svc-section > h2 { max-width: 22ch; font-size: 24px; line-height: 1.16; font-weight: 700; letter-spacing: -0.025em; color: var(--color-ink); text-wrap: balance; }
   .service-prose .svc-section > h2::before { content: ""; display: block; width: 32px; height: 3px; margin-bottom: 18px; border-radius: 2px; background: linear-gradient(90deg, var(--color-electric), var(--color-sky)); }
   .service-prose .svc-body { min-width: 0; max-width: 64ch; }
   .service-prose .svc-body > * + * { margin-top: 20px; }
-  .service-prose .svc-body p { font-size: 17px; line-height: 1.75; color: var(--color-muted); }
-  .service-prose .svc-body > p:first-child { font-size: 19px; line-height: 1.65; font-weight: 500; letter-spacing: -0.005em; color: var(--color-ink); }
+  .service-prose .svc-body p { font-size: 16px; line-height: 1.7; color: var(--color-muted); }
+  .service-prose .svc-body > p:first-child { font-size: 17px; line-height: 1.65; font-weight: 500; letter-spacing: -0.005em; color: var(--color-ink); }
   .service-prose .svc-body strong { font-weight: 650; color: var(--color-ink); }
   .service-prose .svc-body a { font-weight: 600; color: var(--color-brand); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px; transition: text-decoration-color 150ms ease-out; }
   .service-prose .svc-body a:hover { text-decoration-color: var(--color-brand); }
@@ -107,6 +107,12 @@
   .service-prose .svc-body ol > li { position: relative; counter-increment: paso; min-height: 36px; padding-left: 52px; font-size: 16px; line-height: 1.65; color: var(--color-muted); }
   .service-prose .svc-body ol > li::before { content: counter(paso, decimal-leading-zero); position: absolute; top: -1px; left: 0; display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid var(--color-line); border-radius: 6px; background: #fff; font-family: var(--font-mono); font-size: 13px; color: var(--color-brand); }
   .service-prose .svc-body li > p { font-size: inherit; line-height: inherit; color: inherit; }
+  @media (min-width: 640px) {
+    .service-prose .svc-section { gap: 24px 64px; padding-block: 44px 52px; }
+    .service-prose .svc-section > h2 { font-size: 28px; }
+    .service-prose .svc-body p { font-size: 17px; line-height: 1.75; }
+    .service-prose .svc-body > p:first-child { font-size: 19px; line-height: 1.65; }
+  }
   @media (min-width: 1024px) {
     .service-prose .svc-section { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); padding-block: 64px 72px; }
     .service-prose .svc-section > h2 { position: sticky; top: 40px; align-self: start; font-size: 32px; }
