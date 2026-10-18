@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteFrame from '../components/content/SiteFrame.astro';
+import Button from '../components/ui/Button.astro';
+
+const title = '404 · Página no encontrada | Devstoremx';
+const description = 'Esta página no existe o cambió de dirección. Vuelve al inicio de Devstoremx o escríbenos para encontrar lo que buscas.';
+---
+<BaseLayout title={title} description={description} noindex>
+  <SiteFrame>
+    <section aria-labelledby="not-found-title" class="section-space bg-paper">
+      <div class="container-page grid min-h-[480px] items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="flex flex-col items-start gap-6">
+          <p class="text-sm font-semibold text-brand">Error 404</p>
+          <h1 id="not-found-title" class="max-w-[14ch] text-[40px] leading-[1.1] font-bold tracking-[-0.03em] text-ink sm:text-[56px]">Esta página no está aquí.</h1>
+          <p class="max-w-[46ch] text-lg leading-8 text-muted">Puede que el enlace haya cambiado o que la dirección esté incompleta. Vuelve al inicio para seguir explorando.</p>
+          <div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+            <Button href="/">Volver al inicio</Button>
+            <Button href="/#contacto" variant="outline">Contactarnos</Button>
+          </div>
+          <p class="text-sm leading-6 text-muted">También puedes <a href="/#servicios" class="font-semibold text-brand underline underline-offset-4 hover:text-ink">ver nuestros servicios</a> o <a href="/blog" class="font-semibold text-brand underline underline-offset-4 hover:text-ink">visitar el blog</a>.</p>
+        </div>
+        <div aria-hidden="true" class="flex min-h-[280px] flex-col justify-between rounded-xl border border-line-dark bg-night p-6 text-muted-dark sm:min-h-[360px] sm:p-8">
+          <div class="flex items-center justify-between border-b border-line-dark pb-4 font-mono text-xs sm:text-sm"><span>devstoremx</span><span>HTTP 404</span></div>
+          <p class="py-6 text-center font-mono text-[clamp(5rem,18vw,10rem)] leading-none tracking-[-0.08em] text-periwinkle">404</p>
+          <p class="border-t border-line-dark pt-4 font-mono text-xs sm:text-sm"><span class="text-sky">/</span> página no encontrada</p>
+        </div>
+      </div>
+    </section>
+  </SiteFrame>
+</BaseLayout>

@@ -95,6 +95,14 @@ export const services = [
     description: 'APIs, webhooks e integraciones con IA para los retos que no se resuelven conectando dos herramientas de caja.',
     icon: '<path d="m12 2 10 5-10 5L2 7z"></path><path d="m2 17 10 5 10-5"></path><path d="m2 12 10 5 10-5"></path>',
   },
+  {
+    number: '13',
+    slug: 'plantillas-pdf',
+    href: '/plantillas-pdf',
+    title: 'Plantillas PDF',
+    description: 'Documentos personalizados, catálogos y PDFs interactivos con tu marca, listos para compartir y reutilizar.',
+    icon: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 12h8M8 16h5"></path>',
+  },
 ] as const;
 
 export const footerServiceSlugs = [
@@ -104,6 +112,8 @@ export const footerServiceSlugs = [
   'ecommerce',
   'shopify',
   'wordpress',
+  'email-templates',
+  'plantillas-pdf',
   'apps-web',
   'apps-moviles',
   'automatizaciones',
@@ -192,7 +202,8 @@ export const ogImageAlt = 'Devstoremx, agencia de desarrollo web en México';
 // formEndpoint acepta POST JSON: name, email, phone, message y el honeypot company.
 export const site = {
   url: 'https://www.devstoremx.xyz',
-  ogImage: '/devstore_mx.png',
+  ogImage: '/devstoremx-social.jpg',
+  founderSlug: 'fernando-peralta',
   // Fichas reales pendientes del equipo: LinkedIn de empresa, Google Business Profile
   // (área de servicio, sin dirección pública), Clutch y GoodFirms.
   sameAs: ['https://www.google.com/maps/place/Paginas+web+Devstoremx/@19.493275,-99.1778529,17z/data=!3m1!4b1!4m6!3m5!1s0x85d1f9e6b5eb7741:0x57e0fb8178bfe2a3!8m2!3d19.49327!4d-99.175278!16s%2Fg%2F11t7_5dl28'] as string[],
@@ -254,7 +265,6 @@ export const faqs = [
 export const navigation = [
   { href: '/#servicios', label: 'Servicios' },
   { href: '/blog', label: 'Blog' },
-  { href: '/portafolio', label: 'Portafolio' },
   { href: '/#proceso', label: 'Proceso' },
   { href: '/#nosotros', label: 'Nosotros' },
   ...(site.videoSrc ? [{ href: '/#video', label: 'Video' }] : []),

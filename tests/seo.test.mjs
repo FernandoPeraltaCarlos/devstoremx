@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict';
-import { readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { test } from 'node:test';
-import { defaultTitle, services } from '../src/data/landing.ts';
+import { defaultTitle, navigation, services, site } from '../src/data/landing.ts';
 import { buildStructuredGraph } from '../src/lib/structured-data.ts';
 import { canonicalPathname, isIndexableUrl, portfolioIsPublic, sitemapLastmod } from '../src/lib/seo.ts';
+import { blogRedirects } from '../src/data/blog-redirects.ts';
 
 const origin = 'https://www.devstoremx.xyz';
 
@@ -25,7 +26,8 @@ function splitFrontmatter(file) {
 }
 
 test('el sitemap toma lastmod del updatedAt de cada entrada', () => {
-  assert.equal(sitemapLastmod('/blog/como-hacer-una-pagina-web'), '2026-10-17T00:00:00.000Z');
+  assert.equal(sitemapLastmod('/blog/cuando-redisenar-la-pagina-web-de-tu-negocio'), '2026-10-17T00:00:00.000Z');
+  assert.equal(sitemapLastmod('/blog/como-hacer-una-pagina-web'), undefined);
   assert.equal(sitemapLastmod('/shopify'), undefined);
   assert.equal(sitemapLastmod('/blog'), undefined);
 });
@@ -39,11 +41,12 @@ test('canonicalPathname quita .html y la barra final', () => {
   assert.equal(canonicalPathname('/blog/como-hacer-una-pagina-web.html'), '/blog/como-hacer-una-pagina-web');
 });
 
-test('el sitemap excluye equipo, dashboard, portafolio vacío y archivos de texto', () => {
+test('el sitemap excluye equipo, dashboard, portafolio retirado y archivos de texto', () => {
   assert.equal(portfolioIsPublic(), false);
   assert.equal(isIndexableUrl(`${origin}/dashboard-cliente`), false);
   assert.equal(isIndexableUrl(`${origin}/dashboard-cliente/`), false);
   assert.equal(isIndexableUrl(`${origin}/portafolio`), false);
+  assert.equal(isIndexableUrl(`${origin}/portafolio/`), false);
   assert.equal(isIndexableUrl(`${origin}/llms.txt`), false);
   assert.equal(isIndexableUrl(`${origin}/llms-full.txt`), false);
   assert.equal(isIndexableUrl(`${origin}/rss.xml`), false);
@@ -52,8 +55,78 @@ test('el sitemap excluye equipo, dashboard, portafolio vacío y archivos de text
   assert.equal(isIndexableUrl(`${origin}/equipo/fernando-peralta/`), false);
   assert.equal(isIndexableUrl(`${origin}/blog`), true);
   assert.equal(isIndexableUrl(`${origin}/shopify`), true);
-  assert.equal(isIndexableUrl(`${origin}/blog/como-hacer-una-pagina-web`), true);
+  assert.equal(isIndexableUrl(`${origin}/blog/cuando-redisenar-la-pagina-web-de-tu-negocio`), true);
+  assert.equal(isIndexableUrl(`${origin}/blog/como-hacer-una-pagina-web`), false);
   assert.equal(isIndexableUrl(`${origin}/aviso-de-privacidad`), true);
+});
+
+test('el portafolio de agencia está archivado y no se anuncia como página pública', () => {
+  assert.equal(existsSync('src/pages/portafolio.astro'), false);
+  assert.equal(existsSync('src/pages/_portafolio.astro'), true);
+  assert.equal(navigation.some((item) => item.href === '/portafolio'), false);
+  assert.doesNotMatch(readFileSync('src/pages/llms.txt.ts', 'utf8'), /\/portafolio|## Portafolio/);
+  assert.doesNotMatch(readFileSync('src/components/ui/TeamCard.astro', 'utf8'), /Ver portafolio/);
+});
+
+test('la imagen social usa un JPG optimizado sin reemplazar el original', () => {
+  assert.equal(site.ogImage, '/devstoremx-social.jpg');
+  assert.equal(existsSync(`public${site.ogImage}`), true);
+  assert.ok(statSync(`public${site.ogImage}`).size < 100 * 1024);
+  assert.ok(statSync(`public${site.ogImage}`).size < statSync('public/devstore_mx.png').size);
+  assert.deepEqual([...readFileSync(`public${site.ogImage}`).subarray(0, 2)], [0xff, 0xd8]);
+});
+
+test('robots explicita permisos para buscadores y asistentes sin restringir los demás', () => {
+  const robots = readFileSync('public/robots.txt', 'utf8');
+  for (const agent of ['*', 'OAI-SearchBot', 'ChatGPT-User', 'PerplexityBot', 'Perplexity-User', 'Claude-SearchBot', 'Claude-User', 'Applebot-Extended']) {
+    assert.ok(robots.includes(`User-agent: ${agent}\nAllow: /`), agent);
+  }
+  assert.match(robots, /Sitemap: https:\/\/www\.devstoremx\.xyz\/sitemap-index\.xml/);
+});
+
+test('el fundador confirmado y el contacto usan datos públicos y nodos sin duplicar', () => {
+  for (const variant of ['home', 'page', 'service', 'article']) {
+    const graph = buildStructuredGraph({
+      origin,
+      pathname: variant === 'home' ? '/' : '/plantillas-pdf',
+      variant,
+      ...(variant === 'article' ? { article: {
+        headline: 'Documento de marca', authorSlug: 'fernando-peralta',
+        datePublished: new Date('2026-10-18'), dateModified: new Date('2026-10-18'),
+      } } : {}),
+    });
+    const nodes = graph['@graph'];
+    const org = nodes.find((node) => Array.isArray(node['@type']) && node['@type'].includes('Organization'));
+    assert.deepEqual(org.founder, { '@id': `${origin}/#fernando-peralta` });
+    assert.equal(nodes.filter((node) => node['@id'] === org.founder['@id']).length, 1, variant);
+    assert.equal(org.contactPoint.email, site.email);
+    assert.equal(org.contactPoint.url, `${origin}/#contacto`);
+    assert.deepEqual(org.contactPoint.availableLanguage, ['es-MX']);
+    assert.equal(Object.hasOwn(org.contactPoint, 'telephone'), false);
+    assert.equal(Object.hasOwn(org.contactPoint, 'hoursAvailable'), false);
+  }
+});
+
+test('el servicio PDF tiene página, catálogo y schema con su URL real', () => {
+  const pdf = services.find((service) => service.href === '/plantillas-pdf');
+  assert.equal(pdf?.title, 'Plantillas PDF');
+  const { fm, body } = splitFrontmatter('src/content/servicios/plantillas-pdf.md');
+  assert.match(fm, /formularios pdf rellenables/);
+  assert.match(body, /compatibilidad|lectores/i);
+  const graph = buildStructuredGraph({ origin, pathname: '/plantillas-pdf', variant: 'service' });
+  assert.equal(graph['@graph'].find((node) => node['@type'] === 'Service').url, `${origin}/plantillas-pdf`);
+});
+
+test('la página 404 no se indexa y ofrece rutas para continuar', () => {
+  for (const path of ['/404', '/404/', '/404.html']) {
+    assert.equal(isIndexableUrl(`${origin}${path}`), false);
+  }
+  const page = readFileSync('src/pages/404.astro', 'utf8');
+  assert.match(page, /<BaseLayout\b[^>]*\bnoindex\b/);
+  assert.match(page, /<SiteFrame>/);
+  assert.match(page, /<h1\b/);
+  assert.match(page, /href="\/"/);
+  assert.match(page, /href="\/#contacto"/);
 });
 
 test('la portada se presenta como agencia y los servicios apuntan a páginas', () => {
@@ -120,23 +193,19 @@ test('un artículo identifica al autor sin enlazar a páginas de equipo', () => 
   const published = new Date('2026-10-07T00:00:00.000Z');
   const graph = buildStructuredGraph({
     origin,
-    pathname: '/blog/como-hacer-una-pagina-web',
-    title: 'Cómo hacer una página web',
+    pathname: '/blog/cuando-redisenar-la-pagina-web-de-tu-negocio',
+    title: 'Cuándo rediseñar tu sitio',
     description: 'Entrada de blog',
     image: '/blog/como-hacer-una-pagina-web.webp',
     imageAlt: 'Laptop con el esquema de un sitio web.',
     variant: 'article',
     article: {
-      headline: 'Cómo hacer una página web',
+      headline: 'Cuándo rediseñar tu sitio',
       datePublished: published,
       dateModified: published,
       authorSlug: 'fernando-peralta',
     },
-    howTo: {
-      name: 'Cómo hacer una página web para un negocio',
-      description: 'Pasos',
-      steps: [{ name: 'Define la oferta', text: 'Escribe la acción.' }],
-    },
+    faqs: [{ question: '¿Debo rehacer todo?', answer: 'Primero revisamos qué funciona.' }],
   });
   const nodes = graph['@graph'];
   const article = nodes.find((node) => node['@type'] === 'BlogPosting');
@@ -150,8 +219,8 @@ test('un artículo identifica al autor sin enlazar a páginas de equipo', () => 
   const webpage = nodes.find((node) => node['@type'] === 'WebPage');
   assert.equal(webpage.primaryImageOfPage.url, article.image);
   assert.equal(webpage.primaryImageOfPage.caption, 'Laptop con el esquema de un sitio web.');
-  const howTo = nodes.find((node) => node['@type'] === 'HowTo');
-  assert.equal(howTo.step[0].position, 1);
+  assert.equal(nodes.some((node) => node['@type'] === 'HowTo'), false);
+  assert.equal(nodes.find((node) => node['@type'] === 'FAQPage').mainEntity[0].name, '¿Debo rehacer todo?');
 });
 
 test('el índice del blog identifica al autor y las portadas de sus entradas', () => {
@@ -162,8 +231,8 @@ test('el índice del blog identifica al autor y las portadas de sus entradas', (
     image: '/blog/como-hacer-una-pagina-web.webp',
     imageAlt: 'Bocetos de una página web.',
     blogPosts: [{
-      headline: 'Cómo hacer una página web',
-      href: '/blog/como-hacer-una-pagina-web',
+      headline: 'Cuándo rediseñar tu sitio',
+      href: '/blog/cuando-redisenar-la-pagina-web-de-tu-negocio',
       datePublished: new Date('2026-10-07T00:00:00.000Z'),
       authorSlug: 'fernando-peralta',
       image: '/blog/como-hacer-una-pagina-web.webp',
@@ -176,7 +245,7 @@ test('el índice del blog identifica al autor y las portadas de sus entradas', (
   assert.equal(webpage.primaryImageOfPage.url, `${origin}/blog/como-hacer-una-pagina-web.webp`);
   assert.equal(webpage.primaryImageOfPage.caption, 'Bocetos de una página web.');
   const entry = blog.blogPost[0];
-  assert.equal(entry['@id'], `${origin}/blog/como-hacer-una-pagina-web#article`);
+  assert.equal(entry['@id'], `${origin}/blog/cuando-redisenar-la-pagina-web-de-tu-negocio#article`);
   assert.equal(entry.image, webpage.primaryImageOfPage.url);
   const author = nodes.find((node) => node['@id'] === entry.author['@id']);
   assert.equal(author.name, 'Fernando Peralta');
@@ -195,21 +264,51 @@ test('los servicios y las entradas de blog tienen texto útil, sin precios ni ni
     assert.doesNotMatch(raw, price, file);
     assert.doesNotMatch(raw, unpublishedTier, file);
   }
-  const howTo = splitFrontmatter('src/content/blog/como-hacer-una-pagina-web.md');
-  assert.match(howTo.fm, /howTo:/);
   const covered = new Set();
   for (const file of readdirSync('src/content/blog').filter((name) => name.endsWith('.md'))) {
     const { raw, fm, body } = splitFrontmatter(`src/content/blog/${file}`);
     assert.match(fm, /^author: fernando-peralta$/m, file);
     assert.match(fm, /^faqs:/m, file);
     assert.match(fm, /^relatedServices:/m, file);
+    assert.match(fm, /^cta:/m, file);
+    assert.doesNotMatch(fm, /^howTo:/m, file);
     const primary = fm.match(/^relatedService: (\S+)/m)?.[1];
     assert.ok(primary, file);
     covered.add(primary);
+    const secondaryServices = fm.match(/^relatedServices:\n((?:  - [^\n]+\n)*)/m)?.[1] ?? '';
+    for (const [, id] of secondaryServices.matchAll(/  - (\S+)/g)) covered.add(id);
     assert.equal(words(body) >= 650, true, `${file} tiene ${words(body)} palabras en el cuerpo`);
     assert.doesNotMatch(raw, price, file);
     assert.doesNotMatch(raw, unpublishedTier, file);
   }
   const serviceIds = readdirSync('src/content/servicios').filter((name) => name.endsWith('.md')).map((name) => name.replace(/\.md$/, ''));
-  for (const id of serviceIds) assert.equal(covered.has(id), true, `falta una entrada principal para ${id}`);
+  for (const id of serviceIds) assert.equal(covered.has(id), true, `falta una entrada relacionada para ${id}`);
+});
+
+test('las URLs editoriales anteriores tienen un reemplazo directo, excluido del sitemap viejo', () => {
+  const files = new Set(readdirSync('src/content/blog').filter((name) => name.endsWith('.md')).map((name) => `/blog/${name.replace(/\.md$/, '')}`));
+  assert.equal(files.size, 16);
+  assert.equal(Object.keys(blogRedirects).length, 12);
+  for (const [from, to] of Object.entries(blogRedirects)) {
+    assert.equal(files.has(from), false, from);
+    assert.equal(files.has(to), true, to);
+    assert.equal(Object.hasOwn(blogRedirects, to), false, `cadena: ${to}`);
+    assert.equal(isIndexableUrl(`${origin}${from}`), false);
+    assert.equal(isIndexableUrl(`${origin}${to}`), true);
+  }
+  assert.match(readFileSync('astro.config.mjs', 'utf8'), /blogRedirects/);
+  assert.match(readFileSync('astro.config.mjs', 'utf8'), /status: 301/);
+});
+
+test('los enlaces internos del contenido no apuntan a URLs de blog retiradas', () => {
+  const posts = new Set(readdirSync('src/content/blog').map((name) => `/blog/${name.replace(/\.md$/, '')}`));
+  for (const collection of ['blog', 'servicios']) {
+    for (const file of readdirSync(`src/content/${collection}`).filter((name) => name.endsWith('.md'))) {
+      const { raw } = splitFrontmatter(`src/content/${collection}/${file}`);
+      for (const [, href] of raw.matchAll(/\]\((\/blog\/[^)#]+)(?:#[^)]*)?\)/g)) {
+        assert.equal(Object.hasOwn(blogRedirects, href), false, `${file}: ${href}`);
+        assert.equal(posts.has(href), true, `${file}: ${href}`);
+      }
+    }
+  }
 });

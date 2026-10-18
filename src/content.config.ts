@@ -40,11 +40,11 @@ const blog = defineCollection({
     relatedService: z.string(),
     relatedServices: z.array(z.string()).default([]),
     faqs: z.array(faq).min(3),
-    howTo: z.object({
-      name: z.string(),
+    cta: z.object({
+      title: z.string(),
       description: z.string(),
-      steps: z.array(z.object({ name: z.string(), text: z.string() })),
-    }).optional(),
+      label: z.string(),
+    }),
   }),
 });
 

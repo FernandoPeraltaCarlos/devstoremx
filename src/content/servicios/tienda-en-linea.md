@@ -24,7 +24,7 @@ highlights:
     value: "Alcance, tiempos y costo por escrito, antes de construir"
 faqs:
   - question: ¿Shopify o WooCommerce?
-    answer: Shopify conviene cuando quieres operar la tienda sin administrar servidores. WooCommerce conviene cuando el sitio ya vive en WordPress o necesitas controlar la instalación. La entrada de blog Shopify o WordPress compara los dos.
+    answer: Shopify conviene cuando quieres operar la tienda sin administrar servidores. WooCommerce conviene cuando el sitio ya vive en WordPress o necesitas controlar la instalación. La entrada del blog Shopify o WooCommerce explica qué cambia para el negocio.
   - question: ¿Puedo vender solo en México?
     answer: Sí. Definimos a qué estados envías, qué métodos de pago vas a ofrecer y qué pasa con un pedido que no se paga. Eso se escribe antes de diseñar el checkout.
   - question: ¿Ustedes cargan los productos?
@@ -42,7 +42,7 @@ order: 4
 
 Una tienda en línea no está lista cuando ya tiene un botón de comprar. Está lista cuando un pedido se puede pagar, apartar, empacar y rastrear sin que alguien reconstruya la venta en una libreta. Devstoremx arma esa operación para negocios que venden en México y quieren atender clientes en otras ciudades sin mudarse.
 
-El proyecto parte de cuatro preguntas: qué se vende, cómo se cobra, cómo se envía y quién atiende el pedido el lunes en la mañana. Con esas respuestas se elige [Shopify](/shopify), WooCommerce sobre [WordPress](/wordpress) o una tienda a la medida. La entrada de blog [cómo crear una tienda en línea](/blog/como-crear-una-tienda-en-linea) recorre el mismo camino si quieres verlo antes de la llamada.
+El proyecto parte de cuatro preguntas: qué se vende, cómo se cobra, cómo se envía y quién atiende el pedido el lunes en la mañana. Con esas respuestas se elige [Shopify](/shopify), WooCommerce sobre [WordPress](/wordpress) o una tienda a la medida. Si hoy todo depende de conversaciones sueltas, la entrada [cuando vender por WhatsApp ya no alcanza](/blog/vender-por-whatsapp-pedidos-que-se-pierden) explica qué problema puede resolver una tienda.
 
 ## Qué incluye el desarrollo
 

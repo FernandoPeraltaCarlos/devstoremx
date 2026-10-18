@@ -1,95 +1,73 @@
 ---
-title: Shopify o WordPress
-metaTitle: Shopify o WordPress, cuál conviene | Devstoremx
-metaDescription: Shopify o WordPress con WooCommerce para vender o publicar en México. Diferencias de operación, panel y cuidado, para elegir sin partir de un precio de desarrollo.
-h1: Shopify o WordPress, cuál te conviene
+title: Shopify o WooCommerce para tu negocio
+metaTitle: Shopify o WooCommerce al contratar una tienda | Devstoremx
+metaDescription: La plataforma cambia quién cuida la base técnica y cómo opera tu equipo. Shopify o WooCommerce para un proyecto de tienda definido por el negocio, no por la moda.
+h1: "Shopify o WooCommerce: lo que cambia para tu negocio, no solo para quien programa"
 intro: >
-  Elige Shopify si el centro del proyecto es una tienda y no quieres administrar el servidor. Elige WordPress si el centro es el contenido editable, o WooCommerce si la tienda debe vivir en ese mismo panel.
-  No son equivalentes con otro logo. Esta comparación sirve para decidir cuál vas a operar el día a día.
+  La elección de plataforma no debería convertirse en tu tarea técnica antes de contratar una tienda. Lo importante es qué necesitas vender, cómo lo entregas y quién va a operar los pedidos.
+  Shopify y WooCommerce pueden resolver un ecommerce, pero dejan responsabilidades distintas después del lanzamiento.
 author: fernando-peralta
 publishedAt: 2026-10-07
 updatedAt: 2026-10-17
 heroImage: /blog/shopify-vs-wordpress.webp
 heroImageAlt: Dos laptops que muestran una tienda en línea y un sitio de contenidos.
-category: Plataformas
+category: Tiendas en línea
 relatedService: shopify
 relatedServices:
   - wordpress
   - tienda-en-linea
 faqs:
-  - question: ¿Shopify o WordPress para una tienda en México?
-    answer: Shopify si vender es el centro y quieres el hospedaje incluido en la plataforma. WordPress con WooCommerce si la tienda debe vivir junto a un sitio que el equipo ya edita, y aceptas cuidar hosting y actualizaciones.
-  - question: ¿Se puede tener el sitio en WordPress y la tienda en Shopify?
-    answer: "Sí, y a veces es la opción limpia: el contenido en WordPress y el catálogo en Shopify, enlazados. Tiene dos paneles. Conviene cuando cada uno hace bien su parte y el equipo sabe en cuál entra cada tarea."
-  - question: ¿Cambiar de plataforma después es fácil?
-    answer: El catálogo y los clientes se pueden migrar con trabajo. El diseño, las apps y las reglas a la medida no viajan solos. Cambiar es un proyecto, no un interruptor. Por eso la elección inicial debe mirar quién opera, no solo el lanzamiento.
-  - question: ¿Devstoremx trabaja con las dos?
-    answer: Sí. Devstoremx es Shopify Partner y también desarrolla en WordPress y WooCommerce. La recomendación sale del catálogo y de quién lo va a operar.
-howTo:
-  name: Cómo elegir entre Shopify y WordPress
-  description: Tres comprobaciones antes de decidir la plataforma de una tienda o un sitio.
-  steps:
-    - name: Di cuál es el centro
-      text: Si el centro es vender, parte de Shopify. Si el centro es publicar y editar contenido, parte de WordPress.
-    - name: Nombra quién entra al panel cada semana
-      text: Esa persona tiene que poder hacer su tarea sin un desarrollador. Si no puede, la plataforma está mal elegida o falta capacitación.
-    - name: Lista lo que hay que conectar
-      text: Pagos, envíos, facturación, CRM. Comprueba que existan en la plataforma antes de enamorarte del diseño.
-    - name: Separa la mensualidad de la plataforma del desarrollo
-      text: Son costos distintos. La propuesta de desarrollo no sustituye la cuota de Shopify ni el hosting de WordPress.
+  - question: ¿Tengo que elegir plataforma antes de cotizar?
+    answer: No. Podemos evaluar las necesidades del catálogo y la operación antes de recomendar Shopify, WordPress con WooCommerce u otro alcance. No necesitas resolver la decisión técnica por tu cuenta.
+  - question: ¿WooCommerce y WordPress son lo mismo?
+    answer: WordPress permite administrar el sitio y sus contenidos. WooCommerce agrega funciones de comercio electrónico sobre esa instalación. Una propuesta de tienda debe contemplar ambas partes y su mantenimiento.
+  - question: ¿Devstoremx desarrolla en las dos plataformas?
+    answer: Sí. Somos Shopify Partner y también desarrollamos sitios y tiendas en WordPress con WooCommerce. La recomendación depende del proyecto y de cómo se operará.
+cta:
+  title: La plataforma es una decisión del proyecto, no un requisito para llamarnos
+  description: Cuéntanos cómo vende tu negocio. Podemos definir qué ruta encaja con tu catálogo, tu equipo y las herramientas que ya utilizas.
+  label: Hablemos de tu tienda, no de plugins
 ---
 
-## ¿Qué estás comparando en realidad?
+## Una discusión de plataformas puede esconder la decisión importante
 
-Shopify es una plataforma de tienda: el hospedaje, el checkout y el panel de pedidos vienen juntos. WordPress es un sistema para publicar y editar. WooCommerce le agrega tienda. Comparar “Shopify contra WordPress” sin decir si vas a vender es comparar una tienda con un sitio. No salen empatados porque no están en la misma carrera.
+Es habitual llegar a una propuesta después de escuchar opiniones incompatibles. Una persona asegura que Shopify limita todo; otra, que WordPress siempre se rompe. Ninguna afirmación describe el catálogo, el equipo ni los sistemas del negocio que va a pagar la tienda.
 
-Si el proyecto es una [tienda en línea](/tienda-en-linea), la comparación útil es Shopify contra WooCommerce. Si el proyecto es un sitio corporativo sin cobro, WordPress suele ser la conversación, y Shopify no hace falta. Las páginas de servicio están en [Shopify](/shopify) y [WordPress](/wordpress).
+La discusión útil no es qué herramienta gana en abstracto. Es qué responsabilidades asume cada parte y qué límites afectan a tu operación. Una plataforma conocida puede ser una buena elección, pero el reconocimiento de su nombre no sustituye la definición de un proyecto de [tienda en línea](/tienda-en-linea).
 
-Devstoremx es Shopify Partner. También construye sitios y tiendas en WordPress. Ninguna de las dos frases significa que una plataforma le convenga a todo el mundo.
+Si el proveedor presenta una tecnología antes de preguntar cómo cobras y entregas, está adelantando la respuesta. El negocio no debería adaptar sus necesidades únicamente para que la propuesta encaje en la herramienta favorita del equipo técnico.
 
-## ¿En qué se diferencian en el día a día?
+## Shopify cambia el trabajo de cuidar la base
 
-| | Shopify | WordPress | WordPress con WooCommerce |
-| --- | --- | --- | --- |
-| Centro | Vender | Publicar y editar | Vender dentro de WordPress |
-| Servidor | Lo opera la plataforma | Lo opera el hosting que contrates | Igual que WordPress, con más carga |
-| Panel | Pedidos, productos y pagos en un lugar | Páginas y entradas | Productos más el panel de WordPress |
-| Diseño | Temas y secciones, con límites claros | Temas y desarrollo a la medida | Tema de tienda más lo que el catálogo exija |
-| Apps y plugins | Apps de la tienda, con su propia cuota | Plugins, con su propio cuidado | Plugins de tienda, pagos y envíos |
-| Quién lo cuida | La plataforma cuida la base; tú cuidas apps y contenido | Tú, o un equipo de mantenimiento, cuidan actualizaciones | Igual, con más piezas que pueden romperse |
+En [Shopify](/shopify), la tienda vive en una plataforma que administra su infraestructura. El equipo del negocio puede enfocarse en productos y pedidos sin asumir la administración de un servidor. Eso no significa que desaparezcan las decisiones de diseño, catálogo, apps y operación.
 
-La fila que decide no es la del diseño. Es la de quién entra al panel el martes cuando hay que cambiar un precio o contestar un pedido.
+El desarrollo sigue necesitando un alcance. La tienda debe expresar bien la marca, presentar los productos y configurar los flujos acordados. Las apps pueden complementar funciones, pero añadirlas sin criterio también suma dependencias y cuotas que el negocio tendrá que sostener.
 
-## ¿Cuándo elegir Shopify?
+Somos Shopify Partner. Eso permite trabajar desde la relación y los accesos correspondientes, no prometer resultados comerciales por pertenecer al programa. La cuenta debe seguir siendo del negocio y la plataforma no convierte una tienda mal planteada en una operación lista para vender.
 
-Cuando el centro es la tienda y no quieres administrar un servidor, certificados ni actualizaciones de la base. El equipo carga productos, atiende pedidos y cambia textos de la tienda sin abrir un hosting. Las apps cubren envíos, reseñas, mayoreo o suscripciones cuando el plan de la tienda no lo trae de serie.
+## WooCommerce cambia el control y también el cuidado
 
-También cuando quieres una ruta conocida en México para cobrar y enviar, y prefieres que el checkout lo mantenga la plataforma. Shopify Plus existe para operaciones grandes, con otros límites y otra cuota de plataforma. No es el punto de partida de una tienda que todavía está armando el catálogo, y nombrarlo en una propuesta no convierte a quien desarrolla en un nivel distinto del programa de partners.
+[WordPress con WooCommerce](/wordpress) puede encajar cuando el sitio editable y la tienda deben vivir juntos, o cuando el proyecto necesita controlar más de su instalación. El panel reúne contenido y productos, pero alguien debe hacerse cargo de hosting, actualizaciones y compatibilidad entre las piezas que se utilicen.
 
-Si ya decidiste esta ruta, el encargo de desarrollo está en la página de Shopify y los factores del proyecto en [cuánto cuesta una tienda en Shopify](/blog/cuanto-cuesta-una-tienda-en-shopify).
+Esa responsabilidad no es un defecto de la plataforma. Es una condición de la solución. El problema aparece cuando se vende únicamente la libertad y no se habla de quién mantendrá el sitio. Sin ese acuerdo, el negocio puede recibir más control del que realmente quiere operar.
 
-## ¿Cuándo elegir WordPress o WooCommerce?
+Un proyecto profesional contempla esa continuidad. No deja al cliente con una colección de plugins y la expectativa de que investigue qué actualizar. El alcance de mantenimiento puede ser distinto al del desarrollo, pero debe existir una conversación clara sobre el después.
 
-WordPress, cuando el centro es el contenido: servicios, artículos, fichas de proyecto, un equipo que va a editar seguido. WooCommerce, cuando además hay que vender y quieres productos, páginas y blog en el mismo panel.
+## Lo que la comparación cambia en el negocio
 
-Conviene si ya tienes un sitio en WordPress que el equipo conoce, o si la tienda es una parte del sitio y no el sitio entero. El costo de esa libertad es el cuidado: hosting, actualizaciones, copias y plugins que se pisan. Eso es [mantenimiento web](/mantenimiento-web), no un detalle opcional.
+| Decisión | Con Shopify | Con WooCommerce |
+| --- | --- | --- |
+| Base técnica | La administra la plataforma | Se gestiona sobre un hosting y una instalación propia |
+| Operación cotidiana | Productos y pedidos dentro del panel de Shopify | Productos y contenido dentro de WordPress |
+| Funciones adicionales | Dependen del plan, las apps y el desarrollo permitido | Dependen de plugins, compatibilidad y desarrollo |
+| Continuidad | Hay que cuidar tema, apps y operación | También hay que cuidar instalación, actualizaciones y hosting |
 
-Si estás comparando WordPress con un constructor alojado, la otra entrada es [WordPress o Wix](/blog/wordpress-vs-wix). No mezcles esa decisión con la de Shopify: Wix no es la alternativa habitual de una tienda con catálogo serio, y Shopify no es la alternativa habitual de un sitio editorial.
+La tabla no pretende que el cliente se convierta en especialista. Sirve para mostrar que la decisión tiene consecuencias después de publicar. El equipo que contratas debe relacionar esas consecuencias con tu caso y hacerse responsable del trabajo técnico que le corresponde.
 
-## ¿Y el dinero de las plataformas?
+## Cambiar una tienda existente merece otra conversación
 
-Son dos cajas. Una es el desarrollo: diseño, tema, carga inicial, integraciones. La otra es lo que la plataforma o el hosting cobran para que el sitio siga en línea, más las apps o plugins de pago que actives. Devstoremx no publica tarifas de desarrollo. La cuota de Shopify, el hosting de WordPress y las apps no las fija el equipo de desarrollo: las publica cada proveedor y cambian.
+Una migración no es solo copiar productos. Puede implicar direcciones que ya reciben visitas, datos de clientes y una operación que no puede detenerse sin acuerdo. Si la tienda actual falla, primero necesitamos entender dónde: la plataforma, el tema, la información o el proceso comercial.
 
-Por eso una cotización que “incluye todo por siempre” suele estar mezclando cajas. Pide que separen el trabajo de construcción de la mensualidad de terceros. El método para comparar propuestas está en [cuánto cuesta una página web](/blog/cuanto-cuesta-una-pagina-web).
+Cambiar de herramienta para resolver un problema de contenido puede mover el costo sin mover el problema. También hay casos en los que insistir sobre la instalación actual complica demasiado el trabajo. La recomendación se hace después de revisar, no antes de que el equipo tenga accesos y contexto suficiente.
 
-## ¿Se puede cambiar después?
-
-Sí, con trabajo. Productos, clientes y pedidos se pueden exportar en muchos casos. El diseño, las apps, los redirects y las reglas de descuento no viajan solos. Una migración es un proyecto: inventario, URLs, correos transaccionales y una semana en la que alguien vigila que los pedidos no se partan en dos paneles.
-
-Por eso la elección inicial debe mirar los próximos dos años de operación, no solo el día del lanzamiento. Si hoy el centro es contenido y en un año el centro será la tienda, se puede empezar en WordPress y mover el catálogo, o separar sitio y tienda desde el principio. Las dos son decisiones válidas si están escritas.
-
-## ¿Qué preguntar en la llamada?
-
-Quién va a cargar productos. Quién va a contestar pedidos. Qué pasarela se puede activar con la cuenta del negocio. Si el dominio queda a tu nombre. Si el tema se puede editar sin romper el checkout. Qué no entra: mayoreo, suscripciones, varios almacenes, varios idiomas.
-
-Si no puedes responder esas preguntas, todavía no elijas plataforma. Vuelve a [cómo crear una tienda en línea](/blog/como-crear-una-tienda-en-linea) y cierra el catálogo, el cobro y la entrega. La plataforma se elige después de eso, no antes.
+En Devstoremx planteamos esa decisión dentro de la propuesta, con alcance y límites. Tú no necesitas defender Shopify o WordPress para iniciar el proyecto. Necesitas un equipo capaz de explicar cuál conviene a tu negocio y de dejarlo operable, no una discusión técnica que termine convirtiéndose en otra tarea para ti.

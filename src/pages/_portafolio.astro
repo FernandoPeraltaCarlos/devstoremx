@@ -8,6 +8,7 @@ import Button from '../components/ui/Button.astro';
 import { portfolioIsPublic } from '../lib/seo';
 
 const projects = await getCollection('proyectos');
+// Archivado: el prefijo _ impide generar /portafolio hasta que haya casos publicados.
 const indexable = portfolioIsPublic();
 const title = 'Portafolio de desarrollo web | Devstoremx';
 const description = 'Espacio para los casos de Devstoremx. Los proyectos reales se publican cuando el cliente autoriza contar el problema, el alcance y el resultado.';

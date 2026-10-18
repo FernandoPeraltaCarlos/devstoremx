@@ -1,97 +1,70 @@
 ---
-title: Por qué tu negocio necesita una página web
-metaTitle: Por qué tu negocio necesita una página web | Devstoremx
-metaDescription: Por qué una página web sigue haciendo falta si ya tienes redes sociales. Qué no controlas en Instagram o WhatsApp y qué sí puedes publicar en un sitio propio.
-h1: Por qué tu negocio necesita una página web
+title: Tu negocio no debería depender solo de redes
+metaTitle: Tu negocio necesita un sitio propio | Devstoremx
+metaDescription: Si cada prospecto necesita una explicación por chat, las redes no están cubriendo toda la presentación. Un sitio propio para mostrar servicios y recibir contactos.
+h1: Depender de redes sociales puede estar dejando clientes fuera de tu negocio
 intro: >
-  Una página web es el lugar que el negocio controla: el nombre, la oferta, el contacto y lo que ve alguien que llega desde Google o desde un anuncio.
-  Las redes sirven para que te encuentren. No sustituyen un sitio cuando la plataforma cambia las reglas, esconde el alcance o no deja explicar el servicio.
+  Publicas trabajo, recibes mensajes y las redes sí te ayudan a vender. Pero quien quiere entender toda la oferta termina pidiendo un catálogo, buscando publicaciones viejas o esperando una respuesta.
+  Una página propia no reemplaza esa conversación: evita que todo tenga que explicarse dentro de ella.
 author: fernando-peralta
 publishedAt: 2026-10-17
 updatedAt: 2026-10-17
 heroImage: /blog/por-que-tu-negocio-necesita-una-pagina-web.webp
-heroImageAlt: Escritorio con un sitio web de negocio en una laptop y un teléfono con una red social al lado.
-category: Desarrollo web
+heroImageAlt: Ilustración de una ventana de sitio web sobre un fondo oscuro.
+category: Páginas web
 relatedService: paginas-web
 relatedServices:
-  - landing-pages
   - desarrollo-web
+  - landing-pages
 faqs:
-  - question: ¿Por qué una página web si ya tengo redes sociales?
-    answer: "Porque en las redes no controlas el alcance, el orden de la información ni el enlace que alguien guarda. Una página web es tuya: el dominio, los textos y el formulario no dependen de que una plataforma te muestre."
-  - question: ¿WhatsApp puede sustituir al sitio?
-    answer: WhatsApp atiende la conversación. No explica la oferta a quien todavía no escribe, no aparece cuando alguien busca el servicio y no sirve como ficha que puedas mandar en una propuesta. El sitio y el chat se complementan.
-  - question: ¿Qué páginas necesita un negocio pequeño?
-    answer: Con inicio, servicios, una prueba de cómo trabajas y contacto basta para muchos. Cada página debe decir qué ofreces y cómo te contactan. No hace falta un sitio enorme para dejar de depender solo de un perfil.
-  - question: ¿Cuándo una landing alcanza y cuándo hace falta el sitio?
-    answer: La landing alcanza para una campaña con una sola oferta. El sitio hace falta cuando la persona quiere entender el negocio, comparar servicios o volver después. Muchos proyectos necesitan las dos.
-howTo:
-  name: Cómo saber si a tu negocio le falta una página web
-  description: Cuatro comprobaciones para decidir si el perfil de redes ya no alcanza.
-  steps:
-    - name: Busca tu servicio como lo buscaría un cliente
-      text: Si solo apareces dentro de una red, quien no usa esa red no te encuentra.
-    - name: Manda tu oferta sin un enlace de perfil
-      text: Si no tienes una URL propia que explique qué vendes, cada propuesta depende de una captura.
-    - name: Revisa qué pasa si la plataforma baja el alcance
-      text: Un perfil no es un archivo. Un sitio publicado en tu dominio sigue ahí.
-    - name: Mira el formulario
-      text: Si todos los pedidos viven en chats sueltos, no hay un lugar donde el negocio se presente antes de la conversación.
+  - question: ¿Necesito abandonar las redes para tener un sitio?
+    answer: No. Pueden convivir y tener trabajos distintos. Las redes muestran actividad y generan conversación; la página presenta la oferta en una estructura estable bajo el dominio del negocio.
+  - question: ¿Sirve una página si mi negocio es pequeño?
+    answer: Depende de cómo decide tu cliente, no solo del tamaño. Si alguien necesita entender servicios y confiar antes de escribir, un sitio puede ayudar a cubrir esa parte de la venta.
+  - question: ¿Quién se encarga de definir las secciones?
+    answer: En Devstoremx trabajamos esa estructura a partir de la oferta y de lo que debe entender el visitante. No necesitas llegar con una arquitectura del sitio ya resuelta.
+cta:
+  title: Un lugar propio para presentar lo que vendes
+  description: Hablemos de las preguntas que hoy respondes una y otra vez por chat. Podemos convertir esa necesidad en un sitio con alcance y entregables claros.
+  label: Hablemos de la página de tu negocio
 ---
 
-## ¿Por qué una página web si ya estás en redes?
+## Estar visible no es lo mismo que estar explicado
 
-Porque el perfil no es tuyo del todo. Puedes publicar, y la plataforma decide quién lo ve, en qué orden y hasta cuándo el formato sigue existiendo. Una [página web](/paginas-web) vive en un dominio a tu nombre. Alguien que busca el servicio, abre un anuncio o recibe tu enlace ve la oferta completa, no el recorte que el algoritmo eligió hoy.
+Una publicación puede mostrar muy bien un trabajo reciente y aun así no decir qué otros servicios ofreces. Un perfil reúne actividad, pero obliga al visitante a recorrerla como si fuera un archivo. La información comercial termina repartida entre historias, comentarios y mensajes privados.
 
-Las redes siguen sirviendo. Sirven para mostrar trabajo, contestar rápido y llegar a gente que ya está ahí. Fallan como único lugar del negocio cuando un cliente quiere comparar, guardar una ficha o enviarle el enlace a alguien más que decide. Una historia de Instagram no es una propuesta. Una página sí puede serlo.
+Quien conoce al negocio puede orientarse. Quien llega por primera vez tiene más trabajo: distinguir si el servicio sigue disponible, encontrar condiciones y decidir si vale la pena preguntar. No todas las personas con interés están dispuestas a iniciar una conversación para obtener información básica.
 
-Si el negocio atiende en todo el país, el sitio también evita inventar una sucursal. Dices cómo trabajas y desde dónde, sin prestarle una ciudad al perfil para “verse local”.
+Una [página web de negocio](/paginas-web) ofrece otro recorrido. Organiza lo que vendes y cómo trabajas para que el visitante entienda la propuesta antes de escribir. No promete demanda por existir, pero deja de poner toda la presentación detrás de un mensaje.
 
-## ¿Qué no controlas en un perfil y sí en un sitio?
+## El equipo también paga la falta de un lugar común
 
-| | Red social o marketplace | Página web propia |
-| --- | --- | --- |
-| Nombre y URL | El de la plataforma, con el tuyo detrás | El dominio del negocio |
-| Orden de la oferta | El que impone el formato del post | El que diseñas: servicio, prueba, contacto |
-| Quién llega | Quien el algoritmo o el anuncio de ellos elija | Quien busca, a quien le mandas el enlace, quien viene de tu anuncio |
-| Formulario | Un mensaje, si la persona ya decidió escribir | Un formulario con los datos que necesitas, a tu buzón |
-| Si la plataforma cambia | El alcance y a veces el formato se van | El sitio sigue publicado |
-| Cómo te citan | Una captura | Una URL |
+Cada vendedor guarda su versión del catálogo. Un servicio cambió, pero la captura vieja sigue circulando. Una persona explica una condición de una forma y otra la resume diferente. El negocio invierte tiempo en mantener alineados materiales que no tienen una referencia estable.
 
-Esa tabla no dice que haya que abandonar las redes. Dice que no son el archivo del negocio. El archivo es el sitio.
+El sitio no elimina la conversación comercial. Puede darle un punto de apoyo: un enlace con la información vigente que el equipo comparte sin reconstruirla cada vez. Una propuesta, una firma de correo o una recomendación tienen entonces un destino propio, no únicamente la dirección de un perfil.
 
-## ¿WhatsApp, Instagram o Google: cuál no reemplaza al sitio?
+Eso importa especialmente cuando hay varias personas participando en la compra. El contacto inicial puede entender la oferta y necesitar compartirla con alguien más. Una página de servicio facilita esa referencia mejor que una conversación que solo existe en el teléfono de uno de ellos.
 
-WhatsApp es el canal de conversación de muchos negocios en México. Funciona cuando la persona ya quiere escribir. No funciona como presentación: nadie compara tres proveedores leyendo chats ajenos. El sitio explica. El chat cierra.
+## Las redes son un canal, no toda la presencia del negocio
 
-Instagram muestra el trabajo reciente. No guarda un menú de servicios estable, no posiciona una ficha de “mantenimiento industrial en el Bajío” con la misma claridad que una página titulada así, y no te deja el formulario en una bandeja que puedas ordenar. Sirve de escaparate. El sitio sirve de ficha.
+El alcance y los formatos dependen de la plataforma. Una cuenta puede seguir activa mientras sus publicaciones llegan a menos personas o la información importante queda desplazada por contenido nuevo. El negocio trabaja para adaptarse sin decidir cómo se organiza la experiencia completa.
 
-Google muestra a quien busca. Si no hay una página, el resultado es un perfil, un mapa o un directorio que no escribiste tú. Una página bien titulada es la ficha que sí escribes tú. Cómo armarla, en orden, está en [cómo crear una página web paso a paso](/blog/como-hacer-una-pagina-web).
+Un sitio propio también tiene dependencias técnicas y necesita cuidado. No es inmune a fallas ni garantiza aparecer primero en buscadores. La diferencia es que el dominio y la estructura pueden estar bajo el control del negocio, con una presentación que no tenga que ajustarse a la lógica de un feed.
 
-## ¿Qué debería poder hacer un cliente en el sitio?
+La relación entre ambos canales debe ser práctica. Las redes pueden mostrar novedades y acercar visitas; la web puede explicar el servicio con más contexto. No hace falta convertir la decisión en una oposición entre tener sitio o seguir publicando.
 
-Entender qué vendes en la primera pantalla. Ver los servicios sin adivinar. Saber cómo trabajas, aunque sea en cinco pasos. Encontrar un contacto que alguien abre. Si vendes catálogo, llegar a la [tienda en línea](/tienda-en-linea). Si vienes de un anuncio de una sola promo, caer en una [landing page](/landing-pages) y no en un menú de diez cosas.
+## Una página pequeña puede resolver una necesidad grande
 
-No necesita un blog el primer día, ni una animación, ni una sección de premios. Necesita que un extraño no tenga que preguntarte “¿y ustedes qué hacen?” para poder escribirte. Si hoy esa pregunta se repite en cada chat, el sitio te la quita de encima.
+No todos los negocios necesitan un sitio extenso. Un despacho, una clínica o un proveedor especializado pueden necesitar pocas páginas bien resueltas. El valor está en que describan la oferta real, respondan las dudas relevantes y permitan contactar, no en llenar un menú con secciones genéricas.
 
-## ¿Un negocio pequeño también la necesita?
+Ahí entra el trabajo de [desarrollo web](/desarrollo-web): definir qué formato responde al problema y construirlo con el contenido adecuado. La estructura no debería salir de una plantilla que exige inventar premios, clientes o testimonios para completar espacios.
 
-Sí, si alguien que no te conoce tiene que entender la oferta sin una llamada. Un consultorio, un taller, un despacho, una marca que vende a otros negocios: el tamaño no decide. Decide si la venta depende de que te encuentren y te crean antes de escribir.
+Si la necesidad es una campaña específica, puede convenir una [landing page](/landing-pages). Si hay catálogo y cobro, la conversación será la de una tienda. Identificar esa diferencia es parte del encargo que el equipo debe resolver, no una elección técnica que te pedimos traer cerrada.
 
-Un sitio corto basta. Inicio, servicios, cómo se trabaja y contacto. Más páginas cuando hay más ofertas distintas, no cuando alguien te dijo que “un sitio profesional tiene doce secciones”. El [desarrollo web](/desarrollo-web) de un sitio corto es un encargo concreto. Se puede hacer con WordPress si el equipo va a editar, o a la medida si el constructor ya no representa al negocio.
+## Tu negocio no necesita aprender a hacer sitios
 
-Lo que no basta es un enlace de link-en-bio que junta redes y no explica nada. Eso es un directorio personal. No es una página de servicios.
+Puede que tengas clara la oferta y no sepas cómo convertirla en una página. Eso no es una carencia que debas corregir con tutoriales antes de contratar. Es precisamente la distancia que un equipo de diseño y desarrollo debe ayudar a resolver.
 
-## ¿Cuándo el sitio no es el primer paso?
+En Devstoremx empezamos por escuchar qué vende el negocio y cómo decide su cliente. Después definimos alcance, entregables, tiempos y costo por escrito. Si faltan fotografías o textos, se acuerda quién los prepara y cómo se incorporan, en lugar de esperar que aparezcan al final.
 
-Cuando todavía no puedes decir qué vendes. Una página no inventa la oferta. Si el catálogo, el precio de lista interno y la forma de entregar cambian cada semana, publica cuando haya una versión que puedas sostener un mes. Mientras tanto, un perfil puede servir para probar el mensaje. No lo confundas con el archivo final.
-
-Cuando solo vas a correr una campaña de dos semanas y ya tienes sitio, no rehagas la portada: publica una landing. Cuando vas a cobrar productos con envío, el primer paso puede ser la tienda, y el sitio institucional viene al lado, no en lugar del catálogo.
-
-## ¿Qué ganas el día que está publicada?
-
-Un enlace que puedes poner en la firma, en la propuesta y en el anuncio. Un lugar donde el servicio está explicado aunque tú estés en una junta. Un formulario que no depende de que recuerdes el mensaje en un chat. Una base para medir si la gente hace la acción que definiste, en vez de contar likes.
-
-También ganas un activo a tu nombre. Si más adelante hay que rediseñar, el dominio y el contenido se quedan. Si más adelante hay que conectar el formulario a un CRM, se conecta sobre algo que ya existe. Sin sitio, cada mejora empieza de cero en la plataforma de otro.
-
-Si ya decidiste que hace falta y quieres saber qué mueve el encargo, lee [cuánto cuesta una página web](/blog/cuanto-cuesta-una-pagina-web). Si quieres comparar con quién hacerlo, lee [cómo elegir una agencia de desarrollo web](/blog/como-elegir-agencia-de-desarrollo-web). El siguiente paso práctico es la lista de páginas y la acción del visitante, no la elección del color.
+La página no sustituye una buena atención ni una oferta competitiva. Sí puede quitarle al chat la obligación de explicar todo desde cero. Si hoy cada prospecto necesita pedir un PDF para entender quién eres, hay un trabajo concreto que podemos hacer: darle al negocio un lugar propio que sí lo presente.

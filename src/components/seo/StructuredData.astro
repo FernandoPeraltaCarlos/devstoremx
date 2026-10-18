@@ -14,7 +14,6 @@ interface Props {
   serviceName?: string;
   serviceType?: string;
   article?: StructuredInput['article'];
-  howTo?: StructuredInput['howTo'];
   blogPosts?: StructuredInput['blogPosts'];
 }
 
@@ -32,7 +31,6 @@ const graph = buildStructuredGraph({
   serviceName: Astro.props.serviceName,
   serviceType: Astro.props.serviceType,
   article: Astro.props.article,
-  howTo: Astro.props.howTo,
   blogPosts: Astro.props.blogPosts,
 });
 const jsonLd = JSON.stringify(graph).replace(/</g, '\\u003c');

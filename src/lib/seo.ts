@@ -1,7 +1,8 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { blogRedirects } from '../data/blog-redirects.ts';
 
-const PRIVATE_PATHS = new Set(['/dashboard-cliente', '/llms.txt', '/llms-full.txt', '/rss.xml']);
+const PRIVATE_PATHS = new Set(['/404', '/portafolio', '/dashboard-cliente', '/llms.txt', '/llms-full.txt', '/rss.xml']);
 
 /** Public path without `.html` and without a trailing slash, except the site root. */
 export function canonicalPathname(pathname: string): string {
@@ -58,8 +59,7 @@ export function isIndexableUrl(url: string): boolean {
   } catch {
     return false;
   }
-  if (PRIVATE_PATHS.has(pathname) || pathname.startsWith('/api/')) return false;
+  if (Object.hasOwn(blogRedirects, pathname) || PRIVATE_PATHS.has(pathname) || pathname.startsWith('/api/')) return false;
   if (pathname === '/equipo' || pathname.startsWith('/equipo/')) return false;
-  if (pathname === '/portafolio' && !portfolioIsPublic()) return false;
   return true;
 }

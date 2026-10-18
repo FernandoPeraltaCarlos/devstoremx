@@ -10,7 +10,7 @@ const posts = (await getCollection('blog'))
 ---
 <section id="blog" class="section-space border-y border-line bg-white" aria-labelledby="ultimas-entradas">
   <div class="container-page">
-    <SectionHeading eyebrow="Blog" title="Últimas entradas." description="Páginas web, tiendas, apps y cómo encargar un proyecto. Escritas por Fernando Peralta." />
+    <SectionHeading eyebrow="Blog" title="Últimas entradas." description="Lo que frena a tu negocio y cuándo hace falta un equipo para resolverlo. Por Fernando Peralta." />
     <div class="mt-10 grid gap-x-8 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-10">
       {posts.map((post, index) => {
         const author = team.find((member) => memberSlug(member.image) === post.data.author);

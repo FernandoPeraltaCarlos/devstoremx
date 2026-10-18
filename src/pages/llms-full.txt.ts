@@ -52,14 +52,6 @@ export const GET: APIRoute = async () => {
       post.data.intro.trim(),
       '',
     );
-    if (post.data.howTo) {
-      blocks.push(
-        post.data.howTo.name,
-        post.data.howTo.description,
-        ...post.data.howTo.steps.map((step, index) => `${index + 1}. ${step.name}. ${step.text}`),
-        '',
-      );
-    }
     blocks.push(
       plain(post.body ?? ''),
       '',
@@ -71,6 +63,10 @@ export const GET: APIRoute = async () => {
       );
     }
     blocks.push(
+      post.data.cta.title,
+      post.data.cta.description,
+      `${post.data.cta.label}: ${site.url}/#contacto`,
+      '',
       `URL: ${site.url}/blog/${post.id}`,
       '',
       '---',

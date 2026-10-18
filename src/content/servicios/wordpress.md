@@ -41,7 +41,7 @@ order: 6
 
 Un buen WordPress es un sitio que el equipo del negocio puede cambiar el martes sin llamar a quien lo programó: un teléfono, una foto, una entrada, un servicio. Devstoremx lo desarrolla así para empresas en México que trabajan con nosotros en remoto. El panel se deja ordenado, con pocos tipos de contenido y con un tema que no se rompe al actualizar.
 
-WordPress cubre dos encargos distintos. El primero es la [página web](/paginas-web): presentación del negocio, servicios y contacto. El segundo es WooCommerce, la tienda que vive dentro de WordPress. Si la duda es Shopify, la comparación está en [Shopify o WordPress](/blog/shopify-vs-wordpress) y el panorama de la tienda, en [creación de ecommerce](/tienda-en-linea).
+WordPress cubre dos encargos distintos. El primero es la [página web](/paginas-web): presentación del negocio, servicios y contacto. El segundo es WooCommerce, la tienda que vive dentro de WordPress. Si la duda es Shopify, la comparación está en [Shopify o WooCommerce](/blog/shopify-vs-wordpress) y el panorama de la tienda, en [creación de ecommerce](/tienda-en-linea).
 
 ## Cuándo conviene y cuándo no
 

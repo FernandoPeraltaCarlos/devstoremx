@@ -1,93 +1,70 @@
 ---
-title: Qué incluye el mantenimiento de una página web
-metaTitle: Qué incluye el mantenimiento web | Devstoremx
-metaDescription: Qué incluye el mantenimiento de una página web y qué no. Actualizaciones, respaldos, seguridad y cambios de contenido, para acordar el encargo sin letra pequeña.
-h1: Qué incluye el mantenimiento de una página web
+title: Tu sitio sigue publicado, pero nadie se hace cargo
+metaTitle: Mantenimiento web con un responsable claro | Devstoremx
+metaDescription: Un sitio en línea puede estar desactualizado, fallar al recibir contactos o depender de accesos perdidos. Qué resuelve contratar mantenimiento con alcance definido.
+h1: Tu sitio sigue publicado, pero nadie se está haciendo cargo
 intro: >
-  El mantenimiento web es el encargo de que el sitio siga funcionando después de publicarlo: actualizaciones, respaldos, vigilancia y los cambios de contenido que se hayan acordado.
-  No es un rediseño disfrazado ni un soporte ilimitado. Esta entrada separa lo que suele entrar de lo que es otro proyecto.
+  Que la página abra no significa que todo siga funcionando. El formulario puede fallar, el contenido quedar viejo y las actualizaciones acumularse sin que nadie tenga el encargo de revisarlas.
+  El mantenimiento web convierte ese pendiente difuso en un trabajo con responsables y límites claros.
 author: fernando-peralta
 publishedAt: 2026-10-17
 updatedAt: 2026-10-17
 heroImage: /blog/que-incluye-el-mantenimiento-web.webp
-heroImageAlt: Escritorio con una lista de revisión de un sitio web y una laptop encendida.
-category: Mantenimiento
+heroImageAlt: Ilustración de una lista de revisión con casillas sobre un panel oscuro.
+category: Mantenimiento web
 relatedService: mantenimiento-web
 relatedServices:
   - wordpress
   - desarrollo-web
 faqs:
-  - question: ¿Qué incluye el mantenimiento de una página web?
-    answer: Actualizar lo que se pueda actualizar, revisar que el sitio abra y el formulario llegue, guardar respaldos y aplicar los cambios de contenido acordados. El detalle exacto va en la propuesta, porque un WordPress con plugins no se cuida igual que un sitio a la medida.
-  - question: ¿El mantenimiento incluye rediseñar o agregar secciones?
-    answer: No, salvo que se haya escrito así. Una página nueva, una tienda o un cambio de estructura es un proyecto. El mantenimiento cubre el sitio que ya existe, dentro de un tope de cambios.
-  - question: ¿Cada cuánto hay que hacerlo?
-    answer: Con una cadencia fija, no cuando algo ya se rompió. Las actualizaciones y los respaldos no esperan a que el formulario falle. La frecuencia se acuerda según la plataforma y qué tan seguido cambia el contenido.
-  - question: ¿Puedo hacer el mantenimiento yo?
-    answer: Sí, si sabes qué actualizar, tienes los accesos y puedes restaurar un respaldo. Si el sitio es WordPress y nadie abre el panel, el sitio se desactualiza en silencio. En ese caso conviene un encargo, no una buena intención.
-howTo:
-  name: Cómo acordar el mantenimiento de un sitio
-  description: Lista para que el encargo de mantenimiento diga qué entra, qué no y cada cuándo se revisa.
-  steps:
-    - name: Nombra la plataforma
-      text: WordPress, Shopify, un sitio a la medida u otra. El cuidado no es el mismo.
-    - name: Lista lo que hay que vigilar
-      text: Formulario, certificado, pagos si hay tienda, plugins o dependencias, y el correo que recibe los mensajes.
-    - name: Define los cambios de contenido
-      text: Cuántos y de qué tipo entran en el periodo. Textos y fotos no son una sección nueva.
-    - name: Acuerda respaldos y quién puede restaurar
-      text: Cada cuánto se guardan, dónde viven y quién tiene la clave. Un respaldo que nadie puede restaurar no cuenta.
-    - name: Escribe qué es otro proyecto
-      text: Rediseño, páginas nuevas, tienda, app. Si no está fuera, se va a discutir dentro.
+  - question: ¿Pueden dar mantenimiento a un sitio que no hicieron ustedes?
+    answer: Primero revisamos la plataforma, el estado y los accesos. Esa evaluación permite definir qué podemos atender y si hay problemas que requieren un proyecto distinto.
+  - question: ¿Incluye cualquier cambio que pida?
+    answer: No. Se acuerdan el tipo y el alcance de cambios de contenido. Un rediseño, una sección nueva o una integración pueden ser un encargo separado.
+  - question: ¿Tener mantenimiento evita cualquier falla?
+    answer: No existe esa garantía. El mantenimiento permite atender actualizaciones y revisiones dentro del alcance, y definir quién responde. Los servicios externos y otros factores también pueden afectar al sitio.
+cta:
+  title: Que el siguiente problema no empiece buscando quién contesta
+  description: Cuéntanos dónde vive tu sitio y qué ha quedado pendiente. Podemos revisar si hace falta mantenimiento, una intervención inicial o un proyecto de renovación.
+  label: Hablemos del cuidado de tu sitio
 ---
 
-## ¿Qué problema resuelve el mantenimiento?
+## Lo publicado también se desactualiza
 
-El sitio publicado se queda viejo. Cambia un teléfono y el pie sigue con el anterior. Vence un plugin y el formulario deja de llegar. Se acaba un certificado y el navegador asusta a quien entra. Nadie tiene el encargo, así que se nota cuando un cliente escribe para decir que la página no sirve. El [mantenimiento web](/mantenimiento-web) existe para que eso se revise antes, con una persona responsable y una lista.
+Después del lanzamiento, el sitio deja de ser novedad y empieza a competir con el trabajo diario. Cambia un teléfono, aparece otro servicio y alguien recibe un aviso del hosting que no sabe interpretar. Cada pendiente parece pequeño, así que nadie lo toma como un proyecto. Meses después, la página presenta datos que el negocio ya no reconoce.
 
-No es el mismo trabajo que construir el sitio. El [desarrollo web](/desarrollo-web) entrega el proyecto. El mantenimiento lo sostiene. Mezclarlos en “te lo dejo funcionando para siempre” deja el después sin alcance y sin dueño.
+No siempre hay una falla visible. El formulario puede dejar de llegar a la bandeja correcta mientras el botón sigue funcionando en pantalla. Un enlace externo puede cambiar sin que nadie lo note. Publicado y cuidado no son el mismo estado.
 
-Devstoremx lo acuerda por escrito, según la plataforma y lo que el sitio necesita. No hay una tarifa de mantenimiento publicada, por la misma razón por la que no hay una tarifa de sitio: el número sin la lista no se compara.
+Contratar [mantenimiento web](/mantenimiento-web) significa dar dueño a esas revisiones y a los cambios acordados. No convierte el sitio en algo infalible, pero evita que el único plan sea recordar a quien lo construyó cuando un cliente ya reportó el problema.
 
-## ¿Qué suele entrar?
+## El costo no es únicamente técnico
 
-Depende de la plataforma, y la propuesta tiene que bajar esta tabla a tu caso. Como mapa, esto es lo que un encargo serio cubre y lo que deja fuera.
+Cuando la oferta del sitio está vieja, el equipo atiende conversaciones que nacieron con información equivocada. Cuando la página no recibe mensajes, el negocio puede pensar que simplemente hubo menos interés. La ausencia de una revisión deja esas situaciones sin contexto.
 
-| Pieza | Suele entrar | No es mantenimiento |
-| --- | --- | --- |
-| Actualizaciones | Temas, plugins, dependencias y parches que el sitio ya usa | Cambiar de plataforma o rehacer el tema |
-| Respaldo | Copias con fecha y una prueba de que se pueden restaurar | Guardar un archivo en un escritorio que nadie más conoce |
-| Vigilancia | Que el sitio abra, que el formulario llegue, que el certificado siga | Una campaña de anuncios o un informe de redes |
-| Seguridad básica | Cuentas, actualizaciones, lo que la plataforma permite cerrar | Una auditoría forense o un incidente ya ocurrido, que es otro encargo |
-| Contenido acordado | Cambiar textos, fotos o precios dentro de un tope | Una sección nueva, un idioma nuevo, un catálogo entero |
-| Tienda, si la hay | Vigilar que el checkout siga, actualizar lo que toca | Cargar el catálogo completo o abrir un canal de venta nuevo |
+También está el tiempo de coordinación. Recuperar contraseñas, encontrar el contacto del proveedor y explicar de nuevo cómo funciona la página consume atención que no estaba prevista. El pendiente se vuelve urgente justo cuando otra persona necesita una respuesta del negocio.
 
-En [WordPress](/wordpress) el peso está en plugins, tema, hosting y copias. En Shopify el peso está en apps, tema y el checkout, porque la base la opera la plataforma. En un sitio a la medida el peso está en dependencias, deploys y el lugar donde vive. Pedir “el mismo mantenimiento” para los tres es pedir un nombre, no un encargo.
+Un acuerdo de continuidad no debería apoyarse en el miedo a un desastre. Su valor cotidiano es más concreto: saber qué se revisa, qué cambio se puede pedir y quién tiene la responsabilidad de hacerlo. Esa claridad reduce improvisación aunque nunca haya una emergencia espectacular.
 
-## ¿Qué no entra, aunque suene parecido?
+## No se cuidan igual todas las plataformas
 
-Un rediseño. Una página que no existía. Pasar el sitio de un constructor a WordPress. Abrir la tienda. Conectar un CRM que no estaba. Escribir el blog del mes si nadie lo acordó. Estar disponible a cualquier hora para cualquier idea. Esos son proyectos o retainers distintos, y se cotizan como tales.
+Una instalación de [WordPress](/wordpress) puede necesitar atención en temas, plugins y hospedaje. En una plataforma alojada, parte de la base técnica la administra el proveedor, pero siguen existiendo contenido, apps y configuración. Un desarrollo a la medida tiene otras dependencias y accesos.
 
-Tampoco entra adivinar. Si el acceso al hosting está en el correo de alguien que ya no trabaja ahí, el primer trabajo es recuperar accesos, no “dar mantenimiento”. Sin dominio, panel y hosting a nombre del negocio, no hay a quién cuidar el sitio. Esa recuperación se dice antes de empezar.
+La propuesta debe reconocer esa diferencia. Vender el mismo paquete abstracto de cuidado para cualquier sitio oculta lo que realmente se está atendiendo. También puede dar por cubierto algo que pertenece a un tercero o que requiere una intervención específica antes de comenzar.
 
-Los costos de terceros siguen siendo de terceros: el hosting, la cuota de la plataforma, el dominio, las apps de pago. El mantenimiento puede renovar lo que esté en tus cuentas. No absorbe la factura del proveedor.
+En Devstoremx revisamos el estado y la plataforma para plantear el alcance. Si no hay accesos suficientes o existe una deuda técnica importante, se dice. El mantenimiento no es una forma de prometer que una base desconocida se volverá estable sin trabajo previo.
 
-## ¿Cada cuándo y quién avisa?
+## Un responsable no equivale a cambios ilimitados
 
-Con calendario, no con susto. Una revisión periódica de actualizaciones y de que el formulario llega. Respaldos con una frecuencia que tenga sentido para qué tan seguido cambia el sitio: no es lo mismo un sitio institucional que una tienda con pedidos diarios. Un canal para pedir los cambios de contenido que sí entran, y un plazo para hacerlos. Si todo es urgente, nada está priorizado y el tope se gasta en lo último que se pidió.
+Hay una diferencia entre actualizar un teléfono y construir una función nueva. Los dos pueden llegar como “un cambio en la web”, pero no son el mismo encargo. El primero puede caber en el mantenimiento; el segundo puede necesitar [desarrollo web](/desarrollo-web) con su propio alcance.
 
-Alguien del negocio tiene que poder ver que se hizo. Una nota breve —qué se actualizó, qué se respaldó, qué queda pendiente— evita el “¿y sí están haciendo algo?”. Si no hay nota, el encargo es invisible y se cancela el mes en que no hubo un incendio. Justo el mes en que sirvió.
+Lo que conviene evitar es dejar esa frontera para discutirla en cada mensaje. El acuerdo debe describir qué clase de actualizaciones se atienden, qué contenido puede cambiarse y cómo se solicita. Un rediseño o una tienda nueva no deberían esconderse dentro de una mensualidad indefinida.
 
-## ¿Lo puede hacer el equipo interno?
+El negocio sigue tomando decisiones comerciales y aportando información vigente. El equipo técnico se ocupa del trabajo que le corresponde. Así no se exige al cliente que investigue respaldos o compatibilidad, ni se supone que el proveedor conoce cambios que nadie le comunicó.
 
-Sí, con una lista y con accesos. Actualizar, revisar el formulario, cambiar un teléfono, guardar una copia. En un sitio simple, una persona ordenada lo sostiene. Falla cuando esa persona no sabe qué plugin no se debe tocar, cuando el hosting manda avisos a un correo que nadie abre, o cuando restaurar una copia nunca se ha ensayado.
+## Continuidad con accesos y expectativas claras
 
-Ensayar la restauración una vez vale más que tener doce copias. Si nadie lo ha hecho, el respaldo es una esperanza. Parte del encargo, interno o externo, es haber restaurado en un entorno de prueba y saber cuánto tarda.
+El sitio debe seguir siendo del negocio. Dominio, plataforma y cuentas no pueden depender únicamente del correo personal de quien lo desarrolló. Identificar esos accesos forma parte de revisar la situación antes de acordar el cuidado posterior.
 
-Si el equipo interno lleva el contenido y un externo lleva actualizaciones y copias, escríbanlo. Dos personas que creen que la otra respalda es el escenario en el que no hay copia el día que hace falta.
+También importa que el trabajo sea visible. Saber qué se atendió y qué queda pendiente permite decidir con información, en lugar de cancelar el cuidado porque “no pasó nada”. Muchas revisiones no producen un cambio espectacular en la pantalla; su función es sostener lo que el sitio ya debe hacer.
 
-## ¿Cómo se pide sin letra pequeña?
-
-Con la lista de esta entrada llena: plataforma, qué se vigila, qué cambios de contenido entran, cada cuándo, dónde viven las copias, qué es otro proyecto. Pide lo mismo si comparas con otro proveedor. La agencia que responde “todo incluido” sin esa lista no te está cuidando el sitio. Te está dejando la discusión para el mes tres.
-
-Si el sitio todavía no existe, el mantenimiento se acuerda al final del desarrollo, no como un extra sorpresa. Quién se queda con los accesos y quién abre el panel el mes siguiente forma parte de la entrega. El orden del proyecto está en [cómo elegir una agencia de desarrollo web](/blog/como-elegir-agencia-de-desarrollo-web). Si lo que duele hoy es que el sitio ya está caído o desactualizado, el primer paso es una revisión de accesos y de qué plataforma es, y a partir de ahí se escribe el encargo. No al revés.
+Si tu página está publicada pero no puedes decir quién se ocupa de ella, tenemos un punto de partida concreto para conversar. Podemos revisar qué necesita ahora y qué continuidad tiene sentido contratar. No hace falta esperar al siguiente formulario perdido para darle a ese trabajo un responsable.

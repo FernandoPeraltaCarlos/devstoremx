@@ -22,7 +22,7 @@ highlights:
     value: "Alcance, tiempos y costo por escrito, antes de construir"
 faqs:
   - question: ¿En qué se diferencia de una página web?
-    answer: La página web tiene menú y varias secciones para conocer al negocio. La landing esconde las salidas y pide una sola acción. La entrada de blog “qué es una landing page” lo explica con ejemplos.
+    answer: La página web presenta varios servicios y permite conocer al negocio. La landing concentra una oferta y una acción para una campaña. La entrada del blog sobre anuncios sin contactos explica cuándo esa diferencia puede importar.
   - question: ¿Sirve para anuncios?
     answer: Sí. Es el destino habitual de un anuncio o de una campaña de correo. El anuncio y la página tienen que prometer lo mismo, si no, la gente llega y se va.
   - question: ¿Puede tener un pago?
@@ -40,7 +40,7 @@ order: 3
 
 Una landing page existe para una campaña concreta. Alguien llega desde un anuncio, un QR, un correo o una historia y tiene que entender la oferta sin recorrer un sitio completo. Si el menú ofrece “nosotros”, “blog” y “otras cinco cosas”, ya no es una landing: es un sitio al que le falta foco.
 
-Devstoremx las construye para negocios en todo México que necesitan una página de venta o de registro y no quieren armarla en un constructor que después nadie puede medir. Si lo que buscas es presentar a la empresa, el servicio correcto es una [página web](/paginas-web). Si comparas los dos formatos, la entrada de blog [qué es una landing page](/blog/que-es-una-landing-page) entra en el detalle.
+Devstoremx las construye para negocios en todo México que necesitan una página de venta o de registro y no quieren armarla en un constructor que después nadie puede medir. Si lo que buscas es presentar a la empresa, el servicio correcto es una [página web](/paginas-web). Si la campaña atrae visitas pero la página no acompaña la oferta, la entrada [anuncios sin contactos](/blog/anuncios-sin-contactos-landing-page) explica el problema que una landing puede resolver.
 
 La landing no sustituye al sitio. Muchas empresas tienen las dos: el sitio explica quiénes son y la landing trabaja una oferta de temporada, un webinar, una lista de espera o un servicio que se quiere empujar este mes.
 

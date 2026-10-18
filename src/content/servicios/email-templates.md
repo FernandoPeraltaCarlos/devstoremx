@@ -32,7 +32,7 @@ faqs:
 relatedServices:
   - landing-pages
   - tienda-en-linea
-  - automatizaciones
+  - plantillas-pdf
 order: 11
 ---
 
@@ -64,6 +64,8 @@ También se prueba con las imágenes apagadas. El título, la oferta y el enlace
 La plantilla tiene que vivir en el sistema que envía: la tienda, la herramienta de campañas o el correo transaccional del producto. Si ese sistema es [Shopify o WooCommerce](/tienda-en-linea), se revisa qué partes del aviso son editables. Si es una herramienta de boletines, se entrega en el formato que esa herramienta acepta. Si el envío lo dispara un flujo, se coordina con [automatizaciones](/automatizaciones) para no diseñar un correo que nadie dispara.
 
 La cuenta de envío queda a nombre del negocio. El dominio que aparece en el “de:” tiene que ser el del negocio, no un dominio improvisado, porque de eso depende que la gente reconozca el mensaje.
+
+Si el correo lleva un catálogo, una propuesta o una ficha para compartir, las [plantillas PDF](/plantillas-pdf) pueden diseñarse como parte de un alcance coordinado. El adjunto tiene su propia estructura y revisión: no se exporta el correo como si los dos formatos funcionaran igual.
 
 ## Qué no incluye
 

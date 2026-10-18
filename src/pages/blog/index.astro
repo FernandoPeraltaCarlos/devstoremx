@@ -9,10 +9,10 @@ import { formatDate } from '../../lib/seo';
 import { readingMinutes } from '../../lib/blog';
 
 const posts = (await getCollection('blog')).sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf() || a.id.localeCompare(b.id, 'es'));
-const featured = posts.find((post) => post.id === 'como-hacer-una-pagina-web') ?? posts[0];
+const featured = posts.find((post) => post.id === 'cuando-redisenar-la-pagina-web-de-tu-negocio') ?? posts[0];
 const rest = posts.filter((post) => post.id !== featured?.id);
 const title = 'Blog de desarrollo web, tiendas y apps | Devstoremx';
-const description = 'Entradas de blog para crear una página web, una tienda en línea, una app o automatizar tu negocio en México. Comparaciones, pasos y qué encargar a una agencia.';
+const description = 'Páginas web que ya no representan al negocio, pedidos que se pierden y sistemas que no se conectan. El blog de Fernando Peralta sobre cuándo contratar desarrollo.';
 const featuredAuthor = team.find((member) => memberSlug(member.image) === featured?.data.author);
 const crumbs = [{ name: 'Inicio', href: '/' }, { name: 'Blog', href: '/blog' }];
 ---
@@ -24,7 +24,7 @@ const crumbs = [{ name: 'Inicio', href: '/' }, { name: 'Blog', href: '/blog' }];
     <div class="blog-home">
       <header class="blog-width blog-intro">
         <nav aria-label="Ruta de navegación"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Blog</span></nav>
-        <div class="blog-intro-heading"><h1>Entradas para decidir<br />antes de construir.</h1><p>Páginas web, tiendas en línea, apps, automatizaciones y mantenimiento. Escritas por Fernando Peralta, para negocios en México.</p></div>
+        <div class="blog-intro-heading"><h1>Tu negocio cambió.<br />¿Tu sitio también?</h1><p>Sitios que se quedaron atrás, pedidos que se pierden y tareas que frenan al equipo. Fernando Peralta escribe sobre los problemas que resolvemos en Devstoremx.</p></div>
       </header>
       {featured && (
         <section class="blog-width" aria-labelledby="entrada-destacada">

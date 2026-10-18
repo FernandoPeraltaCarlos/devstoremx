@@ -51,7 +51,7 @@ Devstoremx toma Shopify como la base de una tienda cuando el negocio quiere vend
 
 Shopify cobra su propia suscripción y, según el plan y la pasarela, sus comisiones. Esas tarifas son de Shopify y de quien procesa el pago, no un precio de Devstoremx. Por eso aquí no hay una cifra de “tienda desde”. La propuesta separa lo que pagas a la plataforma y lo que pagas por el desarrollo.
 
-Si todavía estás comparando con WordPress, lee [Shopify o WordPress](/blog/shopify-vs-wordpress) y la página de [creación de ecommerce](/tienda-en-linea), que ve el problema completo antes de casarse con una herramienta.
+Si todavía estás comparando con WordPress, lee [Shopify o WooCommerce](/blog/shopify-vs-wordpress) y la página de [creación de ecommerce](/tienda-en-linea), que ve el problema completo antes de casarse con una herramienta.
 
 ## Cuándo Shopify encaja
 

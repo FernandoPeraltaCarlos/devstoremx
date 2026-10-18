@@ -44,11 +44,6 @@ export interface StructuredInput {
     authorSlug: string;
     image?: string;
   };
-  howTo?: {
-    name: string;
-    description: string;
-    steps: readonly { name: string; text: string }[];
-  };
   blogPosts?: readonly { headline: string; href: string; datePublished: Date; authorSlug: string; image: string }[];
 }
 
@@ -83,6 +78,7 @@ export function buildStructuredGraph(input: StructuredInput) {
   const sameAs = organizationSameAs();
   const email = publicValue(site.email);
   const phone = publicValue(site.phone);
+  const founder = team.find((member) => memberSlug(member.image) === site.founderSlug);
   const location = publicValue(site.location);
   const organizationDescription = metaDescription();
   const imagePath = input.image || input.article?.image || site.ogImage;
@@ -120,6 +116,17 @@ export function buildStructuredGraph(input: StructuredInput) {
   if (email) organization.email = email;
   if (phone) organization.telephone = phone;
   if (location) organization.address = postalAddress(location);
+  if (founder) organization.founder = { '@id': `${origin}/#${memberSlug(founder.image)}` };
+  organization.contactPoint = {
+    '@type': 'ContactPoint',
+    '@id': `${origin}/#contacto-comercial`,
+    contactType: 'sales',
+    url: `${origin}/#contacto`,
+    availableLanguage: ['es-MX'],
+    areaServed: { '@type': 'Country', name: 'México' },
+    ...(email ? { email } : {}),
+    ...(phone ? { telephone: phone } : {}),
+  };
 
   const webpage: Record<string, unknown> = {
     '@type': 'WebPage',
@@ -230,21 +237,6 @@ export function buildStructuredGraph(input: StructuredInput) {
       mainEntityOfPage: { '@id': webpageId },
       url: pageUrl,
     });
-    if (input.howTo) {
-      graph.push({
-        '@type': 'HowTo',
-        '@id': `${pageUrl}#howto`,
-        name: input.howTo.name,
-        description: input.howTo.description,
-        inLanguage: 'es-MX',
-        step: input.howTo.steps.map((step, index) => ({
-          '@type': 'HowToStep',
-          position: index + 1,
-          name: step.name,
-          text: step.text,
-        })),
-      });
-    }
   }
 
   if (input.blogPosts?.length) {
@@ -296,6 +288,11 @@ export function buildStructuredGraph(input: StructuredInput) {
         acceptedAnswer: { '@type': 'Answer', text: faq.answer },
       })),
     });
+  }
+
+  if (founder) {
+    const founderId = `${origin}/#${memberSlug(founder.image)}`;
+    if (!graph.some((node) => node['@id'] === founderId)) graph.push(personNode(origin, founder));
   }
 
   return { '@context': 'https://schema.org', '@graph': graph };
