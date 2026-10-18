@@ -7,6 +7,7 @@ import vercel from '@astrojs/vercel';
 import tailwindcss from '@tailwindcss/vite';
 import { canonicalPathname, isIndexableUrl, sitemapLastmod } from './src/lib/seo.ts';
 import { blogRedirects } from './src/data/blog-redirects.ts';
+import { projectRedirects } from './src/data/project-slugs.ts';
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,7 +15,7 @@ export default defineConfig({
   // @astrojs/vercel fuerza build.format = 'directory'. trailingSlash: 'never'
   // hace que el deploy responda 308 desde la URL con barra hacia la canónica.
   trailingSlash: 'never',
-  redirects: Object.fromEntries(Object.entries(blogRedirects).map(([from, destination]) => [from, { destination, status: 301 }])),
+  redirects: Object.fromEntries(Object.entries({ ...blogRedirects, ...projectRedirects }).map(([from, destination]) => [from, { destination, status: 301 }])),
   adapter: vercel(),
   env: {
     schema: {

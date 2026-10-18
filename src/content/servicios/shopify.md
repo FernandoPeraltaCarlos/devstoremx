@@ -26,6 +26,8 @@ faqs:
     answer: Sí. Devstoremx es Shopify Partner y desarrolla tiendas Shopify para negocios en México. En la práctica significa que trabajamos desde una cuenta de Partner, que es la vía con la que Shopify permite pedir acceso de colaborador a tu tienda sin que compartas tu contraseña.
   - question: ¿Qué hace un desarrollador Shopify?
     answer: Configura la tienda y su catálogo, adapta o construye el tema, deja funcionando pagos, envíos y avisos, y revisa que quien la va a operar pueda cambiar precios y productos sin romper el diseño. En Devstoremx ese trabajo lo hace el mismo equipo que después te entrega los accesos.
+  - question: ¿Quién desarrolla mi tienda Shopify en Devstoremx?
+    answer: El trabajo técnico lo dirige Fernando Peralta, Technical Lead, con experiencia construyendo temas y funcionalidades Shopify con Liquid desde 2021. Su perfil, con el trabajo previo que respalda esa experiencia, está en devstoremx.xyz/equipo/fernando-peralta.
   - question: ¿Shopify sirve para vender en México?
     answer: Sí, con los métodos de pago y de envío que se puedan contratar para tu caso. Eso se confirma en la planeación, no se da por hecho en el tema visual.
   - question: ¿Puedo usar un tema y solo cambiar colores?
@@ -75,6 +77,12 @@ Las aplicaciones de Shopify se instalan con criterio. Cada app suma costo mensua
 El éxito de Shopify no es el día del lanzamiento. Es la semana siguiente, cuando alguien tiene que cambiar un precio, pausar una variante agotada y leer un pedido. Por eso el diseño evita secciones que solo se pueden editar tocando código, salvo que esa sección se haya pedido así y quede documentada.
 
 También dejamos claro qué no debemos tocar después: el checkout tiene límites que impone Shopify, y prometer “el checkout idéntico a esta imagen” sin revisar el plan es una forma fácil de fallar. Si hace falta algo fuera de la tienda, como facturar o sincronizar un almacén, se plantea como [integración](/integraciones).
+
+## Quién construye las tiendas
+
+El trabajo técnico de Shopify lo dirige [Fernando Peralta](/equipo/fernando-peralta), Technical Lead de Devstoremx. Desde 2021 construye temas y funcionalidades de tienda con Liquid, y antes de Devstoremx lo hizo para tiendas de varias marcas, desde secciones y filtros de colecciones hasta integraciones de reseñas, suscripciones y envíos.
+
+Su perfil presenta esos proyectos con capturas, tecnologías y el detalle de su participación: actualizaciones de temas, componentes Liquid e integraciones para tiendas en producción.
 
 ## Después de publicar
 

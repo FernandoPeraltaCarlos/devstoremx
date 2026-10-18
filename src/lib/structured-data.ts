@@ -13,6 +13,8 @@ import {
   team,
   technologies,
 } from '../data/landing.ts';
+import { authorPath, authorProfiles } from '../data/authors.ts';
+import { authorProjects, projectPath, type AuthorProject } from './author-projects.ts';
 import { absoluteUrl } from './seo.ts';
 
 export interface Crumb {
@@ -32,7 +34,9 @@ export interface StructuredInput {
   description?: string;
   image?: string;
   imageAlt?: string;
-  variant?: 'home' | 'page' | 'service' | 'article';
+  variant?: 'home' | 'page' | 'service' | 'article' | 'profile' | 'project';
+  profileSlug?: string;
+  project?: AuthorProject;
   breadcrumbs?: Crumb[];
   faqs?: readonly FaqItem[];
   serviceName?: string;
@@ -51,7 +55,9 @@ function personNode(origin: string, member: (typeof team)[number]) {
   const slug = memberSlug(member.image);
   const linkedin = publicValue(member.linkedin);
   const portfolio = publicValue(member.portfolio);
-  const sameAs = [linkedin, portfolio].filter((link): link is string => Boolean(link));
+  const profile = authorProfiles[slug];
+  const pagePath = authorPath(slug);
+  const sameAs = [linkedin, portfolio, profile?.links.github].filter((link): link is string => Boolean(link));
   const person: Record<string, unknown> = {
     '@type': 'Person',
     '@id': `${origin}/#${slug}`,
@@ -60,8 +66,10 @@ function personNode(origin: string, member: (typeof team)[number]) {
     image: new URL(member.image, origin).href,
     worksFor: { '@id': `${origin}/#organization` },
   };
-  if (portfolio || linkedin) person.url = portfolio || linkedin;
+  if (pagePath) person.url = absoluteUrl(origin, pagePath);
+  else if (portfolio || linkedin) person.url = portfolio || linkedin;
   if (sameAs.length) person.sameAs = sameAs;
+  if (profile) person.knowsAbout = [...profile.knowsAbout];
   if (member.bio) person.description = member.bio;
   return person;
 }
@@ -80,6 +88,7 @@ export function buildStructuredGraph(input: StructuredInput) {
   const phone = publicValue(site.phone);
   const founder = team.find((member) => memberSlug(member.image) === site.founderSlug);
   const location = publicValue(site.location);
+  const base = publicValue(site.baseLocality);
   const organizationDescription = metaDescription();
   const imagePath = input.image || input.article?.image || site.ogImage;
 
@@ -116,6 +125,7 @@ export function buildStructuredGraph(input: StructuredInput) {
   if (email) organization.email = email;
   if (phone) organization.telephone = phone;
   if (location) organization.address = postalAddress(location);
+  else if (base) organization.address = { '@type': 'PostalAddress', addressLocality: base, addressCountry: 'MX' };
   if (founder) organization.founder = { '@id': `${origin}/#${memberSlug(founder.image)}` };
   organization.contactPoint = {
     '@type': 'ContactPoint',
@@ -217,6 +227,52 @@ export function buildStructuredGraph(input: StructuredInput) {
     };
     webpage.about = { '@id': pageUrl };
     graph.push(serviceNode);
+  }
+
+  if (variant === 'profile' && input.profileSlug) {
+    const member = team.find((item) => memberSlug(item.image) === input.profileSlug);
+    if (member) {
+      const personId = `${origin}/#${input.profileSlug}`;
+      webpage['@type'] = 'ProfilePage';
+      webpage.about = { '@id': personId };
+      webpage.mainEntity = { '@id': personId };
+      graph.push(personNode(origin, member));
+      const projects = authorProjects.filter((project) => project.author === input.profileSlug);
+      if (projects.length) {
+        const listId = `${pageUrl}#proyectos`;
+        webpage.hasPart = { '@id': listId };
+        graph.push({
+          '@type': 'ItemList', '@id': listId, name: `Soluciones de desarrollo con experiencia de ${member.name}`,
+          itemListElement: projects.map((project, index) => ({
+            '@type': 'ListItem', position: index + 1, name: project.content.title,
+            url: absoluteUrl(origin, projectPath(project)),
+          })),
+        });
+      }
+    }
+  }
+
+  if (variant === 'project' && input.project) {
+    const project = input.project;
+    const author = team.find((member) => memberSlug(member.image) === project.author);
+    if (author) graph.push(personNode(origin, author));
+    const projectId = `${pageUrl}#project`;
+    webpage.about = { '@id': projectId };
+    webpage.mainEntity = { '@id': projectId };
+    graph.push({
+      '@type': 'Article', '@id': projectId, url: pageUrl,
+      headline: project.content.title, description: project.content.description, abstract: project.content.intro,
+      genre: 'Desarrollo web para empresas', inLanguage: 'es-MX',
+      author: { '@id': `${origin}/#${project.author}` },
+      publisher: { '@id': organizationId },
+      mainEntityOfPage: { '@id': webpageId },
+      datePublished: project.publishedAt, dateModified: project.updatedAt,
+      image: new URL(input.image || site.ogImage, origin).href,
+      keywords: [project.content.title, ...project.skills],
+      isBasedOn: project.sourceUrl,
+      citation: [project.sourceUrl],
+      about: project.relatedServices.map((id) => ({ '@type': 'Service', name: services.find((service) => service.href === `/${id}`)?.title ?? id, url: `${origin}/${id}`, provider: { '@id': organizationId } })),
+    });
   }
 
   if (variant === 'article' && input.article) {

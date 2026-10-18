@@ -12,6 +12,12 @@ Los cuatro clientes usan el mismo arranque y el mismo token de este proyecto:
 | Codex | `.codex/config.toml` |
 | OpenCode | `opencode.json` |
 
+OpenCode V2 no usa el objeto V1 `mcp.gscServer` ni un `timeout` numérico. El
+servidor va en `mcp.servers.gscServer`. Un `timeout: 30000` heredado de V1 se
+aplica también a la ejecución de herramientas y corta las consultas de Search
+Console; en V2 el tiempo de ejecución va aparte (`timeout.execution`, 180000 ms,
+igual que `tool_timeout_sec` de Codex).
+
 El nombre del servidor es `gscServer`. Las rutas de los clientes corresponden a
 `/home/fermx95/proyectos/devstoremx`; si mueves el repositorio,
 actualiza esas rutas y reinstala el entorno virtual.

@@ -9,6 +9,8 @@ interface Props {
   image?: string;
   imageAlt?: string;
   variant?: StructuredInput['variant'];
+  profileSlug?: string;
+  project?: StructuredInput['project'];
   breadcrumbs?: StructuredInput['breadcrumbs'];
   faqs?: StructuredInput['faqs'];
   serviceName?: string;
@@ -26,6 +28,8 @@ const graph = buildStructuredGraph({
   image: Astro.props.image,
   imageAlt: Astro.props.imageAlt,
   variant: Astro.props.variant ?? 'home',
+  profileSlug: Astro.props.profileSlug,
+  project: Astro.props.project,
   breadcrumbs: Astro.props.breadcrumbs,
   faqs: Astro.props.faqs,
   serviceName: Astro.props.serviceName,

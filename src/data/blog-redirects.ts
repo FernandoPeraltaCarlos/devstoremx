@@ -1,6 +1,5 @@
 /** Migración editorial: cada URL retirada apunta directamente a su reemplazo. */
 export const blogRedirects: Record<string, string> = {
-  '/blog/como-hacer-una-pagina-web': '/blog/cuando-redisenar-la-pagina-web-de-tu-negocio',
   '/blog/cuanto-cuesta-una-pagina-web': '/blog/cotizar-desarrollo-web',
   '/blog/como-elegir-agencia-de-desarrollo-web': '/blog/que-resuelve-una-agencia-de-desarrollo-web',
   '/blog/como-crear-una-tienda-en-linea': '/blog/vender-por-whatsapp-pedidos-que-se-pierden',

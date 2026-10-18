@@ -1,0 +1,156 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StructuredData from '../../components/seo/StructuredData.astro';
+import SiteFrame from '../../components/content/SiteFrame.astro';
+import PageHero from '../../components/content/PageHero.astro';
+import Contact from '../../components/sections/Contact.astro';
+import { authorProfiles } from '../../data/authors';
+import { memberSlug, team } from '../../data/landing';
+import { formatDate } from '../../lib/seo';
+import { authorProjects } from '../../lib/author-projects';
+import ProjectCard from '../../components/content/ProjectCard.astro';
+
+export function getStaticPaths() {
+  return Object.keys(authorProfiles).map((slug) => ({ params: { slug }, props: { slug } }));
+}
+
+const { slug } = Astro.props;
+const profile = authorProfiles[slug];
+const member = team.find((item) => memberSlug(item.image) === slug);
+if (!profile || !member) throw new Error(`Perfil de equipo no encontrado: ${slug}`);
+
+const posts = (await getCollection('blog'))
+  .filter((post) => post.data.author === slug)
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf() || a.id.localeCompare(b.id, 'es'));
+
+const title = `${member.name}, ${member.role} de Devstoremx`;
+const metaTitle = `${member.name} | Desarrollador Shopify y web en México | Devstoremx`;
+const description = profile.metaDescription;
+const crumbs = [
+  { name: 'Inicio', href: '/' },
+  { name: 'Equipo', href: '/#nosotros' },
+  { name: member.name, href: `/equipo/${slug}` },
+];
+const external = { rel: 'noopener noreferrer', target: '_blank' } as const;
+const projects = authorProjects.filter((project) => project.author === slug);
+---
+<BaseLayout title={metaTitle} description={description} ogType="profile" image={member.image} imageAlt={`Retrato de ${member.name}, ${member.role} de Devstoremx`}>
+  <StructuredData slot="head" title={metaTitle} description={description} variant="profile" profileSlug={slug}
+    image={member.image} imageAlt={`Retrato de ${member.name}`} breadcrumbs={crumbs} />
+  <SiteFrame>
+    <PageHero crumbs={crumbs} title={title} lede={profile.lede}>
+      <div class="mt-2 flex flex-wrap gap-3">
+        <a href="/#contacto" class="button button-hero">Hablemos de tu proyecto</a>
+        <a href={profile.links.portfolio} {...external} class="button button-dark-outline">Portafolio personal<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+        <a href={profile.links.linkedin} {...external} class="button button-dark-outline">LinkedIn<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+      </div>
+    </PageHero>
+
+    <article class="bg-paper">
+      <section class="section-space" aria-labelledby="sobre">
+        <div class="container-page grid gap-10 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-20">
+          <div class="flex flex-col gap-6">
+            <img src={member.image} alt={`Retrato de ${member.name}, ${member.role} de Devstoremx`} width="400" height="400" loading="eager" class="aspect-square w-full max-w-[320px] rounded-[10px] object-cover" />
+            <dl class="flex flex-col gap-4">
+              {profile.highlights.map((item) => (
+                <div class="border-t border-line pt-4">
+                  <dt class="eyebrow text-brand">{item.label}</dt>
+                  <dd class="mt-1 text-base leading-6 text-ink">{item.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+          <div class="flex max-w-[760px] flex-col gap-5">
+            <h2 id="sobre" class="text-[32px] leading-[1.14] font-bold tracking-[-0.025em] text-ink sm:text-[40px]">{profile.headline}</h2>
+            {profile.about.map((paragraph) => <p class="text-[17px] leading-8 text-muted">{paragraph}</p>)}
+            <p class="text-[17px] leading-8 text-muted">
+              Si tu proyecto es una tienda, revisa el servicio de <a class="font-semibold text-brand underline underline-offset-4" href="/shopify">Shopify</a>; si es un sitio de negocio, el de <a class="font-semibold text-brand underline underline-offset-4" href="/paginas-web">páginas web</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-space border-t border-line bg-white" aria-labelledby="especialidades">
+        <div class="container-page">
+          <h2 id="especialidades" class="max-w-[22ch] text-[32px] leading-[1.14] font-bold tracking-[-0.025em] text-ink sm:text-[40px]">Dónde aporta en tu proyecto.</h2>
+          <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {profile.specialties.map((item) => (
+              <div class="flex flex-col gap-3 rounded-[10px] border border-line bg-paper p-6">
+                <h3 class="text-xl font-bold tracking-[-0.02em] text-ink">{item.title}</h3>
+                <p class="text-[15px] leading-7 text-muted">{item.description}</p>
+                <ul class="mt-auto flex flex-wrap gap-2 pt-2">
+                  {item.stack.map((tech) => <li class="rounded-md bg-primary-soft px-2.5 py-1 text-xs font-semibold text-brand">{tech}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="section-space border-t border-line" aria-labelledby="proyectos">
+        <div class="container-page">
+          <h2 id="proyectos" class="text-[32px] leading-[1.14] font-bold tracking-[-0.025em] text-ink sm:text-[40px]">Problemas que podemos ayudarte a resolver.</h2>
+          <p class="mt-4 max-w-[65ch] text-base leading-7 text-muted">Desarrollo para tiendas, sitios y herramientas de trabajo, con la experiencia técnica de Fernando. Conoce qué podemos hacer por tu negocio y revisa los proyectos completos en su portafolio personal.</p>
+          <div class="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            {projects.map((project) => <ProjectCard project={project} />)}
+          </div>
+        </div>
+      </section>
+
+      <section class="section-space border-t border-line" aria-labelledby="experiencia">
+        <div class="container-page">
+          <div class="flex max-w-[760px] flex-col gap-4">
+            <h2 id="experiencia" class="text-[32px] leading-[1.14] font-bold tracking-[-0.025em] text-ink sm:text-[40px]">Experiencia profesional.</h2>
+          </div>
+          <ol class="mt-10 flex flex-col">
+            {profile.roles.map((role) => (
+              <li class="grid gap-3 border-t border-line py-8 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-16">
+                <div>
+                  <p class="text-lg font-bold tracking-[-0.02em] text-ink">{role.company}</p>
+                  <p class="mt-1 text-sm leading-6 text-muted">{role.role}</p>
+                  <p class="text-sm leading-6 text-muted">{role.period}</p>
+                </div>
+                <div class="flex max-w-[760px] flex-col gap-4">
+                  <p class="text-base leading-7 text-muted">{role.summary}</p>
+                  <ul class="flex flex-wrap gap-x-5 gap-y-2">
+                    {role.links.map((link) => (
+                       <li><a href={link.href} {...external} class="inline-flex min-h-9 items-center text-sm font-semibold text-brand underline underline-offset-4">{link.label}<span class="sr-only"> (proyecto completo en el portafolio personal, se abre en una pestaña nueva)</span></a></li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <p class="border-t border-line pt-6 text-base leading-7 text-muted">
+            El recorrido completo, con certificaciones y formación, está en su <a href={profile.links.portfolio} {...external} class="font-semibold text-brand underline underline-offset-4">portafolio personal</a> y en su <a href={profile.links.cv} {...external} class="font-semibold text-brand underline underline-offset-4">CV</a>. También publica su código en <a href={profile.links.github} {...external} class="font-semibold text-brand underline underline-offset-4">GitHub</a>.
+          </p>
+        </div>
+      </section>
+
+      {posts.length > 0 && (
+        <section class="section-space border-t border-line" aria-labelledby="articulos">
+          <div class="container-page">
+            <div class="flex flex-wrap items-end justify-between gap-4">
+              <h2 id="articulos" class="text-[32px] leading-[1.14] font-bold tracking-[-0.025em] text-ink sm:text-[40px]">Lo que ha escrito en el blog.</h2>
+              <a href="/blog" class="inline-flex min-h-11 items-center font-semibold text-brand hover:text-[#2f47cc]">Ver el blog</a>
+            </div>
+            <ul class="mt-10 grid gap-x-12 md:grid-cols-2">
+              {posts.map((post) => (
+                <li class="border-t border-line py-5">
+                  <a href={`/blog/${post.id}`} class="group block">
+                    <p class="text-[13px] leading-5 font-bold text-brand">{post.data.category}</p>
+                    <p class="mt-1 text-lg leading-7 font-semibold tracking-[-0.015em] text-ink group-hover:text-brand">{post.data.h1}</p>
+                    <p class="mt-1 text-sm text-muted"><time datetime={post.data.publishedAt.toISOString()}>{formatDate(post.data.publishedAt)}</time></p>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+    </article>
+
+    <Contact />
+  </SiteFrame>
+</BaseLayout>

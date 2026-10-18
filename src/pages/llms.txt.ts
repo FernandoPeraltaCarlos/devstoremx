@@ -1,6 +1,8 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
-import { shopifyPartner, site, steps, team } from '../data/landing';
+import { authorPath } from '../data/authors';
+import { memberSlug, shopifyPartner, site, steps, team } from '../data/landing';
+import { authorProjects, projectPath } from '../lib/author-projects';
 
 export const prerender = true;
 
@@ -34,8 +36,15 @@ export const GET: APIRoute = async () => {
     '',
     '## Equipo',
     '',
-    ...team.map((member) => `- ${member.name}, ${member.role}. ${member.bio}`),
+    ...team.map((member) => {
+      const profile = authorPath(memberSlug(member.image));
+      return `- ${profile ? `[${member.name}](${origin}${profile})` : member.name}, ${member.role}. ${member.bio}`;
+    }),
     '- Fernando Peralta es fundador de Devstoremx.',
+    '',
+    '## Soluciones de desarrollo con experiencia de Fernando Peralta',
+    '',
+    ...authorProjects.map((project) => `- [${project.content.title}](${origin}${projectPath(project)}): ${project.content.description} Proyecto completo de referencia: ${project.sourceUrl}`),
     '',
     '## Contacto',
     '',
@@ -43,10 +52,10 @@ export const GET: APIRoute = async () => {
     `- Formulario: ${origin}/#contacto`,
     `- Correo: ${site.email}`,
     `- Aviso de privacidad: ${origin}/aviso-de-privacidad`,
-    `- Texto completo de los servicios y las entradas de blog: ${origin}/llms-full.txt`,
+    `- Texto completo de servicios, soluciones de desarrollo y entradas de blog: ${origin}/llms-full.txt`,
     `- RSS del blog: ${origin}/rss.xml`,
     '',
-    'El teléfono no está publicado. No hay ciudad ni dirección: el trabajo es remoto en todo México. El dashboard de ejemplo usa datos ficticios y no es un caso de cliente.',
+    'El teléfono no está publicado. No se publica dirección: el trabajo es remoto y atiende negocios de todo México. El dashboard de ejemplo usa datos ficticios y no es un caso de cliente.',
     '',
   ];
   return new Response(lines.join('\n'), {

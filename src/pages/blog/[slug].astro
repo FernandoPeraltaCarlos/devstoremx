@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import StructuredData from '../../components/seo/StructuredData.astro';
 import SiteFrame from '../../components/content/SiteFrame.astro';
 import PostCard from '../../components/blog/PostCard.astro';
+import { authorPath } from '../../data/authors';
 import { memberSlug, team } from '../../data/landing';
 import { formatDate } from '../../lib/seo';
 import { readingMinutes } from '../../lib/blog';
@@ -20,6 +21,7 @@ if (!post) throw new Error(`Entrada de blog no encontrada: ${id}`);
 const { Content, headings } = await render(post);
 const author = team.find((member) => memberSlug(member.image) === post.data.author);
 if (!author) throw new Error(`Autor no encontrado: ${post.data.author}`);
+const authorHref = authorPath(post.data.author);
 const servicios = await getCollection('servicios');
 const serviceIds = [...new Set([post.data.relatedService, ...post.data.relatedServices])];
 const linkedServices = serviceIds.flatMap((serviceId) => {
@@ -63,7 +65,7 @@ const more = posts.filter((item) => item.id !== post.id)
           <div class="article-byline">
             <div class="author-identity">
               <img src={author.image} alt="" width="48" height="48" class="author-avatar" />
-              <div><p class="author-name">{author.name}</p><p class="author-role">{author.role} en Devstoremx</p></div>
+              <div><p class="author-name">{authorHref ? <a href={authorHref} rel="author">{author.name}</a> : author.name}</p><p class="author-role">{author.role} en Devstoremx</p></div>
             </div>
             <div class="article-dates">
               <p><time datetime={post.data.publishedAt.toISOString()}>{formatDate(post.data.publishedAt)}</time></p>
@@ -95,7 +97,7 @@ const more = posts.filter((item) => item.id !== post.id)
             <p class="article-updated">Última actualización: <time datetime={post.data.updatedAt.toISOString()}>{formatDate(post.data.updatedAt)}</time></p>
             <div class="author-note">
               <img src={author.image} alt="" width="64" height="64" class="author-avatar" loading="lazy" />
-              <div><p class="author-note-label">Escrito por</p><p class="author-name">{author.name}</p><p class="author-description">{author.bio}</p></div>
+              <div><p class="author-note-label">Escrito por</p><p class="author-name">{authorHref ? <a href={authorHref} rel="author">{author.name}</a> : author.name}</p><p class="author-description">{author.bio}</p>{authorHref && <a class="author-profile-link" href={authorHref}>Ver el perfil y la experiencia de {author.name}</a>}</div>
             </div>
           </footer>
           {post.data.faqs.length > 0 && (
@@ -152,6 +154,8 @@ const more = posts.filter((item) => item.id !== post.id)
   .author-identity { display: flex; align-items: center; gap: 12px; }
   .author-avatar { border-radius: 50%; object-fit: cover; flex: none; }
   .author-name { font-size: 14px; font-weight: 700; }
+  .author-name a:hover, .author-profile-link:hover { color: var(--color-brand); }
+  .author-profile-link { display: inline-block; margin-top: 10px; padding-block: 6px; font-size: 13px; font-weight: 600; color: var(--color-brand); text-decoration: underline; text-underline-offset: 4px; }
   .author-role, .article-dates { font-size: 12px; line-height: 1.8; color: var(--color-muted); }
   .article-dates { text-align: right; }
   .article-cover > img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 12px; background: var(--color-surface-sunken); }

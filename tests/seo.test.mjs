@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { test } from 'node:test';
-import { defaultTitle, navigation, services, site } from '../src/data/landing.ts';
+import { defaultTitle, metaDescription, navigation, services, site } from '../src/data/landing.ts';
 import { buildStructuredGraph } from '../src/lib/structured-data.ts';
 import { canonicalPathname, isIndexableUrl, portfolioIsPublic, sitemapLastmod } from '../src/lib/seo.ts';
 import { blogRedirects } from '../src/data/blog-redirects.ts';
@@ -27,7 +27,7 @@ function splitFrontmatter(file) {
 
 test('el sitemap toma lastmod del updatedAt de cada entrada', () => {
   assert.equal(sitemapLastmod('/blog/cuando-redisenar-la-pagina-web-de-tu-negocio'), '2026-10-17T00:00:00.000Z');
-  assert.equal(sitemapLastmod('/blog/como-hacer-una-pagina-web'), undefined);
+  assert.equal(sitemapLastmod('/blog/como-hacer-una-pagina-web'), '2026-10-18T00:00:00.000Z');
   assert.equal(sitemapLastmod('/shopify'), undefined);
   assert.equal(sitemapLastmod('/blog'), undefined);
 });
@@ -41,7 +41,7 @@ test('canonicalPathname quita .html y la barra final', () => {
   assert.equal(canonicalPathname('/blog/como-hacer-una-pagina-web.html'), '/blog/como-hacer-una-pagina-web');
 });
 
-test('el sitemap excluye equipo, dashboard, portafolio retirado y archivos de texto', () => {
+test('el sitemap incluye el perfil de Fernando y excluye dashboard, portafolio retirado, archivos de texto y el índice de equipo', () => {
   assert.equal(portfolioIsPublic(), false);
   assert.equal(isIndexableUrl(`${origin}/dashboard-cliente`), false);
   assert.equal(isIndexableUrl(`${origin}/dashboard-cliente/`), false);
@@ -52,11 +52,12 @@ test('el sitemap excluye equipo, dashboard, portafolio retirado y archivos de te
   assert.equal(isIndexableUrl(`${origin}/rss.xml`), false);
   assert.equal(isIndexableUrl(`${origin}/equipo`), false);
   assert.equal(isIndexableUrl(`${origin}/equipo/`), false);
-  assert.equal(isIndexableUrl(`${origin}/equipo/fernando-peralta/`), false);
+  assert.equal(isIndexableUrl(`${origin}/equipo/fernando-peralta`), true);
+  assert.equal(isIndexableUrl(`${origin}/equipo/fernando-peralta/`), true);
   assert.equal(isIndexableUrl(`${origin}/blog`), true);
   assert.equal(isIndexableUrl(`${origin}/shopify`), true);
   assert.equal(isIndexableUrl(`${origin}/blog/cuando-redisenar-la-pagina-web-de-tu-negocio`), true);
-  assert.equal(isIndexableUrl(`${origin}/blog/como-hacer-una-pagina-web`), false);
+  assert.equal(isIndexableUrl(`${origin}/blog/como-hacer-una-pagina-web`), true);
   assert.equal(isIndexableUrl(`${origin}/aviso-de-privacidad`), true);
 });
 
@@ -161,8 +162,10 @@ test('el grafo de la portada usa Devstoremx y las URLs reales de servicio', () =
   assert.equal(serialized.includes('/#ecommerce'), false);
   assert.equal(serialized.includes('/#desarrollo-web'), false);
   const fernando = nodes.find((node) => node['@id'] === `${origin}/#fernando-peralta`);
-  assert.equal(fernando.url, 'https://fernandoperalta.xyz');
-  assert.equal(serialized.includes('/equipo/'), false);
+  assert.equal(fernando.url, `${origin}/equipo/fernando-peralta`);
+  assert.ok(fernando.sameAs.includes('https://fernandoperalta.xyz'));
+  assert.ok(fernando.sameAs.includes('https://www.linkedin.com/in/fernandodperaltac/'));
+  assert.equal(serialized.match(/\/equipo\//g).length, 1);
 });
 
 test('una página de servicio publica su propia URL, migas y preguntas', () => {
@@ -189,7 +192,7 @@ test('una página de servicio publica su propia URL, migas y preguntas', () => {
   assert.equal(faq.mainEntity[0].name, '¿La cuenta queda del negocio?');
 });
 
-test('un artículo identifica al autor sin enlazar a páginas de equipo', () => {
+test('un artículo identifica al autor y lo enlaza a su página de perfil', () => {
   const published = new Date('2026-10-07T00:00:00.000Z');
   const graph = buildStructuredGraph({
     origin,
@@ -212,8 +215,7 @@ test('un artículo identifica al autor sin enlazar a páginas de equipo', () => 
   assert.deepEqual(article.author, { '@id': `${origin}/#fernando-peralta` });
   const author = nodes.find((node) => node['@id'] === article.author['@id']);
   assert.equal(author.name, 'Fernando Peralta');
-  assert.equal(author.url, 'https://fernandoperalta.xyz');
-  assert.equal(JSON.stringify(graph).includes('/equipo/'), false);
+  assert.equal(author.url, `${origin}/equipo/fernando-peralta`);
   assert.equal(article.datePublished, '2026-10-07T00:00:00.000Z');
   assert.equal(article.image, `${origin}/blog/como-hacer-una-pagina-web.webp`);
   const webpage = nodes.find((node) => node['@type'] === 'WebPage');
@@ -249,7 +251,7 @@ test('el índice del blog identifica al autor y las portadas de sus entradas', (
   assert.equal(entry.image, webpage.primaryImageOfPage.url);
   const author = nodes.find((node) => node['@id'] === entry.author['@id']);
   assert.equal(author.name, 'Fernando Peralta');
-  assert.equal(JSON.stringify(graph).includes('/equipo/'), false);
+  assert.equal(author.url, `${origin}/equipo/fernando-peralta`);
 });
 
 test('los servicios y las entradas de blog tienen texto útil, sin precios ni niveles de partner no publicados', () => {
@@ -287,8 +289,10 @@ test('los servicios y las entradas de blog tienen texto útil, sin precios ni ni
 
 test('las URLs editoriales anteriores tienen un reemplazo directo, excluido del sitemap viejo', () => {
   const files = new Set(readdirSync('src/content/blog').filter((name) => name.endsWith('.md')).map((name) => `/blog/${name.replace(/\.md$/, '')}`));
-  assert.equal(files.size, 16);
-  assert.equal(Object.keys(blogRedirects).length, 12);
+  assert.equal(files.size, 17);
+  assert.equal(Object.keys(blogRedirects).length, 11);
+  assert.equal(Object.hasOwn(blogRedirects, '/blog/como-hacer-una-pagina-web'), false);
+  assert.equal(files.has('/blog/como-hacer-una-pagina-web'), true);
   for (const [from, to] of Object.entries(blogRedirects)) {
     assert.equal(files.has(from), false, from);
     assert.equal(files.has(to), true, to);
@@ -310,5 +314,54 @@ test('los enlaces internos del contenido no apuntan a URLs de blog retiradas', (
         assert.equal(posts.has(href), true, `${file}: ${href}`);
       }
     }
+  }
+});
+
+test('el perfil de Fernando es una ProfilePage con su persona, sin duplicar nodos', () => {
+  const graph = buildStructuredGraph({
+    origin,
+    pathname: '/equipo/fernando-peralta',
+    variant: 'profile',
+    profileSlug: 'fernando-peralta',
+    breadcrumbs: [
+      { name: 'Inicio', href: '/' },
+      { name: 'Equipo', href: '/#nosotros' },
+      { name: 'Fernando Peralta', href: '/equipo/fernando-peralta' },
+    ],
+  });
+  const nodes = graph['@graph'];
+  const page = nodes.find((node) => node['@id'] === `${origin}/equipo/fernando-peralta#webpage`);
+  assert.equal(page['@type'], 'ProfilePage');
+  assert.deepEqual(page.mainEntity, { '@id': `${origin}/#fernando-peralta` });
+  const people = nodes.filter((node) => node['@id'] === `${origin}/#fernando-peralta`);
+  assert.equal(people.length, 1);
+  assert.equal(people[0].url, `${origin}/equipo/fernando-peralta`);
+  assert.ok(people[0].sameAs.includes('https://github.com/fernandoperaltacarlos'));
+  assert.ok(people[0].knowsAbout.includes('Shopify'));
+});
+
+test('el perfil de autor presenta proyectos locales y conserva el enlace al portafolio personal', () => {
+  const profile = readFileSync('src/pages/equipo/[slug].astro', 'utf8');
+  assert.doesNotMatch(profile, /No son casos de clientes de Devstoremx/);
+  assert.match(profile, /<ProjectCard project=\{project\}/);
+  assert.match(profile, /href=\{link.href\} \{\.\.\.external\}/);
+  assert.match(profile, /proyecto completo en el portafolio personal/);
+  assert.match(profile, /<h1|PageHero/);
+  const data = readFileSync('src/data/authors.ts', 'utf8');
+  assert.match(data, /fernandoperalta\.xyz\/es\/casos-de-estudio/);
+  assert.match(data, /portfolio: 'https:\/\/fernandoperalta\.xyz\/es\/'/);
+});
+
+test('la ciudad base solo va en datos estructurados y no aparece en texto visible', () => {
+  assert.equal(site.location, '');
+  assert.equal(site.baseLocality, 'Ciudad de México');
+  const graph = buildStructuredGraph({ origin, pathname: '/', variant: 'home' });
+  const org = graph['@graph'].find((node) => Array.isArray(node['@type']) && node['@type'].includes('Organization'));
+  assert.deepEqual(org.address, { '@type': 'PostalAddress', addressLocality: 'Ciudad de México', addressCountry: 'MX' });
+  assert.equal(Object.hasOwn(org.address, 'streetAddress'), false);
+  assert.doesNotMatch(metaDescription(), /Ciudad de México|CDMX/);
+  assert.doesNotMatch(defaultTitle, /Ciudad de México|CDMX/);
+  for (const file of ['src/components/sections/Footer.astro', 'src/pages/llms.txt.ts']) {
+    assert.doesNotMatch(readFileSync(file, 'utf8'), /Ciudad de México|CDMX/, file);
   }
 });

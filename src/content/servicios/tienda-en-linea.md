@@ -42,7 +42,7 @@ order: 4
 
 Una tienda en línea no está lista cuando ya tiene un botón de comprar. Está lista cuando un pedido se puede pagar, apartar, empacar y rastrear sin que alguien reconstruya la venta en una libreta. Devstoremx arma esa operación para negocios que venden en México y quieren atender clientes en otras ciudades sin mudarse.
 
-El proyecto parte de cuatro preguntas: qué se vende, cómo se cobra, cómo se envía y quién atiende el pedido el lunes en la mañana. Con esas respuestas se elige [Shopify](/shopify), WooCommerce sobre [WordPress](/wordpress) o una tienda a la medida. Si hoy todo depende de conversaciones sueltas, la entrada [cuando vender por WhatsApp ya no alcanza](/blog/vender-por-whatsapp-pedidos-que-se-pierden) explica qué problema puede resolver una tienda.
+El proyecto parte de cuatro preguntas: qué se vende, cómo se cobra, cómo se envía y quién atiende el pedido el lunes en la mañana. Con esas respuestas se elige [Shopify](/shopify) (somos Shopify Partner en México), WooCommerce sobre [WordPress](/wordpress) o una tienda a la medida. Si hoy todo depende de conversaciones sueltas, la entrada [cuando vender por WhatsApp ya no alcanza](/blog/vender-por-whatsapp-pedidos-que-se-pierden) explica qué problema puede resolver una tienda.
 
 ## Qué incluye el desarrollo
 

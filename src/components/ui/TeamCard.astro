@@ -1,20 +1,23 @@
 ---
 import Icon from './Icon.astro';
 import ImagePlaceholder from './ImagePlaceholder.astro';
-interface Props { name: string; role: string; image?: string; linkedin?: string; portfolio?: string; tone: 'founder' | 'light' | 'dark' | 'blue'; delay?: number; }
-const { name, role, image, linkedin, portfolio, tone, delay = 0 } = Astro.props;
+interface Props { name: string; role: string; image?: string; linkedin?: string; portfolio?: string; profile?: string; tone: 'founder' | 'light' | 'dark' | 'blue'; delay?: number; }
+const { name, role, image, linkedin, portfolio, profile, tone, delay = 0 } = Astro.props;
 const tones = { founder: 'bg-line text-[#77839b]', light: 'bg-[#e3e9f3] text-[#77839b]', dark: 'bg-panel text-[#56627a]', blue: 'bg-electric text-[#c9d3ff]' };
 const alt = image ? `Retrato de ${name}, ${role} de devstoremx` : '';
+const CardTag = profile ? 'a' : 'div';
 ---
 <div data-reveal="scale" data-reveal-delay={delay} class="group flex min-w-0 flex-col gap-3">
+  <CardTag href={profile} aria-label={profile ? `Conoce a ${name}` : undefined} class="block rounded-[10px]">
   <ImagePlaceholder src={image} alt={alt} width={image ? 400 : undefined} height={image ? 400 : undefined} person class={`scroll-image-settle ${tones[tone]} aspect-square w-full`}>
     <figcaption class="absolute bottom-3 left-3 flex w-fit max-w-[calc(100%_-_1.5rem)] flex-col gap-0.5 rounded-md bg-brand px-2.5 py-1.5 text-white transition-transform duration-300 group-hover:-translate-y-1">
-      {linkedin
+      {linkedin && !profile
         ? <a href={linkedin} rel="noopener noreferrer" target="_blank" class="text-[13px] leading-[18px] font-semibold underline-offset-2 hover:underline">{name}<span class="sr-only"> en LinkedIn</span></a>
         : <span class="text-[13px] leading-[18px] font-semibold">{name}</span>}
       {role && <span class="text-[11px] leading-[14px] text-white/90">{role}</span>}
     </figcaption>
   </ImagePlaceholder>
+  </CardTag>
   {linkedin && (
     <a href={linkedin} rel="noopener noreferrer" target="_blank" class="button button-linkedin min-h-11 w-full gap-1 px-2 text-xs sm:gap-2.5 sm:px-6 sm:text-[15px]">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="shrink-0" aria-hidden="true"><path d="M20.45 0H3.55A3.55 3.55 0 0 0 0 3.55v16.9A3.55 3.55 0 0 0 3.55 24h16.9A3.55 3.55 0 0 0 24 20.45V3.55A3.55 3.55 0 0 0 20.45 0ZM7.12 20.45H3.56V9h3.56ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM20.45 20.45H16.9v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45Z" /></svg>

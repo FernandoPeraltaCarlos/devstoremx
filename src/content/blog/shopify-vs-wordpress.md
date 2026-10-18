@@ -70,4 +70,4 @@ Una migración no es solo copiar productos. Puede implicar direcciones que ya re
 
 Cambiar de herramienta para resolver un problema de contenido puede mover el costo sin mover el problema. También hay casos en los que insistir sobre la instalación actual complica demasiado el trabajo. La recomendación se hace después de revisar, no antes de que el equipo tenga accesos y contexto suficiente.
 
-En Devstoremx planteamos esa decisión dentro de la propuesta, con alcance y límites. Tú no necesitas defender Shopify o WordPress para iniciar el proyecto. Necesitas un equipo capaz de explicar cuál conviene a tu negocio y de dejarlo operable, no una discusión técnica que termine convirtiéndose en otra tarea para ti.
+En Devstoremx, que somos [Shopify Partner en México](/shopify) y también trabajamos [WordPress](/wordpress), planteamos esa decisión dentro de la propuesta, con alcance y límites. Tú no necesitas defender Shopify o WordPress para iniciar el proyecto. Necesitas un equipo capaz de explicar cuál conviene a tu negocio y de dejarlo operable, no una discusión técnica que termine convirtiéndose en otra tarea para ti.

@@ -33,7 +33,7 @@ cta:
 
 Una tienda puede parecer avanzada porque ya tiene colores, un logo y fotografías de muestra. Esa impresión cambia cuando se carga el catálogo real. Los nombres ocupan más espacio, las variantes no se explican y las colecciones responden a la organización interna del negocio, no a la forma en que compra un cliente.
 
-El [desarrollo de una tienda Shopify](/shopify) no consiste en decorar una cuenta vacía. Hay que organizar la información, adaptar la interfaz a los productos y conectar la presentación con la operación. Si esa definición queda pendiente, el equipo recibe un panel sin recibir una tienda que pueda sostener.
+El desarrollo de una tienda Shopify, que en Devstoremx hacemos como [Shopify Partner en México](/shopify), no consiste en decorar una cuenta vacía. Hay que organizar la información, adaptar la interfaz a los productos y conectar la presentación con la operación. Si esa definición queda pendiente, el equipo recibe un panel sin recibir una tienda que pueda sostener.
 
 Por eso un proyecto a medias no siempre necesita otro tema. Puede necesitar decisiones que nadie tomó: qué catálogo abre, cómo se organiza y qué tiene que entender una persona antes de pagar. Resolverlas forma parte del encargo, no de una investigación que el cliente debería completar solo.
 

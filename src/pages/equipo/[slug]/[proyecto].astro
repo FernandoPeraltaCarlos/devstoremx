@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import StructuredData from '../../../components/seo/StructuredData.astro';
+import SiteFrame from '../../../components/content/SiteFrame.astro';
+import PageHero from '../../../components/content/PageHero.astro';
+import ProjectFigure from '../../../components/content/ProjectFigure.astro';
+import ProjectCard from '../../../components/content/ProjectCard.astro';
+import { authorProjects, projectPath } from '../../../lib/author-projects';
+import { memberSlug, services, site, team } from '../../../data/landing';
+import { formatDate } from '../../../lib/seo';
+
+export function getStaticPaths() {
+  return authorProjects.map((project) => ({
+    params: { slug: project.author, proyecto: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const author = team.find((member) => memberSlug(member.image) === project.author);
+if (!author) throw new Error(`Autor no encontrado: ${project.author}`);
+const authorHref = `/equipo/${project.author}`;
+const content = project.content;
+const title = content.metaTitle;
+const description = content.description;
+const hero = project.images.find((image) => image.id === 'hero');
+const relatedServices = services.filter((service) => project.relatedServices.includes(service.href.slice(1)));
+const more = authorProjects.filter((item) => item.author === project.author && item.slug !== project.slug)
+  .sort((a, b) => Number(b.relatedServices.some((id) => project.relatedServices.includes(id))) - Number(a.relatedServices.some((id) => project.relatedServices.includes(id))))
+  .slice(0, 3);
+const crumbs = [
+  { name: 'Inicio', href: '/' },
+  { name: author.name, href: authorHref },
+  { name: content.title, href: projectPath(project) },
+];
+---
+<BaseLayout title={title} description={description} image={site.ogImage} imageAlt={content.title}
+  ogType="article" publishedTime={project.publishedAt} modifiedTime={project.updatedAt}>
+  <StructuredData slot="head" title={title} description={description} image={site.ogImage} imageAlt={content.title}
+    variant="project" project={project} breadcrumbs={crumbs} faqs={content.faqs} />
+  <SiteFrame>
+    <PageHero crumbs={crumbs} title={content.title} lede={content.intro}>
+      <p class="text-sm leading-7 text-muted-dark">
+        Por{' '}<a href={authorHref} rel="author" class="font-semibold text-cloud underline underline-offset-4">{author.name}</a>, Technical Lead de Devstoremx
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a href="/#contacto" class="button button-hero">{content.cta.label}</a>
+        <a href={project.sourceUrl} target="_blank" rel="noopener noreferrer" class="button button-dark-outline">Ver proyecto completo<span class="sr-only"> en el portafolio de Fernando (se abre en una pestaña nueva)</span></a>
+      </div>
+    </PageHero>
+
+    <article class="bg-paper">
+      <div class="container-page py-12 sm:py-16">
+        <div class="project-story">
+          <aside aria-label="Contenido de la página" class="project-nav">
+            <nav>
+              {content.sections.map((section, index) => <a href={`#alcance-${index}`}>{section.title}</a>)}
+              <a href="#entregables">Qué podemos desarrollar</a>
+              <a href="#preguntas">Preguntas frecuentes</a>
+              <a href="#experiencia">Experiencia relacionada</a>
+              <a href={authorHref}>Volver al perfil</a>
+            </nav>
+          </aside>
+          <div class="project-copy">
+            {content.sections.map((section, index) => (
+              <section id={`alcance-${index}`}>
+                <h2>{section.title}</h2>
+                {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+              </section>
+            ))}
+            <section id="entregables">
+              <h2>Qué podemos desarrollar para tu negocio</h2>
+              <p>El alcance se acuerda después de revisar tu situación. Según el proyecto, el trabajo puede incluir:</p>
+              <ul class="project-deliverables">{content.deliverables.map((item) => <li>{item}</li>)}</ul>
+              <p>No necesitas llegar con la solución técnica elegida. Nos cuentas qué debe resolver el proyecto y definimos contigo las funciones, las responsabilidades y la entrega.</p>
+              <ul class="project-sources">{relatedServices.map((service) => <li><a href={service.href}>Conoce el servicio de {service.title}</a></li>)}</ul>
+            </section>
+            <section id="preguntas">
+              <h2>Preguntas antes de contratar el desarrollo</h2>
+              {content.faqs.map((faq) => <div><h3>{faq.question}</h3><p>{faq.answer}</p></div>)}
+            </section>
+            <section id="experiencia" class="project-evidence">
+              <h2>Experiencia que respalda este trabajo</h2>
+              <p>{content.proof}</p>
+              {hero && <div class="mt-6"><ProjectFigure image={hero} /></div>}
+              <a href={project.sourceUrl} rel="noopener noreferrer" target="_blank" class="project-portfolio">Ver proyecto completo en el portafolio de Fernando<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
+            </section>
+            <aside class="project-contact" aria-labelledby="tu-proyecto">
+              <h2 id="tu-proyecto">{content.cta.title}</h2>
+              <p>{content.cta.text}</p>
+              <a href="/#contacto" class="button button-primary">{content.cta.label}</a>
+            </aside>
+            <p class="project-date">Publicado el <time datetime={project.publishedAt}>{formatDate(new Date(project.publishedAt))}</time>. Actualizado el <time datetime={project.updatedAt}>{formatDate(new Date(project.updatedAt))}</time>.</p>
+          </div>
+        </div>
+      </div>
+      <section class="container-page border-t border-line py-14" aria-labelledby="mas-proyectos">
+        <h2 id="mas-proyectos" class="text-[32px] leading-tight font-bold tracking-[-0.025em] text-ink">Otras necesidades que podemos resolver</h2>
+        <div class="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">{more.map((item) => <ProjectCard project={item} />)}</div>
+      </section>
+    </article>
+  </SiteFrame>
+</BaseLayout>
+<style>
+  .project-story { display: grid; grid-template-columns: 210px minmax(0, 760px); justify-content: space-between; gap: 56px; align-items: start; }
+  .project-nav { position: sticky; top: 32px; }
+  .project-nav nav { display: flex; flex-direction: column; gap: 16px; border-left: 2px solid var(--color-line); padding-left: 18px; font-size: 13px; line-height: 1.6; color: var(--color-muted); }
+  .project-nav a:hover { color: var(--color-brand); }
+  .project-copy { min-width: 0; }
+  .project-copy > section + section, .project-contact { margin-top: 48px; }
+  .project-copy section { scroll-margin-top: 24px; }
+  .project-copy h2 { font-size: clamp(24px, 3vw, 30px); line-height: 1.3; font-weight: 700; letter-spacing: -.025em; color: var(--color-ink); text-wrap: balance; }
+  .project-copy h3 { margin-top: 24px; font-size: 19px; line-height: 1.5; font-weight: 650; color: var(--color-ink); }
+  .project-copy p { margin-top: 18px; font-size: 18px; line-height: 1.85; color: var(--color-muted); }
+  .project-deliverables { margin-top: 20px; padding-left: 24px; list-style: disc; font-size: 18px; line-height: 1.85; color: var(--color-muted); }
+  .project-deliverables li + li { margin-top: 10px; }
+  .project-sources { display: flex; flex-direction: column; align-items: start; gap: 12px; margin-top: 20px; font-size: 15px; overflow-wrap: anywhere; }
+  .project-sources a { display: inline-block; padding-block: 4px; color: var(--color-brand); font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+  .project-copy .project-date { font-size: 13px; line-height: 1.85; }
+  .project-portfolio { display: inline-block; margin-top: 20px; padding-block: 10px; font-weight: 600; color: var(--color-brand); text-decoration: underline; text-underline-offset: 4px; }
+  .project-evidence :global(img) { max-height: 320px; }
+  .project-contact { border-top: 2px solid var(--color-brand); padding-top: 28px; }
+  .project-contact > .button { margin-top: 24px; }
+  @media (max-width: 900px) {
+    .project-story { grid-template-columns: minmax(0, 760px); justify-content: center; gap: 32px; margin-top: 40px; }
+    .project-nav { position: static; }
+    .project-nav nav { flex-direction: row; flex-wrap: wrap; gap: 12px 24px; border-left: 0; border-bottom: 1px solid var(--color-line); padding: 0 0 24px; }
+  }
+</style>

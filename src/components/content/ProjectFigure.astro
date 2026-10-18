@@ -1,0 +1,29 @@
+---
+import { formatDate } from '../../lib/seo';
+import type { ProjectImage } from '../../lib/author-projects';
+interface Props { image: ProjectImage; priority?: boolean }
+const { image, priority = false } = Astro.props;
+---
+<figure class="project-figure">
+  <a href={image.src} aria-label={`Ampliar: ${image.alt}`}>
+    <picture>
+      {image.avif && <source srcset={image.avif} type="image/avif" />}
+      <img src={image.src} alt={image.alt} width={image.width} height={image.height}
+        loading={priority ? 'eager' : 'lazy'} fetchpriority={priority ? 'high' : undefined} decoding="async" />
+    </picture>
+  </a>
+  {(image.caption || image.source) && (
+    <figcaption>
+      {image.caption}
+      {image.capturedDate && <> Captura: <time datetime={image.capturedDate}>{formatDate(new Date(image.capturedDate))}</time>.</>}
+      {image.source && <> <a href={image.source} rel="noopener noreferrer" target="_blank">Ver fuente<span class="sr-only"> (se abre en una pestaña nueva)</span></a>.</>}
+    </figcaption>
+  )}
+</figure>
+<style>
+  .project-figure { min-width: 0; }
+  .project-figure > a { display: block; border: 1px solid var(--color-line); border-radius: 10px; overflow: hidden; background: white; }
+  img { display: block; width: 100%; height: auto; max-height: 780px; object-fit: contain; }
+  figcaption { max-width: 85ch; margin-top: 12px; font-size: 12px; line-height: 1.8; color: var(--color-muted); }
+  figcaption a { text-decoration: underline; text-underline-offset: 3px; }
+</style>

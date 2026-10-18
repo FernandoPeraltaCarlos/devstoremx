@@ -218,7 +218,8 @@ export const site = {
   linkedinUrl: 'https://www.linkedin.com/company/devstoremx',
   email: 'hola@devstoremx.xyz',
   phone: '[Teléfono / WhatsApp]',
-  location: '', // Trabajo remoto en todo México: no hay ciudad ni dirección pública.
+  location: '', // Trabajo remoto en todo México: no hay ciudad ni dirección pública, no se muestra en el sitio.
+  baseLocality: 'Ciudad de México', // Solo datos estructurados (negocio con área de servicio, sin dirección visible); coincide con la ficha de Google.
 };
 
 // Devstoremx es Shopify Partner. El ID se publica en la página de Shopify, los datos estructurados y llms.txt.

@@ -1,0 +1,3273 @@
+[
+  {
+    "slug": "como-actualizar-un-tema-shopify-sin-perder-personalizaciones",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "Charlotte's Web",
+    "relatedServices": [
+      "shopify",
+      "mantenimiento-web"
+    ],
+    "title": "Actualización de tema Shopify con personalizaciones para Charlotte’s Web",
+    "metaTitle": "Actualización de tema Shopify | Charlotte’s Web | Devstoremx",
+    "name": "Charlotte’s Web",
+    "description": "Actualización del tema Shopify de Charlotte’s Web: migración de settings, secciones custom, Liquid, CSS y JavaScript, y pruebas de usuario en staging.",
+    "lead": "Actualización de un tema comercial de Shopify, con migración de settings y secciones personalizadas, adaptación de estilos y pruebas en staging.",
+    "summary": "Actualicé el tema de pago de Charlotte’s Web a una nueva versión. Revisé las secciones declaradas en todas las páginas, identifiqué las personalizaciones al compararlas con el tema actualizado y migré sus settings y código Liquid, CSS y JavaScript. Adapté los estilos y la lectura de variables globales a la nueva versión. La entrega se realizó en staging, donde se probó el flujo completo del usuario.",
+    "role": "Shopify Developer",
+    "year": "2026",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/actualizacion-sitio-web-tema-shopify/",
+    "sourcePublishedAt": "2026-10-12",
+    "liveUrl": "https://www.charlottesweb.com/",
+    "socialImage": "/equipo/proyectos/case-studies/charlottes-web-shopify-theme-upgrade/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/charlottes-web-shopify-theme-upgrade/cover-es.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Inicio actual de Charlotte’s Web con navegación y banner de campaña"
+    },
+    "stack": [
+      "Shopify",
+      "Liquid",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Shopify CLI",
+      "Git",
+      "GitHub"
+    ],
+    "skills": [
+      "Actualización de temas Shopify",
+      "Migración de personalizaciones",
+      "Configuración de secciones",
+      "Liquid",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Shopify CLI",
+      "Git y GitHub",
+      "Pruebas en staging"
+    ],
+    "challenge": "El tema comercial tenía personalizaciones que debían trasladarse a la nueva versión. Actualizar sin revisar esas modificaciones podía dejar fuera secciones custom, configuraciones y código asociado. Además, la nueva versión cambiaba la forma de leer las variables globales de estilo.",
+    "approach": "Comparé las secciones de todas las páginas con las disponibles en la versión actualizada. Migré los settings y las secciones custom junto con su código, adapté los estilos al nuevo tema y lo subí a staging para validar el recorrido del usuario.",
+    "howItWorks": {
+      "intro": "La actualización requirió separar la configuración de las secciones, el código personalizado y los cambios de compatibilidad de la nueva versión. El proceso terminó con la entrega y las pruebas en staging.",
+      "steps": [
+        {
+          "title": "Inventario de secciones por página",
+          "description": "Revisé las secciones declaradas en todas las páginas del tema existente. Esta revisión permitió identificar qué componentes utilizaba cada vista y qué configuración debía trasladarse a la nueva versión."
+        },
+        {
+          "title": "Comparación con el tema actualizado",
+          "description": "Comparé ese inventario con las secciones de la versión actualizada del tema comercial. La comparación permitió distinguir las secciones del tema de las secciones custom que requerían una migración de su código."
+        },
+        {
+          "title": "Migración de settings de cada sección",
+          "description": "Trasladé los settings de cada sección al tema nuevo para conservar su configuración. Los valores configurados se migraron junto con las secciones que los utilizan; copiar el código Liquid por sí solo no reconstruía toda la configuración de las páginas."
+        },
+        {
+          "title": "Migración del código personalizado",
+          "description": "Migré las secciones custom y su código Liquid, CSS y JavaScript. Liquid define el marcado y su integración con Shopify; CSS aporta la presentación y JavaScript los comportamientos de la interfaz que acompañan a esas secciones."
+        },
+        {
+          "title": "Adaptación de estilos y variables globales",
+          "description": "Ajusté los estilos para que las secciones migradas funcionaran con la versión actualizada. También adapté la forma en que se leen las variables globales de estilo, siguiendo la estructura de la nueva versión del tema."
+        },
+        {
+          "title": "Entrega y validación en staging",
+          "description": "Subí el tema actualizado a staging. Allí se realizaron pruebas reproduciendo el flujo completo de un usuario para revisar la integración de las secciones, sus configuraciones y comportamientos dentro del tema actualizado."
+        }
+      ]
+    },
+    "workTitle": "Migración de configuraciones y personalizaciones del tema.",
+    "work": [
+      {
+        "title": "Revisión y comparación",
+        "description": "Revisé las secciones de todas las páginas y las comparé con las del tema actualizado."
+      },
+      {
+        "title": "Settings y código custom",
+        "description": "Migré las configuraciones y las secciones personalizadas con su código Liquid, CSS y JavaScript."
+      },
+      {
+        "title": "Compatibilidad y staging",
+        "description": "Adapté los estilos y la lectura de variables globales, y subí el tema a staging para las pruebas del flujo de usuario."
+      }
+    ],
+    "resultsTitle": "Tema actualizado entregado en staging.",
+    "results": [
+      {
+        "title": "Personalizaciones trasladadas",
+        "description": "Se migraron los settings y las secciones custom identificadas en el tema existente."
+      },
+      {
+        "title": "Estilos adaptados",
+        "description": "Se ajustaron los estilos y la lectura de variables globales para la nueva versión."
+      },
+      {
+        "title": "Entrega en staging",
+        "description": "El tema se entregó en staging y se realizaron pruebas reproduciendo el flujo completo del usuario."
+      }
+    ],
+    "currentNote": "El trabajo descrito fue entregado y probado en staging. Las capturas muestran el sitio público actual de Charlotte’s Web; no documentan el staging ni confirman la publicación del tema entregado. El año 2026 es el período de referencia del trabajo, no una fecha exacta de implementación.",
+    "images": [
+      {
+        "id": "hero",
+        "src": "/equipo/proyectos/case-studies/charlottes-web-shopify-theme-upgrade/home-current.webp",
+        "avif": "/equipo/proyectos/case-studies/charlottes-web-shopify-theme-upgrade/home-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://www.charlottesweb.com/",
+        "capturedDate": "2026-10-12",
+        "alt": "Inicio actual de Charlotte’s Web con navegación y banner de campaña",
+        "caption": "Inicio del sitio público actual. Captura de referencia; no corresponde al staging entregado."
+      },
+      {
+        "id": "collection",
+        "src": "/equipo/proyectos/case-studies/charlottes-web-shopify-theme-upgrade/collection-current.webp",
+        "avif": "/equipo/proyectos/case-studies/charlottes-web-shopify-theme-upgrade/collection-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://www.charlottesweb.com/collections/all",
+        "capturedDate": "2026-10-12",
+        "alt": "Colección actual de Charlotte’s Web con filtros y tarjetas de productos",
+        "caption": "Colección del sitio público actual con filtros y catálogo. La captura muestra la versión disponible al momento de consulta."
+      },
+      {
+        "id": "product",
+        "src": "/equipo/proyectos/case-studies/charlottes-web-shopify-theme-upgrade/product-current.webp",
+        "avif": "/equipo/proyectos/case-studies/charlottes-web-shopify-theme-upgrade/product-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://www.charlottesweb.com/products/calm-25mg-thc-free-cbd-gummies",
+        "capturedDate": "2026-10-12",
+        "alt": "Página actual de producto de Charlotte’s Web con galería, precio y opciones de compra",
+        "caption": "Ficha de producto del sitio público actual. Captura de referencia para mostrar la interfaz de la tienda."
+      }
+    ],
+    "gallery": [
+      {
+        "id": "collection",
+        "layout": "detail"
+      },
+      {
+        "id": "product",
+        "layout": "detail"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Charlotte’s Web — Inicio público actual",
+        "href": "https://www.charlottesweb.com/"
+      },
+      {
+        "label": "Charlotte’s Web — Colección pública actual",
+        "href": "https://www.charlottesweb.com/collections/all"
+      },
+      {
+        "label": "Charlotte’s Web — Producto público actual",
+        "href": "https://www.charlottesweb.com/products/calm-25mg-thc-free-cbd-gummies"
+      },
+      {
+        "label": "Shopify — Actualización de temas y conservación de cambios de código",
+        "href": "https://help.shopify.com/en/manual/online-store/themes/managing-themes/updating-themes"
+      }
+    ]
+  },
+  {
+    "slug": "como-desarrollar-y-publicar-sitios-web-en-sitecore",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "HSBC México",
+    "relatedServices": [
+      "desarrollo-web"
+    ],
+    "title": "Desarrollo y lanzamiento de sitios web en Sitecore para HSBC Innovation Banking",
+    "metaTitle": "Desarrollo web Sitecore y QC | HSBC Innovation Banking | Devstoremx",
+    "name": "HSBC Innovation Banking",
+    "description": "Desarrollo, QC y despliegue de HSBC Innovation Banking para Singapur, India e Indonesia con Sitecore, HTML y administración del proyecto en Monday.com.",
+    "lead": "Participación en el desarrollo, control de calidad y despliegue de HSBC Innovation Banking para Singapur, India e Indonesia, con Sitecore, HTML y administración en Monday.com.",
+    "summary": "En HSBC participé en el desarrollo, QC y despliegue durante el lanzamiento de los sitios web de Innovation Banking para Singapur, India e Indonesia. Utilicé Sitecore y HTML para el trabajo sobre las páginas y Monday.com para la administración de las actividades del proyecto. Mi participación formó parte del trabajo del equipo de lanzamiento.",
+    "role": "Web Production Manager · HSBC",
+    "year": "2024–2026",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/desarrollo-lanzamiento-sitio-web-sitecore/",
+    "sourcePublishedAt": "2026-10-12",
+    "liveUrl": "https://www.hsbcinnovationbanking.com/sg/en",
+    "socialImage": "/equipo/proyectos/case-studies/hsbc-innovation-banking-sitecore-launch/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/hsbc-innovation-banking-sitecore-launch/cover-es.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Inicio actual de HSBC Innovation Banking Singapur con navegación regional y banner principal"
+    },
+    "stack": [
+      "Sitecore",
+      "HTML",
+      "Monday.com"
+    ],
+    "skills": [
+      "Desarrollo web con Sitecore",
+      "HTML",
+      "Control de calidad (QC)",
+      "Despliegue web",
+      "Lanzamiento de sitios regionales",
+      "Monday.com",
+      "Administración de proyectos"
+    ],
+    "challenge": "El proyecto requería preparar los sitios regionales de HSBC Innovation Banking para su lanzamiento y coordinar el trabajo de desarrollo, control de calidad y despliegue. Mi participación abarcó esas tres etapas, con la administración del trabajo en Monday.com.",
+    "approach": "Trabajé sobre las páginas con Sitecore y HTML, participé en el control de calidad y en el despliegue del lanzamiento. La administración de las actividades se realizó en Monday.com, manteniendo el seguimiento del trabajo del proyecto.",
+    "howItWorks": {
+      "intro": "El trabajo combinó implementación de páginas en un CMS empresarial, revisión de calidad, despliegue y administración del proyecto. Participé en estas actividades dentro del equipo del lanzamiento regional.",
+      "steps": [
+        {
+          "title": "Administración del trabajo en Monday.com",
+          "description": "Utilicé Monday.com para administrar las actividades del proyecto. Esta herramienta acompañó el trabajo de desarrollo, QC y despliegue, mientras Sitecore y HTML se utilizaron para la implementación de las páginas."
+        },
+        {
+          "title": "Desarrollo de páginas con Sitecore y HTML",
+          "description": "Sitecore fue el entorno de trabajo sobre los sitios y HTML la tecnología utilizada para el marcado de las páginas. Mi participación en el desarrollo se realizó dentro de ese CMS y del flujo de trabajo del equipo."
+        },
+        {
+          "title": "Control de calidad antes del lanzamiento",
+          "description": "Participé en el QC de los sitios como parte de la preparación del lanzamiento. La revisión de calidad se integró con el trabajo de desarrollo y el seguimiento de actividades del proyecto administradas en Monday.com."
+        },
+        {
+          "title": "Participación en el despliegue",
+          "description": "También participé en el despliegue del lanzamiento de los sitios regionales. Esta etapa completó mi intervención en el proceso de desarrollo, control de calidad y lanzamiento web, coordinado con el resto del equipo."
+        }
+      ]
+    },
+    "workTitle": "Desarrollo, revisión y despliegue del lanzamiento.",
+    "work": [
+      {
+        "title": "Desarrollo en Sitecore y HTML",
+        "description": "Participé en el trabajo de desarrollo de las páginas de Innovation Banking."
+      },
+      {
+        "title": "Control de calidad",
+        "description": "Participé en el QC del lanzamiento de los sitios regionales."
+      },
+      {
+        "title": "Despliegue y administración",
+        "description": "Participé en el despliegue y utilicé Monday.com para administrar las actividades del proyecto."
+      }
+    ],
+    "resultsTitle": "Participación en el lanzamiento regional.",
+    "results": [
+      {
+        "title": "Desarrollo y QC del lanzamiento",
+        "description": "Contribuí al desarrollo y control de calidad de los sitios de Singapur, India e Indonesia."
+      },
+      {
+        "title": "Despliegue del sitio web",
+        "description": "Participé en el despliegue como parte del equipo de lanzamiento, con administración del trabajo en Monday.com."
+      }
+    ],
+    "currentNote": "Mi participación en el lanzamiento incluyó desarrollo, QC y despliegue dentro de un equipo. Las capturas corresponden a los sitios públicos actuales de Singapur e India, y pueden incluir cambios posteriores. El período 2024–2026 corresponde a mi trabajo en HSBC y no indica fechas exactas de cada lanzamiento.",
+    "images": [
+      {
+        "id": "hero",
+        "src": "/equipo/proyectos/case-studies/hsbc-innovation-banking-sitecore-launch/singapore-home-current.webp",
+        "avif": "/equipo/proyectos/case-studies/hsbc-innovation-banking-sitecore-launch/singapore-home-current.avif",
+        "width": 1440,
+        "height": 716,
+        "source": "https://www.hsbcinnovationbanking.com/sg/en",
+        "capturedDate": "2026-10-12",
+        "alt": "Inicio actual de HSBC Innovation Banking Singapur con navegación regional y banner principal",
+        "caption": "Sitio público actual de HSBC Innovation Banking Singapur. Captura de referencia; puede incluir cambios posteriores al lanzamiento en el que participé."
+      },
+      {
+        "id": "india",
+        "src": "/equipo/proyectos/case-studies/hsbc-innovation-banking-sitecore-launch/india-home-current.webp",
+        "avif": "/equipo/proyectos/case-studies/hsbc-innovation-banking-sitecore-launch/india-home-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://www.hsbcinnovationbanking.com/in/en",
+        "capturedDate": "2026-10-12",
+        "alt": "Inicio actual de HSBC Innovation Banking India con selector de país y contenido regional",
+        "caption": "Sitio público actual de HSBC Innovation Banking India. La captura muestra la versión disponible al momento de consulta."
+      },
+      {
+        "id": "singaporeSections",
+        "src": "/equipo/proyectos/case-studies/hsbc-innovation-banking-sitecore-launch/singapore-sections-current.webp",
+        "avif": "/equipo/proyectos/case-studies/hsbc-innovation-banking-sitecore-launch/singapore-sections-current.avif",
+        "width": 1440,
+        "height": 583,
+        "source": "https://www.hsbcinnovationbanking.com/sg/en",
+        "capturedDate": "2026-10-12",
+        "alt": "Sección actual de soluciones de HSBC Innovation Banking Singapur con categorías de empresas y contenido",
+        "caption": "Sección de soluciones del sitio público de Singapur. Captura de referencia del contenido y la interfaz actuales."
+      }
+    ],
+    "gallery": [
+      {
+        "id": "india",
+        "layout": "detail"
+      },
+      {
+        "id": "singaporeSections",
+        "layout": "detail"
+      }
+    ],
+    "sources": [
+      {
+        "label": "HSBC Innovation Banking — Sitio de Singapur",
+        "href": "https://www.hsbcinnovationbanking.com/sg/en"
+      },
+      {
+        "label": "HSBC Innovation Banking — Sitio de India",
+        "href": "https://www.hsbcinnovationbanking.com/in/en"
+      }
+    ]
+  },
+  {
+    "slug": "como-automatizar-el-control-de-calidad-con-una-extension-chromium",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "HSBC México",
+    "relatedServices": [
+      "automatizaciones",
+      "integraciones"
+    ],
+    "title": "Extensión de Chromium que redujo 80 % los errores en tickets en HSBC México",
+    "metaTitle": "Extensión Chromium para control de tickets | HSBC México | Devstoremx",
+    "name": "HSBC México",
+    "description": "Extensión de Chromium en JavaScript para HSBC México: búsqueda en el DOM y checklist de control de calidad que redujo 80 % los errores en tickets.",
+    "lead": "Una extensión en JavaScript para buscar en el DOM, guardar itempaths y verificar los pasos de desarrollo y control de calidad de cada ticket, usada por un equipo de más de 20 desarrolladores.",
+    "summary": "En HSBC México desarrollé una extensión de Chromium en JavaScript, versionada y distribuida con Git, para los tickets del equipo de desarrollo web. Busca en el DOM, guarda itempaths y verifica los pasos de desarrollo y control de calidad de cada ticket. Su uso redujo los errores un 80 % en un equipo de más de 20 desarrolladores, según auditorías mensuales. Es una herramienta interna que no expone contenido sensible, y su código es público en GitHub.",
+    "role": "Web Production Manager",
+    "year": "2025",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/desarrollo-extension-chromium-control-calidad-tickets/",
+    "sourcePublishedAt": "2026-10-12",
+    "socialImage": "/equipo/proyectos/case-studies/hsbc-chromium-extension-ticket-qc/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/hsbc-extension-cover.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Popup de la extensión de Chromium con las pestañas Ticket QC y Doc Search"
+    },
+    "stack": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Manifest V3",
+      "API de extensiones de Chromium",
+      "Git",
+      "GitHub"
+    ],
+    "skills": [
+      "Desarrollo de extensiones de Chromium",
+      "JavaScript",
+      "Manipulación del DOM",
+      "Manifest V3",
+      "Control de calidad",
+      "Herramientas internas",
+      "Git y GitHub"
+    ],
+    "challenge": "Cada ticket seguía pasos que debían aplicarse siempre igual: revisar el contexto, clasificar adjuntos, agregar itempaths, comentarios y QA links, y pasos adicionales en los tickets que eliminan páginas. En un equipo de más de 20 desarrolladores, omitir un paso generaba errores, y ubicar los elementos correctos en el DOM de cada página requería trabajo manual.",
+    "approach": "Construí una extensión con Manifest V3, JavaScript puro, HTML y CSS y sin dependencias externas. Un popup con pestañas agrupa las herramientas, un content script corre en la página y se comunica con el popup mediante mensajes, y la configuración persiste en el navegador. La versioné con Git y la distribuí al equipo.",
+    "howItWorks": {
+      "intro": "Construí una extensión con Manifest V3, JavaScript puro, HTML y CSS y sin dependencias externas. Un popup con pestañas agrupa las herramientas, un content script corre en la página y se comunica con el popup mediante mensajes, y la configuración persiste en el navegador. La versioné con Git y la distribuí al equipo.",
+      "steps": [
+        {
+          "title": "Búsqueda DOM",
+          "description": "Ubicar los elementos en la página"
+        },
+        {
+          "title": "Itempaths",
+          "description": "Guardar las rutas de los items"
+        },
+        {
+          "title": "Checklist",
+          "description": "Verificar pasos de desarrollo y QC"
+        },
+        {
+          "title": "Ticket",
+          "description": "Comentarios y QA links agregados"
+        }
+      ]
+    },
+    "workTitle": "Búsqueda en el DOM, itempaths y checklist de control de calidad.",
+    "work": [
+      {
+        "title": "Búsqueda y resaltado en el DOM",
+        "description": "Link Finder resalta enlaces de la página por URL o por texto visible, con búsqueda parcial o exacta y color y tamaño personalizados."
+      },
+      {
+        "title": "Búsqueda de documentos",
+        "description": "Doc Search escanea la página con un selector de referencia y un selector de cuerpo, lista los elementos encontrados y aplica el resaltado a cada uno con su propio color y tamaño."
+      },
+      {
+        "title": "Checklist de control de calidad",
+        "description": "Un checklist por tipo de ticket (amend, demise y new page) cubre el contexto, la clasificación de adjuntos, los TODOs y los pasos que exige cada tipo, como redirecciones, crawl y entrypoints en los tickets demise."
+      },
+      {
+        "title": "Itempaths y comentarios",
+        "description": "La extensión conserva los itempaths, copia los comentarios de los TODOs y confirma que se agregaron itempaths, comentarios y QA links al ticket."
+      },
+      {
+        "title": "Limpiador de texto",
+        "description": "Un limpiador convierte texto a formato tipo slug y lo copia."
+      },
+      {
+        "title": "Versionado y distribución",
+        "description": "Versioné la extensión con Git y la distribuí al equipo; el repositorio es público en GitHub."
+      }
+    ],
+    "resultsTitle": "Menos errores en el equipo de desarrollo.",
+    "results": [
+      {
+        "title": "80 % menos errores",
+        "description": "Los errores bajaron un 80 % en un equipo de más de 20 desarrolladores, según auditorías mensuales."
+      },
+      {
+        "title": "Los mismos pasos en cada ticket",
+        "description": "El checklist volvió explícitos y repetibles los pasos de desarrollo y control de calidad de cada tipo de ticket."
+      },
+      {
+        "title": "Herramienta interna, código público",
+        "description": "La extensión no expone contenido sensible y su código fuente está disponible en GitHub."
+      }
+    ],
+    "images": [
+      {
+        "id": "hero",
+        "src": "/equipo/proyectos/case-studies/hsbc-chromium-extension-ticket-qc/extension-popup.webp",
+        "avif": "/equipo/proyectos/case-studies/hsbc-chromium-extension-ticket-qc/extension-popup.avif",
+        "width": 1200,
+        "height": 700,
+        "source": "https://github.com/FernandoPeraltaCarlos/extension",
+        "capturedDate": "2026-10-12",
+        "alt": "Popup de la extensión de Chromium con la pestaña Ticket QC (tipo de ticket, TODOs e itempaths) y la pestaña Doc Search con selectores y botones Scan, Apply y Clear",
+        "caption": "El popup de la extensión: las pestañas Ticket QC y Doc Search, renderizadas desde el repositorio público."
+      }
+    ],
+    "gallery": [],
+    "sources": [
+      {
+        "label": "Código fuente de la extensión en GitHub",
+        "href": "https://github.com/FernandoPeraltaCarlos/extension"
+      }
+    ]
+  },
+  {
+    "slug": "como-personalizar-el-inicio-y-las-paginas-de-producto-en-shopify",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "Applabmx",
+    "relatedServices": [
+      "shopify"
+    ],
+    "title": "Desarrollo de tema Shopify: inicio y producto para Cream Right",
+    "metaTitle": "Tema Shopify: inicio y producto | Cream Right | Devstoremx",
+    "name": "Cream Right",
+    "description": "Desarrollo del inicio y la página de producto del tema Shopify de Cream Right con Liquid, HTML, CSS y JavaScript. Proyecto realizado en Applabmx.",
+    "lead": "Desarrollo de la página de inicio y la pantalla de producto dentro del tema Shopify.",
+    "summary": "En Applabmx desarrollé la página de inicio y la pantalla de producto del sitio web de Cream Right. Implementé estas partes del tema Shopify con Liquid, HTML, CSS y JavaScript, dentro de un equipo que trabajaba con Tailwind, Shopify CLI, Git y GitHub.",
+    "role": "Shopify Developer · Applabmx",
+    "year": "2024–2025",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/desarrollo-sitio-web-tema-shopify-inicio-producto/",
+    "sourcePublishedAt": "2026-10-12",
+    "liveUrl": "https://www.creamright.com/",
+    "socialImage": "/equipo/proyectos/case-studies/cream-right-shopify-theme-home-product/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/cream-right-shopify-theme-home-product/cover-es.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Inicio actual de Cream Right con navegación y banner de productos"
+    },
+    "stack": [
+      "Shopify",
+      "Liquid",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "Shopify CLI",
+      "Git",
+      "GitHub"
+    ],
+    "skills": [
+      "Desarrollo de temas Shopify",
+      "Liquid",
+      "Página de inicio",
+      "Página de producto",
+      "Tailwind CSS",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Shopify CLI",
+      "Git y GitHub"
+    ],
+    "challenge": "El alcance asignado incluía construir el inicio de la tienda y la pantalla de producto, integrando ambas vistas con el tema y el contenido de Shopify.",
+    "approach": "Desarrollé las plantillas y secciones del tema con Liquid para la integración con Shopify, HTML para el marcado, CSS y Tailwind para la presentación, y JavaScript para las interacciones de la interfaz.",
+    "howItWorks": {
+      "intro": "El trabajo conectó dos vistas del tema: el inicio, donde se presenta la tienda, y la página que muestra la información de un producto. Cada una utiliza su propio contexto de contenido dentro de Shopify.",
+      "steps": [
+        {
+          "title": "Secciones de la página de inicio",
+          "description": "Liquid genera el HTML de las secciones del inicio a partir del contenido del tema. Desarrollé la estructura de estos bloques y su presentación con HTML, CSS y Tailwind, manteniendo el trabajo dentro del tema Shopify."
+        },
+        {
+          "title": "Plantilla de producto",
+          "description": "La pantalla de producto utiliza el contexto del producto en Shopify para presentar su información. Implementé esta vista con Liquid y HTML, junto con los estilos e interacciones de la interfaz en CSS y JavaScript."
+        },
+        {
+          "title": "Desarrollo sobre el mismo tema",
+          "description": "El inicio y la pantalla de producto comparten el entorno del tema, aunque muestran contenido distinto. Utilicé Shopify CLI para trabajar sobre el tema y Git y GitHub para integrar los cambios con el trabajo del equipo."
+        }
+      ]
+    },
+    "workTitle": "Desarrollo realizado en el tema Shopify.",
+    "work": [
+      {
+        "title": "Página de inicio",
+        "description": "Desarrollé las secciones y la presentación del home de la tienda."
+      },
+      {
+        "title": "Pantalla de producto",
+        "description": "Implementé la página de producto dentro del tema Shopify."
+      }
+    ],
+    "resultsTitle": "Secciones y funcionalidades entregadas.",
+    "results": [
+      {
+        "title": "Inicio implementado",
+        "description": "Se entregó la página de inicio como parte del desarrollo del tema."
+      },
+      {
+        "title": "Página de producto implementada",
+        "description": "Se entregó la pantalla de producto integrada con el contexto de Shopify."
+      }
+    ],
+    "currentNote": "El período de referencia corresponde a mi trabajo en Applabmx, de junio de 2024 a abril de 2025; no indica las fechas exactas de este proyecto. Las capturas muestran el sitio público actual y pueden incluir cambios posteriores.",
+    "images": [
+      {
+        "id": "hero",
+        "src": "/equipo/proyectos/case-studies/cream-right-shopify-theme-home-product/home-current.webp",
+        "avif": "/equipo/proyectos/case-studies/cream-right-shopify-theme-home-product/home-current.avif",
+        "width": 1440,
+        "height": 716,
+        "source": "https://www.creamright.com/",
+        "capturedDate": "2026-10-12",
+        "alt": "Inicio actual de Cream Right con navegación y banner de productos",
+        "caption": "Versión actual del sitio. Inicio actual de Cream Right con navegación y banner de productos. Captura de referencia; puede incluir cambios posteriores a mi trabajo."
+      },
+      {
+        "id": "sections",
+        "src": "/equipo/proyectos/case-studies/cream-right-shopify-theme-home-product/sections-current.webp",
+        "avif": "/equipo/proyectos/case-studies/cream-right-shopify-theme-home-product/sections-current.avif",
+        "width": 1440,
+        "height": 716,
+        "source": "https://www.creamright.com/",
+        "capturedDate": "2026-10-12",
+        "alt": "Sección actual de categorías de Cream Right con enlaces al catálogo",
+        "caption": "Versión actual del sitio. Sección actual de categorías de Cream Right con enlaces al catálogo. Captura de referencia; puede incluir cambios posteriores a mi trabajo."
+      },
+      {
+        "id": "product",
+        "src": "/equipo/proyectos/case-studies/cream-right-shopify-theme-home-product/product-current.webp",
+        "avif": "/equipo/proyectos/case-studies/cream-right-shopify-theme-home-product/product-current.avif",
+        "width": 1440,
+        "height": 716,
+        "source": "https://www.creamright.com/collections/best-sellers/products/creamright-1-pint-stainless-steel-whipped-cream-dispenser",
+        "capturedDate": "2026-10-12",
+        "alt": "Página actual de producto de Cream Right con fotografías, precio e información de compra",
+        "caption": "Versión actual del sitio. Página actual de producto de Cream Right con fotografías, precio e información de compra. Captura de referencia; puede incluir cambios posteriores a mi trabajo."
+      }
+    ],
+    "gallery": [
+      {
+        "id": "sections",
+        "layout": "detail"
+      },
+      {
+        "id": "product",
+        "layout": "detail"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Cream Right — Sitio público actual",
+        "href": "https://www.creamright.com/"
+      },
+      {
+        "label": "Cream Right — Sección actual de categorías de Cream Right con enlaces al catálogo",
+        "href": "https://www.creamright.com/"
+      },
+      {
+        "label": "Cream Right — Página actual de producto de Cream Right con fotografías, precio e información de compra",
+        "href": "https://www.creamright.com/collections/best-sellers/products/creamright-1-pint-stainless-steel-whipped-cream-dispenser"
+      }
+    ]
+  },
+  {
+    "slug": "como-crear-landing-pages-promocionales-en-shopify",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "Applabmx",
+    "relatedServices": [
+      "shopify",
+      "landing-pages"
+    ],
+    "title": "Tema Shopify: landing pages, popup y colecciones para Palmer’s",
+    "metaTitle": "Tema Shopify: landing pages y popup | Palmer’s | Devstoremx",
+    "name": "Palmer’s",
+    "description": "Landing pages promocionales, popup de inicio y pantalla de colecciones para el tema Shopify de Palmer’s México. Desarrollo en Liquid y JavaScript.",
+    "lead": "Landing pages para promociones, popup del inicio y pantalla de colecciones en el tema Shopify.",
+    "summary": "En Applabmx desarrollé landing pages promocionales para Palmer’s México. También creé el popup de la página de inicio y la pantalla de colecciones, trabajando sobre el tema Shopify con Liquid, HTML, CSS y JavaScript.",
+    "role": "Shopify Developer · Applabmx",
+    "year": "2024–2025",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/landing-pages-promocionales-sitio-web-tema-shopify/",
+    "sourcePublishedAt": "2026-10-12",
+    "liveUrl": "https://www.palmers.com.mx/",
+    "socialImage": "/equipo/proyectos/case-studies/palmers-shopify-theme-promo-collections/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/palmers-shopify-theme-promo-collections/cover-es.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Inicio actual de Palmer’s México con banner de campaña y navegación"
+    },
+    "stack": [
+      "Shopify",
+      "Liquid",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "Shopify CLI",
+      "Git",
+      "GitHub"
+    ],
+    "skills": [
+      "Desarrollo de temas Shopify",
+      "Liquid",
+      "Landing pages promocionales",
+      "Popups",
+      "Colecciones Shopify",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Shopify CLI",
+      "Git y GitHub"
+    ],
+    "challenge": "La tienda requería páginas para promociones, un popup en el inicio y una pantalla de colecciones. Mi participación se concentró en implementar esas piezas del tema Shopify.",
+    "approach": "Construí las landing pages, el popup y la pantalla de colecciones como partes del tema. Utilicé Liquid para integrar el contenido de Shopify y HTML, CSS, Tailwind y JavaScript para desarrollar su interfaz.",
+    "howItWorks": {
+      "intro": "Las páginas promocionales, el popup y las colecciones cumplen funciones distintas dentro de la tienda. El desarrollo se realizó sobre el tema Shopify, con plantillas y componentes para cada vista.",
+      "steps": [
+        {
+          "title": "Landing pages promocionales",
+          "description": "Implementé las páginas de promociones con Liquid y HTML para estructurar su contenido, y CSS y Tailwind para su presentación. Estas páginas forman parte del sitio web y tienen una implementación separada de la vista de colecciones."
+        },
+        {
+          "title": "Popup de la página de inicio",
+          "description": "Desarrollé el componente del popup y su presentación dentro del inicio. HTML y CSS definen su estructura y estilos; JavaScript implementa el comportamiento de la interfaz del componente."
+        },
+        {
+          "title": "Pantalla de colecciones",
+          "description": "La vista de colecciones utiliza el contenido del catálogo de Shopify. Implementé su presentación dentro del tema mediante Liquid, con el marcado y los estilos necesarios para mostrar los productos de cada colección."
+        }
+      ]
+    },
+    "workTitle": "Desarrollo realizado en el tema Shopify.",
+    "work": [
+      {
+        "title": "Landing pages para promociones",
+        "description": "Creé páginas específicas para las promociones de la marca."
+      },
+      {
+        "title": "Popup del inicio",
+        "description": "Desarrollé el popup mostrado en la página de inicio."
+      },
+      {
+        "title": "Pantalla de colecciones",
+        "description": "Construí la vista de colecciones dentro del tema Shopify."
+      }
+    ],
+    "resultsTitle": "Secciones y funcionalidades entregadas.",
+    "results": [
+      {
+        "title": "Páginas de promociones",
+        "description": "Se entregaron las landing pages solicitadas para las campañas."
+      },
+      {
+        "title": "Componentes del tema",
+        "description": "Se entregaron el popup del inicio y la pantalla de colecciones."
+      }
+    ],
+    "currentNote": "El período de referencia corresponde a mi trabajo en Applabmx, de junio de 2024 a abril de 2025; no indica las fechas exactas de este proyecto. Las capturas muestran el sitio público actual y pueden incluir cambios posteriores.",
+    "images": [
+      {
+        "id": "hero",
+        "src": "/equipo/proyectos/case-studies/palmers-shopify-theme-promo-collections/home-current.webp",
+        "avif": "/equipo/proyectos/case-studies/palmers-shopify-theme-promo-collections/home-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://www.palmers.com.mx/",
+        "capturedDate": "2026-10-12",
+        "alt": "Inicio actual de Palmer’s México con banner de campaña y navegación",
+        "caption": "Versión actual del sitio. Inicio actual de Palmer’s México con banner de campaña y navegación. Captura de referencia; puede incluir cambios posteriores a mi trabajo."
+      },
+      {
+        "id": "collection",
+        "src": "/equipo/proyectos/case-studies/palmers-shopify-theme-promo-collections/collection-current.webp",
+        "avif": "/equipo/proyectos/case-studies/palmers-shopify-theme-promo-collections/collection-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://www.palmers.com.mx/collections/cuerpo",
+        "capturedDate": "2026-10-12",
+        "alt": "Colección actual de cuerpo, manos y pies de Palmer’s México",
+        "caption": "Versión actual del sitio. Colección actual de cuerpo, manos y pies de Palmer’s México. Captura de referencia; puede incluir cambios posteriores a mi trabajo."
+      }
+    ],
+    "gallery": [
+      {
+        "id": "collection",
+        "layout": "detail"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Palmer’s — Sitio público actual",
+        "href": "https://www.palmers.com.mx/"
+      },
+      {
+        "label": "Palmer’s — Colección actual de cuerpo, manos y pies de Palmer’s México",
+        "href": "https://www.palmers.com.mx/collections/cuerpo"
+      }
+    ]
+  },
+  {
+    "slug": "como-crear-filtros-de-productos-con-metafields-en-shopify",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "Applabmx",
+    "relatedServices": [
+      "shopify"
+    ],
+    "title": "Tema Shopify: filtros con metafields para Exclusive Iron Doors",
+    "metaTitle": "Tema Shopify y filtros | Exclusive Iron Doors | Devstoremx",
+    "name": "Exclusive Iron Doors",
+    "description": "Desarrollo del tema Shopify de Exclusive Iron Doors: filtros con metafields, galería, secciones del inicio e integración de una app de favoritos.",
+    "lead": "Secciones de inicio, galería, filtros de colecciones basados en metafields e integración de favoritos.",
+    "summary": "En Applabmx desarrollé secciones del inicio, la galería y las páginas de colecciones del sitio web de Exclusive Iron Doors. Implementé la lógica de filtros con metafields de Shopify y la integración con una app de favoritos dentro del tema.",
+    "role": "Shopify Developer · Applabmx",
+    "year": "2024–2025",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/filtros-colecciones-sitio-web-tema-shopify/",
+    "sourcePublishedAt": "2026-10-12",
+    "liveUrl": "https://exclusiveirondoors.com/",
+    "socialImage": "/equipo/proyectos/case-studies/exclusive-iron-doors-shopify-theme-filters/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/exclusive-iron-doors-shopify-theme-filters/cover-es.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Inicio actual de Exclusive Iron Doors con navegación y banner de puertas"
+    },
+    "stack": [
+      "Shopify",
+      "Liquid",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "Shopify CLI",
+      "Git",
+      "GitHub"
+    ],
+    "skills": [
+      "Desarrollo de temas Shopify",
+      "Liquid",
+      "Metafields de Shopify",
+      "Filtros de colecciones",
+      "Integración de favoritos",
+      "Galerías",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Shopify CLI",
+      "Git y GitHub"
+    ],
+    "challenge": "El alcance incluía presentar el catálogo en colecciones, implementar filtros basados en los metadatos de los productos y conectar la interfaz con una app de favoritos. También desarrollé secciones del inicio y la galería.",
+    "approach": "Desarrollé las vistas del tema con Liquid, HTML, CSS y JavaScript. Utilicé los metafields de Shopify como base para la lógica de filtros e integré la app de favoritos con la interfaz de la tienda.",
+    "howItWorks": {
+      "intro": "El desarrollo combinó la presentación del catálogo con dos funcionalidades: filtrar productos según sus metafields y utilizar la app de favoritos desde el tema Shopify.",
+      "steps": [
+        {
+          "title": "Metafields como datos de filtrado",
+          "description": "Los metafields de Shopify contienen campos personalizados asociados a los productos. Implementé la lógica de filtros de las colecciones tomando esos valores como criterios, en lugar de depender únicamente del texto visible en las tarjetas del catálogo."
+        },
+        {
+          "title": "Interfaz de las colecciones",
+          "description": "Liquid conecta la vista con el catálogo de Shopify; HTML y CSS estructuran y presentan los controles y productos. JavaScript participa en el comportamiento de la interfaz de filtrado dentro del tema."
+        },
+        {
+          "title": "Integración de favoritos",
+          "description": "Integré una app de favoritos existente con la interfaz del tema. El trabajo consistió en conectar esa funcionalidad con la tienda; la gestión de la lista corresponde a la app integrada."
+        },
+        {
+          "title": "Inicio y galería",
+          "description": "Desarrollé las secciones del inicio y la galería como vistas del tema, con Liquid, HTML, CSS y JavaScript. La galería presenta imágenes, mientras que las colecciones organizan el catálogo de productos."
+        }
+      ]
+    },
+    "workTitle": "Desarrollo realizado en el tema Shopify.",
+    "work": [
+      {
+        "title": "Inicio y galería",
+        "description": "Desarrollé secciones de la página de inicio y la galería."
+      },
+      {
+        "title": "Colecciones con filtros",
+        "description": "Construí las páginas de colecciones y la lógica basada en metafields."
+      },
+      {
+        "title": "App de favoritos",
+        "description": "Integré la funcionalidad de favoritos con el tema Shopify."
+      }
+    ],
+    "resultsTitle": "Secciones y funcionalidades entregadas.",
+    "results": [
+      {
+        "title": "Filtros por campos personalizados",
+        "description": "Se entregó la lógica de filtrado basada en metafields de Shopify."
+      },
+      {
+        "title": "Vistas e integración",
+        "description": "Se entregaron las secciones de inicio, galería, colecciones e integración de favoritos."
+      }
+    ],
+    "currentNote": "El período de referencia corresponde a mi trabajo en Applabmx, de junio de 2024 a abril de 2025; no indica las fechas exactas de este proyecto. Las capturas muestran el sitio público actual y pueden incluir cambios posteriores.",
+    "images": [
+      {
+        "id": "hero",
+        "src": "/equipo/proyectos/case-studies/exclusive-iron-doors-shopify-theme-filters/home-current.webp",
+        "avif": "/equipo/proyectos/case-studies/exclusive-iron-doors-shopify-theme-filters/home-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://exclusiveirondoors.com/",
+        "capturedDate": "2026-10-12",
+        "alt": "Inicio actual de Exclusive Iron Doors con navegación y banner de puertas",
+        "caption": "Versión actual del sitio. Inicio actual de Exclusive Iron Doors con navegación y banner de puertas. Captura de referencia; puede incluir cambios posteriores a mi trabajo."
+      },
+      {
+        "id": "collection",
+        "src": "/equipo/proyectos/case-studies/exclusive-iron-doors-shopify-theme-filters/collection-current.webp",
+        "avif": "/equipo/proyectos/case-studies/exclusive-iron-doors-shopify-theme-filters/collection-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://exclusiveirondoors.com/collections/all",
+        "capturedDate": "2026-10-12",
+        "alt": "Colección actual de Exclusive Iron Doors con controles de estilo, tamaño, apertura y precio",
+        "caption": "Versión actual del sitio. Colección actual de Exclusive Iron Doors con controles de estilo, tamaño, apertura y precio. Captura de referencia; puede incluir cambios posteriores a mi trabajo."
+      },
+      {
+        "id": "gallery",
+        "src": "/equipo/proyectos/case-studies/exclusive-iron-doors-shopify-theme-filters/gallery-current.webp",
+        "avif": "/equipo/proyectos/case-studies/exclusive-iron-doors-shopify-theme-filters/gallery-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://exclusiveirondoors.com/blogs/gallery",
+        "capturedDate": "2026-10-12",
+        "alt": "Galería actual de Exclusive Iron Doors con fotografías de proyectos y categorías",
+        "caption": "Versión actual del sitio. Galería actual de Exclusive Iron Doors con fotografías de proyectos y categorías. Captura de referencia; puede incluir cambios posteriores a mi trabajo."
+      }
+    ],
+    "gallery": [
+      {
+        "id": "collection",
+        "layout": "detail"
+      },
+      {
+        "id": "gallery",
+        "layout": "detail"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Exclusive Iron Doors — Sitio público actual",
+        "href": "https://exclusiveirondoors.com/"
+      },
+      {
+        "label": "Exclusive Iron Doors — Colección actual de Exclusive Iron Doors con controles de estilo, tamaño, apertura y precio",
+        "href": "https://exclusiveirondoors.com/collections/all"
+      },
+      {
+        "label": "Exclusive Iron Doors — Galería actual de Exclusive Iron Doors con fotografías de proyectos y categorías",
+        "href": "https://exclusiveirondoors.com/blogs/gallery"
+      }
+    ]
+  },
+  {
+    "slug": "como-personalizar-el-menu-y-los-formularios-de-una-tienda-shopify",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "Applabmx",
+    "relatedServices": [
+      "shopify"
+    ],
+    "title": "Tema Shopify: menú, formularios y producto para Laerdal",
+    "metaTitle": "Tema Shopify: menú y formularios | Laerdal | Devstoremx",
+    "name": "Laerdal",
+    "description": "Desarrollo del tema Shopify de Laerdal: menú y submenús, formularios, inicio, página de producto, preguntas frecuentes y privacidad. Trabajo en Applabmx.",
+    "lead": "Inicio, menú y submenús, formularios, páginas informativas y pantalla de producto para la tienda Shopify.",
+    "summary": "En Applabmx desarrollé la página de inicio, el componente completo del menú y sus submenús, los formularios y la página de producto de Laerdal. También creé páginas de preguntas frecuentes y privacidad dentro del sitio web Shopify.",
+    "role": "Shopify Developer · Applabmx",
+    "year": "2024–2025",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/menu-formularios-sitio-web-tema-shopify/",
+    "sourcePublishedAt": "2026-10-12",
+    "liveUrl": "https://shop.laerdal.com/",
+    "socialImage": "/equipo/proyectos/case-studies/laerdal-shopify-theme-navigation-forms/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/laerdal-shopify-theme-navigation-forms/cover-es.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Inicio actual de Laerdal México con menú y banner de la tienda"
+    },
+    "stack": [
+      "Shopify",
+      "Liquid",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "Shopify CLI",
+      "Git",
+      "GitHub"
+    ],
+    "skills": [
+      "Desarrollo de temas Shopify",
+      "Liquid",
+      "Menús y submenús",
+      "Formularios web",
+      "Página de producto",
+      "Tailwind CSS",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Shopify CLI",
+      "Git y GitHub"
+    ],
+    "challenge": "La implementación asignada reunía navegación, formularios, contenido informativo y producto. El menú debía organizar el acceso a las distintas partes del sitio web.",
+    "approach": "Desarrollé el menú y los submenús como un componente del tema, junto con las plantillas de inicio, producto y páginas informativas. Utilicé Liquid, HTML, CSS, Tailwind y JavaScript para construir sus vistas y comportamientos.",
+    "howItWorks": {
+      "intro": "La implementación abarcó componentes compartidos, como el menú, y vistas específicas, como el producto y los formularios. Todas estas piezas forman parte del tema Shopify.",
+      "steps": [
+        {
+          "title": "Componente del menú y submenús",
+          "description": "Desarrollé el componente completo de navegación: estructura HTML, presentación con CSS y Tailwind, e interacciones con JavaScript. El menú y sus submenús organizan los enlaces a las distintas páginas de la tienda."
+        },
+        {
+          "title": "Formularios y páginas informativas",
+          "description": "Creé los formularios y las páginas relacionadas con preguntas frecuentes y privacidad. El trabajo incluye el marcado y la presentación dentro del tema; cada vista organiza contenido o campos según su función."
+        },
+        {
+          "title": "Inicio y página de producto",
+          "description": "Implementé el inicio y la pantalla de producto con Liquid y HTML. La vista de producto utiliza el contexto del catálogo de Shopify, con CSS y JavaScript para su presentación e interacciones."
+        },
+        {
+          "title": "Integración de cambios del tema",
+          "description": "Trabajé con Shopify CLI, Git y GitHub dentro del flujo del equipo. La navegación compartida y las distintas plantillas se integraron como partes del mismo tema Shopify."
+        }
+      ]
+    },
+    "workTitle": "Desarrollo realizado en el tema Shopify.",
+    "work": [
+      {
+        "title": "Inicio y producto",
+        "description": "Desarrollé la página de inicio y la pantalla de producto."
+      },
+      {
+        "title": "Menú y submenús",
+        "description": "Creé todo el componente de navegación del sitio."
+      },
+      {
+        "title": "Formularios y contenido informativo",
+        "description": "Creé formularios y páginas relacionadas con preguntas frecuentes y privacidad."
+      }
+    ],
+    "resultsTitle": "Secciones y funcionalidades entregadas.",
+    "results": [
+      {
+        "title": "Navegación implementada",
+        "description": "Se entregó el componente del menú con sus submenús."
+      },
+      {
+        "title": "Plantillas y formularios",
+        "description": "Se entregaron el inicio, producto, formularios y páginas informativas asignadas."
+      }
+    ],
+    "currentNote": "El período de referencia corresponde a mi trabajo en Applabmx, de junio de 2024 a abril de 2025; no indica las fechas exactas de este proyecto. Las capturas muestran el sitio público actual y pueden incluir cambios posteriores.",
+    "images": [
+      {
+        "id": "hero",
+        "src": "/equipo/proyectos/case-studies/laerdal-shopify-theme-navigation-forms/home-current.webp",
+        "avif": "/equipo/proyectos/case-studies/laerdal-shopify-theme-navigation-forms/home-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://shop.laerdal.com/",
+        "capturedDate": "2026-10-12",
+        "alt": "Inicio actual de Laerdal México con menú y banner de la tienda",
+        "caption": "Versión actual del sitio. Inicio actual de Laerdal México con menú y banner de la tienda. Captura de referencia; puede incluir cambios posteriores a mi trabajo."
+      },
+      {
+        "id": "form",
+        "src": "/equipo/proyectos/case-studies/laerdal-shopify-theme-navigation-forms/form-current.webp",
+        "avif": "/equipo/proyectos/case-studies/laerdal-shopify-theme-navigation-forms/form-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://shop.laerdal.com/pages/conectate-con-nosotros",
+        "capturedDate": "2026-10-12",
+        "alt": "Formulario público actual de Laerdal México para solicitar información, sin datos ingresados",
+        "caption": "Versión actual del sitio. Formulario público actual de Laerdal México para solicitar información, sin datos ingresados. Captura de referencia; puede incluir cambios posteriores a mi trabajo."
+      },
+      {
+        "id": "product",
+        "src": "/equipo/proyectos/case-studies/laerdal-shopify-theme-navigation-forms/product-current.webp",
+        "avif": "/equipo/proyectos/case-studies/laerdal-shopify-theme-navigation-forms/product-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://shop.laerdal.com/products/bls-online-hybrid-ecourse",
+        "capturedDate": "2026-10-12",
+        "alt": "Página actual de producto de Laerdal México con información y controles de compra",
+        "caption": "Versión actual del sitio. Página actual de producto de Laerdal México con información y controles de compra. Captura de referencia; puede incluir cambios posteriores a mi trabajo."
+      }
+    ],
+    "gallery": [
+      {
+        "id": "form",
+        "layout": "detail"
+      },
+      {
+        "id": "product",
+        "layout": "detail"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Laerdal — Sitio público actual",
+        "href": "https://shop.laerdal.com/"
+      },
+      {
+        "label": "Laerdal — Formulario público actual de Laerdal México para solicitar información, sin datos ingresados",
+        "href": "https://shop.laerdal.com/pages/conectate-con-nosotros"
+      },
+      {
+        "label": "Laerdal — Página actual de producto de Laerdal México con información y controles de compra",
+        "href": "https://shop.laerdal.com/products/bls-online-hybrid-ecourse"
+      }
+    ]
+  },
+  {
+    "slug": "como-integrar-una-lista-de-favoritos-en-shopify",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "Applabmx",
+    "relatedServices": [
+      "shopify"
+    ],
+    "title": "Tema Shopify: integración de favoritos y secciones para Lerato",
+    "metaTitle": "Tema Shopify: favoritos y secciones | Lerato | Devstoremx",
+    "name": "Lerato",
+    "description": "Integración de una app de favoritos y desarrollo de secciones del inicio en el tema Shopify de Lerato, con Liquid, HTML, CSS y JavaScript en Applabmx.",
+    "lead": "Integración de una app de favoritos y desarrollo de secciones de la página de inicio.",
+    "summary": "En Applabmx integré una app de favoritos en el tema Shopify de Lerato y desarrollé secciones de la página de inicio. Mi participación se concentró en esas funcionalidades de la tienda, con Liquid, HTML, CSS y JavaScript.",
+    "role": "Shopify Developer · Applabmx",
+    "year": "2024–2025",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/integracion-favoritos-sitio-web-tema-shopify/",
+    "sourcePublishedAt": "2026-10-12",
+    "liveUrl": "https://lerato.mx/",
+    "socialImage": "/equipo/proyectos/case-studies/lerato-shopify-theme-wishlist-sections/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/lerato-shopify-theme-wishlist-sections/cover-es.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Inicio actual de Lerato con banner de joyería y navegación"
+    },
+    "stack": [
+      "Shopify",
+      "Liquid",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "Shopify CLI",
+      "Git",
+      "GitHub"
+    ],
+    "skills": [
+      "Desarrollo de temas Shopify",
+      "Liquid",
+      "Integración de apps Shopify",
+      "Favoritos",
+      "Secciones de inicio",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Shopify CLI",
+      "Git y GitHub"
+    ],
+    "challenge": "La tienda requería integrar una app de favoritos con el tema y desarrollar secciones del inicio. El alcance se concentró en conectar esa funcionalidad y construir los bloques asignados.",
+    "approach": "Integré la app existente de favoritos con la interfaz del tema y desarrollé las secciones del inicio con Liquid, HTML, CSS, Tailwind y JavaScript.",
+    "howItWorks": {
+      "intro": "El proyecto tuvo dos partes: integrar la funcionalidad de favoritos de una app existente y desarrollar secciones del inicio dentro del tema Shopify.",
+      "steps": [
+        {
+          "title": "Conexión entre la app y el tema",
+          "description": "Integré la app de favoritos con la interfaz de la tienda. El tema presenta los puntos de acceso a esa función y la app proporciona la gestión de favoritos; mi participación fue la integración dentro del sitio web."
+        },
+        {
+          "title": "Secciones del inicio con Liquid",
+          "description": "Desarrollé las secciones asignadas del home dentro del tema Shopify. Liquid integra el contenido con el marcado HTML, mientras CSS y Tailwind definen la presentación de los bloques."
+        },
+        {
+          "title": "Interfaz e integración de cambios",
+          "description": "JavaScript participa en los comportamientos de la interfaz del tema. Trabajé con Shopify CLI para el desarrollo y con Git y GitHub para integrar las modificaciones con el trabajo del equipo."
+        }
+      ]
+    },
+    "workTitle": "Desarrollo realizado en el tema Shopify.",
+    "work": [
+      {
+        "title": "Integración de favoritos",
+        "description": "Integré la app de favoritos con el tema Shopify."
+      },
+      {
+        "title": "Secciones del inicio",
+        "description": "Desarrollé secciones de la página de inicio."
+      }
+    ],
+    "resultsTitle": "Secciones y funcionalidades entregadas.",
+    "results": [
+      {
+        "title": "App integrada",
+        "description": "Se entregó la integración de favoritos dentro del tema."
+      },
+      {
+        "title": "Secciones desarrolladas",
+        "description": "Se entregaron los bloques asignados del inicio de la tienda."
+      }
+    ],
+    "currentNote": "El período de referencia corresponde a mi trabajo en Applabmx, de junio de 2024 a abril de 2025; no indica las fechas exactas de este proyecto. Las capturas muestran el sitio público actual y pueden incluir cambios posteriores.",
+    "images": [
+      {
+        "id": "hero",
+        "src": "/equipo/proyectos/case-studies/lerato-shopify-theme-wishlist-sections/home-current.webp",
+        "avif": "/equipo/proyectos/case-studies/lerato-shopify-theme-wishlist-sections/home-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://lerato.mx/",
+        "capturedDate": "2026-10-12",
+        "alt": "Inicio actual de Lerato con banner de joyería y navegación",
+        "caption": "Versión actual del sitio. Inicio actual de Lerato con banner de joyería y navegación. Captura de referencia; puede incluir cambios posteriores a mi trabajo."
+      },
+      {
+        "id": "sections",
+        "src": "/equipo/proyectos/case-studies/lerato-shopify-theme-wishlist-sections/sections-current.webp",
+        "avif": "/equipo/proyectos/case-studies/lerato-shopify-theme-wishlist-sections/sections-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://lerato.mx/",
+        "capturedDate": "2026-10-12",
+        "alt": "Secciones actuales de Lerato con catálogo de joyería y botones de favoritos",
+        "caption": "Versión actual del sitio. Secciones actuales de Lerato con catálogo de joyería y botones de favoritos. Captura de referencia; puede incluir cambios posteriores a mi trabajo."
+      }
+    ],
+    "gallery": [
+      {
+        "id": "sections",
+        "layout": "detail"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Lerato — Sitio público actual",
+        "href": "https://lerato.mx/"
+      },
+      {
+        "label": "Lerato — Secciones actuales de Lerato con catálogo de joyería y botones de favoritos",
+        "href": "https://lerato.mx/"
+      }
+    ]
+  },
+  {
+    "slug": "como-desarrollar-componentes-liquid-y-una-app-de-descuentos-para-shopify",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "Rivka",
+    "relatedServices": [
+      "shopify",
+      "integraciones"
+    ],
+    "title": "Componentes Liquid personalizados y app de promo codes para las tiendas Shopify de Rivka",
+    "metaTitle": "Componentes Liquid y app de promo codes en Remix | Rivka | Devstoremx",
+    "name": "Rivka",
+    "description": "Caso de estudio en Rivka: componentes Liquid para dos tiendas Shopify con Tailwind CSS, corrección de bugs y app de promo codes con Remix y React.",
+    "lead": "Componentes Liquid personalizados para dos tiendas Shopify, corrección de bugs en tiendas en producción y participación en una app de promo codes con Remix y React.",
+    "summary": "En 2024 trabajé en Rivka como Shopify Developer en tres proyectos, presentados aquí como un solo trabajo: componentes personalizados en Liquid para dos tiendas Shopify, corrección de bugs en esas tiendas y mi participación en el desarrollo de una app de promo codes hecha con Remix y React. Los proyectos son confidenciales, por lo que no hay enlaces públicos.",
+    "role": "Shopify Developer",
+    "year": "2024",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/componentes-liquid-shopify-y-app-promo-codes-remix/",
+    "sourcePublishedAt": "2026-10-12",
+    "socialImage": "/equipo/proyectos/case-studies/rivka-shopify-liquid-components-and-promo-codes-app/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/shopify-cover.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Componentes Liquid personalizados y app de promo codes para las tiendas Shopify de Rivka"
+    },
+    "stack": [
+      "Liquid",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "Shopify CLI",
+      "GraphQL",
+      "Remix",
+      "React",
+      "Git",
+      "GitHub"
+    ],
+    "skills": [
+      "Desarrollo Shopify",
+      "Liquid",
+      "Componentes personalizados",
+      "Tailwind CSS",
+      "JavaScript",
+      "Remix",
+      "React",
+      "Shopify CLI",
+      "Metafields",
+      "Corrección de bugs",
+      "Git y GitHub"
+    ],
+    "challenge": "Dos tiendas Shopify necesitaban componentes hechos a sus requerimientos en lugar de plantillas comerciales preconstruidas, y las tiendas en producción requerían resolver bugs respetando la arquitectura existente de cada una. En paralelo, el equipo desarrollaba una app de promo codes con Remix y React.",
+    "approach": "Escribí los componentes en Liquid con HTML, CSS, JavaScript y Tailwind CSS, gestioné el trabajo con Git y GitHub, y usé metafields y Shopify CLI para entregar funcionalidades en tiendas en producción. Resolví los conflictos de scripts y estilos que surgieron al integrar apps de terceros y contribuí a la app de promo codes con Remix y React.",
+    "howItWorks": {
+      "intro": "Escribí los componentes en Liquid con HTML, CSS, JavaScript y Tailwind CSS, gestioné el trabajo con Git y GitHub, y usé metafields y Shopify CLI para entregar funcionalidades en tiendas en producción. Resolví los conflictos de scripts y estilos que surgieron al integrar apps de terceros y contribuí a la app de promo codes con Remix y React.",
+      "steps": [
+        {
+          "title": "Componentes",
+          "description": "Liquid personalizado en dos tiendas"
+        },
+        {
+          "title": "Bugs",
+          "description": "Correcciones en tiendas en producción"
+        },
+        {
+          "title": "App de promo codes",
+          "description": "Remix y React, desarrollo en equipo"
+        }
+      ]
+    },
+    "workTitle": "Componentes Liquid, corrección de bugs y app de promo codes.",
+    "work": [
+      {
+        "title": "Componentes Liquid personalizados",
+        "description": "Desarrollé y mantuve componentes y temas desde cero para dos tiendas Shopify con Liquid, HTML, CSS y JavaScript, con estilos en Tailwind CSS."
+      },
+      {
+        "title": "Funcionalidades en tiendas en producción",
+        "description": "Entregué funcionalidades en tiendas en producción con metafields y Shopify CLI, respetando la arquitectura existente de cada tienda."
+      },
+      {
+        "title": "Corrección de bugs y conflictos con apps",
+        "description": "Resolví bugs en las tiendas, incluidos conflictos de scripts y estilos al integrar apps de reseñas, suscripciones y envíos."
+      },
+      {
+        "title": "App de promo codes",
+        "description": "Participé en el desarrollo de una app de promo codes hecha con Remix y React."
+      }
+    ],
+    "resultsTitle": "Componentes, correcciones y una app de promo codes.",
+    "results": [
+      {
+        "title": "Componentes para dos tiendas",
+        "description": "Dos tiendas Shopify recibieron componentes personalizados escritos en Liquid."
+      },
+      {
+        "title": "Bugs y conflictos resueltos",
+        "description": "Se corrigieron bugs y conflictos con apps de terceros en las tiendas en producción."
+      },
+      {
+        "title": "App de promo codes",
+        "description": "La app de promo codes del equipo se desarrolló con Remix y React, con mi participación."
+      }
+    ],
+    "currentNote": "Los proyectos son confidenciales y no hay enlaces públicos ni capturas disponibles.",
+    "images": [],
+    "gallery": [],
+    "sources": []
+  },
+  {
+    "slug": "como-desarrollar-un-tema-wordpress-personalizado",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "Industria Social",
+    "relatedServices": [
+      "wordpress",
+      "paginas-web"
+    ],
+    "title": "Desarrollo de tema WordPress personalizado para Structurall",
+    "metaTitle": "Tema WordPress personalizado | Structurall | Devstoremx",
+    "name": "Structurall",
+    "description": "Desarrollo de un tema WordPress desde cero para Structurall, con PHP, HTML, CSS y JavaScript, para que el cliente pudiera personalizar su sitio web.",
+    "lead": "Un tema WordPress desarrollado desde cero para que el cliente pudiera personalizar su sitio web.",
+    "summary": "En Industria Social desarrollé un tema WordPress desde cero para Structurall. Construí la interfaz con HTML, CSS y JavaScript y utilicé PHP para la lógica del tema. El requerimiento principal era entregar un tema que el cliente pudiera personalizar.",
+    "role": "Lead Web Developer · Industria Social",
+    "year": "2021–2025",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/desarrollo-tema-personalizado-sitio-web-wordpress/",
+    "sourcePublishedAt": "2026-10-12",
+    "liveUrl": "https://structurall.com.mx/",
+    "socialImage": "/equipo/proyectos/case-studies/structurall-custom-wordpress-theme/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/structurall-custom-wordpress-theme/cover-es.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Portada actual de Structurall con navegación y fotografía de una unidad modular"
+    },
+    "stack": [
+      "WordPress",
+      "PHP",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "skills": [
+      "Desarrollo de temas WordPress",
+      "PHP",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "challenge": "Structurall necesitaba un tema WordPress que pudiera personalizar según los requerimientos de su sitio web.",
+    "approach": "Desarrollé el tema desde cero: HTML para la estructura, CSS para los estilos, JavaScript para las interacciones y PHP para integrar la lógica con WordPress.",
+    "howItWorks": {
+      "intro": "El tema reúne la presentación del sitio y la lógica necesaria para integrarla con WordPress. Desarrollé esas capas desde cero con PHP, HTML, CSS y JavaScript.",
+      "steps": [
+        {
+          "title": "PHP y lógica del tema",
+          "description": "PHP implementa la parte lógica del tema dentro de WordPress. Esa capa conecta el contenido gestionado en el CMS con la presentación del sitio; el HTML define la estructura que finalmente recibe el navegador."
+        },
+        {
+          "title": "Estructura, estilos e interacciones",
+          "description": "HTML organiza los elementos de la página, CSS define su presentación y JavaScript implementa los comportamientos de la interfaz. Desarrollé estas capas desde cero como parte del tema personalizado."
+        },
+        {
+          "title": "Personalización por el cliente",
+          "description": "El requerimiento de personalización formó parte del desarrollo del tema. La implementación debía permitir que el cliente adaptara su sitio sobre WordPress, manteniendo la estructura y la lógica del tema que construí."
+        }
+      ]
+    },
+    "workTitle": "Interfaz y lógica del tema WordPress.",
+    "work": [
+      {
+        "title": "Tema desde cero",
+        "description": "Desarrollé el tema WordPress sin partir de un tema preconstruido."
+      },
+      {
+        "title": "Interfaz HTML, CSS y JavaScript",
+        "description": "Construí la estructura, los estilos y las interacciones del sitio web."
+      },
+      {
+        "title": "Lógica en PHP",
+        "description": "Implementé la lógica del tema y su integración con WordPress para permitir la personalización solicitada."
+      }
+    ],
+    "resultsTitle": "Un tema desarrollado a medida.",
+    "results": [
+      {
+        "title": "Personalización del sitio",
+        "description": "El cliente recibió un tema WordPress desarrollado para su requerimiento de personalización."
+      }
+    ],
+    "currentNote": "El trabajo descrito corresponde a mi período en Industria Social (2021–2025). El sitio público actual es una referencia y puede incluir cambios posteriores.",
+    "images": [
+      {
+        "id": "hero",
+        "src": "/equipo/proyectos/case-studies/structurall-custom-wordpress-theme/home-current.webp",
+        "avif": "/equipo/proyectos/case-studies/structurall-custom-wordpress-theme/home-current.avif",
+        "width": 1440,
+        "height": 766,
+        "source": "https://structurall.com.mx/",
+        "capturedDate": "2026-10-12",
+        "alt": "Portada actual de Structurall con navegación y fotografía de una unidad modular",
+        "caption": "Versión actual del sitio de Structurall. Captura de referencia; el sitio puede haber cambiado desde mi trabajo."
+      },
+      {
+        "id": "about",
+        "src": "/equipo/proyectos/case-studies/structurall-custom-wordpress-theme/about-current.webp",
+        "avif": "/equipo/proyectos/case-studies/structurall-custom-wordpress-theme/about-current.avif",
+        "width": 1440,
+        "height": 716,
+        "source": "https://structurall.com.mx/nosotros/",
+        "capturedDate": "2026-10-12",
+        "alt": "Página actual Nosotros de Structurall con navegación, fotografía de una unidad modular e información corporativa",
+        "caption": "Versión actual del sitio. Página actual Nosotros de Structurall con navegación, fotografía de una unidad modular e información corporativa."
+      },
+      {
+        "id": "categories",
+        "src": "/equipo/proyectos/case-studies/structurall-custom-wordpress-theme/categories-current.webp",
+        "avif": "/equipo/proyectos/case-studies/structurall-custom-wordpress-theme/categories-current.avif",
+        "width": 1440,
+        "height": 716,
+        "source": "https://structurall.com.mx/categorias/",
+        "capturedDate": "2026-10-12",
+        "alt": "Sección actual de categorías de Structurall con imágenes de oficinas, dormitorios y sanitarios móviles",
+        "caption": "Versión actual del sitio. Sección actual de categorías de Structurall con imágenes de oficinas, dormitorios y sanitarios móviles."
+      }
+    ],
+    "gallery": [
+      {
+        "id": "about",
+        "layout": "detail"
+      },
+      {
+        "id": "categories",
+        "layout": "detail"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Sitio público de Structurall",
+        "href": "https://structurall.com.mx/"
+      },
+      {
+        "label": "Structurall — Nosotros (versión actual)",
+        "href": "https://structurall.com.mx/nosotros/"
+      },
+      {
+        "label": "Structurall — Categorías (versión actual)",
+        "href": "https://structurall.com.mx/categorias/"
+      }
+    ]
+  },
+  {
+    "slug": "como-personalizar-shopify-y-renovar-plantillas-de-email-html",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "Industria Social",
+    "relatedServices": [
+      "shopify",
+      "email-templates"
+    ],
+    "title": "Componentes Shopify y plantillas de email HTML para Original Penguin",
+    "metaTitle": "Componentes Shopify y emails HTML | Original Penguin | Devstoremx",
+    "name": "Original Penguin",
+    "description": "Componentes personalizados en Liquid, HTML, CSS y JavaScript para Original Penguin, y reconstrucción de plantillas HTML legacy para campañas de marketing.",
+    "lead": "Componentes personalizados para la tienda Shopify y reconstrucción de las plantillas de correo de campañas de marketing.",
+    "summary": "En Industria Social desarrollé componentes personalizados para Original Penguin con Liquid, HTML, CSS y JavaScript. También reconstruí las plantillas antiguas de campañas de marketing con nuevos templates en HTML legacy para correo electrónico.",
+    "role": "Lead Web Developer · Industria Social",
+    "year": "2021–2025",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/componentes-web-shopify-liquid-plantillas-email-html/",
+    "sourcePublishedAt": "2026-10-12",
+    "liveUrl": "https://originalpenguin.com.mx/",
+    "socialImage": "/equipo/proyectos/case-studies/original-penguin-shopify-components-and-email/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/original-penguin-shopify-components-and-email/cover-es.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Portada actual de Original Penguin México con navegación y banner de campaña"
+    },
+    "stack": [
+      "Shopify",
+      "Liquid",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "HTML legacy"
+    ],
+    "skills": [
+      "Desarrollo Shopify",
+      "Liquid",
+      "Componentes web personalizados",
+      "HTML para email",
+      "CSS",
+      "JavaScript"
+    ],
+    "challenge": "El trabajo incluía agregar componentes personalizados a la tienda Shopify y reemplazar las plantillas antiguas de las campañas de correo.",
+    "approach": "Desarrollé los componentes con Liquid, HTML, CSS y JavaScript. Para los correos, reconstruí los templates utilizando HTML legacy para email, separado de la implementación de los componentes de la tienda.",
+    "howItWorks": {
+      "intro": "El proyecto tuvo dos implementaciones distintas: componentes para la tienda Shopify y templates HTML para campañas de correo electrónico.",
+      "steps": [
+        {
+          "title": "Liquid y generación del HTML",
+          "description": "Liquid integra los componentes con el contenido de Shopify y genera su marcado HTML. Desarrollé los componentes a medida dentro de ese entorno, con CSS para su presentación y JavaScript para los comportamientos de la interfaz."
+        },
+        {
+          "title": "Componentes dentro de la tienda",
+          "description": "El trabajo sobre los componentes combina la plantilla Liquid con las capas del navegador: HTML, CSS y JavaScript. La implementación pertenece a la interfaz de la tienda y utiliza el contexto de Shopify."
+        },
+        {
+          "title": "Reconstrucción de los templates de correo",
+          "description": "Para las campañas reconstruí los templates antiguos con HTML legacy para email. Los correos tienen su propio marcado y presentación: su destino es un cliente de correo, mientras que los componentes Liquid se presentan en el sitio web."
+        }
+      ]
+    },
+    "workTitle": "Componentes de tienda y templates de campañas.",
+    "work": [
+      {
+        "title": "Componentes Liquid",
+        "description": "Creé componentes a medida con Liquid, HTML, CSS y JavaScript."
+      },
+      {
+        "title": "Reconstrucción de templates",
+        "description": "Reemplacé las plantillas antiguas por nuevos templates para las campañas de marketing."
+      },
+      {
+        "title": "HTML legacy para correo",
+        "description": "Desarrollé el marcado HTML de los correos como una implementación distinta a los componentes web."
+      }
+    ],
+    "resultsTitle": "Componentes personalizados y plantillas renovadas.",
+    "results": [
+      {
+        "title": "Componentes a medida",
+        "description": "La tienda contó con componentes personalizados desarrollados en Liquid."
+      },
+      {
+        "title": "Nuevas plantillas de campañas",
+        "description": "Las plantillas anteriores fueron reconstruidas con nuevos templates HTML para email."
+      }
+    ],
+    "currentNote": "El trabajo descrito corresponde a mi período en Industria Social (2021–2025). El sitio público actual es una referencia y puede incluir cambios posteriores.",
+    "images": [
+      {
+        "id": "hero",
+        "src": "/equipo/proyectos/case-studies/original-penguin-shopify-components-and-email/home-current.webp",
+        "avif": "/equipo/proyectos/case-studies/original-penguin-shopify-components-and-email/home-current.avif",
+        "width": 1440,
+        "height": 722,
+        "source": "https://originalpenguin.com.mx/",
+        "capturedDate": "2026-10-12",
+        "alt": "Portada actual de Original Penguin México con navegación y banner de campaña",
+        "caption": "Versión actual del sitio de Original Penguin. Captura de referencia; el sitio puede haber cambiado desde mi trabajo."
+      },
+      {
+        "id": "collection",
+        "src": "/equipo/proyectos/case-studies/original-penguin-shopify-components-and-email/collection-current.webp",
+        "avif": "/equipo/proyectos/case-studies/original-penguin-shopify-components-and-email/collection-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://originalpenguin.com.mx/collections/polos",
+        "capturedDate": "2026-10-12",
+        "alt": "Colección actual de polos de Original Penguin con filtros, ordenación y tarjetas de productos",
+        "caption": "Versión actual del sitio. Colección actual de polos de Original Penguin con filtros, ordenación y tarjetas de productos."
+      },
+      {
+        "id": "product",
+        "src": "/equipo/proyectos/case-studies/original-penguin-shopify-components-and-email/product-current.webp",
+        "avif": "/equipo/proyectos/case-studies/original-penguin-shopify-components-and-email/product-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://originalpenguin.com.mx/collections/polos/products/polo_polo-honeycomb-jacquard-tipped_opkf2625?variant=48012076089585",
+        "capturedDate": "2026-10-12",
+        "alt": "Ficha actual de un polo de Original Penguin con fotografías, selector de color y talla e información de compra",
+        "caption": "Versión actual del sitio. Ficha actual de un polo de Original Penguin con fotografías, selector de color y talla e información de compra."
+      }
+    ],
+    "gallery": [
+      {
+        "id": "collection",
+        "layout": "detail"
+      },
+      {
+        "id": "product",
+        "layout": "detail"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Sitio público de Original Penguin",
+        "href": "https://originalpenguin.com.mx/"
+      },
+      {
+        "label": "Original Penguin — Colección de polos (versión actual)",
+        "href": "https://originalpenguin.com.mx/collections/polos"
+      },
+      {
+        "label": "Original Penguin — Ficha de producto (versión actual)",
+        "href": "https://originalpenguin.com.mx/collections/polos/products/polo_polo-honeycomb-jacquard-tipped_opkf2625?variant=48012076089585"
+      }
+    ]
+  },
+  {
+    "slug": "como-crear-un-sitio-web-bilingue-con-wordpress-y-elementor",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "Industria Social",
+    "relatedServices": [
+      "wordpress",
+      "paginas-web"
+    ],
+    "title": "Sitio web bilingüe en WordPress y Elementor para Mezcal Viviente",
+    "metaTitle": "Sitio web bilingüe WordPress | Mezcal Viviente | Devstoremx",
+    "name": "Mezcal Viviente",
+    "description": "Desarrollo del sitio web de Mezcal Viviente con WordPress, Elementor, HTML, CSS y JavaScript, con versiones en español e inglés.",
+    "lead": "Desarrollo de un sitio web con WordPress y Elementor, disponible en español e inglés.",
+    "summary": "En Industria Social desarrollé el sitio web de Mezcal Viviente con WordPress y Elementor. Utilicé HTML, CSS y JavaScript para el desarrollo de la interfaz e implementé soporte para español e inglés.",
+    "role": "Lead Web Developer · Industria Social",
+    "year": "2021–2025",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/desarrollo-sitio-web-bilingue-wordpress-elementor/",
+    "sourcePublishedAt": "2026-10-12",
+    "liveUrl": "https://vivientemezcal.com/es/",
+    "socialImage": "/equipo/proyectos/case-studies/mezcal-viviente-bilingual-wordpress-website/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/mezcal-viviente-bilingual-wordpress-website/cover-es.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Portada actual de Mezcal Viviente con navegación, selector español e inglés y un fotograma del video de presentación"
+    },
+    "stack": [
+      "WordPress",
+      "Elementor",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "skills": [
+      "Desarrollo WordPress",
+      "Elementor",
+      "Sitios web bilingües",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "challenge": "El proyecto requería un sitio web en WordPress con contenido disponible en dos idiomas.",
+    "approach": "Desarrollé el sitio con WordPress y Elementor, complementados con HTML, CSS y JavaScript, y preparé las versiones en español e inglés.",
+    "howItWorks": {
+      "intro": "WordPress administra el contenido, Elementor permite construir la presentación y HTML, CSS y JavaScript completan la interfaz. El sitio ofrece ese contenido en español e inglés.",
+      "steps": [
+        {
+          "title": "WordPress y Elementor",
+          "description": "Desarrollé el sitio sobre WordPress y utilicé Elementor para la maquetación. El CMS y el constructor forman la base de la presentación del contenido, complementada con el desarrollo de la interfaz web."
+        },
+        {
+          "title": "HTML, CSS y JavaScript",
+          "description": "HTML define la estructura, CSS adapta los estilos y JavaScript implementa las interacciones de la interfaz. Estas tecnologías se utilizaron junto con WordPress y Elementor para construir el sitio."
+        },
+        {
+          "title": "Contenido en dos idiomas",
+          "description": "Implementé soporte para versiones en español e inglés. La navegación permite consultar el contenido en el idioma correspondiente; ambas versiones forman parte del mismo proyecto WordPress."
+        }
+      ]
+    },
+    "workTitle": "Sitio WordPress y contenido bilingüe.",
+    "work": [
+      {
+        "title": "Desarrollo en WordPress",
+        "description": "Construí el sitio utilizando WordPress y Elementor."
+      },
+      {
+        "title": "HTML, CSS y JavaScript",
+        "description": "Utilicé estas tecnologías para desarrollar la interfaz del sitio."
+      },
+      {
+        "title": "Español e inglés",
+        "description": "Implementé soporte para consultar el contenido en ambos idiomas."
+      }
+    ],
+    "resultsTitle": "Sitio web disponible en dos idiomas.",
+    "results": [
+      {
+        "title": "Sitio bilingüe",
+        "description": "El sitio quedó disponible en español e inglés sobre WordPress y Elementor."
+      }
+    ],
+    "currentNote": "El trabajo descrito corresponde a mi período en Industria Social (2021–2025). El sitio público actual es una referencia y puede incluir cambios posteriores.",
+    "images": [
+      {
+        "id": "hero",
+        "src": "/equipo/proyectos/case-studies/mezcal-viviente-bilingual-wordpress-website/home-current.webp",
+        "avif": "/equipo/proyectos/case-studies/mezcal-viviente-bilingual-wordpress-website/home-current.avif",
+        "width": 1440,
+        "height": 722,
+        "source": "https://vivientemezcal.com/es/",
+        "capturedDate": "2026-10-12",
+        "alt": "Portada actual de Mezcal Viviente con navegación, selector español e inglés y un fotograma del video de presentación",
+        "caption": "Versión actual del sitio de Mezcal Viviente. Captura de referencia; el sitio puede haber cambiado desde mi trabajo."
+      },
+      {
+        "id": "about",
+        "src": "/equipo/proyectos/case-studies/mezcal-viviente-bilingual-wordpress-website/about-current.webp",
+        "avif": "/equipo/proyectos/case-studies/mezcal-viviente-bilingual-wordpress-website/about-current.avif",
+        "width": 1440,
+        "height": 684,
+        "source": "https://vivientemezcal.com/es/nosotros/",
+        "capturedDate": "2026-10-12",
+        "alt": "Página actual Nosotros de Mezcal Viviente con navegación bilingüe, fotografía de agave y presentación de la marca",
+        "caption": "Versión actual del sitio. Página actual Nosotros de Mezcal Viviente con navegación bilingüe, fotografía de agave y presentación de la marca."
+      },
+      {
+        "id": "products",
+        "src": "/equipo/proyectos/case-studies/mezcal-viviente-bilingual-wordpress-website/products-current.webp",
+        "avif": "/equipo/proyectos/case-studies/mezcal-viviente-bilingual-wordpress-website/products-current.avif",
+        "width": 1440,
+        "height": 684,
+        "source": "https://vivientemezcal.com/es/mezcales/",
+        "capturedDate": "2026-10-12",
+        "alt": "Catálogo actual de Mezcal Viviente con fotografías de botellas, descripciones y enlaces de consulta",
+        "caption": "Versión actual del sitio. Catálogo actual de Mezcal Viviente con fotografías de botellas, descripciones y enlaces de consulta."
+      }
+    ],
+    "gallery": [
+      {
+        "id": "about",
+        "layout": "detail"
+      },
+      {
+        "id": "products",
+        "layout": "detail"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Sitio público de Mezcal Viviente",
+        "href": "https://vivientemezcal.com/es/"
+      },
+      {
+        "label": "Mezcal Viviente — Nosotros (versión actual)",
+        "href": "https://vivientemezcal.com/es/nosotros/"
+      },
+      {
+        "label": "Mezcal Viviente — Catálogo de mezcales (versión actual)",
+        "href": "https://vivientemezcal.com/es/mezcales/"
+      }
+    ]
+  },
+  {
+    "slug": "como-conectar-formularios-de-devolucion-con-la-api-de-shopify",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "Industria Social",
+    "relatedServices": [
+      "shopify",
+      "integraciones",
+      "email-templates"
+    ],
+    "title": "Formularios web conectados a Shopify y plantillas de email para RCA",
+    "metaTitle": "Formularios Shopify API y devoluciones | RCA | Devstoremx",
+    "name": "RCA",
+    "description": "Formularios de devoluciones y atención conectados a la API de Shopify para RCA, componentes de códigos promocionales y plantillas de respuesta por email.",
+    "lead": "Formularios de devoluciones y atención conectados a Shopify, componentes de códigos promocionales y templates de respuesta por correo.",
+    "summary": "En Industria Social desarrollé componentes para agregar códigos promocionales en RCA. Creé formularios para devoluciones, preguntas frecuentes y otras solicitudes, conectados a la API de Shopify, además de las plantillas de correo utilizadas para responder a cada solicitud.",
+    "role": "Lead Web Developer · Industria Social",
+    "year": "2021–2025",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/formularios-web-shopify-api-devoluciones/",
+    "sourcePublishedAt": "2026-10-12",
+    "liveUrl": "https://rca-mex.com/",
+    "socialImage": "/equipo/proyectos/case-studies/rca-shopify-api-forms-and-email/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/rca-shopify-api-forms-and-email/cover-es.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Portada actual de RCA México con navegación y banner de una parrilla eléctrica"
+    },
+    "stack": [
+      "Shopify",
+      "API de Shopify",
+      "HTML para email"
+    ],
+    "skills": [
+      "Desarrollo Shopify",
+      "Integración de API de Shopify",
+      "Formularios web",
+      "Solicitudes de devolución",
+      "Plantillas de email"
+    ],
+    "challenge": "El proyecto requería componentes para códigos promocionales y formularios de atención que se conectaran con Shopify, junto con sus plantillas de respuesta por correo.",
+    "approach": "Desarrollé los componentes promocionales y los formularios de atención, conecté los formularios a la API de Shopify y creé los templates de correo para las respuestas.",
+    "howItWorks": {
+      "intro": "La implementación reúne componentes promocionales, captura de solicitudes mediante formularios, conexión con la API de Shopify y templates de respuesta por correo.",
+      "steps": [
+        {
+          "title": "Componentes para promo codes",
+          "description": "Desarrollé componentes destinados a agregar códigos promocionales. Esta parte del trabajo corresponde a funcionalidades de la tienda, junto con los formularios de atención y sus integraciones."
+        },
+        {
+          "title": "Captura de solicitudes",
+          "description": "Los formularios recogen la información necesaria para cada solicitud de devolución, preguntas frecuentes u otras consultas. Cada formulario organiza esa captura según el tipo de atención que necesita el usuario."
+        },
+        {
+          "title": "Conexión con la API de Shopify",
+          "description": "Conecté los formularios con la API de Shopify para integrar las solicitudes con la plataforma. La captura de información ocurre en el formulario; la conexión con Shopify constituye la capa de integración del proyecto."
+        },
+        {
+          "title": "Templates de respuesta",
+          "description": "Creé las plantillas de correo para las respuestas de atención. Los templates resuelven la presentación del mensaje enviado al usuario y forman una implementación adicional a los formularios y la conexión con Shopify."
+        }
+      ]
+    },
+    "workTitle": "Promociones, formularios y respuestas por correo.",
+    "work": [
+      {
+        "title": "Códigos promocionales",
+        "description": "Desarrollé componentes para agregar promo codes."
+      },
+      {
+        "title": "Formularios de atención",
+        "description": "Creé los formularios de devoluciones, preguntas frecuentes y otras solicitudes."
+      },
+      {
+        "title": "API de Shopify",
+        "description": "Conecté los formularios a la API de Shopify."
+      },
+      {
+        "title": "Templates de respuesta",
+        "description": "Desarrollé las plantillas de correo para responder a las solicitudes."
+      }
+    ],
+    "resultsTitle": "Formularios conectados y templates de respuesta.",
+    "results": [
+      {
+        "title": "Solicitudes conectadas a Shopify",
+        "description": "Los formularios contaron con integración a la API de Shopify."
+      },
+      {
+        "title": "Plantillas por correo",
+        "description": "Las respuestas contaron con los templates desarrollados para el proyecto."
+      }
+    ],
+    "currentNote": "El trabajo descrito corresponde a mi período en Industria Social (2021–2025). El sitio público actual es una referencia y puede incluir cambios posteriores.",
+    "images": [
+      {
+        "id": "hero",
+        "src": "/equipo/proyectos/case-studies/rca-shopify-api-forms-and-email/home-current.webp",
+        "avif": "/equipo/proyectos/case-studies/rca-shopify-api-forms-and-email/home-current.avif",
+        "width": 1440,
+        "height": 722,
+        "source": "https://rca-mex.com/",
+        "capturedDate": "2026-10-12",
+        "alt": "Portada actual de RCA México con navegación y banner de una parrilla eléctrica",
+        "caption": "Versión actual del sitio de RCA. Captura de referencia; el sitio puede haber cambiado desde mi trabajo."
+      },
+      {
+        "id": "contact",
+        "src": "/equipo/proyectos/case-studies/rca-shopify-api-forms-and-email/contact-current.webp",
+        "avif": "/equipo/proyectos/case-studies/rca-shopify-api-forms-and-email/contact-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://rca-mex.com/pages/contacto-rca",
+        "capturedDate": "2026-10-12",
+        "alt": "Página actual de contacto de RCA con formulario de nombre, correo electrónico y mensaje",
+        "caption": "Versión actual del sitio. Página actual de contacto de RCA con formulario de nombre, correo electrónico y mensaje."
+      },
+      {
+        "id": "faq",
+        "src": "/equipo/proyectos/case-studies/rca-shopify-api-forms-and-email/faq-current.webp",
+        "avif": "/equipo/proyectos/case-studies/rca-shopify-api-forms-and-email/faq-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://rca-mex.com/pages/preguntas-frecuentes-2",
+        "capturedDate": "2026-10-12",
+        "alt": "Página actual de preguntas frecuentes de RCA con información sobre pedidos y pagos",
+        "caption": "Versión actual del sitio. Página actual de preguntas frecuentes de RCA con información sobre pedidos y pagos."
+      }
+    ],
+    "gallery": [
+      {
+        "id": "contact",
+        "layout": "detail"
+      },
+      {
+        "id": "faq",
+        "layout": "detail"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Sitio público de RCA",
+        "href": "https://rca-mex.com/"
+      },
+      {
+        "label": "RCA — Formulario de contacto (versión actual)",
+        "href": "https://rca-mex.com/pages/contacto-rca"
+      },
+      {
+        "label": "RCA — Preguntas frecuentes (versión actual)",
+        "href": "https://rca-mex.com/pages/preguntas-frecuentes-2"
+      }
+    ]
+  },
+  {
+    "slug": "como-crear-una-pagina-web-de-restaurante-con-menu-dinamico",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "Industria Social",
+    "relatedServices": [
+      "paginas-web"
+    ],
+    "title": "Sitio web de restaurante en Astro con menú dinámico para De Leña Pizzas",
+    "metaTitle": "Sitio web Astro con menú dinámico | De Leña Pizzas | Devstoremx",
+    "name": "De Leña Pizzas",
+    "description": "Desarrollo del sitio web informativo de De Leña Pizzas con Astro y una sección de consulta dinámica del menú del restaurante.",
+    "lead": "Un sitio web informativo acerca del restaurante, desarrollado con Astro, con consulta dinámica del menú.",
+    "summary": "En Industria Social desarrollé el sitio web de De Leña Pizzas con Astro. El sitio presenta información del restaurante e incluye una sección para consultar el menú de forma dinámica.",
+    "role": "Lead Web Developer · Industria Social",
+    "year": "2021–2025",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/sitio-web-restaurante-astro-menu-dinamico/",
+    "sourcePublishedAt": "2026-10-12",
+    "liveUrl": "https://www.delenapizzas.com/",
+    "socialImage": "/equipo/proyectos/case-studies/delena-astro-restaurant-website/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/delena-astro-restaurant-website/cover-es.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Portada actual de De Leña Pizzas con navegación y fotografía de una pizza"
+    },
+    "stack": [
+      "Astro"
+    ],
+    "skills": [
+      "Desarrollo web con Astro",
+      "Sitios web para restaurantes",
+      "Interfaces web",
+      "Menú dinámico"
+    ],
+    "challenge": "El restaurante necesitaba un sitio informativo que también permitiera consultar su menú de forma dinámica.",
+    "approach": "Desarrollé el sitio con Astro y agregué la sección de consulta dinámica del menú dentro de la página informativa.",
+    "howItWorks": {
+      "intro": "El sitio combina una página informativa desarrollada con Astro y una sección de consulta dinámica del menú dentro de la misma experiencia de navegación.",
+      "steps": [
+        {
+          "title": "Página informativa en Astro",
+          "description": "Utilicé Astro para desarrollar la página que presenta el restaurante. La estructura del sitio reúne la información del negocio y el acceso a la sección del menú en una misma interfaz web."
+        },
+        {
+          "title": "Consulta dinámica del menú",
+          "description": "La sección del menú permite consultar su contenido de forma dinámica dentro del sitio. Esta funcionalidad tiene un papel distinto al contenido informativo: presenta la información del menú durante la consulta del visitante."
+        },
+        {
+          "title": "Integración en la navegación",
+          "description": "Integré la consulta del menú como una sección de la página del restaurante. El visitante puede pasar de la información general a la consulta del menú dentro del sitio desarrollado con Astro."
+        }
+      ]
+    },
+    "workTitle": "Información del restaurante y consulta del menú.",
+    "work": [
+      {
+        "title": "Desarrollo con Astro",
+        "description": "Construí el sitio web informativo acerca del restaurante."
+      },
+      {
+        "title": "Menú dinámico",
+        "description": "Agregué una sección para consultar el menú de forma dinámica."
+      }
+    ],
+    "resultsTitle": "Sitio informativo con menú dinámico.",
+    "results": [
+      {
+        "title": "Información y menú en el sitio",
+        "description": "El sitio reúne la información del restaurante y la consulta dinámica de su menú."
+      }
+    ],
+    "currentNote": "El trabajo descrito corresponde a mi período en Industria Social (2021–2025). El sitio público actual es una referencia y puede incluir cambios posteriores.",
+    "images": [
+      {
+        "id": "hero",
+        "src": "/equipo/proyectos/case-studies/delena-astro-restaurant-website/home-current.webp",
+        "avif": "/equipo/proyectos/case-studies/delena-astro-restaurant-website/home-current.avif",
+        "width": 1440,
+        "height": 722,
+        "source": "https://www.delenapizzas.com/",
+        "capturedDate": "2026-10-12",
+        "alt": "Portada actual de De Leña Pizzas con navegación y fotografía de una pizza",
+        "caption": "Versión actual del sitio de De Leña Pizzas. Captura de referencia; el sitio puede haber cambiado desde mi trabajo."
+      },
+      {
+        "id": "menu",
+        "src": "/equipo/proyectos/case-studies/delena-astro-restaurant-website/menu-current.webp",
+        "avif": "/equipo/proyectos/case-studies/delena-astro-restaurant-website/menu-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://www.delenapizzas.com/#menu",
+        "capturedDate": "2026-10-12",
+        "alt": "Sección actual del menú de De Leña Pizzas con una cuadrícula de fotografías de alimentos y bebidas",
+        "caption": "Versión actual del sitio. Sección actual del menú de De Leña Pizzas con una cuadrícula de fotografías de alimentos y bebidas."
+      },
+      {
+        "id": "about",
+        "src": "/equipo/proyectos/case-studies/delena-astro-restaurant-website/about-current.webp",
+        "avif": "/equipo/proyectos/case-studies/delena-astro-restaurant-website/about-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://www.delenapizzas.com/#nosotros",
+        "capturedDate": "2026-10-12",
+        "alt": "Sección actual Nosotros de De Leña Pizzas con información del restaurante y fotografías de preparación de alimentos",
+        "caption": "Versión actual del sitio. Sección actual Nosotros de De Leña Pizzas con información del restaurante y fotografías de preparación de alimentos."
+      }
+    ],
+    "gallery": [
+      {
+        "id": "menu",
+        "layout": "detail"
+      },
+      {
+        "id": "about",
+        "layout": "detail"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Sitio público de De Leña Pizzas",
+        "href": "https://www.delenapizzas.com/"
+      },
+      {
+        "label": "De Leña Pizzas — Consulta del menú (versión actual)",
+        "href": "https://www.delenapizzas.com/#menu"
+      },
+      {
+        "label": "De Leña Pizzas — Nosotros (versión actual)",
+        "href": "https://www.delenapizzas.com/#nosotros"
+      }
+    ]
+  },
+  {
+    "slug": "como-automatizar-el-acceso-a-cursos-con-stripe-zapier-y-teachable",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "Industria Social",
+    "relatedServices": [
+      "automatizaciones",
+      "integraciones"
+    ],
+    "title": "Sitio web Webflow y automatización Stripe, Zapier y Teachable para Nutriandreaa",
+    "metaTitle": "Webflow, Stripe y automatización Teachable | Nutriandreaa | Devstoremx",
+    "name": "Nutriandreaa",
+    "description": "Sitio web de Nutriandreaa en Webflow, pagos con Stripe y automatización Zapier para crear un usuario en Teachable al detectar el pago de un curso.",
+    "lead": "Sitio Webflow con pagos en Stripe y creación de usuarios en Teachable mediante Zapier después del pago de un curso.",
+    "summary": "En Industria Social desarrollé el sitio web de Nutriandreaa con Webflow, a petición del cliente. Conecté la pasarela de pagos Stripe y configuré una automatización en Zapier que creaba un nuevo usuario en Teachable cuando detectaba el pago de un curso.",
+    "role": "Lead Web Developer · Industria Social",
+    "year": "2021–2025",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/sitio-web-webflow-stripe-zapier-teachable/",
+    "sourcePublishedAt": "2026-10-12",
+    "liveUrl": "https://www.retosnutriandreaa.com/",
+    "socialImage": "/equipo/proyectos/case-studies/nutriandreaa-webflow-stripe-course-automation/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/nutriandreaa-webflow-stripe-course-automation/cover-es.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Portada actual de Nutriandreaa con navegación, presentación de programas y fotografía de Andrea Solorio"
+    },
+    "stack": [
+      "Webflow",
+      "Stripe",
+      "Zapier",
+      "Teachable"
+    ],
+    "skills": [
+      "Desarrollo Webflow",
+      "Integración Stripe",
+      "Automatización Zapier",
+      "Integración Teachable",
+      "Integración de plataformas"
+    ],
+    "challenge": "El cliente solicitó desarrollar el sitio con Webflow y conectar el pago de un curso con la creación del usuario en Teachable.",
+    "approach": "Desarrollé el sitio en Webflow, conecté Stripe para los pagos y configuré Zapier para detectar el pago de un curso y crear el usuario en Teachable.",
+    "howItWorks": {
+      "intro": "El flujo conecta cuatro plataformas: Webflow presenta el curso, Stripe procesa el pago, Zapier detecta ese pago y Teachable recibe la acción de creación de usuario.",
+      "steps": [
+        {
+          "title": "Webflow como interfaz del sitio",
+          "description": "Desarrollé el sitio en Webflow porque era la plataforma solicitada por el cliente. El sitio presenta los cursos y se conecta con la pasarela Stripe para el proceso de pago."
+        },
+        {
+          "title": "Stripe como origen del pago",
+          "description": "La compra del curso se realiza mediante la integración con Stripe. El pago del curso es el evento que debía detectar la automatización para iniciar la creación del usuario."
+        },
+        {
+          "title": "Zapier como capa de automatización",
+          "description": "Configuré Zapier para detectar el pago del curso y ejecutar la acción correspondiente en Teachable. La automatización conecta la información de la compra con la creación de la cuenta: Zapier coordina el flujo y Teachable ejecuta el alta del usuario."
+        },
+        {
+          "title": "Creación del usuario en Teachable",
+          "description": "La acción final del flujo crea un nuevo usuario en Teachable utilizando la información de la compra. El resultado de la integración es una cuenta creada a partir del pago detectado por Zapier."
+        }
+      ]
+    },
+    "workTitle": "Sitio Webflow y automatización del alta de usuarios.",
+    "work": [
+      {
+        "title": "Webflow a petición del cliente",
+        "description": "Desarrollé el sitio utilizando la plataforma solicitada."
+      },
+      {
+        "title": "Pagos con Stripe",
+        "description": "Conecté la pasarela Stripe para el pago de los cursos."
+      },
+      {
+        "title": "Zapier y Teachable",
+        "description": "Configuré la automatización que detectaba el pago y creaba un nuevo usuario en Teachable."
+      }
+    ],
+    "resultsTitle": "Pago del curso conectado a la creación del usuario.",
+    "results": [
+      {
+        "title": "Creación de usuario tras el pago",
+        "description": "La detección del pago de un curso activaba la creación del usuario en Teachable mediante Zapier."
+      }
+    ],
+    "currentNote": "El trabajo descrito corresponde a mi período en Industria Social (2021–2025). El sitio público actual es una referencia y puede incluir cambios posteriores.",
+    "images": [
+      {
+        "id": "hero",
+        "src": "/equipo/proyectos/case-studies/nutriandreaa-webflow-stripe-course-automation/home-current.webp",
+        "avif": "/equipo/proyectos/case-studies/nutriandreaa-webflow-stripe-course-automation/home-current.avif",
+        "width": 1440,
+        "height": 722,
+        "source": "https://www.retosnutriandreaa.com/",
+        "capturedDate": "2026-10-12",
+        "alt": "Portada actual de Nutriandreaa con navegación, presentación de programas y fotografía de Andrea Solorio",
+        "caption": "Versión actual del sitio de Nutriandreaa. Captura de referencia; el sitio puede haber cambiado desde mi trabajo."
+      },
+      {
+        "id": "course",
+        "src": "/equipo/proyectos/case-studies/nutriandreaa-webflow-stripe-course-automation/course-current.webp",
+        "avif": "/equipo/proyectos/case-studies/nutriandreaa-webflow-stripe-course-automation/course-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://www.retosnutriandreaa.com/reto-clean-keto-by-nutriandreaa",
+        "capturedDate": "2026-10-12",
+        "alt": "Página actual de un curso de Nutriandreaa con información, video de presentación y enlace de inscripción",
+        "caption": "Versión actual del sitio. Página actual de un curso de Nutriandreaa con información, video de presentación y enlace de inscripción."
+      },
+      {
+        "id": "consultation",
+        "src": "/equipo/proyectos/case-studies/nutriandreaa-webflow-stripe-course-automation/consultation-current.webp",
+        "avif": "/equipo/proyectos/case-studies/nutriandreaa-webflow-stripe-course-automation/consultation-current.avif",
+        "width": 1440,
+        "height": 685,
+        "source": "https://www.retosnutriandreaa.com/consultas",
+        "capturedDate": "2026-10-12",
+        "alt": "Página actual de consultas de Nutriandreaa con navegación, presentación del servicio e información de la consulta",
+        "caption": "Versión actual del sitio. Página actual de consultas de Nutriandreaa con navegación, presentación del servicio e información de la consulta."
+      }
+    ],
+    "gallery": [
+      {
+        "id": "course",
+        "layout": "detail"
+      },
+      {
+        "id": "consultation",
+        "layout": "detail"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Sitio público de Nutriandreaa",
+        "href": "https://www.retosnutriandreaa.com/"
+      },
+      {
+        "label": "Nutriandreaa — Página del curso (versión actual)",
+        "href": "https://www.retosnutriandreaa.com/reto-clean-keto-by-nutriandreaa"
+      },
+      {
+        "label": "Nutriandreaa — Página de consultas (versión actual)",
+        "href": "https://www.retosnutriandreaa.com/consultas"
+      }
+    ]
+  },
+  {
+    "slug": "como-personalizar-envios-y-paquetes-con-plugins-de-woocommerce",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "Industria Social",
+    "relatedServices": [
+      "wordpress",
+      "tienda-en-linea"
+    ],
+    "title": "Plugins WooCommerce de envíos y bundles para GroovePro",
+    "metaTitle": "Plugins WooCommerce: envíos y bundles | GroovePro | Devstoremx",
+    "name": "GroovePro",
+    "description": "Sitio WordPress y Elementor bilingüe para GroovePro y dos plugins PHP de WooCommerce: envíos por productos y dimensiones, y bundles con precios por cantidad.",
+    "lead": "Sitio bilingüe y dos plugins PHP para calcular envíos y crear bundles personalizados con precios según las cantidades del carrito.",
+    "summary": "En Industria Social desarrollé el sitio de GroovePro con WordPress y Elementor, con español e inglés según la región y la configuración del navegador. También desarrollé dos plugins en PHP para WordPress y WooCommerce: uno para ajustar los cobros de envío según los bundles, productos y dimensiones; otro para crear bundles personalizados y ajustar los precios según las cantidades del carrito.",
+    "role": "Lead Web Developer · Industria Social",
+    "year": "2021–2025",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/plugins-woocommerce-envios-bundles-personalizados/",
+    "sourcePublishedAt": "2026-10-12",
+    "liveUrl": "https://groove.pro/",
+    "socialImage": "/equipo/proyectos/case-studies/groovepro-custom-woocommerce-plugins/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/groovepro-custom-woocommerce-plugins/cover-es.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Portada actual de GroovePro con logotipo, navegación y fotografía de un garaje con paneles de organización"
+    },
+    "stack": [
+      "WordPress",
+      "Elementor",
+      "WooCommerce",
+      "PHP"
+    ],
+    "skills": [
+      "Desarrollo WordPress",
+      "Elementor",
+      "Desarrollo de plugins WooCommerce",
+      "PHP",
+      "Cálculo de envíos",
+      "Bundles personalizados",
+      "Precios por cantidad",
+      "Sitios web bilingües"
+    ],
+    "challenge": "El sitio requería soporte para dos idiomas y reglas de envío y precios adaptadas a los productos, sus dimensiones y los bundles del carrito.",
+    "approach": "Desarrollé el sitio con WordPress y Elementor y el soporte de idiomas según región y navegador. Implementé dos plugins PHP para WooCommerce, separando las reglas de envío de las reglas de bundles y precios por cantidad.",
+    "howItWorks": {
+      "intro": "Desarrollé dos plugins PHP para WordPress y WooCommerce, cada uno con reglas e inputs distintos. El sitio también ofrece español e inglés según la región y la configuración del navegador.",
+      "steps": [
+        {
+          "title": "Plugin de cálculo de envíos",
+          "description": "El plugin utiliza los productos, los bundles y sus dimensiones como entradas para ajustar los cobros de envío. Su lógica implementa las reglas de envío del proyecto dentro de WordPress y WooCommerce."
+        },
+        {
+          "title": "Plugin de bundles y precios",
+          "description": "El segundo plugin permite crear bundles personalizados y ajustar sus precios según las cantidades presentes en el carrito. La composición del bundle y la cantidad de productos son entradas de esta lógica de precios."
+        },
+        {
+          "title": "Separación de las reglas comerciales",
+          "description": "Las reglas de envío y las reglas de bundles/precios están implementadas en dos plugins distintos, desarrollados en PHP. Cada plugin resuelve su cálculo: cobro del envío o precio asociado a los bundles y cantidades."
+        },
+        {
+          "title": "Idioma según región y navegador",
+          "description": "El sitio WordPress y Elementor tiene versiones en español e inglés. Implementé el soporte de idiomas basado en la región y la configuración del navegador, junto con las funcionalidades de los plugins WooCommerce."
+        }
+      ]
+    },
+    "workTitle": "Sitio bilingüe y dos plugins de reglas comerciales.",
+    "work": [
+      {
+        "title": "WordPress y Elementor",
+        "description": "Desarrollé el sitio con soporte para español e inglés según región y navegador."
+      },
+      {
+        "title": "Plugin de envíos",
+        "description": "Implementé ajustes de cobro de envío según bundles, productos y dimensiones."
+      },
+      {
+        "title": "Plugin de bundles y precios",
+        "description": "Implementé bundles personalizados y ajustes de precio según las cantidades en el carrito."
+      }
+    ],
+    "resultsTitle": "Reglas de envío y bundles implementadas en plugins.",
+    "results": [
+      {
+        "title": "Dos plugins PHP",
+        "description": "Las reglas de envío y de bundles/precios quedaron implementadas en dos plugins para WordPress y WooCommerce."
+      },
+      {
+        "title": "Soporte bilingüe",
+        "description": "El sitio contó con español e inglés según región y configuración del navegador."
+      }
+    ],
+    "currentNote": "El trabajo descrito corresponde a mi período en Industria Social (2021–2025). El sitio público actual es una referencia y puede incluir cambios posteriores.",
+    "images": [
+      {
+        "id": "hero",
+        "src": "/equipo/proyectos/case-studies/groovepro-custom-woocommerce-plugins/home-current.webp",
+        "avif": "/equipo/proyectos/case-studies/groovepro-custom-woocommerce-plugins/home-current.avif",
+        "width": 1440,
+        "height": 722,
+        "source": "https://groove.pro/",
+        "capturedDate": "2026-10-12",
+        "alt": "Portada actual de GroovePro con logotipo, navegación y fotografía de un garaje con paneles de organización",
+        "caption": "Versión actual del sitio de GroovePro. Captura de referencia; el sitio puede haber cambiado desde mi trabajo."
+      },
+      {
+        "id": "colors",
+        "src": "/equipo/proyectos/case-studies/groovepro-custom-woocommerce-plugins/colors-current.webp",
+        "avif": "/equipo/proyectos/case-studies/groovepro-custom-woocommerce-plugins/colors-current.avif",
+        "width": 1440,
+        "height": 508,
+        "source": "https://groove.pro/",
+        "capturedDate": "2026-10-12",
+        "alt": "Sección actual de colores de GroovePro con imagen de paneles en blanco, negro, gris e ivory",
+        "caption": "Versión actual del sitio. Sección actual de colores de GroovePro con imagen de paneles en blanco, negro, gris e ivory."
+      }
+    ],
+    "gallery": [
+      {
+        "id": "colors",
+        "layout": "detail"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Sitio público de GroovePro",
+        "href": "https://groove.pro/"
+      }
+    ]
+  },
+  {
+    "slug": "como-desarrollar-un-sitio-web-corporativo-con-wordpress",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "Brainfood Marketing",
+    "relatedServices": [
+      "wordpress",
+      "paginas-web"
+    ],
+    "title": "Desarrollo de sitio web corporativo en WordPress y Elementor para Grupo AGA",
+    "metaTitle": "Sitio web corporativo en WordPress y Elementor | Grupo AGA | Devstoremx",
+    "name": "Grupo AGA",
+    "description": "Desarrollo del sitio web corporativo de Grupo AGA en WordPress y Elementor, con HTML, CSS y JavaScript, a través de Brainfood Marketing.",
+    "lead": "Sitio web corporativo desarrollado con WordPress, Elementor, HTML, CSS y JavaScript a través de Brainfood Marketing.",
+    "summary": "Desarrollé el sitio web de Grupo AGA con WordPress, Elementor, HTML, CSS y JavaScript durante mi trabajo en Brainfood Marketing. Brainfood participó como proveedor terciario en el proyecto de Embotelladora AGA de Occidente. El sitio público recibió cambios después de mi participación; las capturas de este caso documentan su versión actual.",
+    "role": "WordPress Developer",
+    "year": "2023–2024",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/desarrollo-sitio-web-corporativo-wordpress/",
+    "sourcePublishedAt": "2026-10-12",
+    "liveUrl": "https://embotelladoraaga.com/",
+    "socialImage": "/equipo/proyectos/case-studies/grupo-aga-wordpress-website/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/grupo-aga-wordpress-website/aga-home-desktop.webp",
+      "width": 1425,
+      "height": 891,
+      "alt": "Portada actual del sitio de Embotelladora AGA de Occidente con navegación, información corporativa y productos de bebidas"
+    },
+    "stack": [
+      "WordPress",
+      "Elementor",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "skills": [
+      "WordPress",
+      "Elementor",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Desarrollo de sitios web",
+      "Sitios web corporativos"
+    ],
+    "challenge": "El proyecto corresponde al sitio web de Embotelladora AGA de Occidente, una empresa mexicana de bebidas.",
+    "approach": "Utilicé WordPress como plataforma y Elementor para maquetar el sitio. El desarrollo incluyó HTML, CSS y JavaScript para su estructura, estilos y funcionamiento.",
+    "workTitle": "Creación del sitio web corporativo.",
+    "work": [
+      {
+        "title": "Maquetación con Elementor",
+        "description": "Construí el sitio web corporativo de Grupo AGA en WordPress utilizando Elementor para la maquetación."
+      },
+      {
+        "title": "HTML y CSS",
+        "description": "Utilicé HTML y CSS para trabajar la estructura y los estilos del sitio."
+      },
+      {
+        "title": "JavaScript",
+        "description": "Utilicé JavaScript como parte del desarrollo y funcionamiento del sitio web."
+      }
+    ],
+    "resultsTitle": "Información de la empresa, sus productos y contacto.",
+    "results": [
+      {
+        "title": "Información corporativa",
+        "description": "La versión actual incluye una sección sobre Embotelladora AGA de Occidente y su historia."
+      },
+      {
+        "title": "Marcas y productos",
+        "description": "El sitio actual presenta las bebidas y marcas de la empresa, con enlaces a sus páginas de productos."
+      },
+      {
+        "title": "Contacto",
+        "description": "El sitio público dispone de una página con los canales de contacto de la empresa."
+      }
+    ],
+    "currentNote": "El sitio recibió cambios posteriores a mi participación. Las capturas muestran la versión pública consultada el 12 de octubre de 2026.",
+    "images": [
+      {
+        "id": "hero",
+        "src": "/equipo/proyectos/case-studies/grupo-aga-wordpress-website/aga-home-desktop.webp",
+        "avif": "/equipo/proyectos/case-studies/grupo-aga-wordpress-website/aga-home-desktop.avif",
+        "width": 1425,
+        "height": 891,
+        "source": "https://embotelladoraaga.com/",
+        "capturedDate": "2026-10-12",
+        "alt": "Portada actual del sitio de Embotelladora AGA de Occidente con navegación, información corporativa y productos de bebidas",
+        "caption": "Portada actual de embotelladoraaga.com. El sitio recibió cambios posteriores al desarrollo que realicé a través de Brainfood Marketing."
+      },
+      {
+        "id": "about",
+        "src": "/equipo/proyectos/case-studies/grupo-aga-wordpress-website/aga-about-desktop.webp",
+        "avif": "/equipo/proyectos/case-studies/grupo-aga-wordpress-website/aga-about-desktop.avif",
+        "width": 1425,
+        "height": 891,
+        "source": "https://embotelladoraaga.com/nosotros-aga/",
+        "capturedDate": "2026-10-12",
+        "alt": "Página Nosotros del sitio actual de Embotelladora AGA de Occidente con encabezado verde e introducción a la historia de la empresa",
+        "caption": "Sección Nosotros de la versión actual del sitio, consultada como referencia pública del proyecto."
+      },
+      {
+        "id": "mobile",
+        "src": "/equipo/proyectos/case-studies/grupo-aga-wordpress-website/aga-home-mobile.webp",
+        "avif": "/equipo/proyectos/case-studies/grupo-aga-wordpress-website/aga-home-mobile.avif",
+        "width": 375,
+        "height": 812,
+        "source": "https://embotelladoraaga.com/",
+        "capturedDate": "2026-10-12",
+        "alt": "Portada actual de Embotelladora AGA en móvil con logotipo, menú compacto y accesos a responsabilidad social y productos",
+        "caption": "Vista móvil de la versión actual del sitio de Embotelladora AGA."
+      }
+    ],
+    "gallery": [
+      {
+        "id": "about",
+        "layout": "before"
+      },
+      {
+        "id": "mobile",
+        "layout": "mobile"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Sitio público de Embotelladora AGA de Occidente",
+        "href": "https://embotelladoraaga.com/"
+      },
+      {
+        "label": "Nosotros · Embotelladora AGA",
+        "href": "https://embotelladoraaga.com/nosotros-aga/"
+      },
+      {
+        "label": "Contacto · Embotelladora AGA",
+        "href": "https://embotelladoraaga.com/contacto-aga/"
+      }
+    ]
+  },
+  {
+    "slug": "como-integrar-anuncios-en-una-pagina-web-con-javascript-y-typescript",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "Stitchers.Space",
+    "relatedServices": [
+      "integraciones"
+    ],
+    "title": "Integración de anuncios web con JavaScript y TypeScript en Stitchers.Space",
+    "metaTitle": "Anuncios web con JavaScript y TypeScript | Stitchers.Space | Devstoremx",
+    "name": "Stitchers.Space",
+    "description": "Integración de anuncios web en Stitchers.Space: scripts en JavaScript y TypeScript, análisis HTML con DevTools, selectores CSS y QA de ubicación.",
+    "lead": "Scripts publicitarios en JavaScript y TypeScript, posicionados mediante selectores CSS y verificados con QA.",
+    "summary": "En Stitchers.Space desarrollé e inserté scripts publicitarios en sitios de alto valor publicitario, como Cuevana. Utilicé las herramientas de desarrollo del navegador para analizar el HTML y localizar, mediante selectores CSS, los elementos donde debían aparecer los anuncios. Desarrollé los scripts con JavaScript y TypeScript y realicé QA para comprobar que los anuncios estuvieran colocados correctamente.",
+    "role": "JavaScript Developer",
+    "year": "2024",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/integracion-anuncios-web-javascript-typescript/",
+    "sourcePublishedAt": "2026-10-12",
+    "socialImage": "/equipo/proyectos/case-studies/stitchers-space-web-ad-integration/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/experience/stitchers-space.webp",
+      "width": 1280,
+      "height": 854,
+      "alt": "Computadoras y consolas retro; imagen ilustrativa del caso de Stitchers.Space"
+    },
+    "stack": [
+      "JavaScript",
+      "TypeScript",
+      "Chrome DevTools",
+      "Selectores CSS"
+    ],
+    "skills": [
+      "JavaScript",
+      "TypeScript",
+      "Chrome DevTools",
+      "Análisis del DOM",
+      "Selectores CSS",
+      "Integración de anuncios web",
+      "QA de anuncios"
+    ],
+    "challenge": "El trabajo requería identificar dentro del HTML de cada sitio las posiciones destinadas a los anuncios. Los scripts debían insertar la publicidad en esos elementos, y cada integración necesitaba una revisión para confirmar su ubicación.",
+    "approach": "Analicé el HTML y el DOM con DevTools, identifiqué las posiciones mediante selectores CSS e inserté los scripts desarrollados con JavaScript y TypeScript. Después revisé los anuncios para comprobar que aparecieran en los lugares previstos.",
+    "howItWorks": {
+      "intro": "Analicé el HTML y el DOM con DevTools, identifiqué las posiciones mediante selectores CSS e inserté los scripts desarrollados con JavaScript y TypeScript. Después revisé los anuncios para comprobar que aparecieran en los lugares previstos.",
+      "steps": [
+        {
+          "title": "DevTools",
+          "description": "Analizar la estructura HTML"
+        },
+        {
+          "title": "Selectores CSS",
+          "description": "Elegir la posición del anuncio"
+        },
+        {
+          "title": "Scripts JS y TS",
+          "description": "Insertar los scripts publicitarios"
+        },
+        {
+          "title": "QA de anuncios",
+          "description": "Comprobar la ubicación de los anuncios"
+        }
+      ]
+    },
+    "workTitle": "Inspección del HTML, inserción de scripts y QA.",
+    "work": [
+      {
+        "title": "Análisis con DevTools",
+        "description": "Utilicé las herramientas de desarrollo del navegador para inspeccionar el HTML y localizar los elementos donde debían insertarse los anuncios."
+      },
+      {
+        "title": "Posiciones mediante selectores CSS",
+        "description": "Identifiqué los elementos del DOM con selectores CSS para dirigir la inserción de los scripts a las posiciones correctas."
+      },
+      {
+        "title": "Scripts en JavaScript y TypeScript",
+        "description": "Desarrollé e integré los scripts publicitarios en JavaScript y TypeScript, adaptando la inserción a los elementos identificados en cada sitio."
+      },
+      {
+        "title": "QA de los anuncios",
+        "description": "Comprobé la colocación de los anuncios después de insertar los scripts para verificar que aparecieran en las posiciones previstas."
+      }
+    ],
+    "resultsTitle": "Scripts integrados y ubicaciones verificadas.",
+    "results": [
+      {
+        "title": "Integración en sitios web",
+        "description": "Inserté scripts publicitarios en sitios de alto valor publicitario, con Cuevana como uno de los ejemplos del trabajo realizado."
+      },
+      {
+        "title": "Inserción basada en selectores",
+        "description": "Las posiciones de inserción se definían a partir de los elementos identificados en el HTML de cada sitio."
+      },
+      {
+        "title": "Colocación revisada con QA",
+        "description": "Cada integración se revisaba para comprobar que los anuncios estuvieran bien colocados."
+      }
+    ],
+    "images": [],
+    "gallery": [],
+    "sources": []
+  },
+  {
+    "slug": "como-desarrollar-landing-pages-y-plantillas-de-email-para-casinos-online",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "10Bet Latam",
+    "relatedServices": [
+      "landing-pages",
+      "email-templates"
+    ],
+    "title": "Páginas de compliance, landing pages y plantillas de email para el casino en línea de 10Bet Latam",
+    "metaTitle": "Compliance y plantillas de email para casino | 10Bet Latam | Devstoremx",
+    "name": "10Bet Latam",
+    "description": "Compliance en React y Next.js para 10Bet México (aviso de privacidad, reglas de juego y deportes), landing pages para África y Europa y plantillas de email.",
+    "lead": "Componentes y páginas de compliance para México, landing pages para África y Europa, y las plantillas de email del casino en línea.",
+    "summary": "Entre octubre de 2022 y marzo de 2023 trabajé en 10Bet Latam como Mid Front-End Developer. Desarrollé componentes y módulos para las secciones que requerían compliance en México, creé las páginas de aviso de privacidad, reglas de juego y reglas de deportes, construí landing pages para 10Bet Africa y 10Bet Europa, y desarrollé las numerosas plantillas de email del casino en línea. También administré un servidor que corría sobre AWS.",
+    "role": "Mid Front-End Developer",
+    "year": "2022–2023",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/paginas-compliance-plantillas-email-casino-en-linea-mexico/",
+    "sourcePublishedAt": "2026-10-12",
+    "liveUrl": "https://www.10bet.mx/",
+    "socialImage": "/equipo/proyectos/case-studies/10bet-latam-compliance-and-email/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/10bet-latam-compliance-and-email/10bet-mx-home.webp",
+      "width": 1265,
+      "height": 854,
+      "alt": "Páginas de compliance, landing pages y plantillas de email para 10Bet Latam"
+    },
+    "stack": [
+      "React",
+      "Next.js",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Tailwind CSS",
+      "Git",
+      "GitHub",
+      "AWS"
+    ],
+    "skills": [
+      "Páginas de compliance",
+      "React",
+      "Next.js",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Plantillas de email",
+      "Git y GitHub",
+      "Administración de servidor en AWS"
+    ],
+    "challenge": "10Bet operaba en varios mercados y, en México, algunas secciones debían cumplir con regulaciones de compliance: el aviso de privacidad, las reglas de juego y las reglas de apuestas deportivas. África y Europa necesitaban sus propias landing pages, y el casino en línea requería una gran cantidad de plantillas de email.",
+    "approach": "Trabajé con React, Next.js, HTML, CSS, JavaScript y Tailwind CSS, con Node.js, Git y GitHub dentro del flujo de trabajo. Desarrollé componentes y módulos para las secciones reguladas, creé las páginas para México, construí las landing pages para África y Europa y escribí en HTML las plantillas de email del casino.",
+    "howItWorks": {
+      "intro": "Trabajé con React, Next.js, HTML, CSS, JavaScript y Tailwind CSS, con Node.js, Git y GitHub dentro del flujo de trabajo. Desarrollé componentes y módulos para las secciones reguladas, creé las páginas para México, construí las landing pages para África y Europa y escribí en HTML las plantillas de email del casino.",
+      "steps": [
+        {
+          "title": "Componentes",
+          "description": "Módulos en React y Next.js"
+        },
+        {
+          "title": "Páginas México",
+          "description": "Privacidad, reglas de juego y deportes"
+        },
+        {
+          "title": "Landing pages",
+          "description": "10Bet Africa y 10Bet Europa"
+        },
+        {
+          "title": "Email",
+          "description": "Plantillas del casino en línea"
+        }
+      ]
+    },
+    "workTitle": "Páginas reguladas, landing pages y plantillas de email.",
+    "work": [
+      {
+        "title": "Componentes y módulos de compliance",
+        "description": "Desarrollé componentes y módulos en React y Next.js para las secciones que requerían compliance en México."
+      },
+      {
+        "title": "Aviso de privacidad, reglas de juego y de deportes",
+        "description": "Creé las páginas de aviso de privacidad, reglas de juego y reglas de apuestas deportivas de 10Bet México."
+      },
+      {
+        "title": "Landing pages para África y Europa",
+        "description": "Construí landing pages para 10Bet Africa y 10Bet Europa con HTML, CSS y JavaScript."
+      },
+      {
+        "title": "Plantillas de email del casino",
+        "description": "Creé las plantillas de email en HTML del casino en línea, un conjunto numeroso que incluyó campañas semanales y el lanzamiento del casino de 10Bet México."
+      },
+      {
+        "title": "Términos y condiciones en un solo lugar",
+        "description": "Centralicé los términos y condiciones en una API de Node.js para que un cambio se haga una sola vez y no en cada página."
+      },
+      {
+        "title": "Servidor en AWS",
+        "description": "Administré un servidor que corría sobre AWS y alojaba contenido compartido entre los sitios."
+      }
+    ],
+    "resultsTitle": "Páginas de compliance, landing pages y emails del casino.",
+    "results": [
+      {
+        "title": "Páginas de compliance para México",
+        "description": "Las páginas de aviso de privacidad, reglas de juego y reglas de apuestas deportivas se publicaron en 10Bet México."
+      },
+      {
+        "title": "Landing pages para África y Europa",
+        "description": "10Bet Africa y 10Bet Europa contaron cada una con sus landing pages."
+      },
+      {
+        "title": "Plantillas para el casino en línea",
+        "description": "Un conjunto numeroso de plantillas de email, desde campañas semanales hasta el lanzamiento del casino en México."
+      }
+    ],
+    "currentNote": "Los sitios enlazados son sus versiones actuales y pueden haber cambiado desde que trabajé en ellos.",
+    "images": [
+      {
+        "id": "hero",
+        "src": "/equipo/proyectos/case-studies/10bet-latam-compliance-and-email/10bet-mx-sports-betting-rules.webp",
+        "avif": "/equipo/proyectos/case-studies/10bet-latam-compliance-and-email/10bet-mx-sports-betting-rules.avif",
+        "width": 1425,
+        "height": 900,
+        "source": "https://www.10bet.mx/help/reglas-apuestas/",
+        "capturedDate": "2026-10-12",
+        "alt": "Página de reglas de apuestas deportivas de 10Bet México con la navegación de la sección de ayuda y una tabla de tipos de apuesta",
+        "caption": "Página de reglas de apuestas deportivas en 10bet.mx, una de las páginas de compliance que creé, tal como se publica hoy."
+      },
+      {
+        "id": "privacy",
+        "src": "/equipo/proyectos/case-studies/10bet-latam-compliance-and-email/10bet-mx-privacy-notice.webp",
+        "avif": "/equipo/proyectos/case-studies/10bet-latam-compliance-and-email/10bet-mx-privacy-notice.avif",
+        "width": 1425,
+        "height": 900,
+        "source": "https://www.10bet.mx/help/aviso-de-privacidad/",
+        "capturedDate": "2026-10-12",
+        "alt": "Página de aviso de privacidad y cookies de 10Bet México con el texto legal sobre datos personales",
+        "caption": "Página de aviso de privacidad en 10bet.mx, tal como se publica hoy."
+      },
+      {
+        "id": "mobile",
+        "src": "/equipo/proyectos/case-studies/10bet-latam-compliance-and-email/10bet-mx-privacy-notice-mobile.webp",
+        "avif": "/equipo/proyectos/case-studies/10bet-latam-compliance-and-email/10bet-mx-privacy-notice-mobile.avif",
+        "width": 375,
+        "height": 829,
+        "source": "https://www.10bet.mx/help/aviso-de-privacidad/",
+        "capturedDate": "2026-10-12",
+        "alt": "Página de aviso de privacidad de 10Bet México en una pantalla móvil",
+        "caption": "La misma página de aviso de privacidad en una pantalla móvil."
+      }
+    ],
+    "gallery": [
+      {
+        "id": "privacy",
+        "layout": "before"
+      },
+      {
+        "id": "mobile",
+        "layout": "mobile"
+      }
+    ],
+    "sources": [
+      {
+        "label": "10Bet México",
+        "href": "https://www.10bet.mx/"
+      },
+      {
+        "label": "Términos y condiciones",
+        "href": "https://www.10bet.mx/help/terminos-condiciones/"
+      },
+      {
+        "label": "Reglas de apuestas deportivas",
+        "href": "https://www.10bet.mx/help/reglas-apuestas/"
+      },
+      {
+        "label": "Aviso de privacidad",
+        "href": "https://www.10bet.mx/help/aviso-de-privacidad/"
+      },
+      {
+        "label": "10Bet Africa",
+        "href": "https://www.10bet.co.za/"
+      }
+    ]
+  },
+  {
+    "slug": "como-migrar-un-sitio-web-institucional-a-modx",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "COFAA-IPN",
+    "relatedServices": [
+      "paginas-web",
+      "desarrollo-web"
+    ],
+    "title": "Migración del sitio web institucional de COFAA-IPN a MODX",
+    "metaTitle": "Migración del sitio web institucional de COFAA-IPN a MODX | Devstoremx",
+    "name": "COFAA-IPN",
+    "description": "Migración del sitio web institucional de COFAA-IPN a MODX: diseño del IPN, traslado de información y documentos, y componentes en HTML, CSS y JavaScript.",
+    "lead": "Migración a MODX, homologación con el diseño del IPN y desarrollo de componentes con HTML, CSS y JavaScript.",
+    "summary": "Entre 2019 y 2020, como mi primer proyecto en la Comisión de Operación y Fomento de Actividades Académicas del Instituto Politécnico Nacional (COFAA-IPN), migré su sitio institucional a MODX. Adopté la biblioteca de componentes del IPN, trasladé la información y los documentos del portal anterior y desarrollé componentes propios con HTML, CSS y JavaScript.",
+    "role": "Administrador de Sistemas Informáticos",
+    "year": "2019–2020",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/cofaa-migracion-sitio-web-institucional-modx/",
+    "sourcePublishedAt": "2026-10-11",
+    "liveUrl": "https://www.cofaa.ipn.mx/",
+    "socialImage": "/equipo/proyectos/case-studies/cofaa-institutional-website/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/cofaa-institutional-website/cofaa-current-desktop.webp",
+      "width": 1425,
+      "height": 677,
+      "alt": "Migración del sitio web institucional de COFAA-IPN a MODX"
+    },
+    "stack": [
+      "MODX",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "skills": [
+      "MODX",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Componentes institucionales",
+      "Migración de contenido",
+      "Edición fotográfica"
+    ],
+    "challenge": "El sitio anterior tenía un diseño antiguo que no seguía los lineamientos de los sitios institucionales del IPN. No se adaptaba a móviles y presentaba problemas de accesibilidad. El rediseño requería migrar toda la información, los documentos y los enlaces existentes.",
+    "approach": "Migré el sitio a MODX y utilicé la biblioteca de componentes del IPN. Tomé un curso en el Edificio Inteligente de Zacatenco y desarrollé componentes propios para las necesidades de contenido de COFAA.",
+    "workTitle": "Migración de contenido y desarrollo de componentes.",
+    "work": [
+      {
+        "title": "Capacitación y homologación institucional",
+        "description": "Tomé un curso en el Edificio Inteligente de Zacatenco y utilicé la biblioteca de componentes del IPN para alinear el portal con las otras páginas institucionales."
+      },
+      {
+        "title": "Migración del sitio a MODX",
+        "description": "Migré el sitio institucional al CMS MODX e integré el contenido de COFAA con los componentes del IPN."
+      },
+      {
+        "title": "Información, documentos y enlaces",
+        "description": "Migré toda la información del sitio anterior, incluidos documentos, enlaces y archivos Word y Excel."
+      },
+      {
+        "title": "Componentes propios con HTML, CSS y JavaScript",
+        "description": "Creé componentes a medida para resolver necesidades específicas del contenido, complementando la biblioteca institucional con desarrollo de front-end propio."
+      },
+      {
+        "title": "Fotografía y edición de exsecretarios",
+        "description": "No había imágenes de buena calidad de todos los exsecretarios. Fotografié sus retratos con mi celular en la sala del secretario, edité las imágenes y las recorté al mismo tamaño para dar consistencia a la galería."
+      }
+    ],
+    "resultsTitle": "Sitio en MODX con el diseño institucional del IPN.",
+    "results": [
+      {
+        "title": "Diseño institucional del IPN",
+        "description": "El sitio quedó en MODX con la biblioteca de componentes del IPN y los componentes que desarrollé para COFAA."
+      },
+      {
+        "title": "Contenido y documentos migrados",
+        "description": "La renovación incluyó el contenido y los recursos documentales del sitio anterior. Gran parte de esa información continúa en el portal actual."
+      },
+      {
+        "title": "Fotografías editadas",
+        "description": "La galería de exsecretarios contó con fotografías editadas y recortadas de forma uniforme, incluidas las que tomé para suplir la falta de material digital adecuado."
+      }
+    ],
+    "currentNote": "El sitio actual conserva la estructura y gran parte de la información que migré. La portada y otros contenidos se han actualizado después de mi entrega en 2019–2020.",
+    "images": [
+      {
+        "id": "hero",
+        "src": "/equipo/proyectos/case-studies/cofaa-institutional-website/cofaa-current-desktop.webp",
+        "avif": "/equipo/proyectos/case-studies/cofaa-institutional-website/cofaa-current-desktop.avif",
+        "width": 1425,
+        "height": 677,
+        "source": "https://www.cofaa.ipn.mx/",
+        "capturedDate": "2026-10-11",
+        "alt": "Portada actual del sitio COFAA-IPN con encabezado institucional y contenido actualizado para 2026",
+        "caption": "Portada actual de COFAA-IPN, con contenido actualizado después del proyecto de 2019–2020."
+      },
+      {
+        "id": "before",
+        "src": "/equipo/proyectos/case-studies/cofaa-institutional-website/cofaa-before-2019.webp",
+        "avif": "/equipo/proyectos/case-studies/cofaa-institutional-website/cofaa-before-2019.avif",
+        "width": 1000,
+        "height": 1400,
+        "source": "https://web.archive.org/web/20191118045836/https://www.cofaa.ipn.mx/",
+        "capturedDate": "2026-10-11",
+        "alt": "Sitio COFAA-IPN archivado en noviembre de 2019, con diseño de ancho fijo, navegación y contenido en varias columnas",
+        "caption": "Antes: portal archivado por Wayback Machine el 18 de noviembre de 2019."
+      },
+      {
+        "id": "mobile",
+        "src": "/equipo/proyectos/case-studies/cofaa-institutional-website/cofaa-current-mobile.webp",
+        "avif": "/equipo/proyectos/case-studies/cofaa-institutional-website/cofaa-current-mobile.avif",
+        "width": 375,
+        "height": 812,
+        "source": "https://www.cofaa.ipn.mx/",
+        "capturedDate": "2026-10-11",
+        "alt": "Vista móvil actual del portal COFAA-IPN con menú compacto, título institucional y sección de bienvenida",
+        "caption": "Vista móvil actual del sitio COFAA-IPN."
+      },
+      {
+        "id": "secretaries",
+        "src": "/equipo/proyectos/case-studies/cofaa-institutional-website/cofaa-executive-secretaries.webp",
+        "avif": "/equipo/proyectos/case-studies/cofaa-institutional-website/cofaa-executive-secretaries.avif",
+        "width": 1080,
+        "height": 426,
+        "source": "https://www.cofaa.ipn.mx/conocenos/secretario.html",
+        "capturedDate": "2026-10-11",
+        "alt": "Galería actual de retratos históricos de exsecretarios ejecutivos de COFAA-IPN con recortes de tamaño uniforme",
+        "caption": "Detalle de la galería de exsecretarios. Como parte del proyecto, fotografié, edité y recorté retratos para esta sección."
+      }
+    ],
+    "gallery": [
+      {
+        "id": "secretaries",
+        "layout": "detail"
+      },
+      {
+        "id": "before",
+        "layout": "before"
+      },
+      {
+        "id": "mobile",
+        "layout": "mobile"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Portal COFAA-IPN anterior · archivo de noviembre de 2019",
+        "href": "https://web.archive.org/web/20191118045836/https://www.cofaa.ipn.mx/"
+      },
+      {
+        "label": "Sitio institucional COFAA-IPN actual",
+        "href": "https://www.cofaa.ipn.mx/"
+      },
+      {
+        "label": "Galería de secretarios y exsecretarios de COFAA-IPN",
+        "href": "https://www.cofaa.ipn.mx/conocenos/secretario.html"
+      },
+      {
+        "label": "Plataforma web y catálogo de componentes MODX del IPN · documentación actual",
+        "href": "https://www.ipn.mx/cenac/servicios/portalweb.html"
+      }
+    ]
+  },
+  {
+    "slug": "como-centralizar-las-solicitudes-de-soporte-con-un-sistema-de-tickets",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "COFAA-IPN",
+    "relatedServices": [
+      "apps-web"
+    ],
+    "title": "Bitácora web de servicio y gestión de tickets de COFAA-IPN",
+    "metaTitle": "Desarrollo de sistema web de tickets | COFAA-IPN | Devstoremx",
+    "name": "COFAA-IPN",
+    "description": "Sistema web de tickets para COFAA-IPN con PHP, MySQL y React: soporte técnico, inventario de equipos, encuestas y reportes PDF, XLS y CSV.",
+    "lead": "Tickets de soporte, asignación de técnicos, inventario de equipos y reportes en una aplicación web.",
+    "summary": "Desarrollé la bitácora de servicio de la Comisión de Operación y Fomento de Actividades Académicas del Instituto Politécnico Nacional (COFAA-IPN). Fue el proyecto principal de mi trabajo en la institución: centralizó la solicitud, el registro, el seguimiento y la resolución de tickets que antes se gestionaban en libretas separadas. La aplicación reunió el historial de soporte, el inventario de equipos y la generación de reportes para su consulta y presentación en auditorías.",
+    "role": "Desarrollador web",
+    "year": "2019–2022",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/desarrollo-sistema-web-gestion-tickets/",
+    "sourcePublishedAt": "2026-10-12",
+    "socialImage": "/equipo/proyectos/case-studies/cofaa-service-desk/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/ipn-cover.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Escudo del Instituto Politécnico Nacional"
+    },
+    "stack": [
+      "Windows Server",
+      "WampServer",
+      "PHP",
+      "MySQL",
+      "React",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "Git"
+    ],
+    "skills": [
+      "Desarrollo de sistemas web",
+      "PHP",
+      "MySQL",
+      "React",
+      "Gestión de tickets",
+      "Inventario de equipos",
+      "Reportes PDF, XLS y CSV"
+    ],
+    "challenge": "El equipo de apoyo técnico daba mantenimiento y soporte a los equipos electrónicos de COFAA. Cada etapa se registraba a mano en una libreta distinta. Esa separación impedía reunir el historial completo de una solicitud y obtener un concentrado de todos los tickets para las auditorías.",
+    "approach": "Creé una mesa de servicio web con PHP y MySQL en Windows Server con WampServer. Implementé el flujo de tickets, la asignación con un máximo de dos tickets simultáneos por técnico, el cierre mediante formulario, las encuestas y los reportes. El desarrollo también utilizó React, HTML, CSS, JavaScript, Bootstrap y Git.",
+    "howItWorks": {
+      "intro": "Creé una mesa de servicio web con PHP y MySQL en Windows Server con WampServer. Implementé el flujo de tickets, la asignación con un máximo de dos tickets simultáneos por técnico, el cierre mediante formulario, las encuestas y los reportes. El desarrollo también utilizó React, HTML, CSS, JavaScript, Bootstrap y Git.",
+      "steps": [
+        {
+          "title": "Solicitud",
+          "description": "El usuario levanta un ticket"
+        },
+        {
+          "title": "Asignación",
+          "description": "Máximo 2 tickets por técnico"
+        },
+        {
+          "title": "Seguimiento",
+          "description": "Registro del soporte realizado"
+        },
+        {
+          "title": "Cierre",
+          "description": "Formulario de conclusión"
+        },
+        {
+          "title": "Encuesta",
+          "description": "Satisfacción del usuario"
+        },
+        {
+          "title": "Equipos",
+          "description": "Registro de cada unidad de cómputo"
+        },
+        {
+          "title": "Componentes",
+          "description": "Inventario de componentes"
+        },
+        {
+          "title": "Tickets",
+          "description": "Concentrado del soporte técnico"
+        },
+        {
+          "title": "Reportes",
+          "description": "Exportación PDF · XLS · CSV"
+        }
+      ]
+    },
+    "workTitle": "Solicitud, seguimiento y cierre del soporte técnico.",
+    "work": [
+      {
+        "title": "Registro y asignación de tickets",
+        "description": "El usuario podía levantar una solicitud de soporte. El sistema permitía asignar tickets a los técnicos y limitaba a dos los tickets simultáneos de cada técnico."
+      },
+      {
+        "title": "Seguimiento y conclusión",
+        "description": "Centralicé el registro y seguimiento de la solicitud hasta su resolución. Un formulario de conclusión permitía documentar el cierre del ticket."
+      },
+      {
+        "title": "Encuestas y acuses de recepción",
+        "description": "Al terminar un ticket se solicitaba una encuesta de satisfacción al usuario. El sistema también registraba el acuse de recepción cuando la encuesta había sido recibida pero no contestada."
+      },
+      {
+        "title": "Inventario de equipos y componentes",
+        "description": "Implementé el registro de cada unidad de cómputo y sus componentes para consultar el inventario desde la aplicación."
+      },
+      {
+        "title": "Reportes y avisos",
+        "description": "Agregué generación de reportes en PDF, XLS y CSV, además de avisos dentro del sistema. Los concentrados reunían la información necesaria para su consulta y presentación en auditorías."
+      }
+    ],
+    "resultsTitle": "Historial de soporte y reportes en un solo sistema.",
+    "results": [
+      {
+        "title": "Registro centralizado",
+        "description": "Las etapas del soporte quedaron en una aplicación web, con información disponible desde la solicitud hasta el cierre."
+      },
+      {
+        "title": "Asignación con límite de tickets",
+        "description": "La regla de dos tickets simultáneos por técnico quedó integrada al proceso de asignación."
+      },
+      {
+        "title": "Inventario y exportación",
+        "description": "El sistema permitió consultar equipos y componentes y generar reportes en PDF, XLS y CSV."
+      }
+    ],
+    "images": [],
+    "gallery": [],
+    "sources": []
+  },
+  {
+    "slug": "como-registrar-y-consultar-acuses-digitales-en-una-aplicacion-web",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "COFAA-IPN",
+    "relatedServices": [
+      "apps-web"
+    ],
+    "title": "Aplicación web del Código de Conducta y acuses de COFAA-IPN",
+    "metaTitle": "Desarrollo de sistema web de acuses | COFAA-IPN | Devstoremx",
+    "name": "COFAA-IPN",
+    "description": "Aplicación web para el Código de Conducta de COFAA-IPN: acuses en MySQL, copia por correo, consulta administrativa y concentrado XLS. Desarrollada en PHP.",
+    "lead": "Consulta del Código de Conducta, registro de acuses y envío de una copia por correo al personal.",
+    "summary": "Desarrollé una aplicación web para registrar la adhesión del personal al Código de Conducta de la Comisión de Operación y Fomento de Actividades Académicas del Instituto Politécnico Nacional (COFAA-IPN). El proyecto respondió a una solicitud de auditoría de llevar un control del conocimiento del código. El sistema registraba el acuse del personal después de consultar el documento y permitía a la administración consultar y descargar los registros.",
+    "role": "Desarrollador web",
+    "year": "2019–2022",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/desarrollo-sistema-web-gestion-acuses/",
+    "sourcePublishedAt": "2026-10-12",
+    "socialImage": "/equipo/proyectos/case-studies/cofaa-code-of-conduct/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/ipn-cover.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Escudo del Instituto Politécnico Nacional"
+    },
+    "stack": [
+      "PHP",
+      "MySQL",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "skills": [
+      "Desarrollo de aplicaciones web",
+      "PHP",
+      "MySQL",
+      "Gestión de acuses",
+      "Formularios web",
+      "Correo electrónico",
+      "Exportación XLS"
+    ],
+    "challenge": "En una auditoría se solicitó llevar un control de que el personal conociera el Código de Conducta de COFAA. Se necesitaba un proceso para consultar el documento, registrar la adhesión de cada persona y reunir los acuses para su consulta administrativa.",
+    "approach": "Creé una aplicación con PHP, MySQL, HTML, CSS y JavaScript. El personal consultaba el Código de Conducta y llenaba un formulario con sus datos. El acuse se guardaba en la base de datos y el usuario recibía una copia por correo electrónico. El administrador podía consultar y descargar acuses individuales y un concentrado en XLS.",
+    "howItWorks": {
+      "intro": "Creé una aplicación con PHP, MySQL, HTML, CSS y JavaScript. El personal consultaba el Código de Conducta y llenaba un formulario con sus datos. El acuse se guardaba en la base de datos y el usuario recibía una copia por correo electrónico. El administrador podía consultar y descargar acuses individuales y un concentrado en XLS.",
+      "steps": [
+        {
+          "title": "Consulta",
+          "description": "Lectura del Código de Conducta"
+        },
+        {
+          "title": "Formulario",
+          "description": "Datos del personal y adhesión"
+        },
+        {
+          "title": "Registro",
+          "description": "Acuse almacenado en MySQL"
+        },
+        {
+          "title": "Correo",
+          "description": "Copia del acuse para el usuario"
+        },
+        {
+          "title": "Administración",
+          "description": "Consulta, descarga y XLS"
+        }
+      ]
+    },
+    "workTitle": "Consulta del código y registro de acuses.",
+    "work": [
+      {
+        "title": "Consulta del Código de Conducta",
+        "description": "Integré el documento en la aplicación para que el personal pudiera revisarlo antes de completar el registro."
+      },
+      {
+        "title": "Formulario y almacenamiento en MySQL",
+        "description": "Desarrollé el formulario con los datos del personal y el registro del acuse de adhesión en la base de datos."
+      },
+      {
+        "title": "Copia del acuse por correo",
+        "description": "Implementé el envío de una copia del acuse al usuario después de completar el formulario."
+      },
+      {
+        "title": "Consulta administrativa y concentrado XLS",
+        "description": "El administrador podía consultar y descargar el acuse de cada usuario, además de un archivo XLS con el concentrado del personal adscrito al Código de Conducta."
+      }
+    ],
+    "resultsTitle": "Acuses individuales y concentrado para la administración.",
+    "results": [
+      {
+        "title": "Registro de adhesión",
+        "description": "La aplicación almacenaba el acuse de cada persona que completaba el formulario después de consultar el código."
+      },
+      {
+        "title": "Copia para el personal",
+        "description": "Cada usuario recibía por correo una copia de su acuse."
+      },
+      {
+        "title": "Consulta y descarga",
+        "description": "La administración podía recuperar acuses individuales y descargar el concentrado de registros en XLS."
+      }
+    ],
+    "images": [],
+    "gallery": [],
+    "sources": []
+  },
+  {
+    "slug": "como-crear-un-portal-de-transparencia-con-avisos-por-correo",
+    "author": "fernando-peralta",
+    "kind": "career",
+    "context": "COFAA-IPN",
+    "relatedServices": [
+      "apps-web",
+      "automatizaciones"
+    ],
+    "title": "Portal web de transparencia de COFAA-IPN con avisos por correo",
+    "metaTitle": "Desarrollo de portal web de transparencia | COFAA-IPN | Devstoremx",
+    "name": "COFAA-IPN",
+    "description": "Portal web de transparencia para COFAA-IPN: consulta de oficios públicos y avisos por correo con enlaces a documentos. Desarrollo con PHP, MySQL y Bootstrap.",
+    "lead": "Consulta de oficios públicos y notificaciones por correo con enlaces a los documentos actualizados.",
+    "summary": "Desarrollé un portal web de transparencia para la Comisión de Operación y Fomento de Actividades Académicas del Instituto Politécnico Nacional (COFAA-IPN). El portal facilitaba la consulta de oficios de carácter público y notificaba a los usuarios por correo cuando se actualizaban los documentos correspondientes. Los mensajes compartían los enlaces de consulta, con un funcionamiento similar al de un boletín.",
+    "role": "Desarrollador web",
+    "year": "2019–2022",
+    "publishedAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "sourceUrl": "https://fernandoperalta.xyz/es/casos-de-estudio/desarrollo-portal-web-transparencia/",
+    "sourcePublishedAt": "2026-10-12",
+    "socialImage": "/equipo/proyectos/case-studies/cofaa-transparency-portal/og-es.jpg",
+    "cover": {
+      "src": "/equipo/proyectos/case-studies/ipn-cover.webp",
+      "width": 736,
+      "height": 414,
+      "alt": "Escudo del Instituto Politécnico Nacional"
+    },
+    "stack": [
+      "PHP",
+      "MySQL",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap"
+    ],
+    "skills": [
+      "Desarrollo de portales web",
+      "PHP",
+      "MySQL",
+      "Bootstrap",
+      "Consulta de documentos",
+      "Notificaciones por correo"
+    ],
+    "challenge": "Los usuarios necesitaban consultar de forma sencilla los oficios públicos y conocer las actualizaciones del portal. El proyecto debía conectar la publicación de los documentos con avisos que incluyeran los enlaces de consulta.",
+    "approach": "Desarrollé el portal con PHP, MySQL, HTML, CSS, JavaScript y Bootstrap. Implementé la consulta de los oficios y el envío de notificaciones por correo al actualizar el portal con los documentos correspondientes.",
+    "howItWorks": {
+      "intro": "Desarrollé el portal con PHP, MySQL, HTML, CSS, JavaScript y Bootstrap. Implementé la consulta de los oficios y el envío de notificaciones por correo al actualizar el portal con los documentos correspondientes.",
+      "steps": [
+        {
+          "title": "Oficios",
+          "description": "Documentos de carácter público"
+        },
+        {
+          "title": "Portal",
+          "description": "Actualización de los documentos"
+        },
+        {
+          "title": "Correo",
+          "description": "Aviso con enlaces de consulta"
+        },
+        {
+          "title": "Consulta",
+          "description": "Acceso a cada documento"
+        }
+      ]
+    },
+    "workTitle": "Publicación de oficios y avisos con enlaces de consulta.",
+    "work": [
+      {
+        "title": "Portal de consulta de documentos",
+        "description": "Creé la interfaz web para que los usuarios pudieran consultar los oficios de carácter público."
+      },
+      {
+        "title": "Actualización de oficios",
+        "description": "Implementé el flujo de actualización del portal en función de los oficios que correspondían publicar."
+      },
+      {
+        "title": "Notificaciones por correo",
+        "description": "Al actualizar el portal, el usuario recibía un aviso por correo con los enlaces de consulta de cada documento."
+      },
+      {
+        "title": "Interfaz con Bootstrap",
+        "description": "Utilicé Bootstrap junto con HTML, CSS y JavaScript para desarrollar la interfaz del portal, y PHP y MySQL para su funcionamiento."
+      }
+    ],
+    "resultsTitle": "Documentos públicos y avisos de actualización.",
+    "results": [
+      {
+        "title": "Consulta de oficios",
+        "description": "El portal ofrecía un punto de consulta de los documentos públicos."
+      },
+      {
+        "title": "Avisos por correo",
+        "description": "Los usuarios eran notificados cuando se actualizaban los oficios correspondientes."
+      },
+      {
+        "title": "Enlaces a cada documento",
+        "description": "Las notificaciones compartían los enlaces de consulta para acceder a los documentos publicados."
+      }
+    ],
+    "images": [],
+    "gallery": [],
+    "sources": []
+  }
+]

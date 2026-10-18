@@ -1,6 +1,8 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { blogRedirects } from '../data/blog-redirects.ts';
+import { projectRedirects } from '../data/project-slugs.ts';
+import { authorProjects, projectPath } from './author-projects.ts';
 
 const PRIVATE_PATHS = new Set(['/404', '/portafolio', '/dashboard-cliente', '/llms.txt', '/llms-full.txt', '/rss.xml']);
 
@@ -41,7 +43,10 @@ export function portfolioIsPublic(): boolean {
 
 /** ISO lastmod for blog posts, taken from the `updatedAt` frontmatter. */
 export function sitemapLastmod(pathname: string): string | undefined {
-  const slug = canonicalPathname(pathname).match(/^\/blog\/([a-z0-9-]+)$/)?.[1];
+  const path = canonicalPathname(pathname);
+  const project = authorProjects.find((item) => projectPath(item) === path);
+  if (project) return `${project.updatedAt}T00:00:00.000Z`;
+  const slug = path.match(/^\/blog\/([a-z0-9-]+)$/)?.[1];
   if (!slug) return undefined;
   try {
     const raw = readFileSync(fileURLToPath(new URL(`../content/blog/${slug}.md`, import.meta.url)), 'utf8');
@@ -59,7 +64,7 @@ export function isIndexableUrl(url: string): boolean {
   } catch {
     return false;
   }
-  if (Object.hasOwn(blogRedirects, pathname) || PRIVATE_PATHS.has(pathname) || pathname.startsWith('/api/')) return false;
-  if (pathname === '/equipo' || pathname.startsWith('/equipo/')) return false;
+  if (Object.hasOwn(blogRedirects, pathname) || Object.hasOwn(projectRedirects, pathname) || PRIVATE_PATHS.has(pathname) || pathname.startsWith('/api/')) return false;
+  if (pathname === '/equipo') return false;
   return true;
 }
