@@ -38,6 +38,19 @@ export function portfolioIsPublic(): boolean {
   }
 }
 
+/** ISO lastmod for blog posts, taken from the `updatedAt` frontmatter. */
+export function sitemapLastmod(pathname: string): string | undefined {
+  const slug = canonicalPathname(pathname).match(/^\/blog\/([a-z0-9-]+)$/)?.[1];
+  if (!slug) return undefined;
+  try {
+    const raw = readFileSync(fileURLToPath(new URL(`../content/blog/${slug}.md`, import.meta.url)), 'utf8');
+    const match = raw.match(/^updatedAt:\s*(\d{4}-\d{2}-\d{2})\s*$/m);
+    return match ? `${match[1]}T00:00:00.000Z` : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 export function isIndexableUrl(url: string): boolean {
   let pathname: string;
   try {

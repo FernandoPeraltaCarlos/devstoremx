@@ -8,6 +8,7 @@ import DashboardShowcase from '../components/sections/DashboardShowcase.astro';
 import About from '../components/sections/About.astro';
 import Video from '../components/sections/Video.astro';
 import Faq from '../components/sections/Faq.astro';
+import LatestPosts from '../components/sections/LatestPosts.astro';
 import Contact from '../components/sections/Contact.astro';
 import Footer from '../components/sections/Footer.astro';
 import StructuredData from '../components/seo/StructuredData.astro';
@@ -15,6 +16,6 @@ import StructuredData from '../components/seo/StructuredData.astro';
 <BaseLayout>
   <StructuredData slot="head" />
   <!-- clip (not hidden) keeps the pinned timeline sticky while side reveals stay off-canvas. -->
-  <main id="contenido" class="overflow-x-clip"><Hero /><Services /><Technologies /><Process /><DashboardShowcase /><About /><Video /><Faq /><Contact /></main>
+  <main id="contenido" class="overflow-x-clip"><Hero /><Services /><Technologies /><Process /><DashboardShowcase /><About /><Video /><Faq /><LatestPosts /><Contact /></main>
   <Footer />
 </BaseLayout>

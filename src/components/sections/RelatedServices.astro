@@ -1,0 +1,143 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Icon from '../ui/Icon.astro';
+import { services } from '../../data/landing';
+
+interface Props {
+  entries: CollectionEntry<'servicios'>[];
+}
+const { entries } = Astro.props;
+const items = entries.flatMap((entry) => {
+  const card = services.find((service) => service.href === `/${entry.id}`);
+  if (!card) return [];
+  return [{
+    id: entry.id,
+    number: card.number,
+    title: card.title,
+    icon: card.icon,
+    intro: entry.data.intro.replace(/\s+/g, ' '),
+  }];
+});
+---
+{items.length > 0 && (
+  <section class="section-space bg-surface-sunken" aria-labelledby="relacionados">
+    <div class="container-page">
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <div class="max-w-[640px]">
+          <h2 id="relacionados" class="text-[32px] leading-[1.14] font-bold tracking-[-0.025em] sm:text-[40px]">También puede servirte</h2>
+          <p class="mt-4 max-w-[42ch] text-base leading-7 text-muted">Si este servicio no cubre todo el proyecto, estas son las piezas que suelen ir junto a él.</p>
+        </div>
+        <a href="/#servicios" class="inline-flex min-h-11 items-center font-semibold text-brand hover:text-[#2f47cc]">Ver todos los servicios</a>
+      </div>
+      <div class="related-services mt-10 overflow-hidden rounded-[10px] border border-line bg-white lg:mt-14">
+        {items.map((item) => (
+          <a href={`/${item.id}`} class="service-choice group">
+            <span class="service-cap">
+              <span class="font-mono text-lg text-periwinkle">{item.number}</span>
+              <span class="service-mark">
+                <Icon markup={item.icon} size={22} />
+              </span>
+            </span>
+            <span class="service-body">
+              <span class="service-title">{item.title}</span>
+              <span class="service-copy">{item.intro}</span>
+              <span class="service-action">Ver el servicio</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+<style>
+  .related-services {
+    display: grid;
+  }
+  .service-choice {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    color: inherit;
+    text-decoration: none;
+  }
+  .service-choice + .service-choice {
+    border-top: 1px solid var(--color-line);
+  }
+  .service-cap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-night);
+    padding: 18px 22px;
+  }
+  .service-mark {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #56627a;
+    border-radius: 6px;
+    color: var(--color-periwinkle);
+    transition: background-color 150ms ease-out, border-color 150ms ease-out, color 150ms ease-out, box-shadow 150ms ease-out;
+  }
+  .service-body {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    padding: 22px;
+  }
+  .service-title {
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    transition: color 150ms ease-out;
+  }
+  .service-copy {
+    display: -webkit-box;
+    margin-top: 12px;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-muted);
+  }
+  .service-action {
+    margin-top: auto;
+    padding-top: 22px;
+    font-weight: 600;
+    color: var(--color-brand);
+  }
+  .service-choice:hover .service-mark,
+  .service-choice:focus-visible .service-mark {
+    border-color: var(--color-electric);
+    background: var(--color-electric);
+    color: white;
+    box-shadow: 0 0 0 4px rgba(82, 113, 255, 0.18);
+  }
+  .service-choice:hover .service-title,
+  .service-choice:focus-visible .service-title {
+    color: var(--color-brand);
+  }
+  @media (min-width: 900px) {
+    .related-services {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .related-services:has(.service-choice:nth-child(2):last-child) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .service-choice + .service-choice {
+      border-top: 0;
+      border-left: 1px solid var(--color-line);
+    }
+    .service-body {
+      padding: 26px 24px 24px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .service-mark, .service-title { transition: none; }
+  }
+</style>

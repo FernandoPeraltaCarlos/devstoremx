@@ -1,0 +1,14 @@
+{
+	"$schema": "https://opencode.ai/config.json",
+	"mcp": {
+		"gscServer": {
+			"type": "local",
+			"command": [
+				"/bin/bash",
+				"/home/fermx95/proyectos/devstoremx/.mcp/gsc/run.sh"
+			],
+			"enabled": true,
+			"timeout": 30000
+		}
+	}
+}

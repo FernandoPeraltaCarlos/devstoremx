@@ -13,6 +13,13 @@ intro: >
   Devstoremx las desarrolla para negocios en México. No es una página de presentación. El costo sale del número de roles, pantallas y reglas, y no hay un precio de lista.
 platforms:
   - A la medida
+highlights:
+  - label: Qué es
+    value: "Un sistema en el navegador: reservas, portales, tableros"
+  - label: Cómo se cotiza
+    value: "Por roles, pantallas y reglas, no por un precio de lista"
+  - label: Entrega
+    value: "Un ambiente que ya puedes usar, con accesos a la infraestructura"
 faqs:
   - question: ¿En qué se diferencia de una página web?
     answer: La página informa y recibe un mensaje. La aplicación identifica usuarios, guarda datos y deja hacer operaciones distintas según el rol. Si no hay usuarios ni datos, probablemente no necesitas una app.
@@ -66,6 +73,6 @@ También se escribe qué pasa con los errores: cita duplicada, pago no reflejado
 
 Las conexiones con correo, pagos, hojas o un ERP se listan como [integraciones](/integraciones). “Que se conecte con todo” no es un requisito: es una forma de no terminar.
 
-## Entrega
+## Qué recibes al final
 
 Al final hay un ambiente que el negocio puede usar, usuarios de prueba recorridos con el equipo y los accesos de la infraestructura. El código y las cuentas no se quedan como rehén. Si después hace falta una segunda versión, se cotiza con lo que ya se aprendió de la primera, no se reabre todo el proyecto por inercia.

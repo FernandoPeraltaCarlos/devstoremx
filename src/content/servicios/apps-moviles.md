@@ -13,6 +13,13 @@ intro: >
   Devstoremx las desarrolla para negocios en México. Antes de cotizar decimos si de verdad necesitas la app o si un sitio bien hecho en el celular resuelve el mismo problema.
 platforms:
   - A la medida
+highlights:
+  - label: Primero
+    value: "Te decimos si de verdad necesitas la app o si un sitio resuelve lo mismo"
+  - label: Dónde vive
+    value: "iOS, Android y las tiendas de aplicaciones"
+  - label: Propuesta
+    value: "Alcance, tiempos y costo por escrito, antes de construir"
 faqs:
   - question: ¿Siempre hacen iOS y Android?
     answer: No siempre. Se decide según dónde están tus usuarios. Publicar en las dos tiendas duplica cuentas, revisiones y mantenimiento. Si un sistema operativo es casi todo tu público, se puede empezar por ese.

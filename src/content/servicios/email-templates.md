@@ -13,6 +13,13 @@ intro: >
   Devstoremx las maqueta para que se lean en Gmail, Outlook y el celular, con la marca del negocio. El costo depende de cuántos correos y de qué sistema los envía, y no hay una tarifa en esta página.
 platforms:
   - A la medida
+highlights:
+  - label: Compatibilidad
+    value: "Se leen bien en Gmail, Outlook y el celular"
+  - label: Marca
+    value: "Correos con el diseño del negocio, listos para reutilizar"
+  - label: Propuesta
+    value: "Alcance, tiempos y costo por escrito, antes de construir"
 faqs:
   - question: ¿Por qué un correo no se diseña como una página web?
     answer: Porque cada bandeja interpreta el HTML a su modo y muchas ignoran el diseño moderno. Una plantilla se construye con esas limitaciones, no se exporta desde la página.

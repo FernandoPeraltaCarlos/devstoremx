@@ -13,6 +13,13 @@ intro: >
 platforms:
   - A la medida
   - WordPress
+highlights:
+  - label: Foco
+    value: "Una sola página, una sola acción"
+  - label: Medición
+    value: "Qué cuenta como éxito se define antes de publicar"
+  - label: Propuesta
+    value: "Alcance, tiempos y costo por escrito, antes de construir"
 faqs:
   - question: ¿En qué se diferencia de una página web?
     answer: La página web tiene menú y varias secciones para conocer al negocio. La landing esconde las salidas y pide una sola acción. La entrada de blog “qué es una landing page” lo explica con ejemplos.
@@ -58,7 +65,7 @@ Conectamos el formulario con el correo del negocio y, si ya usan una hoja, un CR
 
 También revisamos la página en el celular con el mismo texto del anuncio. Si el anuncio dice “cotiza en un minuto” y el formulario pide doce campos, el diseño está mal aunque se vea ordenado.
 
-## Para quién es
+## Para quién conviene, y para quién no
 
 Es para quien va a invertir en atraer visitas a una oferta específica y no quiere mandarlas a la portada general. Estudios, clínicas con una campaña de valoración, cursos, lanzamientos, preventas y servicios profesionales con un primer paso claro.
 

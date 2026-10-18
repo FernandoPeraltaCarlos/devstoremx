@@ -15,6 +15,13 @@ platforms:
   - Shopify
   - WordPress
   - A la medida
+highlights:
+  - label: Alcance
+    value: "Sitio, tienda o herramienta, diseñados y construidos por el mismo equipo"
+  - label: Plataforma
+    value: "Shopify, WordPress o a la medida, según quién la va a operar"
+  - label: Propuesta
+    value: "Alcance, tiempos y costo por escrito, antes de construir"
 faqs:
   - question: ¿El desarrollo web incluye el diseño?
     answer: Sí, cuando el proyecto lo necesita. Diseño y desarrollo van en la misma propuesta para que la página se vea bien y también se pueda construir, medir y actualizar.
@@ -43,7 +50,7 @@ Un proyecto de desarrollo web no es “una página”. Es el conjunto de decisio
 
 Si el negocio también necesita [una tienda en línea](/tienda-en-linea), [una landing para una campaña](/landing-pages) o [una aplicación](/apps-web), eso se cotiza como parte del mismo proyecto o como una fase siguiente. No se mezcla todo en un mismo entregable si no hace falta.
 
-## Para quién es
+## Cuándo contratar un equipo y no un tutorial
 
 Este servicio es para una empresa que ya sabe que necesita presencia en internet y quiere un equipo que la construya, no un tutorial para hacerlo sola. Sirve cuando el sitio actual se ve viejo, no se puede editar, tarda en cargar o no refleja lo que el negocio vende hoy.
 

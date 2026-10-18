@@ -13,6 +13,13 @@ intro: >
   Devstoremx conecta esas herramientas para negocios en México. Si el flujo todavía no se hace a mano, primero se ordena. No hay un precio publicado por “una automatización”.
 platforms:
   - A la medida
+highlights:
+  - label: Qué hace
+    value: "Un paso repetido ocurre solo cuando se cumple una condición"
+  - label: Antes de automatizar
+    value: "Si el flujo no existe a mano, primero se ordena"
+  - label: Propuesta
+    value: "Alcance, tiempos y costo por escrito, antes de construir"
 faqs:
   - question: ¿Esto es lo mismo que una integración a la medida?
     answer: No. La automatización conecta herramientas que ya existen. La integración a la medida se construye cuando esas herramientas no se hablan o la regla no cabe en un conector. Las dos se pueden necesitar.
@@ -52,7 +59,7 @@ Una automatización que solo vive en la cuenta personal de quien la armó se pie
 
 También se prueba el camino infeliz: un formulario a medias, un correo que rebota, un pedido duplicado. El camino feliz de la demo no es la prueba.
 
-## Para quién es
+## A quién le quita trabajo repetido
 
 Es para un equipo que ya siente la repetición en el cuerpo: la misma copia, el mismo aviso, el mismo olvido. No es para quien espera que un diagrama sustituya una política que todavía no existe. Si no pueden explicar el paso 2, no hay nada que conectar.
 

@@ -15,6 +15,13 @@ platforms:
   - Shopify
   - WooCommerce
   - A la medida
+highlights:
+  - label: Qué resuelve
+    value: "Catálogo, pagos, envíos y la operación de los pedidos"
+  - label: Plataforma
+    value: "Shopify, WooCommerce o a la medida, según tu catálogo"
+  - label: Propuesta
+    value: "Alcance, tiempos y costo por escrito, antes de construir"
 faqs:
   - question: ¿Shopify o WooCommerce?
     answer: Shopify conviene cuando quieres operar la tienda sin administrar servidores. WooCommerce conviene cuando el sitio ya vive en WordPress o necesitas controlar la instalación. La entrada de blog Shopify o WordPress compara los dos.
@@ -50,7 +57,7 @@ El alcance se escribe, pero una tienda completa suele contemplar:
 
 Una [página web](/paginas-web) corporativa puede convivir con la tienda, pero no la reemplaza. El inicio de la marca y el catálogo responden preguntas distintas.
 
-## Para quién es
+## Para quien hoy confirma existencias a mano
 
 Es para quien ya vende por mensaje, por Instagram o en un local y quiere dejar de confirmar existencia a mano. También para quien tiene una tienda vieja, lenta o amarrada a una cuenta que no controla.
 

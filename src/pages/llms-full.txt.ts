@@ -63,6 +63,14 @@ export const GET: APIRoute = async () => {
     blocks.push(
       plain(post.body ?? ''),
       '',
+    );
+    if (post.data.faqs.length) {
+      blocks.push(
+        'Preguntas frecuentes',
+        ...post.data.faqs.flatMap((faq) => [faq.question, faq.answer, '']),
+      );
+    }
+    blocks.push(
       `URL: ${site.url}/blog/${post.id}`,
       '',
       '---',

@@ -13,6 +13,13 @@ intro: >
   Devstoremx las desarrolla para negocios en México cuando la automatización de caja ya no alcanza. El costo depende de los sistemas y de las reglas, y no se publica un precio por integración.
 platforms:
   - A la medida
+highlights:
+  - label: Qué conecta
+    value: "Dos sistemas que no traen un botón de conectar, vía su API"
+  - label: Qué se entrega
+    value: "Un flujo con nombre, no una conexión genérica"
+  - label: Propuesta
+    value: "Alcance, tiempos y costo por escrito, antes de construir"
 faqs:
   - question: ¿En qué se diferencia de una automatización?
     answer: La automatización usa conectores que ya existen entre herramientas. La integración se programa cuando ese conector no existe, no cubre la regla o hay que transformar los datos.
@@ -53,7 +60,7 @@ Integrar un modelo no es pegar un chat en la esquina del sitio. El trabajo serio
 
 Si la tarea no se puede revisar, no se automatiza la respuesta final. Un modelo que inventa una política de devoluciones y la manda al cliente es un problema operativo, no una función. En la propuesta se escribe el punto en el que la persona sigue en el circuito.
 
-## Para quién es
+## Para equipos que ya saben qué dato se pierde
 
 Es para un equipo que ya identificó los dos sistemas y el dato que se pierde en medio. No es para quien dice “conéctalo con todo” sin poder nombrar el primer flujo. Ese descubrimiento se puede hacer en la llamada, y a veces termina en una automatización más simple, que es mejor noticia que un desarrollo largo.
 

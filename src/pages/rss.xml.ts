@@ -9,7 +9,7 @@ export const GET: APIRoute = async () => {
   const posts = (await getCollection('blog')).sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
   return rss({
     title: 'Blog de Devstoremx',
-    description: 'Entradas de blog en español para crear una página web, una tienda en línea o elegir cómo desarrollarla.',
+    description: 'Entradas de blog de Devstoremx para crear una página web, una tienda en línea, una app o automatizar un negocio en México.',
     site: site.url,
     items: posts.map((post) => ({
       title: post.data.h1,

@@ -5,7 +5,7 @@ import preact from '@astrojs/preact';
 import sitemap from '@astrojs/sitemap';
 import vercel from '@astrojs/vercel';
 import tailwindcss from '@tailwindcss/vite';
-import { canonicalPathname, isIndexableUrl } from './src/lib/seo.ts';
+import { canonicalPathname, isIndexableUrl, sitemapLastmod } from './src/lib/seo.ts';
 
 // https://astro.build/config
 export default defineConfig({
@@ -26,7 +26,8 @@ export default defineConfig({
       serialize(item) {
         const url = new URL(item.url);
         url.pathname = canonicalPathname(url.pathname);
-        return { ...item, url: url.href };
+        const lastmod = sitemapLastmod(url.pathname);
+        return { ...item, url: url.href, ...(lastmod ? { lastmod } : {}) };
       },
     }),
   ],

@@ -15,6 +15,13 @@ platforms:
   - WordPress
   - Shopify
   - A la medida
+highlights:
+  - label: Cubre
+    value: "Que el sitio siga en línea, actualizado y editable"
+  - label: Alcance mensual
+    value: "Se escribe según tu plataforma y los cambios que necesitas"
+  - label: Modalidad
+    value: "Remota, para negocios en todo México"
 faqs:
   - question: ¿El mantenimiento entra con el desarrollo?
     answer: No de forma automática. El desarrollo termina con la entrega. El mantenimiento es un acuerdo aparte, con lo que sí se vigila y lo que se cobra como cambio extra.
@@ -49,7 +56,7 @@ Un [WordPress](/wordpress) se mantiene actualizando núcleo, tema y plugins, y v
 
 No es el mismo esfuerzo, y no se vende como si lo fuera. En la llamada se ve qué tienes y se propone solo lo que esa base necesita. Si la base no se puede mantener —tema pirata, sin accesos, malware—, el primer entregable es un diagnóstico, no una mensualidad que finja que todo está bien.
 
-## Para quién es
+## Para que el plan no sea escribirle a quien lo hizo
 
 Es para quien ya tiene sitio o tienda y no quiere que el único plan sea “escribirle a quien lo hizo, si contesta”. También es para quien nos contrató el [desarrollo](/desarrollo-web) y quiere continuidad con el mismo equipo.
 

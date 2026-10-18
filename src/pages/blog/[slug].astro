@@ -20,7 +20,17 @@ if (!post) throw new Error(`Entrada de blog no encontrada: ${id}`);
 const { Content, headings } = await render(post);
 const author = team.find((member) => memberSlug(member.image) === post.data.author);
 if (!author) throw new Error(`Autor no encontrado: ${post.data.author}`);
-const service = (await getCollection('servicios')).find((item) => item.id === post.data.relatedService);
+const servicios = await getCollection('servicios');
+const serviceIds = [...new Set([post.data.relatedService, ...post.data.relatedServices])];
+const linkedServices = serviceIds.flatMap((serviceId) => {
+  const match = servicios.find((item) => item.id === serviceId);
+  return match ? [match] : [];
+});
+const service = linkedServices.find((item) => item.id === post.data.relatedService);
+function sharesTopic(item: (typeof posts)[number]) {
+  const ids = new Set([item.data.relatedService, ...item.data.relatedServices]);
+  return serviceIds.some((serviceId) => ids.has(serviceId));
+}
 const crumbs = [
   { name: 'Inicio', href: '/' },
   { name: 'Blog', href: '/blog' },
@@ -28,7 +38,7 @@ const crumbs = [
 ];
 const sections = headings.filter((heading) => heading.depth === 2);
 const more = posts.filter((item) => item.id !== post.id)
-  .sort((a, b) => Number(b.data.relatedService === post.data.relatedService) - Number(a.data.relatedService === post.data.relatedService))
+  .sort((a, b) => Number(sharesTopic(b)) - Number(sharesTopic(a)) || b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
   .slice(0, 3);
 ---
 <BaseLayout title={post.data.metaTitle} description={post.data.metaDescription} ogType="article"
@@ -38,7 +48,7 @@ const more = posts.filter((item) => item.id !== post.id)
     image={post.data.heroImage} imageAlt={post.data.heroImageAlt}
     variant="article" breadcrumbs={crumbs}
     article={{ headline: post.data.h1, datePublished: post.data.publishedAt, dateModified: post.data.updatedAt, authorSlug: post.data.author, image: post.data.heroImage }}
-    howTo={post.data.howTo} />
+    howTo={post.data.howTo} faqs={post.data.faqs} />
   <SiteFrame>
     <article class="blog-article">
       <header class="article-header blog-width">
@@ -62,7 +72,7 @@ const more = posts.filter((item) => item.id !== post.id)
         </div>
         <figure class="article-cover">
           <img src={post.data.heroImage} alt={post.data.heroImageAlt} width="1200" height="630" loading="eager" fetchpriority="high" />
-          <figcaption>{post.data.heroImageAlt} <span>Ilustración editorial generada con IA.</span></figcaption>
+          <figcaption>{post.data.heroImageAlt} <span>Ilustración editorial.</span></figcaption>
         </figure>
       </header>
       <div class="article-layout blog-width">
@@ -73,6 +83,7 @@ const more = posts.filter((item) => item.id !== post.id)
               <ul>
                 {post.data.howTo && <li><a href="#pasos">Pasos para empezar</a></li>}
                 {sections.map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}
+                {post.data.faqs.length > 0 && <li><a href="#preguntas">Preguntas frecuentes</a></li>}
               </ul>
             </nav>
           </details>
@@ -94,11 +105,29 @@ const more = posts.filter((item) => item.id !== post.id)
               <div><p class="author-note-label">Escrito por</p><p class="author-name">{author.name}</p><p class="author-description">{author.bio}</p></div>
             </div>
           </footer>
+          {post.data.faqs.length > 0 && (
+            <section class="article-faq" aria-labelledby="preguntas">
+              <h2 id="preguntas">Preguntas frecuentes</h2>
+              {post.data.faqs.map((faq) => (
+                <div>
+                  <h3>{faq.question}</h3>
+                  <p>{faq.answer}</p>
+                </div>
+              ))}
+            </section>
+          )}
           {service && (
             <aside class="article-service" aria-labelledby="siguiente-paso">
               <h2 id="siguiente-paso">Lleva estas ideas a tu proyecto</h2>
               <p>Si buscas ayuda con {service.data.title.toLocaleLowerCase('es-MX')}, podemos revisar lo que necesitas y preparar una propuesta.</p>
               <a href={`/${service.id}`}>Conoce el servicio de {service.data.title}</a>
+              {linkedServices.length > 1 && (
+                <ul>
+                  {linkedServices.filter((item) => item.id !== service.id).map((item) => (
+                    <li><a href={`/${item.id}`}>{item.data.title}</a></li>
+                  ))}
+                </ul>
+              )}
             </aside>
           )}
         </div>
@@ -170,6 +199,12 @@ const more = posts.filter((item) => item.id !== post.id)
   .article-service h2 { font-size: 21px; font-weight: 700; letter-spacing: -.02em; }
   .article-service p { margin-top: 12px; font-size: 14px; line-height: 1.8; color: var(--color-muted); }
   .article-service a { display: inline-block; margin-top: 18px; font-size: 14px; line-height: 1.6; color: var(--color-brand); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+  .article-service ul { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 14px; padding: 0; list-style: none; }
+  .article-service li a { margin-top: 0; font-weight: 600; }
+  .article-faq { margin-top: 48px; }
+  .article-faq h2 { font-size: 28px; line-height: 1.35; letter-spacing: -.025em; font-weight: 700; scroll-margin-top: 28px; }
+  .article-faq h3 { margin-top: 28px; font-size: 18px; line-height: 1.45; font-weight: 700; }
+  .article-faq p { margin-top: 8px; font-size: 16px; line-height: 1.8; color: var(--color-muted); }
   .article-related { background: var(--color-paper); padding-block: 64px 80px; }
   .related-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 32px; }
   .related-heading h2 { font-size: 30px; font-weight: 700; letter-spacing: -.03em; }

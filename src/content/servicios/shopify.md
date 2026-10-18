@@ -14,6 +14,13 @@ intro: >
   Devstoremx es Shopify Partner: somos la agencia y el equipo de desarrolladores Shopify que diseña, programa y mantiene esas tiendas para negocios en México, en remoto. No publicamos un precio de “tienda Shopify”, porque el catálogo, los pagos y el diseño cambian el trabajo.
 platforms:
   - Shopify
+highlights:
+  - label: Partner
+    value: "Devstoremx es Shopify Partner, ID 2475594"
+  - label: Operación
+    value: "Tú operas productos y pedidos; Shopify cuida la plataforma"
+  - label: Propuesta
+    value: "Alcance, tiempos y costo por escrito, antes de construir"
 faqs:
   - question: ¿Son Shopify Partner?
     answer: Sí. Devstoremx es Shopify Partner y desarrolla tiendas Shopify para negocios en México. En la práctica significa que trabajamos desde una cuenta de Partner, que es la vía con la que Shopify permite pedir acceso de colaborador a tu tienda sin que compartas tu contraseña.

@@ -25,7 +25,7 @@ export const GET: APIRoute = async () => {
     '',
     '## Entradas de blog',
     '',
-    `- [Blog de Devstoremx](${origin}/blog): entradas sobre desarrollo web y tiendas en línea, escritas por Fernando Peralta.`,
+    `- [Blog de Devstoremx](${origin}/blog): entradas sobre páginas web, tiendas en línea, apps, automatizaciones y mantenimiento, escritas por Fernando Peralta.`,
     ...posts.map((post) => `- [${post.data.title}](${origin}/blog/${post.id}): ${post.data.intro.replace(/\s+/g, ' ')}`),
     '',
     '## Portafolio',

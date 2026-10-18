@@ -14,6 +14,13 @@ intro: >
 platforms:
   - WordPress
   - WooCommerce
+highlights:
+  - label: Edición
+    value: "Un panel que tu equipo usa a diario, sin tocar código"
+  - label: Tienda
+    value: "WooCommerce cuando la tienda vive en el mismo sitio"
+  - label: Propuesta
+    value: "Alcance, tiempos y costo por escrito, antes de construir"
 faqs:
   - question: ¿WordPress es solo para blogs?
     answer: No. Sirve para sitios corporativos, landings que se duplican con frecuencia y tiendas WooCommerce. El blog es una función, no la definición del sistema.

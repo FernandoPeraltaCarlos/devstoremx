@@ -1,9 +1,11 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { memberSlug, team } from '../../data/landing';
 import { formatDate } from '../../lib/seo';
 import { readingMinutes } from '../../lib/blog';
 interface Props { post: CollectionEntry<'blog'>; }
 const { post } = Astro.props;
+const author = team.find((member) => memberSlug(member.image) === post.data.author);
 ---
 <article class="post-card">
   <a href={`/blog/${post.id}`} class="post-card-image" tabindex="-1" aria-hidden="true">
@@ -12,7 +14,7 @@ const { post } = Astro.props;
   <div class="post-card-meta"><span>{post.data.category}</span><span>{readingMinutes(post.body)} min de lectura</span></div>
   <h3><a href={`/blog/${post.id}`}>{post.data.h1}</a></h3>
   <p>{post.data.metaDescription}</p>
-  <div class="post-card-footer"><span>Fernando Peralta</span><time datetime={post.data.publishedAt.toISOString()}>{formatDate(post.data.publishedAt)}</time></div>
+  <div class="post-card-footer"><span>{author?.name ?? 'Devstoremx'}</span><time datetime={post.data.publishedAt.toISOString()}>{formatDate(post.data.publishedAt)}</time></div>
 </article>
 <style>
   .post-card { min-width: 0; }

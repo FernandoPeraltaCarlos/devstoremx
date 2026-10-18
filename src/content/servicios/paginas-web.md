@@ -14,6 +14,13 @@ intro: >
 platforms:
   - WordPress
   - A la medida
+highlights:
+  - label: Contenido
+    value: "Las secciones salen de lo que el negocio tiene que decir, no de una plantilla"
+  - label: Edición
+    value: "Pensada para que tu equipo la actualice sin depender de nosotros"
+  - label: Propuesta
+    value: "Alcance, tiempos y costo por escrito, antes de construir"
 faqs:
   - question: ¿Cuántas páginas necesita un sitio corporativo?
     answer: Las que el visitante usa. Casi siempre alcanzan inicio, servicios, una página de confianza y contacto. Sumar páginas vacías no mejora el sitio.
@@ -47,7 +54,7 @@ El mapa cambia con el giro, pero este es el punto de partida que usamos para no 
 
 Un blog solo entra si alguien del negocio va a publicar. Una página vacía de “noticias” no ayuda a Google ni al visitante. Si más adelante quieren explicar procesos, las [entradas de blog](/blog) se pueden sumar cuando haya algo que decir.
 
-## Para quién es este servicio
+## Para el negocio que hoy manda un PDF por WhatsApp
 
 Es para un despacho, un taller, una clínica, una escuela, un fabricante o cualquier negocio que hoy manda un PDF o un mensaje de WhatsApp cada vez que le preguntan “¿y ustedes qué hacen?”. También es para quien ya tiene una página hecha hace años, con textos que ya no son ciertos, fotos prestadas o un editor que nadie sabe usar.
 

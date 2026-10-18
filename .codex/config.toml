@@ -1,0 +1,6 @@
+[mcp_servers.gscServer]
+command = "/bin/bash"
+args = ["/home/fermx95/proyectos/devstoremx/.mcp/gsc/run.sh"]
+enabled = true
+startup_timeout_sec = 30
+tool_timeout_sec = 180

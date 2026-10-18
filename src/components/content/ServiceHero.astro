@@ -1,0 +1,53 @@
+---
+import Breadcrumbs from './Breadcrumbs.astro';
+import Button from '../ui/Button.astro';
+import Icon from '../ui/Icon.astro';
+
+interface Props {
+  crumbs: { name: string; href: string }[];
+  title: string;
+  lede: string;
+  name: string;
+  number: string;
+  icon: string;
+  highlights: readonly { label: string; value: string }[];
+}
+const { crumbs, title, lede, name, number, icon, highlights } = Astro.props;
+---
+<section class="relative overflow-clip bg-night text-cloud">
+  <div aria-hidden="true" class="grid-background absolute inset-0 bg-panel"></div>
+  <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-b from-night/25 via-night/50 to-night"></div>
+  <div class="container-page relative flex flex-col gap-10 pt-6 pb-16 sm:pt-8 lg:pb-24">
+    <Breadcrumbs items={crumbs} />
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)] lg:items-center lg:gap-16">
+      <div class="flex min-w-0 flex-col items-start gap-6">
+        <h1 class="text-[36px] leading-[1.08] font-bold tracking-[-0.03em] text-balance sm:text-5xl lg:text-[56px]">{title}</h1>
+        <p class="max-w-[56ch] text-base leading-7 text-muted-dark sm:text-lg sm:leading-8">{lede}</p>
+        <div class="mt-2 flex flex-wrap items-center gap-x-8 gap-y-5">
+          <Button href="#contacto" variant="hero" class="min-h-14 px-7 text-[17px]">Cotizar este servicio</Button>
+          <a href="#proceso-servicio" class="font-semibold text-cloud underline decoration-[#56627a] underline-offset-[6px] hover:text-periwinkle">Ver cómo trabajamos</a>
+        </div>
+      </div>
+      <aside data-reveal="right" aria-label={`Qué incluye ${name}`} class="rounded-[10px] border border-line-dark bg-panel p-5 sm:p-6">
+        <div class="flex items-center justify-between gap-3 border-b border-line-dark pb-4">
+          <span class="flex min-w-0 items-center gap-3">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-md border border-electric bg-electric text-white shadow-[0_0_0_4px_rgba(82,113,255,0.18)]"><Icon markup={icon} size={22} /></span>
+            <span class="text-[17px] leading-6 font-semibold">{name}</span>
+          </span>
+          <span class="shrink-0 font-mono text-[13px] text-muted-dark">{number}</span>
+        </div>
+        <dl>
+          {highlights.map((item, index) => (
+            <div data-reveal="right" data-reveal-delay={150 + index * 110} class:list={['flex gap-3.5 py-4', index < highlights.length - 1 && 'border-b border-line-dark', index === highlights.length - 1 && 'pb-0']}>
+              <Icon name="check" size={18} class="mt-0.5 shrink-0 text-sky" />
+              <div class="min-w-0">
+                <dt class="text-[13px] leading-5 text-muted-dark">{item.label}</dt>
+                <dd class="mt-0.5 text-[15px] leading-6 text-cloud">{item.value}</dd>
+              </div>
+            </div>
+          ))}
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>

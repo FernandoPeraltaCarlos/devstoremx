@@ -1,0 +1,11 @@
+{
+	"mcpServers": {
+		"gscServer": {
+			"command": "/bin/bash",
+			"args": [
+				"/home/fermx95/proyectos/devstoremx/.mcp/gsc/run.sh"
+			],
+			"type": "stdio"
+		}
+	}
+}

@@ -3,7 +3,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { test } from 'node:test';
 import { defaultTitle, services } from '../src/data/landing.ts';
 import { buildStructuredGraph } from '../src/lib/structured-data.ts';
-import { canonicalPathname, isIndexableUrl, portfolioIsPublic } from '../src/lib/seo.ts';
+import { canonicalPathname, isIndexableUrl, portfolioIsPublic, sitemapLastmod } from '../src/lib/seo.ts';
 
 const origin = 'https://www.devstoremx.xyz';
 
@@ -23,6 +23,12 @@ function splitFrontmatter(file) {
   assert.ok(match, `frontmatter en ${file}`);
   return { raw, fm: match[1], body: match[2] };
 }
+
+test('el sitemap toma lastmod del updatedAt de cada entrada', () => {
+  assert.equal(sitemapLastmod('/blog/como-hacer-una-pagina-web'), '2026-10-17T00:00:00.000Z');
+  assert.equal(sitemapLastmod('/shopify'), undefined);
+  assert.equal(sitemapLastmod('/blog'), undefined);
+});
 
 test('canonicalPathname quita .html y la barra final', () => {
   assert.equal(canonicalPathname('/shopify.html'), '/shopify');
@@ -184,16 +190,26 @@ test('los servicios y las entradas de blog tienen texto útil, sin precios ni ni
     const { raw, fm, body } = splitFrontmatter(`src/content/servicios/${file}`);
     assert.match(fm, /^intro: >/m, file);
     assert.match(fm, /faqs:/, file);
+    assert.match(fm, /^highlights:/m, file);
     assert.equal(words(body) >= 650, true, `${file} tiene ${words(body)} palabras en el cuerpo`);
     assert.doesNotMatch(raw, price, file);
     assert.doesNotMatch(raw, unpublishedTier, file);
   }
   const howTo = splitFrontmatter('src/content/blog/como-hacer-una-pagina-web.md');
   assert.match(howTo.fm, /howTo:/);
+  const covered = new Set();
   for (const file of readdirSync('src/content/blog').filter((name) => name.endsWith('.md'))) {
     const { raw, fm, body } = splitFrontmatter(`src/content/blog/${file}`);
     assert.match(fm, /^author: fernando-peralta$/m, file);
+    assert.match(fm, /^faqs:/m, file);
+    assert.match(fm, /^relatedServices:/m, file);
+    const primary = fm.match(/^relatedService: (\S+)/m)?.[1];
+    assert.ok(primary, file);
+    covered.add(primary);
     assert.equal(words(body) >= 650, true, `${file} tiene ${words(body)} palabras en el cuerpo`);
     assert.doesNotMatch(raw, price, file);
+    assert.doesNotMatch(raw, unpublishedTier, file);
   }
+  const serviceIds = readdirSync('src/content/servicios').filter((name) => name.endsWith('.md')).map((name) => name.replace(/\.md$/, ''));
+  for (const id of serviceIds) assert.equal(covered.has(id), true, `falta una entrada principal para ${id}`);
 });
