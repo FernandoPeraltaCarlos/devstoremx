@@ -214,10 +214,10 @@ export const site = {
   videoPoster: '',
   videoDuration: '[Duración]',
   formEndpoint: '/api/contact',
-  whatsappUrl: '', // https://wa.me/52... con el número real.
+  whatsappUrl: 'https://wa.me/5215518713940', // WhatsApp pide el 1 después de 52 en números de México.
   linkedinUrl: 'https://www.linkedin.com/company/devstoremx',
   email: 'hola@devstoremx.xyz',
-  phone: '[Teléfono / WhatsApp]',
+  phone: '+52 55 1871 3940',
   location: '', // Trabajo remoto en todo México: no hay ciudad ni dirección pública, no se muestra en el sitio.
   baseLocality: 'Ciudad de México', // Solo datos estructurados (negocio con área de servicio, sin dirección visible); coincide con la ficha de Google.
 };

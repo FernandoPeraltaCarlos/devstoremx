@@ -51,11 +51,13 @@ export const GET: APIRoute = async () => {
     `- Sitio: ${origin}/`,
     `- Formulario: ${origin}/#contacto`,
     `- Correo: ${site.email}`,
+    `- Teléfono: ${site.phone}`,
+    `- WhatsApp: ${site.whatsappUrl}`,
     `- Aviso de privacidad: ${origin}/aviso-de-privacidad`,
     `- Texto completo de servicios, soluciones de desarrollo y entradas de blog: ${origin}/llms-full.txt`,
     `- RSS del blog: ${origin}/rss.xml`,
     '',
-    'El teléfono no está publicado. No se publica dirección: el trabajo es remoto y atiende negocios de todo México. El dashboard de ejemplo usa datos ficticios y no es un caso de cliente.',
+    'No se publica dirección: el trabajo es remoto y atiende negocios de todo México. El dashboard de ejemplo usa datos ficticios y no es un caso de cliente.',
     '',
   ];
   return new Response(lines.join('\n'), {

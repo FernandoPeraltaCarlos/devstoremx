@@ -103,7 +103,8 @@ test('el fundador confirmado y el contacto usan datos públicos y nodos sin dupl
     assert.equal(org.contactPoint.email, site.email);
     assert.equal(org.contactPoint.url, `${origin}/#contacto`);
     assert.deepEqual(org.contactPoint.availableLanguage, ['es-MX']);
-    assert.equal(Object.hasOwn(org.contactPoint, 'telephone'), false);
+    assert.equal(org.contactPoint.telephone, site.phone);
+    assert.equal(org.telephone, site.phone);
     assert.equal(Object.hasOwn(org.contactPoint, 'hoursAvailable'), false);
   }
 });
