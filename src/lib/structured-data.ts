@@ -41,12 +41,14 @@ export interface StructuredInput {
   faqs?: readonly FaqItem[];
   serviceName?: string;
   serviceType?: string;
+  dateModified?: Date;
   article?: {
     headline: string;
     datePublished: Date;
     dateModified: Date;
     authorSlug: string;
     image?: string;
+    serviceIds?: string[];
   };
   blogPosts?: readonly { headline: string; href: string; datePublished: Date; authorSlug: string; image: string }[];
 }
@@ -171,6 +173,8 @@ export function buildStructuredGraph(input: StructuredInput) {
     webpage,
   ];
 
+  if (input.dateModified) webpage.dateModified = input.dateModified.toISOString();
+
   if (variant === 'home') {
     const serviceNodes = [...new Map(services.map((service) => {
       const url = absoluteUrl(origin, service.href);
@@ -219,7 +223,7 @@ export function buildStructuredGraph(input: StructuredInput) {
       '@type': 'Service',
       '@id': pageUrl,
       name: card?.title ?? input.serviceName ?? title,
-      description: card?.description ?? description,
+      description: input.description ?? card?.description ?? description,
       url: pageUrl,
       serviceType: input.serviceType ?? card?.title ?? input.serviceName ?? title,
       provider: { '@id': organizationId },
@@ -292,6 +296,10 @@ export function buildStructuredGraph(input: StructuredInput) {
       publisher: { '@id': organizationId },
       mainEntityOfPage: { '@id': webpageId },
       url: pageUrl,
+      about: (input.article.serviceIds ?? []).flatMap((id) => {
+        const service = services.find((item) => item.href === `/${id}`);
+        return service ? [{ '@type': 'Service', '@id': `${origin}${service.href}`, name: service.title, url: `${origin}${service.href}`, provider: { '@id': organizationId } }] : [];
+      }),
     });
   }
 

@@ -10,6 +10,7 @@ import RelatedPosts from '../components/sections/RelatedPosts.astro';
 import RelatedServices from '../components/sections/RelatedServices.astro';
 import Faq from '../components/sections/Faq.astro';
 import Contact from '../components/sections/Contact.astro';
+import { formatDate } from '../lib/seo';
 
 export async function getStaticPaths() {
   const entries = await getCollection('servicios');
@@ -50,6 +51,7 @@ const sectionId = (attrs: string) => attrs.match(/id="([^"]+)"/)?.[1];
     variant="service"
     serviceName={entry.data.title}
     serviceType={entry.data.h1}
+    dateModified={entry.data.updatedAt}
     faqs={entry.data.faqs}
     breadcrumbs={crumbs}
   />
@@ -65,6 +67,7 @@ const sectionId = (attrs: string) => attrs.match(/id="([^"]+)"/)?.[1];
     />
     <article class="bg-paper pt-16 pb-8 sm:pt-20 lg:pt-24 lg:pb-12">
       <div class="container-page">
+        {entry.data.updatedAt && <p class="mb-8 text-sm text-muted">Última revisión del servicio: <time datetime={entry.data.updatedAt.toISOString()}>{formatDate(entry.data.updatedAt)}</time></p>}
         <div class="service-prose">
           {sections.length > 0
             ? sections.map((section) => (

@@ -27,8 +27,11 @@ function splitFrontmatter(file) {
 
 test('el sitemap toma lastmod del updatedAt de cada entrada', () => {
   assert.equal(sitemapLastmod('/blog/cuando-redisenar-la-pagina-web-de-tu-negocio'), '2026-10-17T00:00:00.000Z');
-  assert.equal(sitemapLastmod('/blog/como-hacer-una-pagina-web'), '2026-10-18T00:00:00.000Z');
-  assert.equal(sitemapLastmod('/shopify'), undefined);
+  assert.equal(sitemapLastmod('/blog/como-hacer-una-pagina-web'), '2026-11-04T00:00:00.000Z');
+  assert.equal(sitemapLastmod('/shopify'), '2026-11-04T00:00:00.000Z');
+  assert.equal(sitemapLastmod('/wordpress'), '2026-11-04T00:00:00.000Z');
+  assert.equal(sitemapLastmod('/apps-moviles'), '2026-11-04T00:00:00.000Z');
+  assert.equal(sitemapLastmod('/plantillas-pdf'), undefined);
   assert.equal(sitemapLastmod('/blog'), undefined);
 });
 
@@ -290,10 +293,15 @@ test('los servicios y las entradas de blog tienen texto útil, sin precios ni ni
 
 test('las URLs editoriales anteriores tienen un reemplazo directo, excluido del sitemap viejo', () => {
   const files = new Set(readdirSync('src/content/blog').filter((name) => name.endsWith('.md')).map((name) => `/blog/${name.replace(/\.md$/, '')}`));
-  assert.equal(files.size, 17);
-  assert.equal(Object.keys(blogRedirects).length, 11);
+  assert.equal(files.size, 20);
+  assert.equal(Object.keys(blogRedirects).length, 8);
   assert.equal(Object.hasOwn(blogRedirects, '/blog/como-hacer-una-pagina-web'), false);
   assert.equal(files.has('/blog/como-hacer-una-pagina-web'), true);
+  for (const slug of ['cuanto-cuesta-una-pagina-web', 'cuanto-cuesta-una-tienda-en-shopify', 'cuanto-cuesta-hacer-una-app']) {
+    assert.equal(Object.hasOwn(blogRedirects, `/blog/${slug}`), false);
+    assert.equal(files.has(`/blog/${slug}`), true);
+    assert.equal(isIndexableUrl(`${origin}/blog/${slug}`), true);
+  }
   for (const [from, to] of Object.entries(blogRedirects)) {
     assert.equal(files.has(from), false, from);
     assert.equal(files.has(to), true, to);

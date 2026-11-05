@@ -1,8 +1,9 @@
 ---
 title: Apps móviles
 metaTitle: Desarrollo de apps móviles en México | Devstoremx
-metaDescription: Desarrollo de apps móviles para iOS y Android cuando un sitio ya no alcanza. Alcance por escrito, trabajo remoto en todo México, sin precio de lista.
+metaDescription: Desarrollo de apps iOS y Android para negocios en México. Definimos usuarios, pantallas, integraciones y publicación. Cuéntanos el flujo que necesitas resolver.
 h1: Desarrollo de apps móviles en México
+updatedAt: 2026-11-04
 keywords:
   - desarrollo de apps móviles México
   - aplicación móvil a la medida
@@ -56,6 +57,20 @@ El alcance se escribe en pantallas y tareas, no en “la app”. Una primera ver
 - Una forma de que el negocio vea la información, casi siempre un panel web chico, no otra app para el administrador.
 
 El panel de administración, si la operación es de escritorio, se parece más a una aplicación web y se puede entregar en el navegador. Obligar al gerente a usar la misma app del cliente suele ser un error.
+
+## Define tu primera versión con un ejemplo de uso
+
+Supongamos que tu personal registra visitas en campo. Antes de diseñar pantallas, escribe quién captura, qué dato registra, si necesita fotografía y quién revisa el registro. Añade qué debe pasar si se pierde la señal: guardar un borrador, esperar o impedir una acción. Es un ejemplo de alcance, no un caso de cliente ni una promesa de funciones incluidas.
+
+Esa información nos permite separar el trabajo móvil del panel web, los permisos y la conexión con un sistema existente. Tu equipo aporta cómo funciona el proceso; nosotros evaluamos la arquitectura, las restricciones y las pruebas. No hace falta que programes un prototipo para pedir una propuesta.
+
+## Qué recibirás en la propuesta de la app
+
+La propuesta identifica perfiles de usuario, recorridos principales, pantallas incluidas, sistemas operativos, conexiones y responsable de cada cuenta. También distingue diseño, desarrollo, pruebas y acompañamiento a publicación. Si hay una dependencia externa, como el acceso a un sistema de tu empresa, debe aparecer antes de fijar la entrega.
+
+La primera versión se puede revisar con criterios concretos: el usuario autorizado completa su tarea, un error de conexión no se presenta como éxito y el equipo sabe dónde consultar la información. La estrategia de pruebas se acuerda con los dispositivos y las condiciones del uso real. Un diseño aprobado no sustituye esa validación.
+
+Para preparar el encargo, lee [cuándo tiene sentido desarrollar una app](/blog/cuando-desarrollar-una-app-para-tu-negocio). Si necesitas organizar el presupuesto, consulta [qué determina el costo de una aplicación](/blog/cuanto-cuesta-hacer-una-app). Si todo el flujo cabe en un enlace, también podemos valorar una [app web](/apps-web), sin forzar una instalación.
 
 ## iOS, Android y las tiendas
 

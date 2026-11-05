@@ -1,16 +1,17 @@
 ---
 title: WordPress
-metaTitle: Desarrollo WordPress y WooCommerce | Devstoremx
-metaDescription: Desarrollo WordPress para sitios y WooCommerce. Páginas que tu equipo puede editar, con mantenimiento claro. Trabajo remoto en México.
-h1: Desarrollo WordPress y WooCommerce
+metaTitle: Desarrollo WordPress y WooCommerce en México | Devstoremx
+metaDescription: Desarrollamos sitios WordPress y tiendas WooCommerce en México. Temas a medida, contenido editable y reglas de envío. Revisa experiencia y solicita propuesta.
+h1: Desarrollo WordPress y WooCommerce en México
+updatedAt: 2026-11-04
 keywords:
   - desarrollo wordpress
   - página web en wordpress
   - woocommerce
   - agencia wordpress
 intro: >
-  WordPress es un sistema para publicar y editar un sitio desde un panel, sin tocar código en el día a día.
-  Devstoremx desarrolla páginas y tiendas WooCommerce sobre WordPress para negocios en México. El costo depende del diseño, de los plugins y de si hay tienda, y no se publica una tarifa única.
+  Devstoremx desarrolla sitios WordPress y tiendas WooCommerce para negocios en México: diseño, tema, contenido editable y funciones acordadas para tu operación.
+  Podemos crear un sitio, revisar uno existente o desarrollar reglas que no resuelve un plugin de catálogo. El alcance, las licencias y el mantenimiento se distinguen en la propuesta.
 platforms:
   - WordPress
   - WooCommerce
@@ -72,6 +73,16 @@ También hay que decir qué no entra si no se pide: facturación electrónica, s
 Trae la dirección del sitio actual si existe, y quién tiene el usuario del hosting. Sin ese acceso no se puede saber si conviene mejorar o rehacer. Trae la lista de páginas que sí deben existir y, si hay tienda, un ejemplo de ficha de producto con sus variantes.
 
 Si el sitio lo hizo otra persona y no tienes los accesos, la primera fase es recuperarlos. No diseñamos encima de una instalación que el negocio no controla. La cotización separa esa recuperación, el diseño y la construcción, para que sepas qué estás pagando.
+
+## Experiencia técnica que puedes consultar
+
+El [tema WordPress personalizado de Structurall](/equipo/fernando-peralta/como-desarrollar-un-tema-wordpress-personalizado) documenta experiencia previa de Fernando separando diseño, plantillas y edición. El [sitio bilingüe con WordPress y Elementor](/equipo/fernando-peralta/como-crear-un-sitio-web-bilingue-con-wordpress-y-elementor) muestra otro tipo de encargo: presentar contenido en dos idiomas sin confundir las responsabilidades editoriales.
+
+Para una tienda con condiciones propias, consulta el trabajo relacionado con [plugins de envíos y paquetes WooCommerce](/equipo/fernando-peralta/como-personalizar-envios-y-paquetes-con-plugins-de-woocommerce). Son referencias de la trayectoria de Fernando, con el contexto de participación enlazado en cada página; no se presentan como clientes contratados por Devstoremx ni como garantía de un resultado idéntico.
+
+## Qué necesitamos para revisar una regla de envío
+
+Prepara ejemplos sin datos personales: un producto, su cantidad, el destino aproximado y el resultado que debería calcular la tienda. Incluye una combinación habitual y una excepción. No necesitas elegir un plugin antes de la llamada. Evaluamos si basta la configuración existente o si conviene una función independiente del tema.
 
 ## Ediciones que el equipo tiene que poder hacer solo
 

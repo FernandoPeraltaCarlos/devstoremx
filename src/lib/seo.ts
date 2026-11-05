@@ -41,15 +41,18 @@ export function portfolioIsPublic(): boolean {
   }
 }
 
-/** ISO lastmod for blog posts, taken from the `updatedAt` frontmatter. */
+/** Last substantive editorial update, never the build date. */
 export function sitemapLastmod(pathname: string): string | undefined {
   const path = canonicalPathname(pathname);
   const project = authorProjects.find((item) => projectPath(item) === path);
   if (project) return `${project.updatedAt}T00:00:00.000Z`;
-  const slug = path.match(/^\/blog\/([a-z0-9-]+)$/)?.[1];
+  const blogSlug = path.match(/^\/blog\/([a-z0-9-]+)$/)?.[1];
+  const serviceSlug = path.match(/^\/([a-z0-9-]+)$/)?.[1];
+  const slug = blogSlug ?? serviceSlug;
   if (!slug) return undefined;
+  const collection = blogSlug ? 'blog' : 'servicios';
   try {
-    const raw = readFileSync(fileURLToPath(new URL(`../content/blog/${slug}.md`, import.meta.url)), 'utf8');
+    const raw = readFileSync(fileURLToPath(new URL(`../content/${collection}/${slug}.md`, import.meta.url)), 'utf8');
     const match = raw.match(/^updatedAt:\s*(\d{4}-\d{2}-\d{2})\s*$/m);
     return match ? `${match[1]}T00:00:00.000Z` : undefined;
   } catch {

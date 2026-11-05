@@ -1,14 +1,14 @@
 ---
-title: Lo que hay detrás de hacer una página web
-metaTitle: Cómo hacer una página web para tu negocio | Devstoremx
-metaDescription: Hacer una página web para un negocio es más que elegir una plantilla. El trabajo de contenido, desarrollo y revisión que un equipo hace por ti.
-h1: Cómo hacer una página web para tu negocio y qué trabajo hay detrás
+title: Cómo preparar la página web de tu negocio
+metaTitle: Cómo hacer una página web para mi negocio | Devstoremx
+metaDescription: "Guía básica para preparar la web de tu negocio en México: objetivo, contenido, plataforma y revisión. Qué puedes resolver tú y qué conviene contratar."
+h1: Cómo hacer una página web para tu negocio en México
 intro: >
-  Un constructor te deja publicar un sitio en una tarde. Lo que decide si ese sitio atiende clientes es todo lo que viene antes y después: qué se dice, cómo se ordena, cómo se construye y cómo se comprueba.
-  Esta entrada describe ese trabajo, para que sepas qué parte puedes aportar tú y cuál conviene encargar a un equipo de desarrollo.
+  Para hacer la web de tu negocio, empieza por una acción concreta del cliente, reúne el contenido que necesita para decidir y elige la plataforma según cómo vas a operar.
+  Esta guía básica te ayuda a preparar esas decisiones y revisar la entrega. El diseño, la programación y las conexiones pueden quedar a cargo de Devstoremx.
 author: fernando-peralta
 publishedAt: 2026-10-18
-updatedAt: 2026-10-18
+updatedAt: 2026-11-04
 heroImage: /blog/como-hacer-una-pagina-web.webp
 heroImageAlt: Laptop con el esquema de un sitio web y bocetos de páginas sobre un escritorio.
 category: Páginas web
@@ -32,25 +32,33 @@ cta:
   label: Quiero que hagan mi página web
 ---
 
-## Publicar un sitio y tener una página web que funciona no es lo mismo
+## Antes de empezar: completa este ejemplo con tu negocio
+
+Escribe una frase como esta: “Necesito que una persona que busca mantenimiento de oficinas entienda las zonas que atendemos, vea ejemplos y solicite una visita”. Sustituye el servicio, el público y la acción. Si no puedes completarla, todavía no necesitas elegir una plantilla: necesitas aclarar el encargo.
+
+Después reúne en una carpeta el logotipo, un teléfono y correo vigentes, la lista de servicios, fotografías que puedas utilizar y dos preguntas frecuentes de tus clientes. No compartas contraseñas ni datos de clientes en esa carpeta. Con ese material puedes iniciar la conversación con quien construirá el sitio, aunque los textos todavía necesiten edición.
+
+Esta es una guía de preparación, no un curso de programación. Si solo necesitas validar una idea, una página sencilla puede bastar. Si vas a conectar pagos, reservas o sistemas, conviene que el alcance y las pruebas los defina un equipo antes de tocar tu operación.
+
+## 1. Define qué tiene que lograr el sitio
 
 Cualquier persona puede abrir un constructor, elegir una plantilla y publicar algo. La parte difícil empieza cuando alguien llega a ese sitio y tiene que entender qué haces, confiar en ti y encontrar cómo escribirte, todo en menos de un minuto y probablemente desde el celular.
 
 Ese resultado no sale de la herramienta. Sale de varias decisiones que se toman antes de abrirla: qué debe lograr el sitio, qué páginas necesita, qué dice cada una y quién se encarga de cada pieza. Una [página web profesional](/paginas-web) es el resultado de esas decisiones, no de una plantilla bien elegida.
 
-## Primero se define qué tiene que lograr el sitio
-
 Un sitio para recibir cotizaciones se arma distinto a uno para presentar un catálogo o para que los clientes reserven. Si esa meta no está clara, el diseño termina intentando hacerlo todo y no resuelve nada.
 
 En la primera llamada hablamos de tres cosas: quién es el cliente que quieres atraer, qué necesita saber antes de contactarte y qué quieres que haga al terminar de leer. A partir de ahí, el trabajo deja de ser “hacer una página” y se convierte en construir un recorrido con un propósito.
 
-## Después se ordena el contenido
+## 2. Ordena el contenido que ya tienes
 
 Con la meta definida se decide la estructura: cuántas páginas hacen falta, en qué orden se presentan los servicios y dónde aparece cada llamada a la acción. Casi siempre alcanzan unas pocas páginas bien pensadas. Sumar secciones vacías no mejora el sitio.
 
 También se define quién escribe los textos. Algunos negocios ya los tienen; otros necesitan ayuda para explicar lo que hacen sin tecnicismos. Es una decisión que conviene tomar al inicio, porque un sitio sin texto listo no se puede publicar, y esa espera es una de las causas más comunes de que un proyecto se detenga.
 
-## Lo que parece sencillo y lo que realmente implica
+Como ejercicio básico, dibuja en papel tres bloques: qué ofreces, por qué confiar en tu negocio y cómo contactarte. Añade una página por servicio solo cuando tenga información propia. Ese boceto ayuda a conversar; no te obliga a diseñar ni a decidir la arquitectura técnica.
+
+## 3. Distingue la preparación de la implementación
 
 La mayoría de los pendientes de un sitio parecen pequeños hasta que alguien tiene que resolverlos:
 
@@ -65,17 +73,19 @@ La mayoría de los pendientes de un sitio parecen pequeños hasta que alguien ti
 
 Ninguna de estas tareas es imposible. El problema es que son muchas, se interrumpen entre sí y se descubren una por una cuando ya se tiene fecha de publicación.
 
-## La plataforma se elige después de conocer el negocio
+## 4. Elige la plataforma según la operación
 
 Una pregunta frecuente es en qué se hace la página: [WordPress](/wordpress), una tienda en Shopify o un desarrollo a la medida. No hay una respuesta que sirva para todos los casos.
 
 Un sitio que tu equipo va a actualizar seguido suele encajar bien en WordPress. Si lo central es vender un catálogo, [Shopify](/shopify) suele evitar mucho trabajo de operación. Cuando el sitio necesita reglas propias, usuarios o conexión con otros sistemas, se evalúa un [desarrollo web a la medida](/desarrollo-web). Por eso no empezamos con la herramienta: primero entendemos qué necesita resolver el negocio y después proponemos dónde construirlo.
 
-## La revisión es donde se nota la diferencia
+## 5. Comprueba la entrega como lo haría un cliente
 
 Un sitio que “se ve bien” en la pantalla de quien lo hizo no está terminado. Antes de entregar, se revisa que los enlaces abran páginas vigentes, que el formulario llegue, que cada pantalla funcione en el celular, que las imágenes no vuelvan lenta la carga y que los accesos queden identificados.
 
 Esa pasada final rara vez se ve desde fuera, pero es la que separa un sitio publicado de uno que de verdad atiende contactos. También es la que más se omite cuando una sola persona hace todo y ya tiene ganas de terminar.
+
+Puedes hacer una revisión básica sin herramientas técnicas: abre el enlace desde tu teléfono, localiza un servicio sin ayuda, envía una consulta de prueba y confirma que llega al buzón acordado. Anota la pantalla y el resultado esperado si algo falla. La revisión de seguridad, accesibilidad y configuración debe tener además un responsable técnico; esta comprobación no la sustituye.
 
 ## Qué puedes aportar tú y qué conviene encargar
 
@@ -88,3 +98,5 @@ Lo demás es trabajo técnico y de oficio: la estructura, el desarrollo, la conf
 Empezamos con una llamada para entender tu negocio y lo que ya tienes. Después te enviamos una propuesta por escrito con las páginas, los entregables y los tiempos. Construimos el sitio manteniéndote al tanto, lo revisamos juntos y, al publicarlo, te entregamos los accesos y las indicaciones necesarias para operarlo.
 
 Si lo que buscas es una sola campaña con un formulario, una [landing page](/landing-pages) puede ser más adecuada. Si necesitas presentar a tu empresa con varias secciones, el servicio es el de páginas web. En cualquiera de los casos, no hace falta que llegues con la solución técnica decidida: contarnos el problema es suficiente para empezar.
+
+Para preparar el presupuesto, consulta [qué determina cuánto cuesta una página web](/blog/cuanto-cuesta-una-pagina-web). Si necesitas ver una experiencia concreta, el [sitio de restaurante con menú dinámico](/equipo/fernando-peralta/como-crear-una-pagina-web-de-restaurante-con-menu-dinamico) explica un trabajo previo de Fernando y distingue mostrar un catálogo de recibir pedidos y pagos.

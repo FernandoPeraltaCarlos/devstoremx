@@ -15,6 +15,7 @@ interface Props {
   faqs?: StructuredInput['faqs'];
   serviceName?: string;
   serviceType?: string;
+  dateModified?: Date;
   article?: StructuredInput['article'];
   blogPosts?: StructuredInput['blogPosts'];
 }
@@ -34,6 +35,7 @@ const graph = buildStructuredGraph({
   faqs: Astro.props.faqs,
   serviceName: Astro.props.serviceName,
   serviceType: Astro.props.serviceType,
+  dateModified: Astro.props.dateModified,
   article: Astro.props.article,
   blogPosts: Astro.props.blogPosts,
 });

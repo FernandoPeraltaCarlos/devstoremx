@@ -53,7 +53,7 @@ export interface AuthorProject {
 export const authorProjects: AuthorProject[] = (snapshot as Omit<AuthorProject, 'content'>[]).map((project) => {
   const content = projectContentBySlug[project.slug];
   if (!content) throw new Error(`Falta el contenido comercial del proyecto: ${project.slug}`);
-  return { ...project, content };
+  return { ...project, updatedAt: content.updatedAt ?? project.updatedAt, content };
 });
 
 export function projectPath(project: Pick<AuthorProject, 'author' | 'slug'>): string {

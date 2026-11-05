@@ -7,9 +7,11 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/indexnow.mjs",
+    "build": "astro build && node scripts/check-seo.mjs && node scripts/indexnow.mjs",
     "check": "astro check",
     "test": "node --experimental-strip-types tests/run.mjs",
+    "seo:check": "node scripts/check-seo.mjs",
+    "seo:compare": "node scripts/compare-seo.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

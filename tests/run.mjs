@@ -1,4 +1,5 @@
 import './seo.test.mjs';
+import './seo-commercial.test.mjs';
 import './author-projects.test.mjs';
 import './viewport-reveal.test.mjs';
 import './process-progress.test.mjs';

@@ -13,6 +13,7 @@ const servicios = defineCollection({
     metaTitle: z.string(),
     metaDescription: z.string(),
     h1: z.string(),
+    updatedAt: z.coerce.date().optional(),
     keywords: z.array(z.string()),
     intro: z.string(),
     platforms: z.array(z.string()).default([]),

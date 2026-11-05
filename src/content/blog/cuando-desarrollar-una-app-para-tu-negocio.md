@@ -8,7 +8,7 @@ intro: >
   Esas necesidades pueden justificar una app. Tener un ícono en la tienda, por sí solo, no resuelve un problema del negocio.
 author: fernando-peralta
 publishedAt: 2026-10-17
-updatedAt: 2026-10-17
+updatedAt: 2026-11-04
 heroImage: /blog/cuanto-cuesta-hacer-una-app.webp
 heroImageAlt: Ilustración de dos teléfonos conectados sobre un fondo oscuro.
 category: Apps móviles
@@ -34,6 +34,8 @@ cta:
 Una empresa puede sentir que necesita una aplicación porque sus clientes usan el teléfono para todo. Pero esa observación no define qué hará la app ni por qué alguien querrá instalarla. La descarga exige una decisión adicional; si el beneficio no está claro, el ícono puede desaparecer antes de que el negocio vea uso real.
 
 El [desarrollo de apps móviles](/apps-moviles) tiene otra conversación de fondo: una tarea que se repite, personas que necesitan resolverla y condiciones del teléfono que aportan algo al flujo. Cámara, avisos o acceso frecuente pueden ser relevantes, pero no se convierten en necesidad solo porque existan como funciones.
+
+Si ya decidiste evaluar el proyecto, la guía sobre [qué determina cuánto cuesta hacer una app](/blog/cuanto-cuesta-hacer-una-app) te ayuda a separar desarrollo, publicación y operación. Esta entrada se centra en una decisión anterior: si la aplicación instalada tiene sentido para tu negocio.
 
 Un equipo profesional debe poder cuestionar el formato antes de venderlo. Si el problema es presentar servicios y recibir mensajes, quizá corresponde una página. Si ocurre en el navegador y no necesita instalación, una app web puede ser una ruta más razonable.
 

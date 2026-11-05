@@ -1,14 +1,14 @@
 ---
-title: Una tienda Shopify lista para operar
-metaTitle: Desarrollo de tiendas Shopify para negocios | Devstoremx
-metaDescription: Tener Shopify contratado no significa tener una tienda lista. Diseño, catálogo y operación que un equipo debe resolver antes de entregar tu ecommerce.
-h1: Tener Shopify contratado no es lo mismo que tener una tienda lista
+title: Qué revisar antes de lanzar tu tienda Shopify
+metaTitle: Qué revisar antes de lanzar una tienda Shopify | Devstoremx
+metaDescription: "Lista básica antes de lanzar tu tienda Shopify: catálogo, envíos, pagos, correos y accesos. Detecta pendientes y encarga la implementación a nuestro equipo."
+h1: Qué revisar antes de lanzar tu tienda Shopify
 intro: >
-  El panel ya existe y el tema se ve bien, pero faltan productos, el envío no refleja tu operación y nadie sabe qué correo recibirá el cliente.
-  Entre abrir la cuenta y poner una tienda en manos del negocio hay un proyecto de desarrollo. Ese es el trabajo que no debería quedarse de tu lado.
+  Antes de lanzar una tienda Shopify, comprueba que el catálogo real se entiende, que puedes cobrar y enviar en las zonas acordadas y que tu equipo recibe el pedido.
+  Esta revisión básica te ayuda a detectar pendientes sin programar. Si el problema está en el tema, las apps o las conexiones, podemos encargarnos del desarrollo.
 author: fernando-peralta
 publishedAt: 2026-10-17
-updatedAt: 2026-10-17
+updatedAt: 2026-11-04
 heroImage: /blog/cuanto-cuesta-una-tienda-en-shopify.webp
 heroImageAlt: Ilustración de una bolsa de compra dentro de un panel oscuro.
 category: Shopify
@@ -28,6 +28,20 @@ cta:
   description: Si tu tienda sigue en borrador o ya no acompaña lo que vendes, revisemos el proyecto. Somos Shopify Partner y podemos encargarnos del diseño y desarrollo acordados.
   label: Hablemos de tu proyecto Shopify
 ---
+
+## Una revisión básica antes de compartir el enlace
+
+Elige un producto representativo del catálogo y recorre su compra desde un teléfono. Revisa su nombre, imágenes, variantes y disponibilidad. Avanza hasta las opciones de envío y pago sin hacer un cargo real por accidente: el pedido de prueba y su método deben acordarse con quien configura la tienda.
+
+Anota cada pendiente con una captura y lo que esperabas que ocurriera. Separa falta de contenido de fallas técnicas. “Falta la fotografía del empaque” y “el costo de envío no corresponde a la zona” necesitan responsables distintos. Esta lista sirve para pedir una entrega verificable, no para modificar por tu cuenta el checkout.
+
+| Revisión | Resultado que debes poder confirmar |
+|---|---|
+| Catálogo | La variante elegida y su disponibilidad son claras |
+| Entrega | El destino tiene un método y condiciones correctos |
+| Pago de prueba | Se utiliza el procedimiento seguro acordado |
+| Avisos | Cliente y equipo reciben la información esperada |
+| Accesos | El negocio conserva la cuenta y puede operar productos |
 
 ## El tema es solo una parte del trabajo
 
@@ -68,3 +82,9 @@ Una tienda no está realmente en manos del negocio si nadie sabe qué puede camb
 Después del lanzamiento siguen existiendo preguntas, pedidos y cambios de producto. Esa operación pertenece al negocio salvo que se acuerde otro acompañamiento. El cuidado del tema y las apps también necesita un responsable; no desaparece porque Shopify administre la base de la plataforma.
 
 Si hoy tienes una cuenta sin terminar o una [tienda en línea](/tienda-en-linea) que exige demasiadas correcciones por fuera, podemos revisar el estado del proyecto. No necesitas encontrar por tu cuenta qué falta instalar. Nosotros definimos contigo qué debe quedar resuelto para que tu equipo pueda concentrarse en vender y atender.
+
+## Cuando el pendiente necesita desarrollo
+
+Si un filtro no encuentra productos, prepara una colección y los atributos por los que compra tu cliente. Nuestra página de [filtros con metafields en Shopify](/equipo/fernando-peralta/como-crear-filtros-de-productos-con-metafields-en-shopify) explica qué datos conviene reunir y una experiencia previa de Fernando. Si el tema ya tiene modificaciones, revisa [qué conservar antes de actualizarlo](/equipo/fernando-peralta/como-actualizar-un-tema-shopify-sin-perder-personalizaciones), en vez de instalar otra versión sobre la tienda activa.
+
+Esta entrada es una lista de revisión. Para contratar diseño, configuración o programación, el alcance del servicio está en [desarrollo Shopify en México](/shopify). Para separar honorarios de la suscripción y las apps, consulta [los componentes del costo de una tienda Shopify](/blog/cuanto-cuesta-una-tienda-en-shopify).

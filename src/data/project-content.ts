@@ -1,6 +1,7 @@
 import { projectSlugs } from './project-slugs.ts';
 
 export interface ProjectContent {
+  updatedAt?: string;
   title: string;
   metaTitle: string;
   description: string;
@@ -15,6 +16,7 @@ export interface ProjectContent {
 /** Contenido editorial comercial. El detalle del caso permanece en el portafolio personal. */
 const content: Record<string, ProjectContent> = {
   'charlottes-web': {
+    updatedAt: '2026-11-04',
     title: 'Cómo actualizar un tema Shopify sin perder tus personalizaciones',
     metaTitle: 'Actualizar tema Shopify sin perder cambios | Devstoremx',
     description: 'Actualizamos temas Shopify con secciones y código personalizados. Revisamos qué conservar, migramos los cambios y probamos la tienda antes de publicar.',
@@ -22,6 +24,8 @@ const content: Record<string, ProjectContent> = {
     sections: [
       { title: 'Cuando actualizar deja de ser un botón', paragraphs: ['El tema recibe mejoras, pero tu tienda ya tiene bloques propios, estilos y funciones que no venían con la compra. Instalar la versión nueva no significa que esas modificaciones viajen con ella. El riesgo es aprobar una portada que se ve bien y descubrir después que faltan funciones en productos o colecciones.', 'Revisamos el tema actual y la versión de destino para identificar qué pertenece al proveedor y qué se desarrolló para tu negocio. Esa separación define la migración y evita empezar de cero por una actualización.'] },
       { title: 'Conservar la operación, no solo la apariencia', paragraphs: ['Trabajamos sobre una copia del tema, trasladamos las configuraciones acordadas y adaptamos Liquid, CSS y JavaScript cuando cambia la estructura. No sustituimos la tienda activa mientras se está construyendo.', 'La revisión contempla las páginas y los recorridos definidos en el alcance: navegación, producto, carrito y comportamiento de las integraciones que se hayan incluido. La publicación se acuerda después de esa validación, no como parte de una prueba sobre tus clientes.'] },
+      { title: 'Revisión básica antes de pedir la actualización', paragraphs: ['Primero anota el nombre y la versión del tema. Después reúne capturas de las secciones que no venían originalmente: selector de variantes, tabla de medidas, filtros, suscripciones o bloques de campaña. Añade la lista de apps que aparecen en esas pantallas. No necesitas identificar archivos Liquid ni tocar código para preparar el encargo.', 'Comprueba desde un teléfono cómo funciona hoy un producto representativo y registra qué debe conservarse. No publiques una versión nueva solo para comprobar qué se rompe: un duplicado del tema no aísla todos los cambios de apps, pagos o configuración de la tienda. La revisión técnica y el entorno de trabajo se acuerdan antes de intervenir.'] },
+      { title: 'Cuándo dejar la migración al equipo técnico', paragraphs: ['Si la actualización automática no conserva cambios, si existen componentes propios o si no sabes qué app modifica cada pantalla, detenerse es una decisión razonable. El botón de actualizar no sustituye comparar versiones, adaptar código ni revisar las conexiones. Cambiar configuraciones al azar puede ocultar el problema sin resolverlo.', 'Puedes enviarnos el enlace de la tienda y la lista de funciones que necesitas conservar. Pedimos los accesos adecuados después de delimitar la intervención. La propuesta separa inventario de cambios, adaptación, pruebas y publicación; no promete conservar cualquier personalización sin revisarla.'] },
     ],
     deliverables: ['Inventario de personalizaciones que deben conservarse.', 'Migración de secciones y configuraciones acordadas.', 'Adaptación del código a la versión nueva.', 'Tema de prueba y revisión conjunta antes de publicar.'],
     faqs: [
@@ -105,6 +109,7 @@ const content: Record<string, ProjectContent> = {
     cta: { title: 'Dale a tu campaña una página preparada para recibirla', text: 'Cuéntanos qué vas a promocionar y qué necesita hacer el visitante. Acordamos la landing y sus entregables antes de construir.', label: 'Hablemos de mi campaña en Shopify' },
   },
   'exclusive-iron-doors': {
+    updatedAt: '2026-11-04',
     title: 'Cómo crear filtros de productos con metafields en Shopify',
     metaTitle: 'Filtros con metafields para tiendas Shopify | Devstoremx',
     description: 'Desarrollamos filtros de colecciones Shopify con metafields. Organizamos atributos y opciones para que el cliente encuentre el producto adecuado.',
@@ -112,6 +117,8 @@ const content: Record<string, ProjectContent> = {
     sections: [
       { title: 'Un catálogo grande no se resuelve mostrando más tarjetas', paragraphs: ['Cuando importan medidas, materiales o características específicas, recorrer toda la colección se vuelve trabajo del comprador. Un filtro mal planteado tampoco ayuda: muestra opciones vacías o utiliza nombres que solo entiende el equipo interno.', 'Revisamos qué atributos cambian la elección y cómo están guardados en Shopify. Antes de desarrollar la interfaz se define qué datos faltan, cuáles deben normalizarse y quién los mantendrá.'] },
       { title: 'Datos consistentes y una interfaz que responda', paragraphs: ['Diseñamos los controles y el comportamiento sobre el tema y las capacidades de la tienda. La propuesta separa la carga o limpieza de atributos del desarrollo de filtros, porque son trabajos distintos.', 'También revisamos el resultado al combinar opciones y la experiencia móvil. Si hay integraciones como favoritos o galerías que afectan a la colección, se evalúan dentro del alcance para evitar comportamientos contradictorios.'] },
+      { title: 'Cómo preparar tus primeros filtros sin programar', paragraphs: ['Elige una colección y unos productos representativos. En una hoja de trabajo anota las características que cambian la compra, por ejemplo material, ancho y tipo de apertura. Usa nombres y unidades consistentes y separa esos atributos de frases promocionales como “el favorito”. El objetivo es definir datos útiles antes de decidir cómo guardarlos.', 'Después pide a alguien que encuentre un producto combinando dos características. Anota qué términos usa y qué resultados espera. No cambies metafields en masa ni elimines definiciones para hacer esta prueba: basta con revisar el catálogo y preparar ejemplos. Los tipos de campo y la compatibilidad con el tema requieren una evaluación aparte.'] },
+      { title: 'Configuración estándar o filtros a la medida', paragraphs: ['Shopify ofrece opciones de filtrado mediante Search & Discovery, sujetas a la compatibilidad y límites vigentes de la tienda y del tema. Si esas opciones resuelven el catálogo, no hace falta vender una app o una interfaz propia. La decisión se toma con tus atributos y tus combinaciones reales, no solo con el número de productos.', 'Si los datos ya son consistentes pero el filtro no aparece, falla al combinar opciones o no se utiliza bien desde el celular, podemos revisar configuración e interfaz. Tú aportas los criterios de compra; nosotros definimos campos, comportamiento, compatibilidad y pruebas dentro de un alcance de desarrollo.'] },
     ],
     deliverables: ['Definición de atributos y metafields del catálogo.', 'Diseño y desarrollo de controles de filtrado.', 'Estados de resultados y combinaciones acordadas.', 'Validación con productos reales en móvil y escritorio.'],
     faqs: [
@@ -285,6 +292,7 @@ const content: Record<string, ProjectContent> = {
     cta: { title: 'Que una compra no se convierta en trabajo de captura', text: 'Cuéntanos dónde cobras, dónde están los cursos y qué hace hoy tu equipo. Evaluamos el recorrido completo.', label: 'Quiero automatizar las altas de mis cursos' },
   },
   'groovepro': {
+    updatedAt: '2026-11-04',
     title: 'Cómo personalizar envíos y paquetes con plugins de WooCommerce',
     metaTitle: 'Plugins WooCommerce para envíos y paquetes | Devstoremx',
     description: 'Desarrollamos plugins WooCommerce para reglas de envío y paquetes de productos. Traducimos tu operación a cálculos y validaciones del carrito.',
@@ -292,6 +300,8 @@ const content: Record<string, ProjectContent> = {
     sections: [
       { title: 'Las reglas del negocio ya no caben en la configuración', paragraphs: ['La tienda combina productos y calcula un cobro que luego alguien tiene que corregir. El problema puede estar en cómo se agrupan artículos, se interpretan las dimensiones o se aplican las cantidades de un paquete.', 'Trabajamos con ejemplos concretos del carrito: qué debería cobrarse, cuándo cambia y qué excepciones existen. Esos ejemplos permiten construir reglas comprobables, no una lista de condiciones que cada persona interpreta diferente.'] },
       { title: 'La función debe sobrevivir a un cambio de diseño', paragraphs: ['La lógica comercial que no pertenece a la presentación puede desarrollarse en un plugin separado del tema. Así se distingue el diseño de la tienda de las reglas que calculan los paquetes o el envío.', 'La revisión contempla las extensiones y modalidades de compra incluidas en el proyecto. Si la tarifa requiere consultar una transportista, esa conexión se evalúa aparte; un cálculo personalizado no implica una integración logística completa.'] },
+      { title: 'Una comprobación básica antes de cambiar plugins', paragraphs: ['Anota tres carritos de ejemplo: un producto habitual, una combinación de productos y una excepción de tamaño o cantidad. Para cada uno registra destino aproximado, unidades, peso o dimensiones si aplican, y el resultado esperado. Usa ejemplos sin nombres, teléfonos ni direcciones de compradores reales.', 'Revisa si la diferencia viene de datos incompletos del producto o de la zona y el método configurados. Puedes documentarlo con capturas sin cambiar la tienda. No desactives plugins en producción ni hagas compras reales para experimentar: las pruebas de configuración y pagos deben realizarse en condiciones controladas.'] },
+      { title: 'Qué información necesita el desarrollo de una regla propia', paragraphs: ['Si dos personas del negocio calculan resultados distintos para el mismo carrito, primero hay que acordar la regla. Define qué condición tiene prioridad, cómo se combinan paquetes y qué debe pasar cuando un destino no está cubierto. Un plugin no puede resolver una política comercial que todavía es ambigua.', 'Con esos ejemplos podemos determinar si basta una configuración, una extensión existente o un plugin a la medida. La propuesta distingue cálculo local, consulta de tarifas externas y generación de guías; son funciones distintas. El análisis, el código y las pruebas de compatibilidad quedan de nuestro lado, con la operación validada por tu equipo.'] },
     ],
     deliverables: ['Documento de reglas con ejemplos de carrito.', 'Plugin para las funciones comerciales acordadas.', 'Pruebas de cantidades, combinaciones y excepciones.', 'Documentación de configuración y mantenimiento.'],
     faqs: [

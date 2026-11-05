@@ -49,7 +49,7 @@ const more = posts.filter((item) => item.id !== post.id)
   <StructuredData slot="head" title={post.data.metaTitle} description={post.data.metaDescription}
     image={post.data.heroImage} imageAlt={post.data.heroImageAlt}
     variant="article" breadcrumbs={crumbs}
-    article={{ headline: post.data.h1, datePublished: post.data.publishedAt, dateModified: post.data.updatedAt, authorSlug: post.data.author, image: post.data.heroImage }}
+    article={{ headline: post.data.h1, datePublished: post.data.publishedAt, dateModified: post.data.updatedAt, authorSlug: post.data.author, image: post.data.heroImage, serviceIds }}
     faqs={post.data.faqs} />
   <SiteFrame>
     <article class="blog-article">

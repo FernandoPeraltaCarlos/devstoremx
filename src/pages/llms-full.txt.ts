@@ -30,6 +30,7 @@ export const GET: APIRoute = async () => {
   for (const entry of servicios) {
     blocks.push(
       entry.data.h1,
+      ...(entry.data.updatedAt ? [`Última revisión del servicio: ${formatDate(entry.data.updatedAt)}.`] : []),
       entry.data.intro.trim(),
       '',
       plain(entry.body ?? ''),

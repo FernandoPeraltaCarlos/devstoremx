@@ -3,6 +3,7 @@ title: Shopify
 metaTitle: Shopify Partner en México | Tiendas Shopify | Devstoremx
 metaDescription: Somos Shopify Partner en México. Desarrollamos, configuramos y mantenemos tiendas Shopify para negocios de todo el país. Cotización por escrito.
 h1: "Shopify Partner en México: desarrollo de tiendas Shopify"
+updatedAt: 2026-11-04
 keywords:
   - shopify partner méxico
   - desarrollador shopify méxico
@@ -10,8 +11,8 @@ keywords:
   - agencia shopify méxico
   - tienda shopify
 intro: >
-  Una tienda Shopify es un ecommerce hospedado por Shopify: tú operas productos y pedidos, y Shopify se encarga de la plataforma.
-  Devstoremx es Shopify Partner: somos la agencia y el equipo de desarrolladores Shopify que diseña, programa y mantiene esas tiendas para negocios en México, en remoto. No publicamos un precio de “tienda Shopify”, porque el catálogo, los pagos y el diseño cambian el trabajo.
+  Devstoremx es Shopify Partner en México. Diseñamos, configuramos y desarrollamos tiendas Shopify: catálogo, temas Liquid, pagos, envíos y conexiones según el alcance acordado.
+  Trabajamos en remoto con tu cuenta de negocio. Evaluamos qué puedes resolver con la plataforma y qué requiere desarrollo; te entregamos alcance, tiempos y costo por escrito.
 platforms:
   - Shopify
 highlights:
@@ -83,6 +84,10 @@ También dejamos claro qué no debemos tocar después: el checkout tiene límite
 El trabajo técnico de Shopify lo dirige [Fernando Peralta](/equipo/fernando-peralta), Technical Lead de Devstoremx. Desde 2021 construye temas y funcionalidades de tienda con Liquid, y antes de Devstoremx lo hizo para tiendas de varias marcas, desde secciones y filtros de colecciones hasta integraciones de reseñas, suscripciones y envíos.
 
 Su perfil presenta esos proyectos con capturas, tecnologías y el detalle de su participación: actualizaciones de temas, componentes Liquid e integraciones para tiendas en producción.
+
+Puedes consultar directamente la experiencia en [actualización de temas con personalizaciones](/equipo/fernando-peralta/como-actualizar-un-tema-shopify-sin-perder-personalizaciones) y [filtros de catálogo con metafields](/equipo/fernando-peralta/como-crear-filtros-de-productos-con-metafields-en-shopify). Cada referencia identifica el contexto del trabajo previo de Fernando y enlaza el caso completo. No implica que esas marcas hayan contratado a Devstoremx.
+
+Si estás preparando el lanzamiento, la [lista básica de revisión de Shopify](/blog/desarrollo-de-tiendas-shopify) te ayuda a reunir pendientes. Para comparar propuestas, revisa [qué gastos forman el costo de una tienda Shopify](/blog/cuanto-cuesta-una-tienda-en-shopify): el plan de la plataforma y nuestro trabajo de desarrollo no son el mismo pago.
 
 ## Después de publicar
 

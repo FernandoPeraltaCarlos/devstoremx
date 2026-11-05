@@ -8,7 +8,7 @@ intro: >
   La cotización útil no es la que parece más sencilla: es la que deja claro qué problema va a resolver el equipo que contratas.
 author: fernando-peralta
 publishedAt: 2026-10-07
-updatedAt: 2026-10-17
+updatedAt: 2026-11-04
 heroImage: /blog/cuanto-cuesta-una-pagina-web.webp
 heroImageAlt: Documentos de alcance de un proyecto web junto a una calculadora y una libreta azul.
 category: Desarrollo web
@@ -60,6 +60,8 @@ Integrar un sistema de inventario no es lo mismo que añadir un campo al formula
 La plataforma influye en esas decisiones, pero el nombre de la herramienta no es la solución. Un sitio editable, una tienda alojada y una aplicación propia tienen formas distintas de operar. Nuestra recomendación parte del negocio y del equipo que lo usará, no de una tecnología elegida antes de escuchar el caso.
 
 Los pagos a terceros también deben distinguirse del trabajo de construcción. Dominio, hospedaje, plataformas y licencias tienen condiciones propias. No publicamos rangos de precio ni hacemos pasar esas cuotas por una cotización de tu proyecto.
+
+Si estás armando el presupuesto inicial, la guía de [qué determina el costo de una página web](/blog/cuanto-cuesta-una-pagina-web) separa esas partidas y propone los datos que puedes reunir. Aquí el objetivo es comparar propuestas ya recibidas: comprobar si describen el mismo trabajo y las mismas responsabilidades.
 
 ## Contratar claridad antes de contratar código
 

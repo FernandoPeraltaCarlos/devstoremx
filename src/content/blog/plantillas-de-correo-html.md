@@ -1,14 +1,14 @@
 ---
 title: Tus correos también representan a tu negocio
-metaTitle: Diseño profesional de correos de marca | Devstoremx
-metaDescription: Confirmaciones rotas, mensajes que parecen de otra empresa y botones difíciles de usar. Cuándo tu negocio necesita diseño y maquetación profesional de emails.
-h1: Tus correos también representan a tu negocio, aunque salgan solos
+metaTitle: "Mi correo HTML se ve mal en Outlook: qué revisar"
+metaDescription: "Revisión básica si tu correo HTML se rompe en Outlook o Gmail: imágenes, texto, enlaces y mensaje de prueba. Cuándo encargar maquetación compatible a un equipo."
+h1: "Tu correo HTML se ve mal en Outlook o Gmail: qué puedes revisar"
 intro: >
   El cliente acaba de comprar, agendar o registrarse. El correo que recibe debería confirmar esa confianza, no mostrar un logo invisible, un botón roto o un mensaje de muestra.
   Una plantilla profesional cuida ese momento sin pedirle a tu equipo que aprenda a maquetar para cada bandeja.
 author: fernando-peralta
 publishedAt: 2026-10-17
-updatedAt: 2026-10-18
+updatedAt: 2026-11-04
 heroImage: /blog/plantillas-de-correo-html.webp
 heroImageAlt: Ilustración de un sobre de correo con líneas azules sobre un fondo oscuro.
 category: Email templates
@@ -46,6 +46,18 @@ Ese es un trabajo de maquetación y prueba, no una tarea que debería trasladars
 
 Nosotros contemplamos esas condiciones en el desarrollo de la plantilla. El objetivo es que la información importante siga siendo legible y los enlaces utilizables en los entornos acordados. Ningún diseño serio necesita prometer que todos los programas de correo se comportarán de forma idéntica.
 
+## Una revisión básica que puedes hacer sin tocar HTML
+
+Envía un mensaje de prueba desde la misma herramienta que usa tu negocio, a cuentas que controles. No basta con reenviar un correo: el reenvío puede alterar su estructura. Anota dónde lo abres, porque Outlook clásico de escritorio, el nuevo Outlook y la versión web no representan necesariamente el mensaje igual.
+
+1. Comprueba que el asunto y el primer texto describen el mensaje real, sin datos de muestra.
+2. Abre el correo con las imágenes bloqueadas. La información principal debe seguir disponible como texto, no solo dentro de una imagen.
+3. Revisa en el celular si puedes leer el mensaje y usar el botón sin ampliar la pantalla.
+4. Prueba los enlaces con datos ficticios y confirma el destino. No hagas cargos ni acciones irreversibles para validar un diseño.
+5. Guarda capturas de cada problema y el nombre de la aplicación donde aparece. Si contiene datos personales, ocúltalos antes de compartirlas.
+
+Si falta texto o una imagen está equivocada, puedes corregir el contenido desde tu herramienta. Si se rompen columnas, desaparece un botón o cambian los fondos, evita pegar fragmentos de HTML al azar en la plantilla activa. Es un encargo de maquetación y pruebas de compatibilidad; podemos resolverlo sin que tu equipo aprenda los detalles de cada motor de correo.
+
 ## La marca no debería cambiar entre mensajes
 
 Una empresa puede tener el sitio cuidado y mandar correos con colores, tonos y estructuras que parecen de proveedores distintos. La confirmación usa una plantilla del sistema; el boletín, una campaña antigua; el aviso de cita, una imagen que alguien encontró en una carpeta.
@@ -71,3 +83,5 @@ La propuesta debe aclarar qué queda listo para usar y qué seguirá a cargo del
 En Devstoremx trabajamos con el mensaje real, no únicamente con una muestra perfecta. La revisión contempla su lectura y su función. No prometemos entregabilidad absoluta ni que un diseño por sí solo evitará el spam: esos resultados también dependen del dominio, del remitente y de cómo se envía.
 
 Si tus correos hoy parecen el punto débil de una experiencia bien cuidada, podemos ocuparnos de esa parte. Tu equipo no necesita estudiar las diferencias entre motores de correo. Necesita mensajes claros, reconocibles y listos para representar al negocio cada vez que el sistema los manda.
+
+La experiencia de Fernando en [Shopify y plantillas de email HTML](/equipo/fernando-peralta/como-personalizar-shopify-y-renovar-plantillas-de-email-html) permite consultar un trabajo relacionado y su contexto. Para solicitar el servicio de la agencia, comparte qué sistema envía el correo, cuáles mensajes necesitas y en qué bandejas debe revisarse. Definimos diseño, maquetación e instalación por escrito, sin dar por incluida la gestión de campañas.

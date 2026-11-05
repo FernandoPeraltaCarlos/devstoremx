@@ -27,7 +27,7 @@ export const GET: APIRoute = async () => {
     '',
     '## Entradas de blog',
     '',
-    `- [Blog de Devstoremx](${origin}/blog): Fernando Peralta escribe sobre problemas de sitios, tiendas y sistemas que resolvemos para negocios. Las entradas ayudan a identificar cuándo contratar un servicio; no son tutoriales de implementación.`,
+    `- [Blog de Devstoremx](${origin}/blog): Fernando Peralta publica guías básicas para preparar proyectos, revisar entregas y decidir cuándo contratar desarrollo. No es documentación de implementación técnica. Las guías de costos explican partidas y no publican tarifas ni rangos.`,
     ...posts.map((post) => `- [${post.data.title}](${origin}/blog/${post.id}): ${post.data.intro.replace(/\s+/g, ' ')}`),
     '',
     '## Proceso',
