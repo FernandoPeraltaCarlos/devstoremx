@@ -4,3 +4,10 @@ allowBuilds:
 overrides:
   # GHSA-9wv6-86v2-598j: replace Vercel's pinned vulnerable version.
   '@vercel/routing-utils>path-to-regexp': 6.3.0
+  # Security patches for transitive dependencies.
+  source-map-js: ^1.2.2
+  sharp: ^0.35.5
+  zod: ^4.6.6
+  undici: ^8.12.2
+  fast-uri: ^3.1.9
+  '@vercel/nft>glob': ^14.0.2
