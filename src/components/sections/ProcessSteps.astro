@@ -7,17 +7,17 @@ import { steps } from '../../data/landing';
       <div class="grid gap-10 px-6 py-10 sm:px-10 sm:py-14 lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] lg:items-start lg:gap-16 lg:px-14 lg:py-16">
         <div class="min-w-0 lg:sticky lg:top-28">
           <p data-reveal class="eyebrow text-periwinkle">Flujo de desarrollo</p>
-          <h2 id="proceso-servicio" data-reveal="blur" data-reveal-delay="100" class="mt-4 max-w-[12ch] text-[28px] leading-[1.16] font-bold tracking-[-0.025em] text-balance min-[400px]:text-[30px] sm:text-[40px]">Cómo trabajamos este proyecto</h2>
+          <h2 id="proceso-servicio" data-reveal="blur" data-reveal-delay="100" class="mt-4 max-w-[12ch] text-[1.75rem] leading-[1.16] font-bold tracking-[-0.025em] text-balance min-[400px]:text-[1.875rem] sm:text-[2.5rem]">Cómo trabajamos este proyecto</h2>
           <p data-reveal data-reveal-delay="180" class="mt-5 max-w-[36ch] text-base leading-7 text-muted-dark sm:text-lg">Cinco etapas, las mismas en todos los servicios. El costo queda por escrito en la segunda, antes de construir.</p>
         </div>
         <ol class="steps relative min-w-0">
           <span aria-hidden="true" class="pointer-events-none absolute top-6 bottom-6 left-6 w-px -translate-x-1/2 bg-line-dark"></span>
           {steps.map((step, index) => (
             <li class:list={['step relative grid grid-cols-[48px_minmax(0,1fr)] gap-x-5', step.number === '02' && 'is-quoted', index === steps.length - 1 ? '' : 'pb-8']}>
-              <span class="step-mark relative z-10 flex h-12 w-12 items-center justify-center rounded-md border font-mono text-[15px]">{step.number}</span>
+              <span class="step-mark relative z-10 flex h-12 w-12 items-center justify-center rounded-md border font-mono text-[0.9375rem]">{step.number}</span>
               <div class="min-w-0 pt-1">
                 <h3 class="step-title text-xl leading-7 font-semibold text-balance">{step.title}</h3>
-                <p class="mt-2 text-[15px] leading-6 text-muted-dark">{step.description}</p>
+                <p class="mt-2 text-[0.9375rem] leading-6 text-muted-dark">{step.description}</p>
               </div>
             </li>
           ))}
@@ -28,7 +28,7 @@ import { steps } from '../../data/landing';
 </section>
 <style>
   .step-mark {
-    border-color: #56627a;
+    border-color: var(--color-line-strong-dark);
     background: var(--color-night);
     color: var(--color-cloud);
     transition: background-color 150ms ease-out, border-color 150ms ease-out, color 150ms ease-out, box-shadow 150ms ease-out;
@@ -40,8 +40,8 @@ import { steps } from '../../data/landing';
   .steps > li.is-quoted .step-mark,
   .steps > li:hover .step-mark,
   .steps > li:focus-within .step-mark {
-    border-color: var(--color-electric);
-    background: var(--color-electric);
+    border-color: var(--color-brand);
+    background: var(--color-brand);
     color: white;
     box-shadow: 0 0 0 4px rgba(82, 113, 255, 0.18);
   }
@@ -52,7 +52,7 @@ import { steps } from '../../data/landing';
   }
   .steps:hover > li.is-quoted:not(:hover):not(:focus-within) .step-mark,
   .steps:focus-within > li.is-quoted:not(:hover):not(:focus-within) .step-mark {
-    border-color: #56627a;
+    border-color: var(--color-line-strong-dark);
     background: var(--color-night);
     color: var(--color-cloud);
     box-shadow: none;

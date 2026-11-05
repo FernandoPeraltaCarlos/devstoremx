@@ -34,9 +34,10 @@ export default function ProcessTimeline({ steps }: Props) {
         const rect = track?.getBoundingClientRect();
         if (pinned.matches && rect && pin) {
           // Centre the pinned block; its height changes with the layout, so CSS alone cannot.
-          const pinTop = Math.max(16, (viewportHeight - pin.offsetHeight) / 2);
+          const pinHeight = pin.offsetHeight;
+          const pinTop = Math.max(16, (viewportHeight - pinHeight) / 2);
+          progress = getTrackProgress(rect.top, rect.height, pinTop, pinHeight);
           pin.style.top = `${pinTop}px`;
-          progress = getTrackProgress(rect.top, rect.height, pinTop, pin.offsetHeight);
         } else {
           pin?.style.removeProperty('top');
           progress = getRowProgress(top, viewportHeight);
@@ -81,7 +82,7 @@ export default function ProcessTimeline({ steps }: Props) {
   }, [steps]);
 
   // Line, fill and steps reveal as one block so the line never shows through half-faded numbers.
-  return <div data-reveal="blur" data-reveal-delay="150" class="relative mt-10 lg:mt-16">
+  return <div data-reveal data-reveal-delay="150" class="relative mt-10 lg:mt-16">
     <ol ref={timeline} aria-label="Etapas del desarrollo" class="relative grid gap-8 before:absolute before:top-0 before:bottom-0 before:left-6 before:w-px before:bg-line-dark lg:grid-cols-5 lg:before:top-6 lg:before:right-0 lg:before:bottom-auto lg:before:left-0 lg:before:h-px lg:before:w-auto">
       {steps.map((step, i) => <ProcessStep key={step.number} {...step} active={i === active} done={i < active} />)}
     </ol>

@@ -209,7 +209,7 @@ export const site = {
   sameAs: ['https://www.google.com/maps/place/Paginas+web+Devstoremx/@19.493275,-99.1778529,17z/data=!3m1!4b1!4m6!3m5!1s0x85d1f9e6b5eb7741:0x57e0fb8178bfe2a3!8m2!3d19.49327!4d-99.175278!16s%2Fg%2F11t7_5dl28'] as string[],
   alternateName: ['devstore mx', 'DevStore MX'] as const,
   heroImage: '',
-  contactImage: '/devstoremx-contacto-9x16.png',
+  contactImage: '/devstoremx-contacto-9x16.webp',
   videoSrc: '', // Archivo de video local o URL directa compatible con <video>.
   videoPoster: '',
   videoDuration: '[Duración]',

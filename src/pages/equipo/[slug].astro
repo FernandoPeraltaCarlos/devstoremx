@@ -62,9 +62,9 @@ const projects = authorProjects.filter((project) => project.author === slug);
             </dl>
           </div>
           <div class="flex max-w-[760px] flex-col gap-5">
-            <h2 id="sobre" class="text-[28px] leading-[1.16] font-bold tracking-[-0.025em] text-ink min-[400px]:text-[30px] sm:text-[40px]">{profile.headline}</h2>
-            {profile.about.map((paragraph) => <p class="text-[17px] leading-8 text-muted">{paragraph}</p>)}
-            <p class="text-[17px] leading-8 text-muted">
+            <h2 id="sobre" class="text-[1.75rem] leading-[1.16] font-bold tracking-[-0.025em] text-ink min-[400px]:text-[1.875rem] sm:text-[2.5rem]">{profile.headline}</h2>
+            {profile.about.map((paragraph) => <p class="text-[1.0625rem] leading-8 text-muted">{paragraph}</p>)}
+            <p class="text-[1.0625rem] leading-8 text-muted">
               Si tu proyecto es una tienda, revisa el servicio de <a class="font-semibold text-brand underline underline-offset-4" href="/shopify">Shopify</a>; si es un sitio de negocio, el de <a class="font-semibold text-brand underline underline-offset-4" href="/paginas-web">páginas web</a>.
             </p>
           </div>
@@ -73,12 +73,12 @@ const projects = authorProjects.filter((project) => project.author === slug);
 
       <section class="section-space border-t border-line bg-white" aria-labelledby="especialidades">
         <div class="container-page">
-          <h2 id="especialidades" class="max-w-[22ch] text-[28px] leading-[1.16] font-bold tracking-[-0.025em] text-ink min-[400px]:text-[30px] sm:text-[40px]">Dónde aporta en tu proyecto.</h2>
+          <h2 id="especialidades" class="max-w-[22ch] text-[1.75rem] leading-[1.16] font-bold tracking-[-0.025em] text-ink min-[400px]:text-[1.875rem] sm:text-[2.5rem]">Dónde aporta en tu proyecto.</h2>
           <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {profile.specialties.map((item) => (
               <div class="flex flex-col gap-3 rounded-[10px] border border-line bg-paper p-6">
                 <h3 class="text-xl font-bold tracking-[-0.02em] text-ink">{item.title}</h3>
-                <p class="text-[15px] leading-7 text-muted">{item.description}</p>
+                <p class="text-[0.9375rem] leading-7 text-muted">{item.description}</p>
                 <ul class="mt-auto flex flex-wrap gap-2 pt-2">
                   {item.stack.map((tech) => <li class="rounded-md bg-primary-soft px-2.5 py-1 text-xs font-semibold text-brand">{tech}</li>)}
                 </ul>
@@ -90,7 +90,7 @@ const projects = authorProjects.filter((project) => project.author === slug);
 
       <section class="section-space border-t border-line" aria-labelledby="proyectos">
         <div class="container-page">
-          <h2 id="proyectos" class="text-[28px] leading-[1.16] font-bold tracking-[-0.025em] text-ink min-[400px]:text-[30px] sm:text-[40px]">Problemas que podemos ayudarte a resolver.</h2>
+          <h2 id="proyectos" class="text-[1.75rem] leading-[1.16] font-bold tracking-[-0.025em] text-ink min-[400px]:text-[1.875rem] sm:text-[2.5rem]">Problemas que podemos ayudarte a resolver.</h2>
           <p class="mt-4 max-w-[65ch] text-base leading-7 text-muted">Desarrollo para tiendas, sitios y herramientas de trabajo, con la experiencia técnica de Fernando. Conoce qué podemos hacer por tu negocio y revisa los proyectos completos en su portafolio personal.</p>
           <div class="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => <ProjectCard project={project} />)}
@@ -101,7 +101,7 @@ const projects = authorProjects.filter((project) => project.author === slug);
       <section class="section-space border-t border-line" aria-labelledby="experiencia">
         <div class="container-page">
           <div class="flex max-w-[760px] flex-col gap-4">
-            <h2 id="experiencia" class="text-[28px] leading-[1.16] font-bold tracking-[-0.025em] text-ink min-[400px]:text-[30px] sm:text-[40px]">Experiencia profesional.</h2>
+            <h2 id="experiencia" class="text-[1.75rem] leading-[1.16] font-bold tracking-[-0.025em] text-ink min-[400px]:text-[1.875rem] sm:text-[2.5rem]">Experiencia profesional.</h2>
           </div>
           <ol class="mt-10 flex flex-col">
             {profile.roles.map((role) => (
@@ -132,14 +132,14 @@ const projects = authorProjects.filter((project) => project.author === slug);
         <section class="section-space border-t border-line" aria-labelledby="articulos">
           <div class="container-page">
             <div class="flex flex-wrap items-end justify-between gap-4">
-              <h2 id="articulos" class="text-[28px] leading-[1.16] font-bold tracking-[-0.025em] text-ink min-[400px]:text-[30px] sm:text-[40px]">Lo que ha escrito en el blog.</h2>
-              <a href="/blog" class="inline-flex min-h-11 items-center font-semibold text-brand hover:text-[#2f47cc]">Ver el blog</a>
+              <h2 id="articulos" class="text-[1.75rem] leading-[1.16] font-bold tracking-[-0.025em] text-ink min-[400px]:text-[1.875rem] sm:text-[2.5rem]">Lo que ha escrito en el blog.</h2>
+              <a href="/blog" class="inline-flex min-h-11 items-center font-semibold text-brand hover:text-primary-hover">Ver el blog</a>
             </div>
             <ul class="mt-10 grid gap-x-12 md:grid-cols-2">
               {posts.map((post) => (
                 <li class="border-t border-line py-5">
                   <a href={`/blog/${post.id}`} class="group block">
-                    <p class="text-[13px] leading-5 font-bold text-brand">{post.data.category}</p>
+                    <p class="text-[0.8125rem] leading-5 font-bold text-brand">{post.data.category}</p>
                     <p class="mt-1 text-lg leading-7 font-semibold tracking-[-0.015em] text-ink group-hover:text-brand">{post.data.h1}</p>
                     <p class="mt-1 text-sm text-muted"><time datetime={post.data.publishedAt.toISOString()}>{formatDate(post.data.publishedAt)}</time></p>
                   </a>

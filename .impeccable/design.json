@@ -1,0 +1,648 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-05T04:35:00Z",
+  "title": "Design System: Devstoremx",
+  "extensions": {
+    "colorMeta": {
+      "primary-hover": { "role": "primary", "displayName": "Azul acción · hover", "tonalRamp": ["oklch(15% 0.03 270)", "oklch(26% 0.08 270)", "oklch(38% 0.14 270)", "oklch(49% 0.19 270)", "oklch(61% 0.19 270)", "oklch(72% 0.14 270)", "oklch(84% 0.08 270)", "oklch(95% 0.02 270)"] },
+      "periwinkle-hover": { "role": "primary", "displayName": "Periwinkle · hover", "tonalRamp": ["oklch(15% 0.02 275)", "oklch(26% 0.06 275)", "oklch(38% 0.1 275)", "oklch(49% 0.15 275)", "oklch(61% 0.15 275)", "oklch(72% 0.1 275)", "oklch(84% 0.06 275)", "oklch(95% 0.015 275)"] },
+      "line-strong": { "role": "neutral", "displayName": "Línea fuerte", "tonalRamp": ["oklch(15% 0.01 265)", "oklch(26% 0.02 265)", "oklch(38% 0.03 265)", "oklch(49% 0.04 265)", "oklch(61% 0.04 265)", "oklch(72% 0.03 265)", "oklch(84% 0.02 265)", "oklch(95% 0.005 265)"] },
+      "line-strong-dark": { "role": "neutral", "displayName": "Línea fuerte nocturna", "tonalRamp": ["oklch(15% 0.01 265)", "oklch(26% 0.02 265)", "oklch(38% 0.03 265)", "oklch(49% 0.04 265)", "oklch(61% 0.04 265)", "oklch(72% 0.03 265)", "oklch(84% 0.02 265)", "oklch(95% 0.005 265)"] },
+      "placeholder": { "role": "neutral", "displayName": "Ayuda de campo", "tonalRamp": ["oklch(15% 0.01 265)", "oklch(26% 0.02 265)", "oklch(38% 0.03 265)", "oklch(49% 0.04 265)", "oklch(61% 0.04 265)", "oklch(72% 0.03 265)", "oklch(84% 0.02 265)", "oklch(95% 0.005 265)"] },
+      "surface-raised": { "role": "neutral", "displayName": "Papel elevado", "tonalRamp": ["oklch(15% 0 0)", "oklch(26% 0 0)", "oklch(38% 0 0)", "oklch(49% 0 0)", "oklch(61% 0 0)", "oklch(72% 0 0)", "oklch(84% 0 0)", "oklch(95% 0 0)"] },
+      "primary-soft-dark": { "role": "primary", "displayName": "Azul suave nocturno", "tonalRamp": ["oklch(15% 0.02 275)", "oklch(26% 0.04 275)", "oklch(38% 0.06 275)", "oklch(49% 0.08 275)", "oklch(61% 0.08 275)", "oklch(72% 0.06 275)", "oklch(84% 0.04 275)", "oklch(95% 0.01 275)"] },
+      "success-dark": { "role": "tertiary", "displayName": "Verde publicado nocturno", "tonalRamp": ["oklch(15% 0.02 150)", "oklch(26% 0.05 150)", "oklch(38% 0.09 150)", "oklch(49% 0.12 150)", "oklch(61% 0.12 150)", "oklch(72% 0.09 150)", "oklch(84% 0.05 150)", "oklch(95% 0.01 150)"] },
+      "success-soft-dark": { "role": "tertiary", "displayName": "Verde suave nocturno", "tonalRamp": ["oklch(15% 0.01 150)", "oklch(26% 0.03 150)", "oklch(38% 0.05 150)", "oklch(49% 0.07 150)", "oklch(61% 0.07 150)", "oklch(72% 0.05 150)", "oklch(84% 0.03 150)", "oklch(95% 0.005 150)"] },
+      "warning-dark": { "role": "tertiary", "displayName": "Ámbar pendiente nocturno", "tonalRamp": ["oklch(15% 0.01 80)", "oklch(26% 0.03 80)", "oklch(38% 0.06 80)", "oklch(49% 0.1 80)", "oklch(61% 0.1 80)", "oklch(72% 0.08 80)", "oklch(84% 0.04 80)", "oklch(95% 0.01 80)"] },
+      "warning-soft-dark": { "role": "tertiary", "displayName": "Ámbar suave nocturno", "tonalRamp": ["oklch(15% 0.01 80)", "oklch(26% 0.02 80)", "oklch(38% 0.04 80)", "oklch(49% 0.06 80)", "oklch(61% 0.06 80)", "oklch(72% 0.04 80)", "oklch(84% 0.02 80)", "oklch(95% 0.005 80)"] },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel bruma",
+        "canonical": "#F6F8FC",
+        "tonalRamp": [
+          "#182234",
+          "#223865",
+          "#305091",
+          "#3F69BD",
+          "#698ACD",
+          "#96ADDA",
+          "#C7D0E3",
+          "#F0F1F5"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "#0A0F1C",
+        "tonalRamp": [
+          "#192034",
+          "#233563",
+          "#334C8E",
+          "#4263B9",
+          "#6B86CA",
+          "#98AAD8",
+          "#C8CFE2",
+          "#F0F1F5"
+        ]
+      },
+      "night": {
+        "role": "neutral",
+        "displayName": "Tinta nocturna",
+        "canonical": "#05070D",
+        "tonalRamp": [
+          "#1A2033",
+          "#253461",
+          "#364B8B",
+          "#4662B6",
+          "#6E85C7",
+          "#9AA9D6",
+          "#C9CFE1",
+          "#F0F1F4"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Panel nocturno",
+        "canonical": "#0D1321",
+        "tonalRamp": [
+          "#1A2133",
+          "#263861",
+          "#37508B",
+          "#4768B4",
+          "#6F89C6",
+          "#9BACD5",
+          "#C9D0E1",
+          "#F0F1F4"
+        ]
+      },
+      "brand": {
+        "role": "primary",
+        "displayName": "Azul acción",
+        "canonical": "#3B55E6",
+        "tonalRamp": [
+          "#10173C",
+          "#0F1F78",
+          "#162DAB",
+          "#1C3ADF",
+          "#4D65E8",
+          "#8494EC",
+          "#C0C6EB",
+          "#EFF0F6"
+        ]
+      },
+      "electric": {
+        "role": "primary",
+        "displayName": "Azul eléctrico",
+        "canonical": "#5271FF",
+        "tonalRamp": [
+          "#0A1443",
+          "#001887",
+          "#0023C1",
+          "#002DFB",
+          "#375BFF",
+          "#758DFB",
+          "#B9C3F1",
+          "#EDEFF7"
+        ]
+      },
+      "periwinkle": {
+        "role": "primary",
+        "displayName": "Azul periwinkle",
+        "canonical": "#7B93FF",
+        "tonalRamp": [
+          "#0A1443",
+          "#001987",
+          "#0023C1",
+          "#002EFB",
+          "#375BFF",
+          "#758DFB",
+          "#B9C3F1",
+          "#EDEFF7"
+        ]
+      },
+      "sky": {
+        "role": "secondary",
+        "displayName": "Azul cielo",
+        "canonical": "#51ADE5",
+        "tonalRamp": [
+          "#112B3B",
+          "#125075",
+          "#1972A8",
+          "#2194DB",
+          "#51ADE5",
+          "#86C4EA",
+          "#C1DAEA",
+          "#EFF3F6"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Gris azulado",
+        "canonical": "#4A5570",
+        "tonalRamp": [
+          "#20242C",
+          "#363E51",
+          "#4D5874",
+          "#647397",
+          "#8692AF",
+          "#AAB2C6",
+          "#CFD3DB",
+          "#F1F2F3"
+        ]
+      },
+      "muted-dark": {
+        "role": "neutral",
+        "displayName": "Gris niebla",
+        "canonical": "#98A4BD",
+        "tonalRamp": [
+          "#20242C",
+          "#353E52",
+          "#4B5976",
+          "#627499",
+          "#8593B1",
+          "#A9B3C7",
+          "#CFD3DB",
+          "#F1F2F3"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Línea",
+        "canonical": "#DBE2EE",
+        "tonalRamp": [
+          "#1C2430",
+          "#2B3D5C",
+          "#3E5783",
+          "#5172AB",
+          "#7791BF",
+          "#A0B2D0",
+          "#CBD2DF",
+          "#F1F2F4"
+        ]
+      },
+      "line-dark": {
+        "role": "neutral",
+        "displayName": "Línea nocturna",
+        "canonical": "#1F2A3D",
+        "tonalRamp": [
+          "#1D242F",
+          "#2D3E59",
+          "#415880",
+          "#5573A7",
+          "#7A92BB",
+          "#A2B2CE",
+          "#CCD3DE",
+          "#F1F2F4"
+        ]
+      },
+      "cloud": {
+        "role": "neutral",
+        "displayName": "Nube",
+        "canonical": "#E9EEFB",
+        "tonalRamp": [
+          "#131E3A",
+          "#152F72",
+          "#1E43A3",
+          "#2757D5",
+          "#557CE0",
+          "#89A3E7",
+          "#C2CDE8",
+          "#EFF1F6"
+        ]
+      },
+      "surface-sunken": {
+        "role": "neutral",
+        "displayName": "Papel hundido",
+        "canonical": "#EEF2F8",
+        "tonalRamp": [
+          "#1A2432",
+          "#273E5F",
+          "#385889",
+          "#4973B2",
+          "#7192C5",
+          "#9CB2D4",
+          "#CAD3E1",
+          "#F0F2F4"
+        ]
+      },
+      "primary-soft": {
+        "role": "primary",
+        "displayName": "Azul suave",
+        "canonical": "#E8EDFF",
+        "tonalRamp": [
+          "#0A1643",
+          "#001D87",
+          "#002AC1",
+          "#0037FB",
+          "#3762FF",
+          "#7592FB",
+          "#B9C5F1",
+          "#EDF0F7"
+        ]
+      },
+      "success": {
+        "role": "tertiary",
+        "displayName": "Verde publicado",
+        "canonical": "#1D7A45",
+        "tonalRamp": [
+          "#153824",
+          "#1A6D3E",
+          "#259C58",
+          "#30CB73",
+          "#5DD992",
+          "#8FE1B2",
+          "#C4E6D3",
+          "#EFF5F2"
+        ]
+      },
+      "success-soft": {
+        "role": "tertiary",
+        "displayName": "Verde suave",
+        "canonical": "#E6F5EC",
+        "tonalRamp": [
+          "#1A3224",
+          "#27603E",
+          "#378A58",
+          "#48B473",
+          "#70C692",
+          "#9BD5B2",
+          "#C9E1D3",
+          "#F0F4F2"
+        ]
+      },
+      "warning": {
+        "role": "tertiary",
+        "displayName": "Ámbar pendiente",
+        "canonical": "#8A5A00",
+        "tonalRamp": [
+          "#432F0A",
+          "#875800",
+          "#C17E00",
+          "#FBA400",
+          "#FFB937",
+          "#FBCC75",
+          "#F1DEB9",
+          "#F7F4ED"
+        ]
+      },
+      "warning-soft": {
+        "role": "tertiary",
+        "displayName": "Ámbar suave",
+        "canonical": "#FFF4DC",
+        "tonalRamp": [
+          "#43310A",
+          "#875C00",
+          "#C18400",
+          "#FBAC00",
+          "#FFC037",
+          "#FBD175",
+          "#F1DFB9",
+          "#F7F4ED"
+        ]
+      },
+      "danger": {
+        "role": "tertiary",
+        "displayName": "Rojo error",
+        "canonical": "#B42318",
+        "tonalRamp": [
+          "#3C1411",
+          "#771710",
+          "#AA2117",
+          "#DE2B1E",
+          "#E7594E",
+          "#EB8C85",
+          "#EAC3C0",
+          "#F6EFEF"
+        ]
+      },
+      "danger-soft": {
+        "role": "tertiary",
+        "displayName": "Rojo suave",
+        "canonical": "#FDECEA",
+        "tonalRamp": [
+          "#3E140F",
+          "#7B170C",
+          "#B02211",
+          "#E62C16",
+          "#EE5948",
+          "#F08C80",
+          "#ECC3BE",
+          "#F6EFEE"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "metadata": { "displayName": "Metadata", "purpose": "Texto secundario de al menos 0.75rem, incluidos cargos y pies de foto." },
+      "reading": { "displayName": "Reading", "purpose": "Artículo: 1.1875rem / 1.9, hasta 720 px de medida." },
+      "editorial": { "displayName": "Editorial", "purpose": "Títulos del blog; Plus Jakarta Sans variable en peso 750." },
+      "display": {
+        "displayName": "Display",
+        "purpose": "Solo el H1 del hero."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "H2 de sección."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "H3 de tarjeta y servicio."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Párrafo introductorio."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Texto corrido."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Etiquetas de formulario y badges."
+      },
+      "eyebrow": {
+        "displayName": "Eyebrow",
+        "purpose": "Antetítulo de sección en mayúsculas."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "Cifras, etapas, fechas y metadatos."
+      }
+    },
+    "shadows": [
+      {
+        "name": "floating-layer",
+        "value": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+        "purpose": "Menú móvil y preview del dashboard."
+      },
+      {
+        "name": "electric-state-ring",
+        "value": "0 0 0 4px rgba(82,113,255,0.18)",
+        "purpose": "Etapa actual del timeline y pasos del dashboard."
+      },
+      {
+        "name": "focus-light",
+        "value": "0 0 0 2px #F6F8FC, 0 0 0 4px #3B55E6",
+        "purpose": "Foco de teclado sobre superficies claras."
+      },
+      {
+        "name": "focus-dark",
+        "value": "0 0 0 2px #05070D, 0 0 0 4px #7B93FF",
+        "purpose": "Foco de teclado sobre tinta nocturna."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state",
+        "value": "150ms ease-out",
+        "purpose": "Hover y foco de botones, enlaces y campos."
+      },
+      {
+        "name": "panel",
+        "value": "250ms ease-out",
+        "purpose": "Apertura y cierre de FAQ."
+      },
+      {
+        "name": "process",
+        "value": "300ms ease-out",
+        "purpose": "Cambio de etapa activa en el timeline."
+      },
+      {
+        "name": "reveal",
+        "value": "700–900ms cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Entradas de viewport con opacidad y movimiento, 48 px. Desenfoque de 16 px exclusivamente en títulos."
+      },
+      {
+        "name": "hero-loop",
+        "value": "6–11s linear / ease-in-out",
+        "purpose": "Pulsos, barras, caret y respiración; solo en el hero."
+      },
+      {
+        "name": "view-transition",
+        "value": "700ms cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Transición del dashboard entre home y página de ejemplo."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "400px"
+      },
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "reading",
+        "value": "900px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "article-air",
+        "value": "1250px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción principal sobre superficies claras; azul acción, 48 px de alto y radio de 6 px.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Cotiza tu proyecto <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\"/></svg></button>",
+      "css": ".ds-btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:48px; padding:10px 24px; border:0; border-radius:var(--radius-control); font-family:var(--font-sans); font-size:1rem; font-weight:600; line-height:1.375; cursor:pointer; transition:background-color 150ms ease-out; } .ds-btn-primary { background:var(--color-brand); color:var(--color-surface-raised); } .ds-btn-primary:hover { background:var(--color-primary-hover); } .ds-btn:focus-visible { outline:2px solid transparent; box-shadow:0 0 0 2px var(--color-paper),0 0 0 4px var(--color-brand); } .ds-btn:disabled { cursor:not-allowed; opacity:.6; }"
+    },
+    {
+      "name": "Hero Button",
+      "kind": "button",
+      "refersTo": "button-hero",
+      "description": "Acción principal sobre tinta nocturna; periwinkle con texto noche.",
+      "html": "<button class=\"ds-btn ds-btn-hero\">Cotiza tu proyecto <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\"/></svg></button>",
+      "css": ".ds-btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:48px; padding:10px 24px; border:0; border-radius:var(--radius-control); font-family:var(--font-sans); font-size:1rem; font-weight:600; line-height:1.375; cursor:pointer; transition:background-color 150ms ease-out; } .ds-btn-hero { background:var(--color-periwinkle); color:var(--color-night); } .ds-btn-hero:hover { background:var(--color-periwinkle-hover); } .ds-btn-hero:focus-visible { outline:2px solid transparent; box-shadow:0 0 0 2px var(--color-night),0 0 0 4px var(--color-periwinkle); }"
+    },
+    {
+      "name": "Dark Outline Button",
+      "kind": "button",
+      "refersTo": "button-dark-outline",
+      "description": "Acción secundaria del header oscuro; borde de 1 px y texto nube.",
+      "html": "<a class=\"ds-btn ds-btn-dark-outline\" href=\"#\">Escríbenos</a>",
+      "css": ".ds-btn-dark-outline { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:10px 20px; border:1px solid var(--color-line-strong-dark); border-radius:var(--radius-control); background:transparent; color:var(--color-cloud); font-family:var(--font-sans); font-size:.9375rem; font-weight:600; text-decoration:none; transition:color 150ms ease-out,border-color 150ms ease-out; } .ds-btn-dark-outline:hover { border-color:var(--color-periwinkle); color:var(--color-periwinkle); } .ds-btn-dark-outline:focus-visible { outline:2px solid transparent; box-shadow:0 0 0 2px var(--color-night),0 0 0 4px var(--color-periwinkle); }"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Campo de 48 px con etiqueta de 0.8125rem, indicación opcional y errores asociados mediante aria-describedby.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Correo electrónico</span><input class=\"ds-field-input\" type=\"email\" placeholder=\"tu@empresa.com\" /></label>",
+      "css": ".ds-field { display:flex; flex-direction:column; gap:8px; min-width:0; } .ds-field-label { font-family:var(--font-sans); font-size:.8125rem; font-weight:500; line-height:1rem; letter-spacing:.01em; color:var(--color-ink); } .ds-field-input { min-height:48px; border:1px solid var(--color-line-strong); border-radius:var(--radius-control); background:var(--color-surface-raised); padding:0 14px; font-family:var(--font-sans); font-size:1rem; color:var(--color-ink); caret-color:var(--color-brand); transition:border-color 150ms ease-out; } .ds-field-input::placeholder { color:var(--color-placeholder); } .ds-field-input:focus { border-color:var(--color-brand); outline:2px solid var(--color-brand); outline-offset:2px; } .ds-field-input[aria-invalid=true] { border-color:var(--color-danger); }"
+    },
+    {
+      "name": "Status Badge",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Estado con palabra y color; nunca solo color.",
+      "html": "<div class=\"ds-badges\"><span class=\"ds-badge ds-badge-success\">Aprobado</span><span class=\"ds-badge ds-badge-progress\">En progreso</span><span class=\"ds-badge ds-badge-pending\">Pendiente</span></div>",
+      "css": ".ds-badges { display:flex; flex-wrap:wrap; gap:8px; } .ds-badge { display:inline-flex; align-items:center; border-radius:var(--radius-badge); padding:3px 8px; font-family:var(--font-sans); font-size:.8125rem; font-weight:500; line-height:1.4; } .ds-badge-success { background:var(--color-success-soft); color:var(--color-success); } .ds-badge-progress { background:var(--color-primary-soft); color:var(--color-brand); } .ds-badge-pending { background:var(--color-warning-soft); color:var(--color-warning); }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Contenedor plano de 10 px con borde de 1 px y padding de 24 px.",
+      "html": "<article class=\"ds-card\"><p class=\"ds-card-eyebrow\">Entregables</p><h3 class=\"ds-card-title\">Sitio en producción</h3><p class=\"ds-card-body\">Cada pieza aparece con su estado, sin tener que preguntar.</p></article>",
+      "css": ".ds-card { display:flex; flex-direction:column; gap:10px; border:1px solid var(--color-line); border-radius:var(--radius-card); background:var(--color-surface-raised); padding:24px; } .ds-card-eyebrow { margin:0; font-family:var(--font-sans); font-size:.8125rem; font-weight:700; line-height:1.25rem; letter-spacing:.1em; text-transform:uppercase; color:var(--color-brand); } .ds-card-title { margin:0; font-family:var(--font-sans); font-size:1.375rem; font-weight:600; line-height:1.75rem; letter-spacing:-.01em; color:var(--color-ink); } .ds-card-body { margin:0; font-family:var(--font-sans); font-size:1rem; line-height:1.625; color:var(--color-muted); }"
+    },
+    {
+      "name": "Section Heading",
+      "kind": "custom",
+      "refersTo": "section-heading",
+      "description": "Eyebrow, H2 y descripción a la derecha en escritorio.",
+      "html": "<div class=\"ds-heading\"><div class=\"ds-heading-main\"><p class=\"ds-eyebrow\">Servicios</p><h2 class=\"ds-h2\">Todo lo que tu negocio necesita para vender en línea.</h2></div><p class=\"ds-heading-desc\">Un solo equipo para diseñar, construir y mantener cada pieza de tu presencia digital.</p></div>",
+      "css": ".ds-heading { display:flex; flex-direction:column; gap:24px; } .ds-heading-main { display:flex; flex-direction:column; gap:16px; max-width:640px; } .ds-eyebrow { margin:0; font-family:var(--font-sans); font-size:.8125rem; font-weight:700; line-height:1.25rem; letter-spacing:.1em; text-transform:uppercase; color:var(--color-brand); } .ds-h2 { margin:0; font-family:var(--font-sans); font-size:1.75rem; font-weight:700; line-height:1.16; letter-spacing:-.025em; color:var(--color-ink); } .ds-heading-desc { margin:0; max-width:420px; font-family:var(--font-sans); font-size:1rem; line-height:1.75; color:var(--color-muted); } @media(min-width:640px) { .ds-h2 { font-size:2.5rem; } .ds-heading-desc { font-size:1.125rem; } } @media(min-width:1024px) { .ds-heading { flex-direction:row; align-items:end; justify-content:space-between; gap:64px; } .ds-h2 { font-size:3rem; } .ds-heading-desc { flex:0 0 35%; } }"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "refersTo": "service-card",
+      "description": "Fila de servicio con borde superior, icono de trazo y número mono.",
+      "html": "<a class=\"ds-service\" href=\"#\"><div class=\"ds-service-top\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><polyline points=\"16 18 22 12 16 6\"/><polyline points=\"8 6 2 12 8 18\"/></svg><span class=\"ds-service-number\">01</span></div><h3 class=\"ds-service-title\">Desarrollo web</h3><p class=\"ds-service-body\">Sitios corporativos rápidos, seguros y fáciles de actualizar, hechos a la medida de tu negocio.</p><span class=\"ds-service-link\">Ver el servicio</span></a>",
+      "css": ".ds-service { display:flex; flex-direction:column; gap:14px; border-top:1px solid var(--color-line); padding:32px 0; text-decoration:none; color:inherit; } .ds-service-top { display:flex; align-items:center; justify-content:space-between; color:var(--color-brand); } .ds-service-number { font-family:var(--font-mono); font-size:.8125rem; color:var(--color-muted); } .ds-service-title { margin:6px 0 0; font-family:var(--font-sans); font-size:1.375rem; font-weight:600; line-height:1.75rem; letter-spacing:-.01em; color:var(--color-ink); transition:color 150ms ease-out; } .ds-service-body { margin:0; font-family:var(--font-sans); font-size:1rem; line-height:1.625; color:var(--color-muted); } .ds-service-link { font-family:var(--font-sans); font-size:1rem; font-weight:600; color:var(--color-brand); } .ds-service:hover .ds-service-title { color:var(--color-brand); } .ds-service:hover svg { transform:translateY(-4px); } .ds-service svg { transition:transform 300ms ease-out; } .ds-service:focus-visible { outline:2px solid var(--color-brand); outline-offset:2px; } @media(prefers-reduced-motion:reduce) { .ds-service:hover svg { transform:none; } .ds-service svg { transition:none; } }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Navegación oscura de 15 px con CTA dark outline.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link\" href=\"#\">Servicios</a><a class=\"ds-nav-link\" href=\"#\">Blog</a><a class=\"ds-nav-link\" href=\"#\">Proceso</a><a class=\"ds-nav-cta\" href=\"#\">Escríbenos</a></nav>",
+      "css": ".ds-nav { display:flex; flex-wrap:wrap; align-items:center; justify-content:flex-end; gap:28px; background:var(--color-night); padding:18px 24px; } .ds-nav-link { font-family:var(--font-sans); font-size:.9375rem; font-weight:500; line-height:1.5; color:var(--color-cloud); text-decoration:none; transition:color 150ms ease-out; } .ds-nav-link:hover { color:var(--color-periwinkle); } .ds-nav-cta { display:inline-flex; align-items:center; justify-content:center; min-height:44px; border:1px solid var(--color-line-strong-dark); border-radius:var(--radius-control); padding:10px 20px; font-family:var(--font-sans); font-size:.9375rem; font-weight:600; color:var(--color-cloud); text-decoration:none; transition:color 150ms ease-out,border-color 150ms ease-out; } .ds-nav-cta:hover { border-color:var(--color-periwinkle); color:var(--color-periwinkle); } .ds-nav a:focus-visible { outline:2px solid var(--color-periwinkle); outline-offset:2px; }"
+    },
+    {
+      "name": "Dashboard Preview",
+      "kind": "custom",
+      "refersTo": "dashboard-preview",
+      "description": "Mini dashboard oscuro: la pieza firma que resume transparencia operativa.",
+      "html": "<div class=\"ds-dash\"><div class=\"ds-dash-bar\"><span class=\"ds-dot\"></span><span class=\"ds-dot\"></span><span class=\"ds-dot\"></span><span class=\"ds-dash-url\">Café Altura · Dashboard</span></div><div class=\"ds-dash-body\"><div class=\"ds-dash-head\"><strong>Tienda en línea · Café Altura</strong><span>62 %</span></div><div class=\"ds-progress\"><span style=\"width:62%\"></span></div><p class=\"ds-dash-meta\">Etapa 3 de 5 · Desarrollo</p><div class=\"ds-steps\"><span class=\"ds-step done\">✓</span><span class=\"ds-step done\">✓</span><span class=\"ds-step current\">03</span><span class=\"ds-step\">04</span><span class=\"ds-step\">05</span></div><div class=\"ds-task\"><span><b class=\"ds-check\">✓</b> Desarrollo de páginas</span><span class=\"ds-dash-badge ds-dash-badge-progress\">En progreso</span></div></div></div>",
+      "css": ".ds-dash { overflow:hidden; border:1px solid var(--color-line-dark); border-radius:var(--radius-card); background:var(--color-night); color:var(--color-cloud); box-shadow:0 20px 25px -5px rgb(0 0 0 / .1),0 8px 10px -6px rgb(0 0 0 / .1); font-family:var(--font-sans); } .ds-dash-bar { display:flex; align-items:center; gap:8px; border-bottom:1px solid var(--color-line-dark); background:var(--color-panel); padding:12px 16px; } .ds-dot { width:10px; height:10px; border-radius:9999px; background:var(--color-line-dark); } .ds-dash-url { margin-left:12px; border-radius:var(--radius-badge); background:var(--color-night); padding:4px 12px; font-family:var(--font-mono); font-size:.75rem; color:var(--color-muted-dark); } .ds-dash-body { display:flex; flex-direction:column; gap:24px; padding:24px; } .ds-dash-head { display:flex; justify-content:space-between; gap:16px; font-size:.9375rem; } .ds-dash-head span { font-family:var(--font-mono); color:var(--color-periwinkle); } .ds-progress { height:8px; overflow:hidden; border-radius:9999px; background:var(--color-line-dark); } .ds-progress span { display:block; height:100%; background:linear-gradient(90deg,var(--color-electric),var(--color-sky)); } .ds-dash-meta { margin:0; font-family:var(--font-mono); font-size:.8125rem; color:var(--color-muted-dark); } .ds-steps { display:flex; justify-content:space-between; gap:8px; } .ds-step { display:grid; place-items:center; width:36px; height:36px; border:1px solid var(--color-line-strong-dark); border-radius:var(--radius-control); background:var(--color-night); font-family:var(--font-mono); font-size:.8125rem; color:var(--color-cloud); } .ds-step.done { border-color:var(--color-electric); color:var(--color-periwinkle); } .ds-step.current { border-color:var(--color-brand); background:var(--color-brand); color:var(--color-surface-raised); box-shadow:0 0 0 4px rgba(82,113,255,.18); } .ds-task { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; border-top:1px solid var(--color-line-dark); padding-top:14px; font-size:.875rem; } .ds-check { color:var(--color-success-dark); } .ds-dash-badge { border-radius:var(--radius-badge); padding:3px 8px; font-size:.75rem; font-weight:500; } .ds-dash-badge-progress { background:var(--color-primary-soft-dark); color:var(--color-periwinkle); }"
+    },
+    {
+      "name": "Process Timeline",
+      "kind": "custom",
+      "refersTo": "process-timeline",
+      "description": "Cinco etapas numeradas; azul acción para el número actual y gris niebla sin opacidad para las descripciones inactivas.",
+      "html": "<ol class=\"ds-process\"><li class=\"ds-process-step done\"><span class=\"ds-process-num\">✓</span><div><h3>Llamada</h3><p>Escuchamos qué necesita el negocio.</p></div></li><li class=\"ds-process-step current\" aria-current=\"step\"><span class=\"ds-process-num\">02</span><div><h3>Planeación</h3><p>Alcance, tiempos y costo por escrito.</p></div></li><li class=\"ds-process-step\"><span class=\"ds-process-num\">03</span><div><h3>Desarrollo</h3><p>Construimos y mostramos avances.</p></div></li></ol>",
+      "css": ".ds-process { display:grid; gap:24px; margin:0; padding:24px; list-style:none; background:var(--color-night); } .ds-process-step { display:grid; grid-template-columns:48px minmax(0,1fr); gap:20px; align-items:start; } .ds-process-num { display:grid; place-items:center; width:48px; height:48px; border:1px solid var(--color-line-strong-dark); border-radius:var(--radius-control); background:var(--color-night); font-family:var(--font-mono); font-size:.9375rem; color:var(--color-cloud); transition:background-color 250ms ease-out,color 250ms ease-out; } .ds-process-step.done .ds-process-num { border-color:var(--color-electric); color:var(--color-periwinkle); } .ds-process-step.current .ds-process-num { border-color:var(--color-brand); background:var(--color-brand); color:var(--color-surface-raised); box-shadow:0 0 0 4px rgba(82,113,255,.18); } .ds-process-step h3 { margin:0 0 6px; font-family:var(--font-sans); font-size:1.25rem; font-weight:600; line-height:1.625rem; color:var(--color-cloud); transition:color 300ms ease-out; } .ds-process-step.current h3 { color:var(--color-periwinkle); } .ds-process-step p { margin:0; font-family:var(--font-sans); font-size:.9375rem; line-height:1.5; color:var(--color-muted-dark); } .ds-process-step.current p { color:var(--color-cloud); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "La señal eléctrica",
+    "overview": "Devstoremx se lee como una señal precisa dentro de una retícula oscura: un sistema técnico y sereno donde el azul no decora, avisa. La página se construye con líneas de 1 px, números monoespaciados y superficies que cambian de papel bruma a tinta nocturna según lo que el visitante necesita entender. El movimiento existe, pero se concentra en el hero: pulsos que recorren la retícula, barras que se escriben y un caret que parpadea; fuera de ahí, el contenido entra una vez y se queda quieto.\n\nLa densidad es media. Las secciones respiran, las medidas de lectura se quedan entre 64 y 72 caracteres y las tarjetas se definen por bordes, no por sombras. La jerarquía se construye con tamaño y peso de una sola familia, Plus Jakarta Sans, apoyada por IBM Plex Mono para cifras, etapas y metadatos técnicos. La calidez viene del trato cercano y de la fotografía real del equipo; la autoridad, de la precisión.",
+    "keyCharacteristics": [
+      "Retícula de 160 × 150 px y líneas de 1 px como estructura visible.",
+      "Azul escaso: acción, dato e identidad; nunca relleno decorativo.",
+      "Una sola sans para todo, con IBM Plex Mono como instrumento para números.",
+      "Tarjetas planas, radios contenidos (4/6/10 px) y bordes antes que sombras.",
+      "Movimiento contenido: 150 ms en hover, 250 ms en paneles y bucles solo en el hero."
+    ],
+    "rules": [
+      {
+        "name": "La regla del azul escaso",
+        "body": "El azul se usa con moderación: fondos neutros y azul reservado para acción, dato e identidad. Su rareza es la señal; si todo es azul, nada es importante.",
+        "section": "colors"
+      },
+      {
+        "name": "La regla del texto pequeño",
+        "body": "El azul eléctrico no se usa para texto menor de 24 px sobre claro. Para enlaces, etiquetas y cuerpo, se usa azul acción.",
+        "section": "colors"
+      },
+      {
+        "name": "La regla del estado con palabra",
+        "body": "Éxito, aviso y error siempre llevan palabra o icono además del color. Nunca se comunican solo con un cambio de tono.",
+        "section": "colors"
+      },
+      {
+        "name": "La regla de una sola voz",
+        "body": "No se añade una segunda familia para titulares ni para cuerpo. La jerarquía se gana con tamaño, peso y espacio.",
+        "section": "typography"
+      },
+      {
+        "name": "La regla del número instrumento",
+        "body": "Cifras, etapas, fechas y metadatos van en IBM Plex Mono; el resto, en Plus Jakarta Sans.",
+        "section": "typography"
+      },
+      {
+        "name": "La regla del sentence case",
+        "body": "Los titulares y botones usan mayúscula solo al inicio. Las versalitas se reservan para eyebrows y etiquetas de sección.",
+        "section": "typography"
+      },
+      {
+        "name": "La regla del contenido 1200",
+        "body": "Aunque el marco llegue a 1440, la lectura y la composición se detienen en 1200. Nada de líneas de texto que crucen la pantalla.",
+        "section": "layout"
+      },
+      {
+        "name": "La regla del aire de sección",
+        "body": "Cada sección respira 64/80/96 px. La densidad se ajusta con el contenido, no con márgenes arbitrarios.",
+        "section": "layout"
+      },
+      {
+        "name": "La regla del pin honesto",
+        "body": "El timeline del proceso solo se fija en pantallas altas y anchas. Si no hay espacio, fluye con el documento.",
+        "section": "layout"
+      },
+      {
+        "name": "La regla del borde primero",
+        "body": "Si una superficie necesita separarse, primero se prueba un borde o un cambio de tono. La sombra es el último recurso.",
+        "section": "elevation"
+      },
+      {
+        "name": "La regla de la capa que flota",
+        "body": "Solo el menú móvil y el preview del dashboard se levantan. Todo lo demás vive en el plano.",
+        "section": "elevation"
+      },
+      {
+        "name": "La regla del bucle confinado",
+        "body": "Los bucles pertenecen al hero. Fuera de ahí, el movimiento entra una vez y se detiene.",
+        "section": "elevation"
+      },
+      {
+        "name": "La regla de los 150/250",
+        "body": "Hover y foco en 150 ms; paneles en 250 ms. Sin rebotes, sin animaciones que se sientan pesadas.",
+        "section": "elevation"
+      },
+      {
+        "name": "La regla del radio contenido",
+        "body": "4 px para badges, 6 px para controles, 10 px para tarjetas. Nada de 16/20 px salvo pills funcionales.",
+        "section": "shapes"
+      },
+      {
+        "name": "La regla de la línea de 1 px",
+        "body": "La estructura se dibuja con líneas finas. Si una línea no separa información, se elimina.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do usar papel bruma o tinta nocturna como base y reservar el azul para acción, dato e identidad.",
+      "Do mantener el ritmo de 4 px y los radios 4/6/10.",
+      "Do construir la jerarquía con una sola sans y usar IBM Plex Mono para números y metadatos.",
+      "Do separar superficies con bordes de 1 px y cambios de tono antes de recurrir a sombras.",
+      "Do mantener el foco de teclado visible y los objetivos táctiles de 44–48 px.",
+      "Do usar 150 ms en hover/foco, 250 ms en paneles y 700–900 ms en revelados; los bucles solo en el hero.",
+      "Do usar fotografías reales del equipo y evidencia autorizada."
+    ],
+    "donts": [
+      "Don't usar degradados morados, emojis decorativos, ilustraciones genéricas ni iconos de relleno.",
+      "Don't usar azul eléctrico (#5271FF) en texto pequeño sobre claro; para eso existe azul acción (#3B55E6).",
+      "Don't usar sombras como tratamiento por defecto de tarjetas.",
+      "Don't añadir una segunda familia tipográfica para titulares o cuerpo.",
+      "Don't usar radios mayores a 10 px salvo en pills funcionales como progreso, avatares y puntos.",
+      "Don't animar bucles fuera del hero ni usar rebotes.",
+      "Don't inventar testimonios, logos, métricas o nombres de clientes para llenar una composición."
+    ]
+  }
+}

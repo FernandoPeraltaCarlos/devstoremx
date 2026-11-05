@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
 import type { JSX } from 'preact';
-import { ArrowIcon, Button, Field } from './ui';
+import { ArrowIcon, Button, Field, validateField } from './ui';
 import { contactNotices, isContactResponse, type ContactNotice } from '../../lib/contact-status';
 
 type Props = { endpoint?: string; whatsappUrl?: string; linkedinUrl?: string; };
@@ -25,7 +25,12 @@ export default function ContactForm({ endpoint, whatsappUrl, linkedinUrl }: Prop
     event.preventDefault();
     if (sending) return;
     const form = event.currentTarget;
-    if (!form.reportValidity()) return;
+    const fields = Array.from(form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('.field'));
+    fields.forEach(validateField);
+    if (!form.checkValidity()) {
+      fields.find((field) => !field.validity.valid)?.focus();
+      return;
+    }
     if (!endpoint) {
       setNotice({ tone: 'warning', title: 'Formulario aún no disponible', text: 'Próximamente podrás enviarnos tu proyecto desde aquí.' });
       return;
@@ -66,7 +71,8 @@ export default function ContactForm({ endpoint, whatsappUrl, linkedinUrl }: Prop
   };
 
   return <div class="flex flex-col gap-8">
-    <form onSubmit={submit} class="flex flex-col gap-5" aria-label="Cuéntanos de tu proyecto" aria-busy={sending}>
+    <form onSubmit={submit} noValidate class="flex flex-col gap-5" aria-label="Cuéntanos de tu proyecto" aria-busy={sending}>
+      <p class="text-sm text-muted">Todos los campos son obligatorios, salvo el teléfono.</p>
       <input class="sr-only" type="text" name="company" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <Field id="c-nombre" name="name" label="Nombre" placeholder="Tu nombre completo" autoComplete="name" required />
       <div class="grid gap-5 sm:grid-cols-2 sm:gap-4">

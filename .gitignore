@@ -24,6 +24,9 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
+# Local Impeccable preferences (hook consent, machine-specific state)
+.impeccable/config.local.json
+
 # Project-local Google Search Console MCP runtime and secrets
 .mcp/gsc/.venv/
 .mcp/gsc/cache/
