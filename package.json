@@ -21,7 +21,7 @@
     "@astrojs/sitemap": "^3.7.4",
     "@astrojs/vercel": "^11.0.18",
     "@tailwindcss/vite": "^4.3.4",
-    "astro": "^7.4.5",
+    "astro": "^7.4.7",
     "preact": "^10.29.8",
     "resend": "^6.37.0",
     "tailwindcss": "^4.3.4"
